@@ -1,6 +1,7 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
 nav.landing-navbar{
     //background-color: #35424a;
     background-color: rgb(34,33,38);
@@ -12,6 +13,15 @@ a.navbar-brand{
     font-size: 2rem;
 }
 
+.nav-item:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+.nav-item:hover a{
+    color: rgb(34,33,38);
+}
+
 .nav-link{
     //color: #F08568;
     color: white;
@@ -20,6 +30,28 @@ a.navbar-brand{
 
 body{
     height: 100vh;
+}
+
+.headshot {
+	flex-shrink: 0;
+	margin: 20px;
+	height: calc(130px + 6vw);
+	width: calc(130px + 6vw);
+	border: calc(5px + 0.2vw) solid rgb(34,33,38);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-size: cover;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.headshot-2 {
+	border-radius: 50%;
+	border-color:  linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
+}
+
+.fa-bars{
+    color: white;
 }
 
 main{
@@ -44,10 +76,10 @@ main div h2{
     text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
 
-div img{
-    max-height: 300px;
-    max-width: 200px;
-}
+//div img{
+    //max-height: 300px;
+    //max-width: 200px;
+//}
 
 footer{
     background-color: rgb(34,33,38);
@@ -57,6 +89,12 @@ footer p{
     color: white;
 }
 
+
+//@media (min-width: 576px) {
+    //body{
+        //font-size: 1px;
+    //}
+//}
 
 //.nav-link{
 //    font-size: 1.35em;

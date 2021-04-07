@@ -2,13 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+
+///* General *///
+body{
+    height: 100vh;
+}
+
+
+
+///* Navbar *///
 nav.landing-navbar{
     background-color: rgb(34,33,38);
 }
 
-a.navbar-brand{
+.nav-link{
     color: white;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 .nav-item:hover{
@@ -20,13 +29,29 @@ a.navbar-brand{
     color: rgb(34,33,38);
 }
 
-.nav-link{
+.fa-bars{
     color: white;
-    font-size: 1.2rem;
 }
 
-body{
+
+
+///* Main *///
+main{
+    background-image: url(big-wardrobe.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     height: 100vh;
+    background-size: auto auto;
+}
+
+main div h1{
+    font-size: calc(3.8rem + 0.7vw);
+    text-shadow: 2px 0 0 rgb(34,33,38), -2px 0 0 rgb(34,33,38), 0 2px 0 rgb(34,33,38), 0 -2px 0 rgb(34,33,38), 1px 1px rgb(34,33,38), -1px -1px 0 rgb(34,33,38), 1px -1px 0 rgb(34,33,38), -1px 1px 0 rgb(34,33,38);
+}
+main div h2{
+    font-size: calc(3rem + 0.5vw);
+    font-style: italic;
+    text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
 
 .headshot {
@@ -47,28 +72,9 @@ body{
 	border-color:  linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
 }
 
-.fa-bars{
-    color: white;
-}
 
-main{
-    background-image: url(big-wardrobe.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: auto auto;
-}
 
-main div h1{
-    font-size: calc(3.8rem + 0.7vw);
-    text-shadow: 2px 0 0 rgb(34,33,38), -2px 0 0 rgb(34,33,38), 0 2px 0 rgb(34,33,38), 0 -2px 0 rgb(34,33,38), 1px 1px rgb(34,33,38), -1px -1px 0 rgb(34,33,38), 1px -1px 0 rgb(34,33,38), -1px 1px 0 rgb(34,33,38);
-}
-main div h2{
-    font-size: calc(3rem + 0.5vw);
-    font-style: italic;
-    text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
-}
-
+///* Footer *///
 footer{
     background-color: rgb(34,33,38);
 }

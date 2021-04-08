@@ -2,83 +2,97 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
 ///* General *///
-body{
-    height: 100vh;
+
+$color-primario: #222126; //Es el equivalente a rgb(34,33,38)
+$color-secundario: white; //Es el equivalente a rgb(255,255,255)
+$color-terciario: #68628a; //Es el equivalente a rgb(104,98,138)
+
+body {
+  height: 100vh;
 }
 
-
+.presentacion{
+  text-align: center;
+}
 
 ///* Navbar *///
-nav.landing-navbar{
-    background-color: rgb(34,33,38);
+nav.landing-navbar {
+  background-color: $color-primario;
+  border-bottom: 5px solid $color-terciario;
 }
 
-.nav-link{
-    color: white;
-    font-size: 1.2rem;
+.nav-link {
+  color: $color-secundario;
+  font-size: 1.2rem;
 }
 
-.nav-item:hover{
-    background-color: white;
-    cursor: pointer;
+.nav-item:hover {
+  background-color: $color-terciario;
+  cursor: pointer;
 }
 
-.nav-item:hover a{
-    color: rgb(34,33,38);
+.nav-item:hover a {
+  color: $color-primario;
 }
 
-.fa-bars{
-    color: white;
+.fa-bars {
+  color: $color-secundario;
 }
-
-
 
 ///* Main *///
-main{
-    background-image: url(big-wardrobe.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: auto auto;
+main {
+  background-image: url(big-wardrobe.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: auto auto;
 }
 
-main div h1{
-    font-size: calc(3.8rem + 0.7vw);
-    text-shadow: 2px 0 0 rgb(34,33,38), -2px 0 0 rgb(34,33,38), 0 2px 0 rgb(34,33,38), 0 -2px 0 rgb(34,33,38), 1px 1px rgb(34,33,38), -1px -1px 0 rgb(34,33,38), 1px -1px 0 rgb(34,33,38), -1px 1px 0 rgb(34,33,38);
+main div h1 {
+  font-size: 4.8rem;
+  text-shadow: 2px 0 0 $color-primario, -2px 0 0 $color-primario,
+    0 2px 0 $color-primario, 0 -2px 0 $color-primario, 1px 1px $color-primario,
+    -1px -1px 0 $color-primario, 1px -1px 0 $color-primario,
+    -1px 1px 0 $color-primario;
 }
-main div h2{
-    font-size: calc(3rem + 0.5vw);
-    font-style: italic;
-    text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+main div h2 {
+  font-size: 3.5rem;
+  font-style: italic;
+  text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white,
+    1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
 
 .headshot {
-	flex-shrink: 0;
-	margin: 20px;
-	height: calc(130px + 6vw);
-	width: calc(130px + 6vw);
-	border: calc(5px + 0.2vw) solid rgb(34,33,38);
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	background-size: cover;
-	box-sizing: border-box;
-	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  margin: 20px;
+  height: calc(130px + 6vw);
+  width: calc(130px + 6vw);
+  border: calc(5px + 0.2vw) solid $color-primario;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-size: cover;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .headshot-2 {
-	border-radius: 50%;
-	border-color:  linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
+  border-radius: 50%;
+  border-color: linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
 }
 
+.boton_principal
+{
+  background-color: $color-terciario;
+  color: $color-secundario;
+}
 
 
 ///* Footer *///
-footer{
-    background-color: rgb(34,33,38);
+footer {
+  background-color: $color-primario;
 }
 
-footer p{
-    color: white;
+footer p {
+  color: $color-secundario;
 }

@@ -28,7 +28,7 @@ nav.landing-navbar {
 }
 
 .nav-item:hover {
-  background-color: $color-terciario;
+  background-color: $color-secundario;
   cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ main {
 }
 
 main div h1 {
-  font-size: 4.8rem;
+  font-size: 3.6rem;
   text-shadow: 2px 0 0 $color-primario, -2px 0 0 $color-primario,
     0 2px 0 $color-primario, 0 -2px 0 $color-primario, 1px 1px $color-primario,
     -1px -1px 0 $color-primario, 1px -1px 0 $color-primario,

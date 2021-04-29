@@ -1,11 +1,15 @@
 <h2> Tus prendas </h2>
 
 <ul>
-    <% @prendas.each do |prenda| %>
-        <li>
-            <%= link_to prenda.tipo , prenda %>
-        </li>
-    <% end %>
+    <div class="container">
+        <div class="presentacion row my-5">
+            <div class="col-md-6 col-sm-12 my-4">
+                <% @prendas.each do |prenda| %>
+                    <%=link_to prenda.tipo, prenda%>
+                <% end %>
+            </div>
+        </div>
+    </div>
 </ul>
 
 <%= link_to "Crear nueva prenda", 'prendas/new'%>

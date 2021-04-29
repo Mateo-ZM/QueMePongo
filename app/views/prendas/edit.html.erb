@@ -1,7 +1,24 @@
 Formulario uwu
 
 <%= form_for @prenda do |f| %>
-    <%= f.text_area :tipo %>
+    <div>
+        Tipo de prenda: 
+        <%= f.text_field :tipo %>
+    </div>
+    <div>
+        Tela de la prenda: 
+        <%= f.text_field :tela %>
+    </div>
+    <div>
+        Color Primario de la prenda: 
+        <%= f.text_field :color_p %>
+    </div>
+    <div>
+        Color secundario de la prenda: 
+        <%= f.text_field :color_s %>
+    </div>
     <!--<%= f.select :categoria, Prenda.categoria%> -->
-    <%= f.submit%>
+    <div>
+        <%= f.submit%>
+    </div>
 <% end %>

@@ -1,5 +1,7 @@
-<h3><%= @prendas.tipo %></h3>
+<h3><%= @prenda.tipo %></h3>
 
-...Información de la prenda
+Información de la prenda
 
-<%= link_to "Editar esta prenda", edit_prenda_path(@prendas) %>
+<%= link_to "Editar esta prenda", edit_prenda_path(@prenda) %>
+
+<%= button_to "Delete", prenda_path(@prenda), method: :delete %>

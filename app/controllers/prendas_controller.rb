@@ -5,7 +5,7 @@ class PrendasController < ApplicationController
   end
 
   def show
-    @prendas = Prenda.find(params[:id])
+    @prenda = Prenda.find(params[:id])
   end
 
   def create
@@ -27,8 +27,15 @@ class PrendasController < ApplicationController
     @prenda = Prenda.find(params[:id])
   end
 
+  def destroy
+    @prenda = Prenda.find(params[:id])
+    @prenda.destroy
+    redirect_to action: :index
+
+  end
+
   private
   def prenda_params
-    params.require(:prenda).permit(:tipo, :categoria)
+    params.require(:prenda).permit(:tipo, :categoria, :tela, :color_p, :color_s)
   end
 end

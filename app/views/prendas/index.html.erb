@@ -1,5 +1,11 @@
-<section class="w3-container h-100">
-<h1>Prendas#index</h1>
-<p>Find me in app/views/prendas/index.html.erb</p>
-<%=@prendas%>
-</section>
+<h2> Tus prendas </h2>
+
+<ul>
+    <% @prendas.each do |prenda| %>
+        <li>
+            <%= link_to prenda.tipo , prenda %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Crear nueva prenda", 'prendas/new'%>

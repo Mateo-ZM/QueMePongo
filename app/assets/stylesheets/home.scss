@@ -9,7 +9,10 @@ $color-secundario: white; //Es el equivalente a rgb(255,255,255)
 $color-terciario: #68628a; //Es el equivalente a rgb(104,98,138)
 
 body {
-  height: 100vh;
+  //height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .presentacion{
@@ -41,7 +44,7 @@ nav.landing-navbar {
 }
 
 ///* Main *///
-main {
+main.bg-image{
   background-image: url(big-wardrobe.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -49,14 +52,14 @@ main {
   background-size: auto auto;
 }
 
-main div h1 {
+main.bg-image div h1 {
   font-size: 3.6rem;
   text-shadow: 2px 0 0 $color-primario, -2px 0 0 $color-primario,
     0 2px 0 $color-primario, 0 -2px 0 $color-primario, 1px 1px $color-primario,
     -1px -1px 0 $color-primario, 1px -1px 0 $color-primario,
     -1px 1px 0 $color-primario;
 }
-main div h2 {
+main.bg-image div h2 {
   font-size: 3.5rem;
   font-style: italic;
   text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white,
@@ -91,6 +94,9 @@ main div h2 {
 ///* Footer *///
 footer {
   background-color: $color-primario;
+  //align-self:flex-end;
+  //flex-grow: 1;
+  //margin-top: auto;
 }
 
 footer p {

@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2021_04_28_020908) do
     t.text "tela"
     t.text "color_p"
     t.text "color_s"
-    t.text "link_imagen"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

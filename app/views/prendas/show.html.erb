@@ -1,7 +1,39 @@
-<h3><%= @prenda.tipo %></h3>
 
-Información de la prenda
+<div class="container">
+    <main class="prenda d-flex flex-column justify-content-center align-items-center my-3 py-3">
 
-<%= link_to "Editar esta prenda", edit_prenda_path(@prenda) %>
+        <h1 class="my-1"><%= @prenda.tipo %></h1>
 
-<%= button_to "Delete", prenda_path(@prenda), method: :delete %>
+        <div class="card my-4" style="width: 18rem;">
+            <img src="https://falabella.scene7.com/is/image/FalabellaAR/880107514_1?wid=800&hei=800&qlt=70" class="card-img-top" alt="imagen de la prenda">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= @prenda.categoria %></li>
+                <li class="list-group-item">Algodon</li>
+                <li class="list-group-item">Gris</li>
+            </ul>
+        </div>
+
+
+
+        <div class="row mb-2">
+            <div class="col-md-4 col-sm-12">
+                <button  class="btn btn-crear-prenda btn-lg px-3 py-2">
+                    <%= link_to "Editar", edit_prenda_path(@prenda), class: "text-decoration-none text-white my-2"%>
+                </button>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <%= button_to "Eliminar", prenda_path(@prenda), method: :delete, class:"btn btn-crear-prenda btn-lg px-3 py-2", data: {confirm: 'Seguro que desea eliminar esta prenda?' } %>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <button  class="btn btn-crear-prenda btn-lg px-3 py-2">
+                    <%= link_to "Volver", "/prendas", class:"text-decoration-none text-white" %>
+                </button>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+

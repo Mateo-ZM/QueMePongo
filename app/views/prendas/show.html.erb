@@ -5,7 +5,12 @@
         <h1 class="my-1"><%= @prenda.tipo %></h1>
 
         <div class="card my-4" style="width: 18rem;">
-            <img src="https://falabella.scene7.com/is/image/FalabellaAR/880107514_1?wid=800&hei=800&qlt=70" class="card-img-top" alt="imagen de la prenda">
+            <img src=<%=if @prenda.link_imagen != nil
+                @prenda.link_imagen
+            else
+                "https://www.colombianosune.com/sites/default/files/asociaciones/NO_disponible-43_7.jpg"
+            end %> class="card-img-top" alt="imagen de la prenda">
+            
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><%= @prenda.categoria %></li>
                 <li class="list-group-item"><%= @prenda.tela %></li>

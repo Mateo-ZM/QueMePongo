@@ -1,3 +1,3 @@
 class Prenda < ApplicationRecord
-    enum categoria: [:torso, :piernas, :pies, :accesorio]
+    enum categoria: [:Torso, :Piernas, :Pies, :Accesorio]
 end

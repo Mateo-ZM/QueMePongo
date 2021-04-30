@@ -4,9 +4,13 @@
     <h1 class = "titulo my-5"> Creación de prenda </h1>
     <%= form_for @prenda do |f| %>
         <div>
-          Tipo de prenda: 
-          <%= f.text_field :tipo, class: "my-2 text-box" %>
+        Tipo de prenda: 
+        <%= f.text_field :tipo, class: "my-2 text-box" %>
         </div>
+        <div>
+            Categoria de la prenda:
+            <%= f.select :categoria, [ 'Torso', 'Piernas', 'Pies', 'Accesorio'], :prompt => 'Select One'%>
+        <div>
         <div>
             Tela de la prenda: 
             <%= f.text_field :tela, class: "my-2 text-box" %>
@@ -19,7 +23,6 @@
             Color secundario de la prenda: 
             <%= f.text_field :color_s, class: "my-2 text-box" %>
         </div>
-        <!--<%= f.select :categoria, Prenda.categoria%> -->
         <div>
             <%= f.submit "Crear prenda", class: "btn btn-general btn-lg px-3 py-2 my-3"%>
         </div>

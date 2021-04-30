@@ -1,24 +1,37 @@
-Formulario uwu
 
-<%= form_for @prenda do |f| %>
-    <div>
-        Tipo de prenda: 
-        <%= f.text_field :tipo %>
+<main class= "modificacion container h-100">
+
+    <h1 class="titulo my-5"> Modificación de prenda </h1>
+
+    <%= form_for @prenda do |f| %>
+        <div>
+            Tipo de prenda: 
+            <%= f.text_field :tipo, class: "my-2 text-box" %>
+        </div>
+        <div>
+            Tela de la prenda: 
+            <%= f.text_field :tela, class: "my-2 text-box" %>
+        </div>
+        <div>
+            Color Primario de la prenda: 
+            <%= f.text_field :color_p, class: "my-2 text-box" %>
+        </div>
+        <div>
+            Color secundario de la prenda: 
+            <%= f.text_field :color_s, class: "my-2 text-box" %>
+        </div>
+        <!--<%= f.select :categoria, Prenda.categoria%> -->
+        <div>
+            <%= f.submit "Modificar prenda",  class: "btn btn-general btn-lg px-3 py-2 my-3"%>
+        </div>
+    <% end %>
+</main>
+
+<footer class="footer fixed-bottom">
+    <div class="container d-flex flex-row">
+        <p class="m-4">QueMePongo &copy; All rights reserved</p>
+        <span class="ms-auto">
+            <p class="m-4 contacto text-center">Contacto: +54 9 11 2633-4567 | info@quemepongo.com.ar</p>
+        </span>
     </div>
-    <div>
-        Tela de la prenda: 
-        <%= f.text_field :tela %>
-    </div>
-    <div>
-        Color Primario de la prenda: 
-        <%= f.text_field :color_p %>
-    </div>
-    <div>
-        Color secundario de la prenda: 
-        <%= f.text_field :color_s %>
-    </div>
-    <!--<%= f.select :categoria, Prenda.categoria%> -->
-    <div>
-        <%= f.submit%>
-    </div>
-<% end %>
+</footer>

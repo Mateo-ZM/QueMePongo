@@ -1,10 +1,10 @@
-Prenda.create! tipo: "Remera manga corta", categoria: :torso
-Prenda.create! tipo: "Remera manga larga", categoria: :torso
-Prenda.create! tipo: "Botas militares", categoria: :pies
-Prenda.create! tipo: "Pantalon de Jean", categoria: :piernas
-Prenda.create! tipo: "Camisa negra", categoria: :torso
-Prenda.create! tipo: "Bandana Azul", categoria: :accesorio
-Prenda.create! tipo: "Pollera amarilla", categoria: :piernas
-Prenda.create! tipo: "Remera manga corta", categoria: :torso
-Prenda.create! tipo: "Remera manga larga", categoria: :torso
-Prenda.create! tipo: "Botas militares", categoria: :pies
+Prenda.create! tipo: "Remera manga corta", categoria: :torso, tela: "algodon", color_p: "verde", color_s: "azul"
+Prenda.create! tipo: "Remera manga larga", categoria: :torso, tela: "mohair", color_p: "azul"
+Prenda.create! tipo: "Botas militares", categoria: :pies, tela: "lino", color_p: "gris", color_s: "negro"
+Prenda.create! tipo: "Pantalon de Jean", categoria: :piernas, tela: "lana", color_p: "amarillo"
+Prenda.create! tipo: "Camisa negra", categoria: :torso, tela: "piel", color_p: "fucsia", color_s: "amarillo"
+Prenda.create! tipo: "Bandana Azul", categoria: :accesorio, tela: "seda", color_p: "blanco", color_s: "negro"
+Prenda.create! tipo: "Pollera amarilla", categoria: :piernas, tela: "mohair", color_p: "violeta", color_s: "rojo"
+Prenda.create! tipo: "Remera manga corta", categoria: :torso, tela: "lana", color_p: "verde"
+Prenda.create! tipo: "Remera manga larga", categoria: :torso, tela: "lino", color_p: "rojo", color_s: "amarillo"
+Prenda.create! tipo: "Botas militares", categoria: :pies, tela: "algodon", color_p: "naranja"

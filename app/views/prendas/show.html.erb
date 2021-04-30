@@ -5,17 +5,25 @@
         <h1 class="my-1"><%= @prenda.tipo %></h1>
 
         <div class="card my-4" style="width: 18rem;">
+
+            <div class="container h-100 d-flex justify-content-center align-center my-2" >
             <img src=<%=if @prenda.link_imagen != nil
                 @prenda.link_imagen
             else
                 "https://www.colombianosune.com/sites/default/files/asociaciones/NO_disponible-43_7.jpg"
-            end %> class="card-img-top" alt="imagen de la prenda">
-            
+            end %> class="img-fluid align-middle" style= "max-height: 20rem;" alt="imagen de la prenda">
+            </div>
+
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><%= @prenda.categoria %></li>
-                <li class="list-group-item"><%= @prenda.tela %></li>
-                <li class="list-group-item"><%= @prenda.color_p %></li>
-                <li class="list-group-item"><%= @prenda.color_s %></li>
+                <li class="list-group-item"><b>Categoria: </b><%= @prenda.categoria %></li>
+                <li class="list-group-item"><b>Tipo de Tela: </b><%= @prenda.tela %></li>
+                <li class="list-group-item"><b>Color/es: </b><%=
+                if @prenda.color_s != nil
+                    @prenda.color_p + " y " + @prenda.color_s
+                else
+                    @prenda.color_p 
+                end
+                %></li>
             </ul>
         </div>
 

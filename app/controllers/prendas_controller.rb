@@ -36,6 +36,6 @@ class PrendasController < ApplicationController
 
   private
   def prenda_params
-    params.require(:prenda).permit(:tipo, :categoria, :tela, :color_p, :color_s)
+    params.require(:prenda).permit(:tipo, :categoria, :tela, :color_p, :color_s, :link_imagen)
   end
 end

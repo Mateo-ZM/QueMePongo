@@ -43,12 +43,14 @@ nav.landing-navbar {
   color: $color-secundario;
 }
 
-///* Main *///
+///* Main *///  
 main.bg-image{
-  background-image: url(big-wardrobe.jpg);
+  background-image: url(Tajes_de_fondo.jpg);
+  
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 100vh;
+  height  : 100vh;
+
   background-size: auto auto;
 }
 
@@ -94,11 +96,34 @@ main.bg-image div h2 {
 ///* Footer *///
 footer {
   background-color: $color-primario;
-  //align-self:flex-end;
-  //flex-grow: 1;
-  //margin-top: auto;
+  align-self:flex-end;
+  width: 100%;
+  margin-top: auto;
 }
 
 footer p {
   color: $color-secundario;
+}
+
+.Gonzalo{
+  background-image: url(gonzalo.jpg);
+}
+
+.Lucas{
+  background-image: url(Lucas.jpg);
+}
+
+.Federico{
+  background-image: url(Federico.jpg);
+}
+
+.Mateo{
+  background-image: url(Mateo.jpg);
+}
+//src="https://noverbal.es/uploads/blog/rostro-de-un-criminal.jpg"
+
+
+.headshots_foto{
+  display: flex;
+  justify-content: center;
 }

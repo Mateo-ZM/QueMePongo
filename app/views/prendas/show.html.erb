@@ -7,7 +7,7 @@
         <div class="card my-4" style="width: 18rem;">
 
             <div class="container h-100 d-flex justify-content-center align-center my-2" >
-            <img src=<%=if @prenda.link_imagen != nil
+            <img src=<%=if @prenda.link_imagen != ''
                 @prenda.link_imagen
             else
                 "https://www.colombianosune.com/sites/default/files/asociaciones/NO_disponible-43_7.jpg"
@@ -18,7 +18,7 @@
                 <li class="list-group-item"><b>Categoria: </b><%= @prenda.categoria %></li>
                 <li class="list-group-item"><b>Tipo de Tela: </b><%= @prenda.tela %></li>
                 <li class="list-group-item"><b>Color/es: </b><%=
-                if @prenda.color_s != nil
+                if @prenda.color_s != '' && @prenda.color_s != nil
                     @prenda.color_p + " y " + @prenda.color_s
                 else
                     @prenda.color_p 
@@ -37,11 +37,11 @@
             </div>
 
             <div class="col-md-4 col-sm-12">
-                <%= button_to "Eliminar", prenda_path(@prenda), method: :delete, class:"btn btn-general btn-lg px-3 py-2", data: {confirm: 'Seguro que desea eliminar esta prenda?' } %>
+                <%= button_to "Eliminar", prenda_path(@prenda), method: :delete, :remote => true, class:"btn btn-general btn-lg px-3 py-2", data: {confirm: '¿Seguro que desea eliminar esta prenda?' } %>
             </div>
 
             <div class="col-md-4 col-sm-12">
-                <button  class="btn btn-general btn-lg px-3 py-2">
+                <button  class="btn btn-general btn-lg px-3 mx-3 py-2">
                     <%= link_to "Volver", "/prendas", class:"text-decoration-none text-white" %>
                 </button>
             </div>

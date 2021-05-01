@@ -1,5 +1,7 @@
 class PrendasController < ApplicationController
   
+  skip_forgery_protection
+
   def index
     @prendas = Prenda.all
   end
@@ -10,6 +12,12 @@ class PrendasController < ApplicationController
 
   def create
     Prenda.create! prenda_params
+    if Prenda.last.tipo == ''
+      Prenda.last.delete
+    end
+    if Prenda.last.color_p == Prenda.last.color_s
+      Prenda.last.update({:color_s => ""})
+    end
     redirect_to action: :index
   end
 
@@ -20,6 +28,9 @@ class PrendasController < ApplicationController
   def update
     @prenda = Prenda.find(params[:id])
     @prenda.update! prenda_params
+    if @prenda.color_p == @prenda.color_s
+      @prenda.update({:color_s => ""})
+    end
     redirect_to @prenda
   end
 
@@ -31,7 +42,6 @@ class PrendasController < ApplicationController
     @prenda = Prenda.find(params[:id])
     @prenda.destroy
     redirect_to action: :index
-
   end
 
   private

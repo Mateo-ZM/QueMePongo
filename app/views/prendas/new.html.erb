@@ -4,35 +4,6 @@
     <h1 class = "titulo my-5"> Creación de prenda </h1>
 
 
-    <%= form_for @prenda do |f| %>
-        <div>
-        Tipo de prenda: 
-        <%= f.text_field :tipo, class: "my-2 text-box" %>
-        </div>
-        <div>
-            Categoria de la prenda:
-            <%= f.select :categoria, [ 'Torso', 'Piernas', 'Pies', 'Accesorio'], :prompt => 'Elige uno'%>
-        <div>
-        <div>
-            Tela de la prenda: 
-            <%= f.text_field :tela, class: "my-2 text-box" %>
-        </div>
-        <div>
-            Color Primario de la prenda: 
-            <%= f.text_field :color_p, class: "my-2 text-box" %>
-        </div>
-        <div>
-            Color secundario de la prenda: 
-            <%= f.text_field :color_s, class: "my-2 text-box" %>
-        </div>
-        <div>
-            Link de Imagen de la prenda: 
-            <%= f.text_field :link_imagen, class: "my-2 text-box" %>
-        </div>
-        <div>
-            <%= f.submit "Crear prenda", class: "btn btn-general btn-lg px-3 py-2 my-3"%>
-            <%= button_to "Volver", "/prendas", class:"btn-salir px-3 mx-2 text-white"%>
-        </div>
-    <% end %>
+<%=render 'prendas/form'%>
 </main>
 

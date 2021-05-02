@@ -6,42 +6,40 @@
 
     <div class="card my-4 card_sola">
         <div class="card-header"><%= @prenda.tipo %></div>
-        <div class="container h-100 d-flex justify-content-center align-center my-2" >
-        <img src=<%=if @prenda.link_imagen != ''
-            @prenda.link_imagen
-        else
-            "https://www.colombianosune.com/sites/default/files/asociaciones/NO_disponible-43_7.jpg"
-        end %> class="img-fluid align-middle" style= "max-height: 20rem;" alt="imagen de la prenda">
+        <div class="container h-100 d-flex justify-content-center align-items-center my-2" >
+                <%if  @prenda.imagen.attached? %>
+                    <%= image_tag( @prenda.imagen , class:"fotos_cards h-100") %>
+                <%elsif @prenda.link_imagen != nil %>           <!--No entiendo porqué esto no es al revés pero asi funciona y de la otra forma no-->
+                    <%= image_tag( @prenda.link_imagen , class:"fotos_cards h-100") %>
+                <%else %>
+                    <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards h-100") %>
+                <%end %>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><b>Categoria: </b><%= @prenda.categoria %></li>
             <li class="list-group-item"><b>Tipo de Tela: </b><%= @prenda.tela %></li>
-            <li class="list-group-item"><b>Color/es: </b><%=
-            if @prenda.color_s != '' && @prenda.color_s != nil
-                @prenda.color_p + " y " + @prenda.color_s
-            else
-                @prenda.color_p 
-            end
-            %></li>
+            <li class="list-group-item"><b>Color/es: </b>
+                <%=if @prenda.color_s != '' && @prenda.color_s != nil
+                    @prenda.color_p + " y " + @prenda.color_s
+                else
+                    @prenda.color_p 
+                end%>
+            </li>
         </ul>
         
-
         <footer class="card-footer">
             <div class="row mb-2">
+
+
                 <div class="col-md-4 col-sm-12">
-                    <button  class="btn btn-general btn-lg px-3 py-2">
-                        <%= link_to "Editar", edit_prenda_path(@prenda), class: "text-decoration-none text-white "%>
-                    </button>
+                        <%= link_to "Editar", edit_prenda_path(@prenda), class: "text-decoration-none text-white btn btn-general btn-lg px-3 py-2"%>
                 </div>
 
                 <div class="col-md-4 col-sm-12">
                     <%= button_to "Eliminar", prenda_path(@prenda), method: :delete, class:"btn btn-general btn-lg px-3 py-2", data: {confirm: 'Seguro que desea eliminar esta prenda?' } %>
                 </div>
-
                 <div class="col-md-4 col-sm-12">
-                    <button  class="btn btn-general btn-lg px-3 py-2 mx-3">
-                        <%= link_to "Volver", "/prendas", class:"text-decoration-none text-white" %>
-                    </button>
+                        <%= link_to "Volver", "/prendas", class:"text-decoration-none text-white btn btn-general btn-lg px-3 py-2 mx-3" %>
                 </div>
             </div>
         </footer>

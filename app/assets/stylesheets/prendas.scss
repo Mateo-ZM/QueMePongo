@@ -40,4 +40,27 @@ main.guardarropa span.firulete{
     font-size: larger;
 }
 
+.modificacion{
+    h1{ 
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.mi_card{
+    width:30em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+.fotos_cards_index{
+    max-height: 7rem;
+    alt:"imagen de la prenda";
+    overflow: hidden;
+}
+.fotos_cards{
+    max-height: 15rem;
+    alt:"imagen de la prenda";
+    overflow: hidden;
+}
 

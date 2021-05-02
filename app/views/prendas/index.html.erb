@@ -10,12 +10,21 @@
                 
                     <div class="card h-100">
                         <div class="container h-100 d-flex justify-content-center align-center my-1" >
-                        <img src=<%=if prenda.link_imagen != ''
-                                        prenda.link_imagen
-                                    else
-                                        "https://www.colombianosune.com/sites/default/files/asociaciones/NO_disponible-43_7.jpg"
-                                    end %> class="img-fluid align-middle" style= "max-height: 7rem;" alt="imagen de la prenda">
-                        </div>
+                        <!--<img src=<%=if prenda.link_imagen != ''
+                                prenda.link_imagen
+                            else
+                                "https://www.colombianosune.com/sites/default/files/asociaciones/NO_disponible-43_7.jpg"
+                            end %> class="img-fluid align-middle" style= "max-height: 7rem;" alt="imagen de la prenda"> -->
+                        
+                            <%if  prenda.imagen.attached? %>
+                                <%= image_tag( prenda.imagen , class:"fotos_cards_index h-100") %>
+                            <%elsif prenda.link_imagen != nil %>           <!--No entiendo porqué esto no es al revés pero asi funciona y de la otra forma no-->
+                                <%= image_tag( prenda.link_imagen , class:"fotos_cards_index h-100") %>
+                            <%else %>
+                                <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards_index h-100") %>
+                            <%end %>   
+                            
+                        </div> 
                         <div class="card-footer">
                             <h5 class="text-center text-dark"><%= prenda.tipo %></h5>
                         </div>

@@ -7,7 +7,7 @@
             <div class="container d-flex justify-content-center my-2" >
                 <%if  @prenda.imagen.attached? %>
                     <%= image_tag( @prenda.imagen , class:"fotos_cards h-100") %>
-                <%elsif @prenda.link_imagen != nil %>           <!--No entiendo porqué esto no es al revés pero asi funciona y de la otra forma no-->
+                <%elsif @prenda.link_imagen != nil && @prenda.link_imagen != ''%>           <!--No entiendo porqué esto no es al revés pero asi funciona y de la otra forma no-->
                     <%= image_tag( @prenda.link_imagen , class:"fotos_cards h-100") %>
                 <%else %>
                     <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards h-100") %>
@@ -32,12 +32,12 @@
                     <li class="list-group-item"><b>Color primario: </b><%= f.text_field :color_s, class: "my-2 text-box form-control", placeholder: "Ej: Rosa, Naranja, etc." %> </li>
             </ul>
 
-            <card-footer>
+            <footer class="card-footer">
                 <div class="action form-group">
                     <%= f.submit   class: "btn btn-general px-3 py-2 my-3 form-control" %>
                     <%= button_to "Volver", "/prendas", class:"btn-salir px-3  text-white form-control"%>
                 </div>
-            </card-footer>
+            </footer>
         <% end %>
 
             <!--

@@ -18,7 +18,7 @@
                         
                             <%if  prenda.imagen.attached? %>
                                 <%= image_tag( prenda.imagen , class:"fotos_cards_index h-100") %>
-                            <%elsif prenda.link_imagen != nil %>           <!--No entiendo porqué esto no es al revés pero asi funciona y de la otra forma no-->
+                            <%elsif prenda.link_imagen != nil &&  prenda.link_imagen != '' %>           <!--No entiendo porqué esto no es al revés pero asi funciona y de la otra forma no-->
                                 <%= image_tag( prenda.link_imagen , class:"fotos_cards_index h-100") %>
                             <%else %>
                                 <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards_index h-100") %>
@@ -26,7 +26,12 @@
                             
                         </div> 
                         <div class="card-footer">
-                            <h5 class="text-center text-dark"><%= prenda.tipo %></h5>
+                            <h5 class="text-center text-dark"><% if prenda.tipo.length > 25 %>
+                                <%= prenda.tipo[0,25] + '...'%>
+                                <% else %>
+                                <%= prenda.tipo %>
+                                <% end %>
+                            </h5>
                         </div>
                     </div>
                 <% end %>

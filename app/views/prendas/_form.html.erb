@@ -1,8 +1,10 @@
 <div class="d-flex  justify-content-center">
     <div class="card mi_card ">
         <%= form_for @prenda do |f| %>
-            <div class="card-header position-relative"> <%= f.text_field :tipo, class: "my-2 text-box form-control d-flex justify-content-center" %>  </div>
-            <div class="container h-100 d-flex justify-content-center my-2" >
+            <div class="card-header position-relative">
+                <%= f.text_field :tipo, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
+            </div>
+            <div class="container d-flex justify-content-center my-2" >
                 <%if  @prenda.imagen.attached? %>
                     <%= image_tag( @prenda.imagen , class:"fotos_cards h-100") %>
                 <%elsif @prenda.link_imagen != nil %>           <!--No entiendo porqué esto no es al revés pero asi funciona y de la otra forma no-->
@@ -21,12 +23,13 @@
                 </div>
                 <div class="field form-group">
                     <b>Link de la Imagen: </b>
-                    <%= f.text_field :link_imagen, class: "my-2 text-box form-control" %>
-                </div>            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>Categoria: </b><%= f.select :categoria, [ 'Torso', 'Piernas', 'Pies', 'Accesorio'], :prompt => 'Elige uno', class:"form-control"%></li>
-                <li class="list-group-item"><b>Tela: </b><%= f.text_field :tela, class: "my-2 text-box form-control" %></li>
-                <li class="list-group-item"><b>Color primario: </b><%= f.text_field :color_p, class: "my-2 text-box form-control" %> </li>
-                <li class="list-group-item"><b>Color primario: </b><%= f.text_field :color_s, class: "my-2 text-box form-control" %> </li>
+                    <%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: "Link" %>
+                </div>            
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Categoria: </b><%= f.select :categoria, [ 'Torso', 'Piernas', 'Pies', 'Accesorio'], :prompt => 'Elige uno', class:"form-control"%></li>
+                    <li class="list-group-item"><b>Tela: </b><%= f.text_field :tela, class: "my-2 text-box form-control", placeholder: "Ej: Tela, Cuero, etc." %></li>
+                    <li class="list-group-item"><b>Color primario: </b><%= f.text_field :color_p, class: "my-2 text-box form-control", placeholder: "Ej: Rojo, Azul, etc." %> </li>
+                    <li class="list-group-item"><b>Color primario: </b><%= f.text_field :color_s, class: "my-2 text-box form-control", placeholder: "Ej: Rosa, Naranja, etc." %> </li>
             </ul>
 
             <card-footer>

@@ -6,17 +6,22 @@
 
 $color-primario: #222126; //Es el equivalente a rgb(34,33,38)
 $color-secundario: white; //Es el equivalente a rgb(255,255,255)
-$color-terciario: #68628a; //Es el equivalente a rgb(104,98,138)
+$color-terciario: #1B8F88; //Es el equivalente a rgb(104,98,138)
+$color-cuarto: #115C57;
+//cyan #1B8F88
 
-body {
-  //height: 100vh;
+body { 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.presentacion{
+.presentacion {
   text-align: center;
+}
+
+span.negrita {
+  font-weight: bold;
 }
 
 ///* Navbar *///
@@ -30,13 +35,13 @@ nav.landing-navbar {
   font-size: 1.2rem;
 }
 
-.nav-item:hover {
-  background-color: $color-secundario;
+.nav-item:hover, .nav-item:focus{
+  background-color: $color-terciario;
   cursor: pointer;
 }
 
-.nav-item:hover a {
-  color: $color-primario;
+.nav-item:hover a, .nav-item:focus a {
+  color: $color-secundario;
 }
 
 .fa-bars {
@@ -90,6 +95,12 @@ main.bg-image div h2 {
 {
   background-color: $color-terciario;
   color: $color-secundario;
+}
+
+.boton_principal:hover, .boton_principal:focus {
+  background-color: $color-cuarto;
+  color: $color-secundario;
+  cursor: pointer;
 }
 
 

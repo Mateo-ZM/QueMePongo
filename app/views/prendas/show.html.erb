@@ -1,59 +1,38 @@
-
 <div class="container">
     <main class="prenda d-flex justify-content-center my-5">
+        <div class="card my-4 mi_card">
+            <div class="card-header d-flex justify-content-between align-items-center"><i class="fa fa-arrow-left"></i><%= @prenda.tipo %><i class="fas fa-trash"></i></div>
 
+            <div class="container h-100 d-flex justify-content-center align-items-center my-2" >
+                    <%if  @prenda.imagen.attached? %>
+                        <%= image_tag( @prenda.imagen , class:"fotos_cards h-100") %>
+                    <%elsif @prenda.link_imagen != nil && @prenda.link_imagen != '' %>
+                        <%= image_tag( @prenda.link_imagen , class:"fotos_cards h-100") %>
+                    <%else %>
+                        <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards h-100") %>
+                    <%end %>
+            </div>
 
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><span class="negrita">Categoria: </span><%= @prenda.categoria %></li>
+                <li class="list-group-item"><span class="negrita">Tipo de Tela: </span><%= @prenda.tela %></li>
+                <li class="list-group-item"><span class="negrita">Color/es: </span>
+                    <%=if @prenda.color_s != '' && @prenda.color_s != nil
+                        @prenda.color_p + " y " + @prenda.color_s
+                    else
+                        @prenda.color_p 
+                    end%>
+                </li>
+            </ul>
 
-    <div class="card my-4 mi_card">
-        <div class="card-header"><%= @prenda.tipo %></div>
-        <div class="container h-100 d-flex justify-content-center align-items-center my-2" >
-                <%if  @prenda.imagen.attached? %>
-                    <%= image_tag( @prenda.imagen , class:"fotos_cards h-100") %>
-                <%elsif @prenda.link_imagen != nil && @prenda.link_imagen != '' %>           <!--No entiendo porqué esto no es al revés pero asi funciona y de la otra forma no-->
-                    <%= image_tag( @prenda.link_imagen , class:"fotos_cards h-100") %>
-                <%else %>
-                    <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards h-100") %>
-                <%end %>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>Categoria: </b><%= @prenda.categoria %></li>
-            <li class="list-group-item"><b>Tipo de Tela: </b><%= @prenda.tela %></li>
-            <li class="list-group-item"><b>Color/es: </b>
-                <%=if @prenda.color_s != '' && @prenda.color_s != nil
-                    @prenda.color_p + " y " + @prenda.color_s
-                else
-                    @prenda.color_p 
-                end%>
-            </li>
-        </ul>
-        
-        <footer class="card-footer">
-            <div class="action form-group">
+            <footer class="card-footer">
+                <div class="action form-group">
                     <%= link_to "Editar", edit_prenda_path(@prenda), class: "btn btn-general px-3 py-2 my-1 form-control"%>
                     <%= button_to "Eliminar", prenda_path(@prenda), method: :delete, class:"btn btn-general px-3 py-2 my-1 form-control", data: {confirm: 'Seguro que desea eliminar esta prenda?' } %>
-                    <%= link_to "Volver", "/prendas", class:"btn btn-general px-3 py-2 my-1 form-control" %>
-            </div>
-        </footer>
-
-
-        <!--<div class="row mb-2">
-            <div class="col-md-4 col-sm-12">
-                <button  class="btn btn-general btn-lg px-3 py-2">
-                    <%= link_to "Editar", edit_prenda_path(@prenda), class: "text-decoration-none text-white my-2"%>
-                </button>
-            </div>
-
-            <div class="col-md-4 col-sm-12">
-                <%= button_to "Eliminar", prenda_path(@prenda), method: :delete, :remote => true, class:"btn btn-general btn-lg px-3 py-2", data: {confirm: '¿Seguro que desea eliminar esta prenda?' } %>
-            </div>
-
-            <div class="col-md-4 col-sm-12">
-                <button  class="btn btn-general btn-lg px-3 mx-3 py-2">
-                    <%= link_to "Volver", "/prendas", class:"text-decoration-none text-white" %>
-                </button>
-            </div>
-        </div> -->
-    </div>
+                    <%= link_to "Volver", "/prendas", class:"btn btn-salir px-3 py-2 my-1 form-control" %> 
+                </div>
+            </footer>
+        </div>
     </main>
 </div>
 

@@ -4,61 +4,88 @@
 
 $color-primario: #222126; //Es el equivalente a rgb(34,33,38)
 $color-secundario: white; //Es el equivalente a rgb(255,255,255)
-$color-terciario: #68628a; //Es el equivalente a rgb(104,98,138)
+$color-terciario: #1B8F88; //Es el equivalente a rgb(104,98,138)
+$color-cuarto: #115C57;
+//rojo opcional #F54F47
 
-main.guardarropa h1.titulo{
+main.guardarropa h1.titulo {
     //text-decoration: underline;
     //text-decoration-color: $color-terciario;
     //font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3.6rem;;
 }
 
-main.guardarropa span.firulete{
+main.guardarropa span.firulete{ 
     color: $color-terciario;
     font-size: 3.6rem;;
 }
 
-.btn-general{
+.btn-general {
     background-color: $color-terciario;
     color: $color-secundario;
 }
 
-.btn-salir{
+.btn-general:hover, .btn-general:focus {
+    background-color: $color-cuarto;
     color: $color-secundario;
-    background-color: red;
 }
 
-//main.container-prenda{
-//    margin-left: 25%;
-//    margin-right: 25%;
-//}
+.btn-crear {
+    background-color: $color-terciario;
+    color: $color-secundario;
+    font-size: 1.5rem;
+}
 
-.card-header{
+.btn-crear:hover, .btn-crear:focus {
+    background-color: $color-cuarto;
+    color: $color-secundario;
+}
+
+.btn-salir {
+    color: $color-secundario;
+    background-color: #ed1c24;
+}
+
+.btn-salir:hover, .btn-salir:focus {
+    color: $color-secundario;
+    background-color: #780E12;
+}
+
+.card-header {
     display: flex;
     justify-content: center;
     font-weight: bold;
     font-size: larger;
 }
 
-.modificacion{
+.modificacion {
+    h1 { 
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.creacion {
     h1{ 
         display: flex;
         justify-content: center;
     }
 }
 
-.mi_card{
+.mi_card {
     width:30em;
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
 }
-.fotos_cards_index{
+
+.fotos_cards_index {
     max-height: 7rem;
     alt:"imagen de la prenda";
     overflow: hidden;
 }
-.fotos_cards{
+
+.fotos_cards {
     max-height: 15rem;
     alt:"imagen de la prenda";
     overflow: hidden;

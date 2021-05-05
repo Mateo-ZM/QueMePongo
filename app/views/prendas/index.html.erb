@@ -7,18 +7,12 @@
         <% @prendas.each do |prenda| %>
             <div class="col-lg-2 col-md-3 col-sm-4 col-6 my-2">
                     <%= link_to prenda, class: "text-decoration-none" do %>
-                
+
                     <div class="card h-100">
-                        <div class="container h-100 d-flex justify-content-center align-center my-1" >
-                        <!--<img src=<%=if prenda.link_imagen != ''
-                                prenda.link_imagen
-                            else
-                                "https://www.colombianosune.com/sites/default/files/asociaciones/NO_disponible-43_7.jpg"
-                            end %> class="img-fluid align-middle" style= "max-height: 7rem;" alt="imagen de la prenda"> -->
-                        
+                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
                             <%if  prenda.imagen.attached? %>
                                 <%= image_tag( prenda.imagen , class:"fotos_cards_index h-100") %>
-                            <%elsif prenda.link_imagen != nil &&  prenda.link_imagen != '' %>           <!--No entiendo porqué esto no es al revés pero asi funciona y de la otra forma no-->
+                            <%elsif prenda.link_imagen != nil &&  prenda.link_imagen != '' %>           
                                 <%= image_tag( prenda.link_imagen , class:"fotos_cards_index h-100") %>
                             <%else %>
                                 <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards_index h-100") %>
@@ -26,8 +20,9 @@
                             
                         </div> 
                         <div class="card-footer">
-                            <h5 class="text-center text-dark"><% if prenda.tipo.length > 25 %>
-                                <%= prenda.tipo[0,25] + '...'%>
+                            <h5 class="text-center text-dark">
+                                <% if prenda.tipo.length > 25 %>
+                                <%= prenda.tipo[0,25] + ' ...'%>
                                 <% else %>
                                 <%= prenda.tipo %>
                                 <% end %>
@@ -39,18 +34,7 @@
         <% end %>
     </div>
 
-    <section class="navegacion-guardarropa d-flex justify-content-between align-center my-4">
-        <%= link_to "Crear nueva prenda", 'prendas/new', class: "btn btn-general btn-lg px-3 py-2"%>  
-
-        <!-- <div class="botones-slider">
-            <button class="control-left" type="button">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="control-right" type="button">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div> -->
-
+    <section class="navegacion-guardarropa d-flex justify-content-center align-center my-4">
+        <%= link_to "Crear nueva prenda", 'prendas/new', class: "btn btn-crear btn-lg px-4 py-3"%>  
     </section>
 </main>
-

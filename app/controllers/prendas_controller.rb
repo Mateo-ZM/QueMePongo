@@ -16,7 +16,7 @@ class PrendasController < ApplicationController
 
       if  prenda.imagen.attached?
         prenda.link_imagen = url_for(prenda.imagen)
-      elsif !(prenda.link_imagen != nil &&  prenda.link_imagen != '' && ((prenda.link_imagen.include? "https://") || (prenda.link_imagen.include? "http://")))       
+      elsif !(prenda.link_imagen != nil &&  prenda.link_imagen != '' && ((prenda.link_imagen.include? "https://") || (prenda.link_imagen.include? "http://")) && ((prenda.link_imagen.include? ".jpg") || (prenda.link_imagen.include? ".jpeg") || (prenda.link_imagen.include? ".png") || (prenda.link_imagen.include? ".webp")))
         prenda.link_imagen = "imagen_no_disponible.jpg"
       end
     end
@@ -33,7 +33,7 @@ class PrendasController < ApplicationController
 
     if  @prenda.imagen.attached?
       @prenda.link_imagen = url_for(@prenda.imagen)
-    elsif !(@prenda.link_imagen != nil &&  @prenda.link_imagen != '' && ((@prenda.link_imagen.include? "https://") || (@prenda.link_imagen.include? "http://")))       
+    elsif !(@prenda.link_imagen != nil &&  @prenda.link_imagen != '' && ((@prenda.link_imagen.include? "https://") || (@prenda.link_imagen.include? "http://")) && ((@prenda.link_imagen.include? ".jpg") || (@prenda.link_imagen.include? ".jpeg") || (@prenda.link_imagen.include? ".png") || (@prenda.link_imagen.include? ".webp")))       
       @prenda.link_imagen = "imagen_no_disponible.jpg"
     end
   end
@@ -66,7 +66,7 @@ class PrendasController < ApplicationController
 
     if  @prenda.imagen.attached?
       @prenda.link_imagen = url_for(@prenda.imagen)
-    elsif !(@prenda.link_imagen != nil &&  @prenda.link_imagen != '' && ((@prenda.link_imagen.include? "https://") || (@prenda.link_imagen.include? "http://")))       
+    elsif !(@prenda.link_imagen != nil &&  @prenda.link_imagen != '' && ((@prenda.link_imagen.include? "https://") || (@prenda.link_imagen.include? "http://")) && ((@prenda.link_imagen.include? ".jpg") || (@prenda.link_imagen.include? ".jpeg") || (@prenda.link_imagen.include? ".png") || (@prenda.link_imagen.include? ".webp")))
       @prenda.link_imagen = "imagen_no_disponible.jpg"
     end
   end

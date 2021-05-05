@@ -6,9 +6,10 @@
     <div class="row mt-5 mb-3"> 
         <% @prendas.each do |prenda| %>
             <div class="col-lg-2 col-md-3 col-sm-4 col-6 my-2">
-                    <%= link_to prenda, class: "text-decoration-none" do %>
+                <%= link_to prenda, class: "text-decoration-none" do %>
 
                     <div class="card h-100">
+
                         <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
                             <%if  prenda.imagen.attached? %>
                                 <%= image_tag( prenda.imagen , class:"fotos_cards_index h-100") %>
@@ -17,18 +18,20 @@
                             <%else %>
                                 <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards_index h-100") %>
                             <%end %>   
-                            
-                        </div> 
+                        </div>
+
                         <div class="card-footer">
                             <h5 class="text-center text-dark">
                                 <% if prenda.tipo.length > 25 %>
-                                <%= prenda.tipo[0,25] + ' ...'%>
+                                    <%= prenda.tipo[0,25] + ' ...'%>
                                 <% else %>
-                                <%= prenda.tipo %>
+                                    <%= prenda.tipo %>
                                 <% end %>
                             </h5>
                         </div>
+
                     </div>
+
                 <% end %>
             </div>
         <% end %>
@@ -37,4 +40,5 @@
     <section class="navegacion-guardarropa d-flex justify-content-center align-center my-4">
         <%= link_to "Crear nueva prenda", 'prendas/new', class: "btn btn-crear btn-lg px-4 py-3"%>  
     </section>
+
 </main>

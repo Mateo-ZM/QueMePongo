@@ -72,7 +72,15 @@ main.guardarropa span.firulete{
     }
 }
 
-.mi_card {
+.mi_card_prenda {
+    width:30em;
+    height: 40em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.mi_card_modif {
     width:30em;
     display: flex;
     justify-content: center;

@@ -13,9 +13,7 @@ class PrendasController < ApplicationController
   def create
     Prenda.create! prenda_params
     
-    if Prenda.last.tipo == '' 
-      Prenda.last.delete
-    elsif Prenda.last.color_p == Prenda.last.color_s
+    if Prenda.last.color_p == Prenda.last.color_s
       Prenda.last.update({:color_s => ""})
     end
     redirect_to action: :index

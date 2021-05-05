@@ -12,7 +12,7 @@
                         <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
                             <%if  prenda.imagen.attached? %>
                                 <%= image_tag( prenda.imagen , class:"fotos_cards_index h-100") %>
-                            <%elsif prenda.link_imagen != nil &&  prenda.link_imagen != '' %>           
+                            <%elsif prenda.link_imagen != nil &&  prenda.link_imagen != '' && ((prenda.link_imagen.include? "https://") || (prenda.link_imagen.include? "http://"))%>           
                                 <%= image_tag( prenda.link_imagen , class:"fotos_cards_index h-100") %>
                             <%else %>
                                 <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards_index h-100") %>

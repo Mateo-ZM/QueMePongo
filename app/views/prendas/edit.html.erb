@@ -1,4 +1,46 @@
 <main class= "modificacion container h-100">
     <h1 class="titulo my-3"> Modificación de prenda </h1>
-    <%=render 'prendas/form'%>
+    <div class="d-flex  justify-content-center">
+    <div class="card mi_card ">
+        <%= form_for @prenda do |f| %>
+            <div class="card-header position-relative">
+                <%= f.text_field :tipo, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
+            </div>
+
+            <div class="container d-flex justify-content-center my-2" >
+                <%if  @prenda.imagen.attached? %>
+                    <%= image_tag( @prenda.imagen , class:"fotos_cards h-100") %>
+                <%elsif @prenda.link_imagen != nil && @prenda.link_imagen != '' && ((@prenda.link_imagen.include? "https://") || (@prenda.link_imagen.include? "http://"))%>
+                    <%= image_tag( @prenda.link_imagen , class:"fotos_cards h-100") %>
+                <%else %>
+                    <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards h-100") %>
+                <%end %>
+                
+            </div>
+
+            <div class="field form-group">   
+                <%=f.file_field :imagen , class: "form-control"%>
+            </div>
+
+            <div class="field form-group">
+                <span class="negrita">Link de la Imagen:</span>
+                <%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: "Link" %>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><span class="negrita">Categoria: </span><%= f.select :categoria, [ 'Torso', 'Piernas', 'Pies', 'Accesorio'], :prompt => 'Elige uno', class:"form-control"%></li>
+                <li class="list-group-item"><span class="negrita">Tela:</span> <%= f.text_field :tela, class: "my-2 text-box form-control", placeholder: "Ej: Tela, Cuero, etc." %></li>
+                <li class="list-group-item"><span class="negrita">Color primario: </span><%= f.text_field :color_p, class: "my-2 text-box form-control", placeholder: "Ej: Rojo, Azul, etc." %> </li>
+                <li class="list-group-item"><span class="negrita">Color secundario: </span><%= f.text_field :color_s, class: "my-2 text-box form-control", placeholder: "Ej: Rosa, Naranja, etc." %> </li>
+            </ul>
+            
+            <footer class="card-footer">
+                <div class="action form-group">
+                    <%= f.submit   class: "btn btn-general px-3 py-2 my-3 form-control" %>
+                    <%= link_to "Volver", @prenda, class:"btn-salir px-3 text-decoration-none text-center text-white form-control"%>
+                </div>
+            </footer>
+        <% end %>
+    </div>
+</div>
 </main>

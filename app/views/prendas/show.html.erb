@@ -6,7 +6,7 @@
             <div class="container h-100 d-flex justify-content-center align-items-center my-2" >
                     <%if  @prenda.imagen.attached? %>
                         <%= image_tag( @prenda.imagen , class:"fotos_cards h-100") %>
-                    <%elsif @prenda.link_imagen != nil && @prenda.link_imagen != '' %>
+                    <%elsif @prenda.link_imagen != nil && @prenda.link_imagen != '' && ((@prenda.link_imagen.include? "https://") || (@prenda.link_imagen.include? "http://")) %>
                         <%= image_tag( @prenda.link_imagen , class:"fotos_cards h-100") %>
                     <%else %>
                         <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards h-100") %>
@@ -28,8 +28,8 @@
             <footer class="card-footer">
                 <div class="action form-group">
                     <%= link_to "Editar", edit_prenda_path(@prenda), class: "btn btn-general px-3 py-2 my-1 form-control"%>
-                    <%= button_to "Eliminar", prenda_path(@prenda), method: :delete, class:"btn btn-general px-3 py-2 my-1 form-control", data: {confirm: 'Seguro que desea eliminar esta prenda?' } %>
-                    <%= link_to "Volver", "/prendas", class:"btn btn-salir px-3 py-2 my-1 form-control" %> 
+                    <%= button_to "Eliminar", prenda_path(@prenda), method: :delete, class:"btn btn-general px-3 py-2 my-1 form-control", data: {confirm: '¿Seguro que desea eliminar esta prenda?' } %>
+                    <%= link_to "Volver", prendas_path, class:"btn btn-salir px-3 py-2 my-1 form-control" %> 
                 </div>
             </footer>
         </div>

@@ -4,10 +4,34 @@ class PrendasController < ApplicationController
 
   def index
     @prendas = Prenda.all
+    
+    @prendas.each do |prenda|
+      if prenda.tipo.length > 25 
+        prenda.tipo = prenda.tipo[0,25] + ' ...'
+      else
+        prenda.tipo
+      end
+
+      if  prenda.imagen.attached?
+        prenda.link_imagen = url_for(prenda.imagen)
+      elsif !(prenda.link_imagen != nil &&  prenda.link_imagen != '' && ((prenda.link_imagen.include? "https://") || (prenda.link_imagen.include? "http://")))       
+        prenda.link_imagen = "imagen_no_disponible.jpg"
+      end
+    end
   end
 
   def show
     @prenda = Prenda.find(params[:id])
+
+    if @prenda.color_s != '' && @prenda.color_s != nil
+      @prenda.color_p = @prenda.color_p + " y " + @prenda.color_s
+    end
+
+    if  @prenda.imagen.attached?
+      @prenda.link_imagen = url_for(@prenda.imagen)
+    elsif !(@prenda.link_imagen != nil &&  @prenda.link_imagen != '' && ((@prenda.link_imagen.include? "https://") || (@prenda.link_imagen.include? "http://")))       
+      @prenda.link_imagen = "imagen_no_disponible.jpg"
+    end
   end
 
   def create
@@ -34,6 +58,12 @@ class PrendasController < ApplicationController
 
   def edit
     @prenda = Prenda.find(params[:id])
+
+    if  @prenda.imagen.attached?
+      @prenda.link_imagen = url_for(@prenda.imagen)
+    elsif !(@prenda.link_imagen != nil &&  @prenda.link_imagen != '' && ((@prenda.link_imagen.include? "https://") || (@prenda.link_imagen.include? "http://")))       
+      @prenda.link_imagen = "imagen_no_disponible.jpg"
+    end
   end
 
   def destroy

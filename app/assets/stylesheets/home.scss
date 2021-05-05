@@ -24,6 +24,11 @@ span.negrita {
   font-weight: bold;
 }
 
+::selection{
+  background-color: $color-terciario;
+  color: $color-secundario;
+}
+
 ///* Navbar *///
 nav.landing-navbar {
   background-color: $color-primario;
@@ -51,11 +56,9 @@ nav.landing-navbar {
 ///* Main *///  
 main.bg-image{
   background-image: url(Tajes_de_fondo.jpg);
-  
   background-attachment: fixed;
   background-repeat: no-repeat;
   height  : 100vh;
-
   background-size: auto auto;
 }
 
@@ -131,8 +134,6 @@ footer p {
 .Mateo{
   background-image: url(https://media-exp1.licdn.com/dms/image/C4E03AQH8ACaHB5czlg/profile-displayphoto-shrink_800_800/0/1617742080328?e=1625702400&v=beta&t=3nbKjyjR_cGlqfmli4KEJExPRuAchkDKaSzwpSJbH4A);
 }
-//src="https://noverbal.es/uploads/blog/rostro-de-un-criminal.jpg"
-
 
 .headshots_foto{
   display: flex;

@@ -7,15 +7,8 @@
                     <%= f.text_field :tipo, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
                 </div>
 
-                <div class="container d-flex justify-content-center my-2" >
-                    <%if  @prenda.imagen.attached? %>
-                        <%= image_tag( @prenda.imagen , class:"fotos_cards h-100") %>
-                    <%elsif @prenda.link_imagen != nil && @prenda.link_imagen != '' && ((@prenda.link_imagen.include? "https://") || (@prenda.link_imagen.include? "http://"))%>
-                        <%= image_tag( @prenda.link_imagen , class:"fotos_cards h-100") %>
-                    <%else %>
-                        <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards h-100") %>
-                    <%end %>
-                    
+                <div class="container d-flex justify-content-center my-2">
+                    <%= image_tag("imagen_no_disponible.jpg", class:"fotos_cards h-100") %>
                 </div>
 
                 <div class="field form-group">   

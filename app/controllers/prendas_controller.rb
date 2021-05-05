@@ -6,10 +6,12 @@ class PrendasController < ApplicationController
     @prendas = Prenda.all
     
     @prendas.each do |prenda|
-      if prenda.tipo.length > 25 
-        prenda.tipo = prenda.tipo[0,25] + ' ...'
-      else
-        prenda.tipo
+      if prenda.tipo != nil
+        if prenda.tipo.length > 25 
+          prenda.tipo = prenda.tipo[0,25] + ' ...'
+        else
+          prenda.tipo
+        end
       end
 
       if  prenda.imagen.attached?
@@ -24,7 +26,9 @@ class PrendasController < ApplicationController
     @prenda = Prenda.find(params[:id])
 
     if @prenda.color_s != '' && @prenda.color_s != nil
-      @prenda.color_p = @prenda.color_p + " y " + @prenda.color_s
+      if @prenda.color_s != @prenda.color_p
+        @prenda.color_p = @prenda.color_p + " y " + @prenda.color_s
+      end
     end
 
     if  @prenda.imagen.attached?
@@ -36,10 +40,11 @@ class PrendasController < ApplicationController
 
   def create
     Prenda.create! prenda_params
-    
+
     if Prenda.last.color_p == Prenda.last.color_s
       Prenda.last.update({:color_s => ""})
     end
+    
     redirect_to action: :index
   end
 

@@ -33,7 +33,7 @@ main.guardarropa span.firulete{
 .btn-crear {
     background-color: $color-terciario;
     color: $color-secundario;
-    font-size: 1.34rem;
+    font-size: 1.5rem;
 }
 
 .btn-crear:hover, .btn-crear:focus {
@@ -56,20 +56,6 @@ main.guardarropa span.firulete{
     justify-content: center;
     font-weight: bold;
     font-size: larger;
-}
-
-.modificacion {
-    h1 { 
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.creacion {
-    h1{ 
-        display: flex;
-        justify-content: center;
-    }
 }
 
 .mi_card_prenda {
@@ -100,16 +86,17 @@ main.guardarropa span.firulete{
     
 }
 
-.card-footer{
-    min-height: 4.5rem;
-    text-overflow: ellipsis;
-    //overflow: hidden;
+.card-footer-index{
+    height: 6rem;
 }
 
-
-//.card-index {
-    //max-height: 20rem;
-//}
+.card-footer h5 {
+    margin-top: auto;
+    margin-bottom: auto;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis; //con un height fijo del card-footer deberia funcionar
+}
 
 
 .pagination {
@@ -142,7 +129,8 @@ main.guardarropa span.firulete{
     }
 
     a {
-        padding: 0 0.6rem;
+        padding:0.35rem 0.6rem ;
+        padding-right: 0.6rem ;
         line-height: 2.5rem;
         font-size: 1.34rem;
         text-decoration: none;
@@ -170,6 +158,9 @@ main.guardarropa span.firulete{
 
     .first{
         padding : 0;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        overflow: hidden;
     }
     .prev {
         padding : 0;
@@ -183,5 +174,8 @@ main.guardarropa span.firulete{
     .last{
         padding : 0;
         border-right: 0.01rem  solid grey;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        overflow: hidden;
     }
 }

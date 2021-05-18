@@ -4,49 +4,25 @@ class PrendasController < ApplicationController
 
   def index
     @prendas = Prenda.page(params[:page])
-    
     @prendas.each do |prenda|
-      if prenda.tipo != nil
-        if prenda.tipo.length > 19
-          prenda.tipo = prenda.tipo[0,19] + ' ...'
-        else
-          prenda.tipo
-        end
-      end
-
-      if  prenda.imagen.attached?
-        prenda.link_imagen = url_for(prenda.imagen)
-      elsif prenda.vacia?
-        prenda.link_imagen = "imagen_no_disponible.jpg"
-      end
+      prenda.comprobar_link_imagen!
     end
   end
 
   def show
     @prenda = Prenda.find(params[:id])
-
     if !@prenda.color_secundario.blank? 
       if !@prenda.mismo_color?
         @prenda.color_primario = @prenda.color_primario + " y " + @prenda.color_secundario
       end
     end
-
-    if  @prenda.imagen.attached?
-      @prenda.link_imagen = url_for(@prenda.imagen)
-    elsif @prenda.vacia?       
-      @prenda.link_imagen = "imagen_no_disponible.jpg"
-    end
+    @prenda.comprobar_link_imagen!
   end
 
   def create
     @prenda = Prenda.new prenda_params
-
-    if @prenda.mismo_color?
-      @prenda.update({:color_secundario => ""})
-    end
-
+    @prenda.comprobar_color_secundario
     @prenda.save
-    
     redirect_to @prenda
   end
 
@@ -57,22 +33,13 @@ class PrendasController < ApplicationController
   def update
     @prenda = Prenda.find(params[:id])
     @prenda.update! prenda_params
-
-    if @prenda.mismo_color?
-      @prenda.update({:color_secundario => ""})
-    end
-
+    @prenda.comprobar_color_secundario
     redirect_to @prenda
   end
 
   def edit
     @prenda = Prenda.find(params[:id])
-
-    if  @prenda.imagen.attached?
-      @prenda.link_imagen = url_for(@prenda.imagen)
-    elsif @prenda.vacia?
-      @prenda.link_imagen = "imagen_no_disponible.jpg"
-    end
+    @prenda.comprobar_link_imagen!
   end
 
   def destroy

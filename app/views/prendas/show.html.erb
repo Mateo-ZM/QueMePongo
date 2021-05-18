@@ -8,18 +8,18 @@
             </div>
 
             <div class="container h-100 d-flex justify-content-center align-items-center my-2" >
-                <%= image_tag( @prenda.link_imagen , class:"fotos_cards h-100") %>
+                <%= image_tag( @prenda.link_imagen , class:"fotos_cards_show h-100") %>
             </div>
 
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><span class="negrita">Categoria: </span><%= @prenda.categoria %></li>
                 <li class="list-group-item"><span class="negrita">Tipo de Tela: </span><%= @prenda.tela %></li>
-                <li class="list-group-item"><span class="negrita">Color/es: </span><%= @prenda.color_p%></li>
+                <li class="list-group-item"><span class="negrita">Color/es: </span><%= @prenda.color_primario%></li>
             </ul>
 
             <footer class="card-footer">
                 <div class="action form-group">
-                    <%= link_to "Editar", edit_prenda_path(@prenda), class: "btn btn-general px-3 py-2 my-1 form-control"%>
+                    <%= link_to edit_prenda_path(@prenda), class: "btn btn-general px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> Editar</p> <%end%>
                 </div>
             </footer>
         </div>

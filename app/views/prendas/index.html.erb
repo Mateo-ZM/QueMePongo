@@ -4,9 +4,9 @@
 
     <div class="row mt-5 mb-3"> 
         <% @prendas.each do |prenda| %>
-            <div class="col-lg-2 col-md-3 col-sm-4 col-6 my-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 my-2">
                 <%= link_to prenda, class: "text-decoration-none" do %>
-                    <div class="card h-100">
+                    <div class="card card-index h-100">
                         <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
                             <%= image_tag( prenda.link_imagen , class:"fotos_cards_index h-100") %>
                         </div>
@@ -23,6 +23,6 @@
     </div>
 
     <section class="navegacion-guardarropa d-flex justify-content-center align-center my-4">
-        <%= link_to "Crear nueva prenda", 'prendas/new', class: "btn btn-crear btn-lg px-4 py-3"%>  
+        <%= link_to 'prendas/new', class: "btn btn-crear btn-lg px-4 py-3" do %>  <i class="fas fa-plus-circle"></i> <p class="d-inline ">Crear prenda</p><%end%>
     </section>
 </main>

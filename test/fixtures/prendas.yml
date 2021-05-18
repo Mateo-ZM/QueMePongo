@@ -4,12 +4,12 @@ one:
   tipo: MyText
   categoria: 1
   tela: MyText
-  color_p: MyText
-  color_s: MyText
+  color_primario: MyText
+  color_secundario: MyText
 
 two:
   tipo: MyText
   categoria: 1
   tela: MyText
-  color_p: MyText
-  color_s: MyText
+  color_primario: MyText
+  color_secundario: MyText

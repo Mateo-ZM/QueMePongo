@@ -3,9 +3,9 @@ class CreatePrendas < ActiveRecord::Migration[6.0]
     create_table :prendas do |t|
       t.text :tipo
       t.integer :categoria
-      t.text :tela
-      t.text :color_p
-      t.text :color_s
+      t.integer :tela
+      t.text :color_primario
+      t.text :color_secundario
       t.text :link_imagen
 
       t.timestamps

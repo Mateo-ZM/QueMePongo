@@ -88,14 +88,26 @@ main.guardarropa span.firulete{
 }
 
 .fotos_cards_index {
-    max-height: 7rem;
+    max-height: 12rem;
     alt:"imagen de la prenda";
     overflow: hidden;
 }
 
-.fotos_cards {
+.fotos_cards_show {
     max-height: 15rem;
     alt:"imagen de la prenda";
     overflow: hidden;
+    
 }
+
+.card-footer{
+    min-height: 4.5rem;
+    text-overflow: ellipsis;
+    //overflow: hidden;
+}
+
+
+//.card-index {
+    //max-height: 20rem;
+//}
 

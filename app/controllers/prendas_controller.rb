@@ -3,7 +3,7 @@ class PrendasController < ApplicationController
   skip_forgery_protection
 
   def index
-    @prendas = Prenda.all
+    @prendas = Prenda.page(params[:page])
     
     @prendas.each do |prenda|
       if prenda.tipo != nil
@@ -47,7 +47,7 @@ class PrendasController < ApplicationController
 
     @prenda.save
     
-    redirect_to action: :index
+    redirect_to @prenda
   end
 
   def new

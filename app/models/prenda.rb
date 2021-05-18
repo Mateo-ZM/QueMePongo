@@ -2,6 +2,7 @@ class Prenda < ApplicationRecord
     enum categoria: [:Torso, :Piernas, :Pies, :Accesorio]
     enum tela: [:Algodon, :Lana, :Lino, :Cuero, :Denim, :Seda, :Poliester, :Mohair, :Piel, :Cuerina]
     has_one_attached :imagen
+    paginates_per 8
 
     def vacia?
         return (self.link_imagen.blank? || ((URI.parse(self.link_imagen).scheme != "https") && (URI.parse(self.link_imagen).scheme != "http")))

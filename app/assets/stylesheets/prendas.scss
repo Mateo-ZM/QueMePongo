@@ -33,7 +33,7 @@ main.guardarropa span.firulete{
 .btn-crear {
     background-color: $color-terciario;
     color: $color-secundario;
-    font-size: 1.5rem;
+    font-size: 1.34rem;
 }
 
 .btn-crear:hover, .btn-crear:focus {
@@ -111,3 +111,77 @@ main.guardarropa span.firulete{
     //max-height: 20rem;
 //}
 
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    span{
+        font-size: 1.34rem;
+        background-color: $color-secundario;
+        color: $color-terciario;
+        border-top: 0.01rem  solid grey;
+        border-bottom: 0.01rem  solid grey;
+        border-left: 0.01rem  solid grey;
+    }
+
+    span:hover{
+        background-color: $color-cuarto;
+        color: $color-secundario;
+    }
+
+    span:hover a{
+        background-color: $color-cuarto;
+        color: $color-secundario;
+    }
+
+    a:hover{
+        background-color: $color-cuarto;
+        color: $color-secundario;
+    }
+
+    a {
+        padding: 0 0.6rem;
+        line-height: 2.5rem;
+        font-size: 1.34rem;
+        text-decoration: none;
+        background-color: $color-secundario;
+        color: $color-terciario;
+    }
+
+    span.current{
+        padding: 0 0.6rem;
+        font-size: 1.34rem;
+        line-height: 2.5rem;
+        text-decoration: none;
+        background-color: $color-terciario;
+        color: $color-secundario;
+    }
+
+    span.gap {
+        padding: 0 0.6rem;
+        font-size: 1.34rem;
+        line-height: 2.5rem;
+        text-decoration: none;
+        background-color: $color-secundario;
+        color: $color-terciario;
+    }
+
+    .first{
+        padding : 0;
+    }
+    .prev {
+        padding : 0;
+    }
+    .page{
+        padding : 0;
+    }
+    .next{
+        padding : 0;
+    }
+    .last{
+        padding : 0;
+        border-right: 0.01rem  solid grey;
+    }
+}

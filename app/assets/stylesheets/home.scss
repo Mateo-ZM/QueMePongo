@@ -36,7 +36,22 @@ nav.landing-navbar {
   border-bottom: 5px solid $color-terciario;
 }
 
-.nav-link {
+.nav-img{
+  height: 2em;
+}
+
+.nav-icon{
+  /*margin-right: 6rem;*/
+  white-space: nowrap;
+  width: 17em;
+}
+
+.nav-clima{
+
+  text-align: center;
+}
+
+.nav-text {
   color: $color-secundario;
   font-size: 1.2rem;
 }

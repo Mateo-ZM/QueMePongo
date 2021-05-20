@@ -1,0 +1,26 @@
+<main class= "container h-100">
+    <h1 class = "titulo text-center mt-4 mb-3"> <%= titulo %> </h1>
+    <div class="d-flex  justify-content-center">
+        <div class="card mi_card_modif ">
+            <%= form_for guardarropa do |f| %>
+                <div class="card-header position-relative">
+                    <%= f.text_field :Nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
+                </div>
+
+
+                
+                <footer class="card-footer">
+                    <div class="action form-group">
+                        <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 form-control ") do %>
+                            <i class="<%= icono%>"%></i> <p class="d-inline"><%= btn_text %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
+                        <% end %>
+                        
+                        <%= link_to "/guardarropas", class:"btn-salir px-3 text-decoration-none text-center text-white form-control" do%>
+                            <i class="fa fa-arrow-left"></i><p class="d-inline"> Volver</p>
+                        <% end %>
+                    </div>
+                </footer>
+            <% end %>
+        </div>
+    </div>
+</main>

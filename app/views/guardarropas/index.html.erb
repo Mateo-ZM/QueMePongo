@@ -3,17 +3,15 @@
     <h1 class="titulo my-4 text-center">Mi guardarropa</h1>
 
     <div class="row mt-5 mb-3"> 
-        <% @prendas.each do |prenda| %>
+        <% @guardarropas.each do |guardarropa| %>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-2"> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                <%= link_to prenda, class: "text-decoration-none" do %>
+                <%= link_to guardarropa, class: "text-decoration-none" do %>
                     <div class="card h-100">
-                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                            <%= image_tag( prenda.link_imagen , class:"fotos_cards_index h-100") %>
-                        </div>
+
 
                         <div class="card-footer card-footer-index d-flex justify-content-center align-center">
                             <h5 class="container text-center text-dark">
-                                <%= prenda.tipo%>
+                                <%= guardarropa.Nombre%>
                             </h5>
                         </div>
                     </div>
@@ -24,7 +22,6 @@
 
     <section class="navegacion-guardarropa d-flex justify-content-between align-center my-4">
         <%= link_to 'prendas/new', class: "btn btn-crear btn-lg" do %>  <i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear prenda</p><%end%>
-        <%= paginate @prendas, window: 3 %>
+        <%= paginate @guardarropas, window: 3 %>
     </section>
 </main>
-

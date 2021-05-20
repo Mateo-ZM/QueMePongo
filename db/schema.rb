@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_01_094410) do
+ActiveRecord::Schema.define(version: 2021_05_20_210812) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,28 @@ ActiveRecord::Schema.define(version: 2021_05_01_094410) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "atuendos", force: :cascade do |t|
+    t.string "Descripcion"
+    t.integer "Puntaje"
+    t.integer "Etiqueta_Formal"
+    t.integer "Etiqueta_Estacion"
+    t.integer "Etiqueta_DiaNoche"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "prenda_torso_id"
+    t.integer "prenda_piernas_id"
+    t.integer "prenda_pies_id"
+    t.integer "prenda_accesorios_id"
+    t.integer "guardarropa_id"
+    t.index ["guardarropa_id"], name: "index_atuendos_on_guardarropa_id"
+  end
+
+  create_table "guardarropas", force: :cascade do |t|
+    t.string "Nombre"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "prendas", force: :cascade do |t|
     t.text "tipo"
     t.integer "categoria"
@@ -42,6 +64,8 @@ ActiveRecord::Schema.define(version: 2021_05_01_094410) do
     t.text "link_imagen"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "guardarropa_id"
+    t.index ["guardarropa_id"], name: "index_prendas_on_guardarropa_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

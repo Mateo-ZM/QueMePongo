@@ -1,0 +1,2 @@
+module AtuendosHelper
+end

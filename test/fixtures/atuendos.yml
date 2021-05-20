@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Descripcion: MyString
+  Puntaje: 1
+  Etiqueta_Formal: 1
+  Etiqueta_Estacion: 1
+  Etiqueta_DiaNoche: 1
+
+two:
+  Descripcion: MyString
+  Puntaje: 1
+  Etiqueta_Formal: 1
+  Etiqueta_Estacion: 1
+  Etiqueta_DiaNoche: 1

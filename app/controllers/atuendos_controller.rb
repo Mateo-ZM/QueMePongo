@@ -1,0 +1,2 @@
+class AtuendosController < ApplicationController
+end

@@ -3,13 +3,14 @@ class GuardarropasController < ApplicationController
         @guardarropas = Guardarropa.page(params[:page])
     end
     def show
-        @prendas = Guardarropa.find(params[:id]).prendas
+        @guardarropas = Guardarropa.find(params[:id])
+        @prendas = @guardarropas.prendas
     end
     
     def create
         @guardarropa = Guardarropa.new guardarropa_params
         @guardarropa.save
-        redirect_to @guardarropa
+        redirect_to "/guardarropas"
     end
     
     def new

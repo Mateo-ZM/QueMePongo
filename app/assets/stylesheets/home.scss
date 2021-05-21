@@ -37,7 +37,10 @@ nav.landing-navbar {
 }
 
 .nav-img{
-  height: 2em;
+  height: 2rem;
+  background-color: $color-secundario;
+  border: 0.5px solid $color-primario;
+  border-radius: 10px;
 }
 
 .nav-icon{
@@ -49,7 +52,6 @@ nav.landing-navbar {
 }
 
 .nav-clima{
-
   text-align: center;
 }
 

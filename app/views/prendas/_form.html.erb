@@ -2,7 +2,7 @@
     <h1 class = "titulo text-center mt-4 mb-3"> <%= titulo %> </h1>
     <div class="d-flex  justify-content-center">
         <div class="card mi_card_modif ">
-            <%= form_for prenda do |f| %>
+            <%= form_for [@guardarropa,@prenda] do |f| %>
                 <div class="card-header position-relative">
                     <%= f.text_field :tipo, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
                 </div>
@@ -29,7 +29,7 @@
                             <i class="<%= icono%>"%></i> <p class="d-inline"><%= btn_text %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                         <% end %>
                         
-                        <%= link_to "/prendas", class:"btn-salir px-3 text-decoration-none text-center text-white form-control" do%>
+                        <%= link_to link_volver, class:"btn-salir px-3 text-decoration-none text-center text-white form-control" do%>
                             <i class="fa fa-arrow-left"></i><p class="d-inline"> Volver</p>
                         <% end %>
                     </div>

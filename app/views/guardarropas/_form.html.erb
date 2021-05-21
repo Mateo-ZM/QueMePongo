@@ -7,8 +7,18 @@
                     <%= f.text_field :Nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
                 </div>
 
+                <div class="container d-flex justify-content-center my-2">
+                    <%= image_tag(link_imagen, class:"fotos_cards_show h-100") %>
+                </div>
 
-                
+                <div class="field form-group">   
+                    <%=f.file_field :imagen , class: "form-control"%>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="negrita">Link de la Imagen: </span><%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: "Link imagen" %>
+                </ul>
+
                 <footer class="card-footer">
                     <div class="action form-group">
                         <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 form-control ") do %>

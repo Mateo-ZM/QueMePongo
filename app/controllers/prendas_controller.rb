@@ -5,7 +5,7 @@ class PrendasController < ApplicationController
 
 
   def index
-    @prendas = Prenda.page(params[:page])
+    @prendas = @guardarropa.prendas.page(params[:page])
     @prendas.each do |prenda|
       prenda.comprobar_link_imagen!
     end
@@ -23,19 +23,9 @@ class PrendasController < ApplicationController
 
   def create
     @prenda = @guardarropa.prendas.build (prenda_params)
-    #respond_to do |format|
-    #  if @prenda.save
-    #    format.html { redirect_to guardarropa_prendas_path(@guardarropa), notice: 'Post was successfully created.' }
-    #    format.json { render :show, status: :created, location: @prenda }
-    #  else
-    #    format.html { render :new }
-    #    format.json { render json: @prenda.errors, status: :unprocessable_entity }
-    #  end
-    #end
     @prenda.comprobar_color_secundario
     @prenda.save
     redirect_to guardarropa_prenda_path(@guardarropa,@prenda)
-    #redirect_to guardarropa_prendas_path(Guardarropa.find(params[:guardarropa_id]))
   end
 
   def new

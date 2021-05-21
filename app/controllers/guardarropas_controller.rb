@@ -1,6 +1,9 @@
 class GuardarropasController < ApplicationController
     def index
         @guardarropas = Guardarropa.page(params[:page])
+        @guardarropas.each do |guardarropa|
+            guardarropa.comprobar_link_imagen!
+        end
     end
     def show
         @guardarropas = Guardarropa.find(params[:id])
@@ -10,7 +13,7 @@ class GuardarropasController < ApplicationController
     def create
         @guardarropa = Guardarropa.new guardarropa_params
         @guardarropa.save
-        redirect_to "/guardarropas"
+        redirect_to "/guardarropas" 
     end
     
     def new
@@ -20,11 +23,12 @@ class GuardarropasController < ApplicationController
     def update
         @guardarropa = Guardarropa.find(params[:id])
         @guardarropa.update! guardarropa_params
-        redirect_to @guardarropa
+        redirect_to guardarropas_path
     end
     
     def edit
         @guardarropa = Guardarropa.find(params[:id])
+        @guardarropa.comprobar_link_imagen!
     end
     
     def destroy
@@ -35,7 +39,7 @@ class GuardarropasController < ApplicationController
     
     private
     def guardarropa_params
-        params.require(:guardarropa).permit(:Nombre)
+        params.require(:guardarropa).permit(:Nombre, :imagen, :link_imagen)
     end
 
 end

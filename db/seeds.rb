@@ -1,6 +1,6 @@
-guardarropa_1 = Guardarropa.create! Nombre: "Prueba 1"
-guardarropa_2 = Guardarropa.create! Nombre: "Prueba 2"
-guardarropa_3 = Guardarropa.create! Nombre: "Prueba 3"
+guardarropa_1 = Guardarropa.create! Nombre: "Prueba 1", link_imagen: "https://c0.klipartz.com/pngpicture/382/304/gratis-png-icono-de-dibujos-animados-de-guardarropa-un-armario-abierto.png"
+guardarropa_2 = Guardarropa.create! Nombre: "Prueba 2", link_imagen: "https://img.icons8.com/bubbles/2x/wardrobe.png"
+guardarropa_3 = Guardarropa.create! Nombre: "Prueba 3", link_imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZi0PBoJDgfWf8dJM9MUEQhS_GBwQInw45zs8ZkzFoyjrveZHyDdLxKkUrhqU7oBbfzNc&usqp=CAU"
 
 guardarropa_1.prendas << (Prenda.create! tipo: "Remera manga corta", categoria: :Torso, tela: :Algodon, color_primario: "rojo", link_imagen:"https://cdyc.com.ar/wp-content/uploads/2018/09/remeraroja.jpg")
 guardarropa_1.prendas << (Prenda.create! tipo: "Remera manga larga", categoria: :Torso, tela: :Mohair, color_primario: "azul", link_imagen: "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_azul_lisa_manga_larga_op1_.jpg")

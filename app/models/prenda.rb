@@ -21,7 +21,7 @@ class Prenda < ApplicationRecord
 
     def comprobar_link_imagen! 
         if  self.imagen.attached?
-            self.link_imagen = url_for(self.imagen)
+            #self.link_imagen = url_for(self.imagen)
         elsif self.vacia?
             self.link_imagen = "imagen_no_disponible.jpg"
         end

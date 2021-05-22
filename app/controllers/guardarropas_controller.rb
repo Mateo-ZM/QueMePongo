@@ -41,5 +41,4 @@ class GuardarropasController < ApplicationController
     def guardarropa_params
         params.require(:guardarropa).permit(:Nombre, :imagen, :link_imagen)
     end
-
 end

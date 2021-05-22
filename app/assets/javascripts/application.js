@@ -32,14 +32,4 @@ xhr.onload = function(){
     }
 }
 
-/*xhr.onprogress = function(){
-    document.getElementById('clima-loader').hidden = false;
-}
-
-
-xhr.onerror = function(){
-    document.getElementById('clima-loader').hidden = true;
-    console.log('Request Error...');
-}*/
-
 xhr.send();

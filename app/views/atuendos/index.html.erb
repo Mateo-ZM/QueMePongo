@@ -1,0 +1,41 @@
+<main class="guardarropa container">
+    
+    <h1 class="titulo mt-4 text-center">Atuendos de <%= @guardarropa.Nombre %></h1>
+    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path %></li>
+            <li class="breadcrumb-item"><%= link_to "Prendas", guardarropa_prendas_path(@guardarropa) %></li>
+            <li class="breadcrumb-item active" aria-current="page">Atuendos</li>
+        </ol>
+    </nav>
+
+    <div class="row mt-5 mb-3"> 
+        <% @atuendos.each do |atuendo| %>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-2"> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
+                <%= link_to guardarropa_atuendo_path(@guardarropa,atuendo), class: "text-decoration-none" do %>
+                    <div class="card h-100">
+                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
+                            <%= image_tag(atuendo.link_imagen , class:"fotos_cards_index h-100") %>
+                        </div>
+
+                        <div class="card-footer card-footer-index d-flex justify-content-center align-center">
+                            <h5 class="container text-center text-dark">
+                                <%= atuendo.tipo%>
+                            </h5>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+
+    <section class="navegacion-guardarropa d-flex justify-content-between align-center my-4">
+        <div class="botones-index-atuendo">
+            <%= link_to new_guardarropa_atuendo_path(@guardarropa), class: "btn btn-crear btn-lg" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear atuendo</p><%end%>
+            <%= link_to guardarropa_prendas_path(@guardarropa), class: "btn btn-crear btn-lg" do %><i class="fas fa-list"></i> <p class="d-inline">Prendas</p><%end%>
+            <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline">Guardarropas</p><%end%>
+        </div>
+        <%= paginate @atuendos, window: 3 %>
+    </section>
+</main>

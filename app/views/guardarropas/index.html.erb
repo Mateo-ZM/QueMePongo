@@ -1,32 +1,32 @@
 <main class="guardarropa container">
     
     <h1 class="titulo my-4 text-center">Guardarropas de "Usuario"</h1>
-
+    
     <div class="row mt-5 mb-3"> 
         <% @guardarropas.each do |guardarropa| %>
-            <div class="col-12 my-2"> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                <div class="card d-flex flex-row justify-content-between align-items-center h-100">
-                    <%= link_to guardarropa_prendas_path(guardarropa), class: "text-decoration-none" do %>
-                        <div class="card-footer-index d-flex justify-content-center align-items-center">
-                            <div class="card-footer container h-100 d-flex justify-content-center align-items-center border-0" >
-                                <img src="<%= guardarropa.link_imagen %>" alt="" class="fotos_cards_index h-100">
-                            </div>
-                            <h3 class="container text-center text-dark">
-                                <%= guardarropa.Nombre%>
-                            </h3>
-                            <h4 class="container text-center text-dark">
-                                <%= guardarropa.prendas.count%> prendas
-                            </h4>
-                            <h4 class="container text-center text-dark">
-                                <%= guardarropa.atuendos.count%> atuendos
-                            </h4>
+            <div class="col-12 my-2"> 
+                <div class="card d-flex flex-row justify-content-between flex-wrap align-items-center">
+                    <%= link_to guardarropa_prendas_path(guardarropa), class: "text-decoration-none d-flex flex-row justify-content-start flex-grow-1 align-items-center" do %>
+                        <div class="p-0" >
+                            <img src="<%= guardarropa.link_imagen %>" alt="" class="card-fotos-guardarropa-index">
                         </div>
+                        <div class="textos d-flex flex-row  flex-grow-1 justify-content-around align-items-center">
+                            <div class="card-nombre-guardarropa-index">
+                                <h2 class="text-center container text-dark"><%= guardarropa.Nombre%></h2>
+                            </div>
+                            <div class="card-propiedades-guardarropa-index">
+                                <h5 class="d-inline text-center container text-dark"><%= guardarropa.prendas.count%> prendas</h5>
+                                <h5 class="d-inline text-center container text-dark"><%= guardarropa.atuendos.count%> atuendos</h5>
+                            </div>
+                        </div>
+                        
                     <% end %>
-
+                    
                     <div class="carda-iconos-guardarropa d-flex flex-row justify-content-between align-items-center">
-                        <%= link_to edit_guardarropa_path(guardarropa) do %> <i class="fa fa-pencil-alt fa-2x text-dark mx-5"></i> <%end%>
+                        <%= link_to edit_guardarropa_path(guardarropa) do %> <i class="fa fa-pencil-alt fa-2x text-dark mx-5"></i><%end%>
                         <%= link_to guardarropa_path(guardarropa), method: :delete, data: {confirm: '¿Seguro que desea eliminar este guardarropa?' } do %><i class="mx-5 fas fa-trash fa-2x text-dark"></i><% end %>
                     </div>
+
                 </div>
             </div>
         <% end %>

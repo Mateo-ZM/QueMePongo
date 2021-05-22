@@ -1,41 +1,26 @@
 <main class= "container h-100">
     <h1 class = "titulo text-center mt-4 mb-3"> <%= titulo %> </h1>
-
-    <div class="container">
-        <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path%></li>
-            <li class="breadcrumb-item active" aria-current="page"><%= btn_text %></li>
-        </ol>
-        </nav>
-    </div>
-
     <div class="d-flex  justify-content-center">
         <div class="card mi_card_modif ">
-            <%= form_for guardarropa do |f| %>
-                <div class="card-header position-relative">
-                    <%= f.text_field :Nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
-                </div>
+            <%= form_for [@guardarropa,@prenda] do |f| %>
 
-                <div class="container d-flex justify-content-center my-2">
-                    <%= image_tag(link_imagen, class:"fotos_cards_show h-100") %>
-                </div>
-
-                <div class="field form-group">   
-                    <%=f.file_field :imagen , class: "form-control"%>
-                </div>
+            <%%>
 
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><span class="negrita">Link de la Imagen: </span><%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: "Link imagen" %>
+                    <li class="list-group-item"><span class="negrita">Categoria: </span><%= f.select :categoria, [ 'Torso', 'Piernas', 'Pies', 'Accesorio'], :prompt => 'Elige uno', class:"form-control"%></li>
+                    <li class="list-group-item"><span class="negrita">Tipo de tela:</span> <%= f.select :tela, ['Algodon', 'Lana', 'Lino', 'Cuero', 'Denim', 'Seda', 'Poliester', 'Mohair', 'Piel', 'Cuerina'], :prompt => 'Elige uno', class: "form-control"%></li>
+                    <li class="list-group-item"><span class="negrita">Color primario: </span><%= f.text_field :color_primario, class: "my-2 text-box form-control", placeholder: "Ej: Rojo, Azul, etc." %> </li>
+                    <li class="list-group-item"><span class="negrita">Color secundario: </span><%= f.text_field :color_secundario, class: "my-2 text-box form-control", placeholder: "Ej: Rosa, Naranja, etc." %> </li>
                 </ul>
-
+                
                 <footer class="card-footer">
                     <div class="action form-group">
                         <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 form-control ") do %>
                             <i class="<%= icono%>"%></i> <p class="d-inline"><%= btn_text %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                         <% end %>
                         
-                        <%= link_to "/guardarropas", class:"btn-salir px-3 text-decoration-none text-center text-white form-control" do%>
+                        <%= link_to link_volver, class:"btn-salir px-3 text-decoration-none text-center text-white form-control" do%>
                             <i class="fa fa-arrow-left"></i><p class="d-inline"> Volver</p>
                         <% end %>
                     </div>

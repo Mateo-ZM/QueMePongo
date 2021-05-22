@@ -1,5 +1,16 @@
 <main class= "container h-100">
     <h1 class = "titulo text-center mt-4 mb-3"> <%= titulo %> </h1>
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path%></li>
+            <li class="breadcrumb-item"><%= link_to "Prendas", guardarropa_prendas_path(@guardarropa) %></li>
+            <li class="breadcrumb-item active" aria-current="page"><%= btn_text %></li>
+        </ol>
+        </nav>
+    </div>
+
     <div class="d-flex  justify-content-center">
         <div class="card mi_card_modif ">
             <%= form_for [@guardarropa,@prenda] do |f| %>
@@ -19,8 +30,8 @@
                     <li class="list-group-item"><span class="negrita">Link de la Imagen: </span><%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: "Link imagen" %>
                     <li class="list-group-item"><span class="negrita">Categoria: </span><%= f.select :categoria, [ 'Torso', 'Piernas', 'Pies', 'Accesorio'], :prompt => 'Elige uno', class:"form-control"%></li>
                     <li class="list-group-item"><span class="negrita">Tipo de tela:</span> <%= f.select :tela, ['Algodon', 'Lana', 'Lino', 'Cuero', 'Denim', 'Seda', 'Poliester', 'Mohair', 'Piel', 'Cuerina'], :prompt => 'Elige uno', class: "form-control"%></li>
-                    <li class="list-group-item"><span class="negrita">Color primario: </span><%= f.text_field :color_primario, class: "my-2 text-box form-control", placeholder: "Ej: Rojo, Azul, etc." %> </li>
-                    <li class="list-group-item"><span class="negrita">Color secundario: </span><%= f.text_field :color_secundario, class: "my-2 text-box form-control", placeholder: "Ej: Rosa, Naranja, etc." %> </li>
+                    <li class="list-group-item"><span class="negrita">Color primario: </span><%= f.color_field :color_primario, class: "my-2 text-box form-control" %></li>
+                    <li class="list-group-item"><span class="negrita">Color secundario: </span><%= f.color_field :color_secundario, class: "my-2 text-box form-control" %></li></li>
                 </ul>
                 
                 <footer class="card-footer">

@@ -26,6 +26,9 @@ class Prenda < ApplicationRecord
             self.link_imagen = "imagen_no_disponible.jpg"
         end
     end 
+    
+    has_many :atuendos
 
+    
     #belongs_to :guardarropa
 end

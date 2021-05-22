@@ -13,10 +13,10 @@ class PrendasController < ApplicationController
 
   def show
     @prenda = Prenda.find(params[:id])
-    if !@prenda.color_secundario.blank? 
-      if !@prenda.mismo_color?
-        @prenda.color_primario = @prenda.color_primario + " y " + @prenda.color_secundario
-      end
+    @hide = "visible"
+    if @prenda.color_secundario.blank? 
+      @hide = "hidden"
+      @prenda.color_secundario = "#ffffff";
     end
     @prenda.comprobar_link_imagen!
   end

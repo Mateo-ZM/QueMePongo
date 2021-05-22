@@ -1,3 +1,41 @@
 // Place all the styles related to the Atuendos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$color-primario: #222126; //Es el equivalente a rgb(34,33,38)
+$color-secundario: white; //Es el equivalente a rgb(255,255,255)
+$color-terciario: #1B8F88; //Es el equivalente a rgb(104,98,138)
+$color-terciario-hover: #115C57;
+$color-volver: #F54F47;
+$color-volver-hover: #780E12;
+//rojo fuerte #ed1c24
+//rojo suave #F54F47
+
+
+.card-fotos-atuendos-new {
+    max-height: 6rem;
+    alt:"imagen de la prenda";
+    overflow: hidden;
+}
+
+.columnas-flechas a.prev{
+    padding : 0;
+    color: $color-primario;
+    font-size: calc(1.325rem + .9vw);
+    text-decoration: none;
+}
+
+.columnas-flechas a.next{
+    padding : 0;
+    color: $color-primario;
+    font-size: calc(1.325rem + .9vw);
+    text-decoration: none;
+}
+
+.columnas-flechas{
+    color: $color-primario;
+}
+
+.atuendos-new .card-footer h5 {
+    font-size: 1rem;
+}

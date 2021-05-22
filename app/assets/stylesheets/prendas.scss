@@ -5,8 +5,11 @@
 $color-primario: #222126; //Es el equivalente a rgb(34,33,38)
 $color-secundario: white; //Es el equivalente a rgb(255,255,255)
 $color-terciario: #1B8F88; //Es el equivalente a rgb(104,98,138)
-$color-cuarto: #115C57;
-//rojo opcional #F54F47
+$color-terciario-hover: #115C57;
+$color-volver: #F54F47;
+$color-volver-hover: #780E12;
+//rojo fuerte #ed1c24
+//rojo suave #F54F47
 
 main.guardarropa h1.titulo {
     //text-decoration: underline;
@@ -26,29 +29,40 @@ main.guardarropa span.firulete{
 }
 
 .btn-general:hover, .btn-general:focus {
-    background-color: $color-cuarto;
+    background-color: $color-terciario-hover;
     color: $color-secundario;
 }
 
 .btn-crear {
     background-color: $color-terciario;
     color: $color-secundario;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .btn-crear:hover, .btn-crear:focus {
-    background-color: $color-cuarto;
+    background-color: $color-terciario-hover;
+    color: $color-secundario;
+}
+
+.btn-volver-guardarropas {
+    background-color: $color-volver;
+    color: $color-secundario;
+    font-size: 1.2rem;
+}
+
+.btn-volver-guardarropas:hover, .btn-volver-guardarropas:focus {
+    background-color: $color-volver-hover;
     color: $color-secundario;
 }
 
 .btn-salir {
     color: $color-secundario;
-    background-color: #ed1c24;
+    background-color: $color-volver;
 }
 
 .btn-salir:hover, .btn-salir:focus {
     color: $color-secundario;
-    background-color: #780E12;
+    background-color: $color-volver-hover;
 }
 
 .card-header {
@@ -105,26 +119,27 @@ main.guardarropa span.firulete{
     align-items: center;
     
     span{
-        font-size: 1.34rem;
+        font-size: 1.2rem;
         background-color: $color-secundario;
         color: $color-terciario;
         border-top: 0.01rem  solid grey;
         border-bottom: 0.01rem  solid grey;
         border-left: 0.01rem  solid grey;
+        
     }
 
     span:hover{
-        background-color: $color-cuarto;
+        background-color: $color-terciario-hover;
         color: $color-secundario;
     }
 
     span:hover a{
-        background-color: $color-cuarto;
+        background-color: $color-terciario-hover;
         color: $color-secundario;
     }
 
     a:hover{
-        background-color: $color-cuarto;
+        background-color: $color-terciario-hover;
         color: $color-secundario;
     }
 
@@ -132,7 +147,7 @@ main.guardarropa span.firulete{
         padding:0.35rem 0.6rem ;
         padding-right: 0.6rem ;
         line-height: 2.5rem;
-        font-size: 1.34rem;
+        font-size: 1.2rem;
         text-decoration: none;
         background-color: $color-secundario;
         color: $color-terciario;
@@ -140,7 +155,7 @@ main.guardarropa span.firulete{
 
     span.current{
         padding: 0 0.6rem;
-        font-size: 1.34rem;
+        font-size: 1.2rem;
         line-height: 2.5rem;
         text-decoration: none;
         background-color: $color-terciario;
@@ -149,7 +164,7 @@ main.guardarropa span.firulete{
 
     span.gap {
         padding: 0 0.6rem;
-        font-size: 1.34rem;
+        font-size: 1.2rem;
         line-height: 2.5rem;
         text-decoration: none;
         background-color: $color-secundario;
@@ -178,4 +193,13 @@ main.guardarropa span.firulete{
         border-bottom-right-radius: 25px;
         overflow: hidden;
     }
+}
+
+.color {
+    display: inline-block;
+    min-height: 1.3rem;
+    min-width: 1.3rem;
+    border: 0.01rem  solid $color-primario;
+    border-radius: 0.3rem;
+    margin: 0;
 }

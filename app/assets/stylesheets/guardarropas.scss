@@ -1,3 +1,18 @@
 // Place all the styles related to the Guardarropas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.card-fotos-guardarropa-index {
+    height: 9rem;
+    width: 13rem;
+    alt:"imagen de la prenda";
+    overflow: hidden;
+    background-color:rgba(0,0,0,.03);
+}
+
+.card-nombre-guardarropa-index h2{
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+    

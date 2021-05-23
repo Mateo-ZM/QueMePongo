@@ -12,19 +12,53 @@
 
     <div class="row mt-5 mb-3"> 
         <% @atuendos.each do |atuendo| %>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-2"> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
+            <div class="container col-lg-4 col-md-6 col-sm-12 col-12 my-2"> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
                 <%= link_to guardarropa_atuendo_path(@guardarropa,atuendo), class: "text-decoration-none" do %>
-                    <div class="card h-100">
+                    <div class="card">
                         <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                            <%= image_tag(atuendo.link_imagen , class:"fotos_cards_index h-100") %>
+                            <%= image_tag(atuendo.prenda_torso.link_imagen , class:"fotos_cards_index h-100") %>
                         </div>
 
                         <div class="card-footer card-footer-index d-flex justify-content-center align-center">
                             <h5 class="container text-center text-dark">
-                                <%= atuendo.tipo%>
+                                <%= atuendo.prenda_torso.tipo%>
                             </h5>
                         </div>
                     </div>
+                    <div class="card">
+                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
+                            <%= image_tag(atuendo.prenda_piernas.link_imagen , class:"fotos_cards_index h-100") %>
+                        </div>
+
+                        <div class="card-footer card-footer-index d-flex justify-content-center align-center">
+                            <h5 class="container text-center text-dark">
+                                <%= atuendo.prenda_piernas.tipo%>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
+                            <%= image_tag(atuendo.prenda_pies.link_imagen , class:"fotos_cards_index h-100") %>
+                        </div>
+
+                        <div class="card-footer card-footer-index d-flex justify-content-center align-center">
+                            <h5 class="container text-center text-dark">
+                                <%= atuendo.prenda_pies.tipo%>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
+                            <%= image_tag(atuendo.prenda_accesorios.link_imagen , class:"fotos_cards_index h-100") %>
+                        </div>
+
+                        <div class="card-footer card-footer-index d-flex justify-content-center align-center">
+                            <h5 class="container text-center text-dark">
+                                <%= atuendo.prenda_accesorios.tipo%>
+                            </h5>
+                        </div>
+                    </div>
+                    
                 <% end %>
             </div>
         <% end %>

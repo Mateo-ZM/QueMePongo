@@ -8,129 +8,77 @@
             <li class="breadcrumb-item active" aria-current="page">Crear</li>
         </ol>
     </nav>
-<!-- Torso -->
-    <div class="row">
-        <div class="col-lg-1 d-flex justify-content-center align-items-center">
-            <h2>Torso:</h2>
-        </div>
-        <div class="col-lg-1 columnas-flechas d-flex justify-content-center align-items-center">
-            <%= link_to_previous_page @prendas_torso_paginable, '<', param_name: :torso_page %>
-        </div>
-        <div class="col-lg-9">
-            <div class="row mt-5 mb-3">
-                <% @prendas_torso_paginable.each do |prenda| %>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 my-2">
-                        <div class="card card_atuendos_new_torso h-100">
-                            <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                                <%= image_tag(prenda.link_imagen , class:"card-fotos-atuendos-new  h-100") %>
-                            </div>
-                            <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                                <h5 class="container text-center text-dark">
-                                    <%= prenda.tipo%>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                <%end%>
-            </div>
-        </div>
-        <div class="col-lg-1 columnas-flechas d-flex justify-content-center align-items-center">
-            <%= link_to_next_page @prendas_torso_paginable, '>', param_name: :torso_page %>
-        </div>
-    </div>
 
-<!-- Piernas -->
-    <div class="row">
-        <div class="col-lg-1 d-flex justify-content-center align-items-center">
-            <h2>Piernas:</h2>
-        </div>
-        <div class="col-lg-1 columnas-flechas d-flex justify-content-center align-items-center">
-            <%= link_to_previous_page @prendas_piernas_paginable, '<', param_name: :piernas_page %>
-        </div>
-        <div class="col-lg-9">
-            <div class="row mt-5 mb-3">
-                <% @prendas_piernas_paginable.each do |prenda| %>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 my-2">
-                        <div class="card card_atuendos_new_piernas h-100">
-                            <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                                <%= image_tag(prenda.link_imagen , class:"card-fotos-atuendos-new  h-100") %>
-                            </div>
-                            <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                                <h5 class="container text-center text-dark">
-                                    <%= prenda.tipo%>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                <%end%>
+    <%= form_for [@guardarropa,@atuendo] do |f| %>
+        <!-- Torso -->
+        <div class="row">
+            <div class="col-lg-1 d-flex justify-content-center align-items-center">
+                <h2>Torso:</h2>
             </div>
-        </div>
-        <div class="col-lg-1 columnas-flechas d-flex justify-content-center align-items-center">
-            <%= link_to_next_page @prendas_piernas_paginable, '>', param_name: :piernas_page %>
-        </div>
-    </div>
+            
+            <div class="col-lg-9">
+                <div class="row mt-5 mb-3">
+                    
+                    <%= f.select :prenda_torso_id, options_for_select(@conversion_torso),  class:"form-control"%>
 
-<!-- Pies -->
-    <div class="row">
-        <div class="col-lg-1 d-flex justify-content-center align-items-center">
-            <h2>Pies:</h2>
-        </div>
-        <div class="col-lg-1 columnas-flechas d-flex justify-content-center align-items-center">
-            <%= link_to_previous_page @prendas_pies_paginable, '<', param_name: :pies_page %>
-        </div>
-        <div class="col-lg-9">
-            <div class="row mt-5 mb-3">
-                <% @prendas_pies_paginable.each do |prenda| %>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 my-2">
-                        <div class="card card_atuendos_new_pies h-100">
-                            <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                                <%= image_tag(prenda.link_imagen , class:"card-fotos-atuendos-new  h-100") %>
-                            </div>
-                            <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                                <h5 class="container text-center text-dark">
-                                    <%= prenda.tipo%>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                <%end%>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-1 columnas-flechas d-flex justify-content-center align-items-center">
-            <%= link_to_next_page @prendas_pies_paginable, '>', param_name: :pies_page %>
-        </div>
-    </div>
 
-<!-- Accesorio -->
-    <div class="row"> 
-        <div class="col-lg-1 d-flex justify-content-center align-items-center">
-            <h2>Accesorio:</h2>
         </div>
-        <div class="col-lg-1 columnas-flechas d-flex justify-content-center align-items-center">
-            <%= link_to_previous_page @prendas_accesorio_paginable, '<', param_name: :accesorio_page %>
-        </div>
-        <div class="col-lg-9">
-            <div class="row mt-5 mb-3">
-                <% @prendas_accesorio_paginable.each do |prenda| %>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 my-2">
-                        <div class="card card_atuendos_new_accesorio h-100">
-                            <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                                <%= image_tag(prenda.link_imagen , class:"card-fotos-atuendos-new  h-100") %>
-                            </div>
-                            <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                                <h5 class="container text-center text-dark">
-                                    <%= prenda.tipo%>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                <%end%>
+
+        <!-- Piernas -->
+        <div class="row">
+            <div class="col-lg-1 d-flex justify-content-center align-items-center">
+                <h2>Piernas:</h2>
             </div>
+
+            <div class="col-lg-9">
+                <div class="row mt-5 mb-3">
+
+                    <%= f.select :prenda_piernas_id, options_for_select(@conversion_piernas),  class:"form-control"%>
+
+                </div>
+            </div>
+
         </div>
-        <div class="col-lg-1 columnas-flechas d-flex justify-content-center align-items-center">
-            <%= link_to_next_page @prendas_accesorio_paginable, '>', param_name: :accesorio_page %>
+
+        <!-- Pies -->
+        <div class="row">
+            <div class="col-lg-1 d-flex justify-content-center align-items-center">
+                <h2>Pies:</h2>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="row mt-5 mb-3">
+
+                    <%= f.select :prenda_pies_id, options_for_select(@conversion_pies),  class:"form-control"%>
+                    
+                </div>
+            </div>
+
         </div>
-    </div>
+
+        <!-- Accesorio -->
+        <div class="row"> 
+            <div class="col-lg-1 d-flex justify-content-center align-items-center">
+                <h2>Accesorio:</h2>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="row mt-5 mb-3">
+
+                    <%= f.select :prenda_accesorios_id, options_for_select(@conversion_accesorios),  class:"form-control"%>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 form-control ") do %>
+            <i class="subir"%></i> <p class="d-inline">hola que tal</p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
+        <% end %>
+
+    <%end%>
 </div>
 
 

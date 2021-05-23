@@ -14,7 +14,7 @@
 
 //= require_tree ./application
 
-document.addEventListener("load", ClimaYVariables);
+window.addEventListener("load", ClimaYVariables);
 function ClimaYVariables()
 {
 

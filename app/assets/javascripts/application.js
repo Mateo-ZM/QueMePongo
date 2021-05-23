@@ -33,3 +33,16 @@ xhr.onload = function(){
 }
 
 xhr.send();
+
+//var imagenes_atuendos_new = document.getElementId('card_atuendos_new');
+//
+//imagenes_atuendos_new.onclick = function(){
+//    imagenes_atuendos_new.style.border = "5px solid #FFFFFF";
+//}
+
+//function seleccionar() {
+//    var imagenes_atuendos_new = document.getElementId('card_atuendos_new');
+//    imagenes_atuendos_new.style.border = "5px solid #FFFFFF";
+//}
+
+//var confirmar_volver = prompt("Seguro que desea volver sin guardar?");

@@ -20,7 +20,7 @@
             <div class="row mt-5 mb-3">
                 <% @prendas_torso_paginable.each do |prenda| %>
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12 my-2">
-                        <div class="card h-100">
+                        <div class="card card_atuendos_new h-100" id="card_atuendos_new">
                             <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
                                 <%= image_tag(prenda.link_imagen , class:"card-fotos-atuendos-new  h-100") %>
                             </div>

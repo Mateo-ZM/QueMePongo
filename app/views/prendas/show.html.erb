@@ -23,8 +23,12 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><span class="negrita">Categoria: </span><%= @prenda.categoria %></li>
                 <li class="list-group-item"><span class="negrita">Tipo de Tela: </span><%= @prenda.tela %></li>
-                <li class="list-group-item d-flex justify-content-start align-items-center"><span class="negrita">Color Primario: &nbsp</span><p class="color" style="background-color:<%= @prenda.color_primario%>"></p></li>
-                <li class="list-group-item d-flex justify-content-start align-items-center"><span class="negrita">Color Secundario: &nbsp</span><p class="color" style="background-color:<%= @prenda.color_secundario%> visibility: <%= @hiden %>"></p></li>
+                <li class="list-group-item d-flex justify-content-start align-items-center">
+                    <span class="negrita">Color/es: &nbsp</span>
+                        <p class="color" style="background-color:<%= @prenda.color_primario%>"></p>
+                        <div class="secundario d-flex align-items-center" style="visibility:<%= @hide %>"> <span>&nbspy&nbsp</span> <p class="color" style="background-color:<%= @prenda.color_secundario%>"></p></div>      
+                </li>
+                <!-- <li class="list-group-item d-flex justify-content-start align-items-center"><span class="negrita">Color Secundario: &nbsp</span><p class="color" style="background-color:<%= @prenda.color_secundario%>"></p><%= @prenda.color_secundario%></li> -->
             </ul>
 
             <footer class="card-footer">

@@ -4,8 +4,6 @@
         <div class="card mi_card_modif ">
             <%= form_for [@guardarropa,@prenda] do |f| %>
 
-            <%%>
-
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><span class="negrita">Link de la Imagen: </span><%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: "Link imagen" %>
                     <li class="list-group-item"><span class="negrita">Categoria: </span><%= f.select :categoria, [ 'Torso', 'Piernas', 'Pies', 'Accesorio'], :prompt => 'Elige uno', class:"form-control"%></li>

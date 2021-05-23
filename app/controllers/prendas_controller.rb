@@ -14,16 +14,15 @@ class PrendasController < ApplicationController
   def show
     @prenda = Prenda.find(params[:id])
     @hide = "visible"
-    if @prenda.color_secundario.blank? 
+    if @prenda.mismo_color?
       @hide = "hidden"
-      @prenda.color_secundario = "#ffffff";
     end
     @prenda.comprobar_link_imagen!
   end
 
   def create
     @prenda = @guardarropa.prendas.build (prenda_params)
-    @prenda.comprobar_color_secundario
+    #@prenda.comprobar_color_secundario
     @prenda.save
     redirect_to guardarropa_prenda_path(@guardarropa,@prenda)
   end
@@ -35,7 +34,7 @@ class PrendasController < ApplicationController
   def update
     @prenda = Prenda.find(params[:id])
     @prenda.update! prenda_params
-    @prenda.comprobar_color_secundario
+    #@prenda.comprobar_color_secundario
     redirect_to guardarropa_prenda_path(@guardarropa,@prenda)
   end
 

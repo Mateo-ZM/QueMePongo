@@ -15,7 +15,7 @@ class Prenda < ApplicationRecord
 
     def comprobar_color_secundario
         if self.mismo_color?
-            self.update({:color_secundario => ""})
+            self.update({:color_secundario => "Vacio"})
         end
     end
 

@@ -45,3 +45,9 @@ $color-volver-hover: #780E12;
     border: none;
     white-space: normal;
     }
+
+    .invisible{
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }

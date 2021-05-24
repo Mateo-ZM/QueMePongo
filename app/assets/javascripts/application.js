@@ -71,6 +71,12 @@ function Seleccionar_Torso()
                 {
                     atuendos_new_torso[i].style.border = ""
                 }
+                else
+                {
+                    let id = atuendos_new_torso[i].children[2].innerHTML;
+                    let cadena = "<option value=" + id +"></option>"
+                    atuendos_new_torso[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena;
+                }
             }
         })
     });
@@ -86,6 +92,12 @@ function Seleccionar_Piernas()
                 if(atuendos_new_piernas[i] != Node)
                 {
                     atuendos_new_piernas[i].style.border = ""
+                }
+                else
+                {
+                    let id = atuendos_new_piernas[i].children[2].innerHTML;
+                    let cadena = "<option value=" + id +"></option>"
+                    atuendos_new_piernas[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena;
                 }
             }
         })
@@ -103,6 +115,12 @@ function Seleccionar_Pies()
                 {
                     atuendos_new_pies[i].style.border = ""
                 }
+                else
+                {
+                    let id = atuendos_new_pies[i].children[2].innerHTML;
+                    let cadena = "<option value=" + id +"></option>"
+                    atuendos_new_pies[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena;
+                }
             }
         })
     });
@@ -118,6 +136,12 @@ function Seleccionar_Accesorio()
                 if(atuendos_new_accesorio[i] != Node)
                 {
                     atuendos_new_accesorio[i].style.border = ""
+                }
+                else
+                {
+                    let id = atuendos_new_accesorio[i].children[2].innerHTML;
+                    let cadena = "<option value=" + id +"></option>"
+                    atuendos_new_accesorio[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena;
                 }
             }
         })

@@ -42,9 +42,9 @@ function ClimaYVariables()
     
 }
 
-document.addEventListener("DOMContentLoaded", theDomHasLoaded);
+//document.addEventListener("DOMContentLoaded", theDomHasLoaded);
 
-var atuendos_new
+
 
 function theDomHasLoaded() 
 {

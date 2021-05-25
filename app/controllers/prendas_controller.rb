@@ -5,7 +5,7 @@ class PrendasController < ApplicationController
 
 
   def index
-    @prendas = @guardarropa.prendas.page(params[:page])
+    @prendas = @guardarropa.prendas
     @prendas.each do |prenda|
       prenda.comprobar_link_imagen!
     end

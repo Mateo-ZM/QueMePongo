@@ -38,6 +38,11 @@
                                                 </h5>
                                             </div>
                                             <div class="invisible"><%= prenda.id%></div>
+                                            <div class="invisible">
+                                                <%if(prenda.id == @prenda_torso)%>
+                                                    <div class="prenda_torso_inicial"><%=@prenda_torso%></div>
+                                                <%end%>
+                                            </div>
                                         </div>
                                     </div>
                                 <% end %>
@@ -48,6 +53,10 @@
             </div>
         </div>
     </div>
+
+    <%=@prenda_torso%>
+
+
     <div class="invisible">
         <!--<select name="atuendo[prenda_torso_id]" id="atuendo_prenda_torso_id"><option value=""></option> </select> -->
         <%= f.select :prenda_torso_id, options_for_select(@conversion_torso),  class:"form-control"%>
@@ -80,7 +89,12 @@
                                                     <%= prenda.tipo%>
                                                 </h5>
                                             </div>
-                                        <div class="invisible"><%= prenda.id%></div>
+                                            <div class="invisible"><%= prenda.id%></div>
+                                            <div class="invisible">
+                                                <%if(prenda.id == @prenda_piernas)%>
+                                                    <div class="prenda_piernas_inicial"><%=@prenda_piernas%></div>
+                                                <%end%>
+                                            </div>
                                         </div>
                                     </div>
                                 <% end %>
@@ -91,6 +105,8 @@
             </div>
         </div>
     </div>
+
+    <%=@prenda_piernas%>
 
 
 
@@ -126,6 +142,11 @@
                                                 </h5>
                                             </div>
                                             <div class="invisible"><%= prenda.id%></div>
+                                            <div class="invisible">
+                                                <%if(prenda.id == @prenda_pies)%>
+                                                    <div class="prenda_pies_inicial"><%=@prenda_pies%></div>
+                                                <%end%>
+                                            </div>
                                         </div>
                                     </div>
                                 <% end %>
@@ -136,6 +157,9 @@
             </div>
         </div>
     </div>
+
+    <%=@prenda_pies%>
+
     <div class="invisible"> 
         <!--<select name="atuendo[prenda_pies_id]" id="atuendo_prenda_pies_id"><option value=""></option> </select>-->
         <%= f.select :prenda_pies_id, options_for_select(@conversion_pies),  class:"form-control"%>
@@ -168,6 +192,11 @@
                                                 </h5>
                                             </div>
                                             <div class="invisible"><%= prenda.id%></div>
+                                            <div class="invisible">
+                                                <%if(prenda.id == @prenda_accesorios)%>
+                                                    <div class="prenda_accesorios_inicial"><%=@prenda_accesorios%></div>
+                                                <%end%>
+                                            </div>
                                         </div>
                                     </div>
                                 <% end %>
@@ -178,6 +207,9 @@
             </div>
         </div>
     </div>
+
+    <%=@prenda_accesorios%>
+
     <div class="invisible">
         <!--<select name="atuendo[prenda_accesorio_id]" id="atuendo_prenda_accesorio_id"><option value=""></option> </select>-->
         <%= f.select :prenda_accesorios_id, options_for_select(@conversion_accesorios),  class:"form-control"%>

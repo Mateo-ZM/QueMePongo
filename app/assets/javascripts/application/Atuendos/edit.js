@@ -1,7 +1,5 @@
 
-$(document).ready(function(){
-    Paloma.start();
-  });
+
 
 Paloma.controller('Atuendos', {
     edit: function(){
@@ -16,10 +14,12 @@ Paloma.controller('Atuendos', {
             atuendos_new_accesorio = document.querySelectorAll(".card_atuendos_new_accesorio");
 
             let cadena_inicial = "<option value=" + "></option>"
-            atuendos_new_torso[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena_inicial;
             atuendos_new_piernas[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena_inicial;
             atuendos_new_pies[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena_inicial;
             atuendos_new_accesorio[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena_inicial;
+            
+            let cadena_inicial_torso = "<option value=" + "></option>"
+            atuendos_new_torso[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena_inicial_torso;
 
             let boton = document.querySelector('button.form-control');
             boton.disabled = true;

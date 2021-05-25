@@ -24,7 +24,7 @@
                             <div class="splide__list">
                                 <% @prendas_torso.each do |prenda| %>
                                     <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                                        <div class="card ">
+                                        <div class="card card_atuendos_new_torso">
                                             <div class="container  d-flex justify-content-center align-items-center my-1" >
                                                 <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
                                             </div>
@@ -33,6 +33,7 @@
                                                     <%= prenda.tipo%>
                                                 </h5>
                                             </div>
+                                            <div class="invisible"><%= prenda.id%></div>
                                         </div>
                                     </div>
                                 <% end %>
@@ -54,7 +55,6 @@
             <h2>Piernas:</h2>
         </div>
 
-
         <div class="col-lg-9">
             <div class="row mt-5 mb-3">
                 <div class="splide">
@@ -63,7 +63,7 @@
                             <div class="splide__list">
                                 <% @prendas_piernas.each do |prenda| %>
                                     <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                                        <div class="card ">
+                                        <div class="card card_atuendos_new_piernas">
                                             <div class="container  d-flex justify-content-center align-items-center my-1" >
                                                 <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
                                             </div>
@@ -72,6 +72,7 @@
                                                     <%= prenda.tipo%>
                                                 </h5>
                                             </div>
+                                        <div class="invisible"><%= prenda.id%></div>
                                         </div>
                                     </div>
                                 <% end %>
@@ -103,7 +104,7 @@
                             <div class="splide__list">
                                 <% @prendas_pies.each do |prenda| %>
                                     <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                                        <div class="card ">
+                                        <div class="card card_atuendos_new_pies">
                                             <div class="container  d-flex justify-content-center align-items-center my-1" >
                                                 <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
                                             </div>
@@ -112,6 +113,7 @@
                                                     <%= prenda.tipo%>
                                                 </h5>
                                             </div>
+                                            <div class="invisible"><%= prenda.id%></div>
                                         </div>
                                     </div>
                                 <% end %>
@@ -140,7 +142,7 @@
                             <div class="splide__list">
                                 <% @prendas_accesorios.each do |prenda| %>
                                     <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                                        <div class="card ">
+                                        <div class="card card_atuendos_new_accesorio">
                                             <div class="container  d-flex justify-content-center align-items-center my-1" >
                                                 <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
                                             </div>
@@ -149,6 +151,7 @@
                                                     <%= prenda.tipo%>
                                                 </h5>
                                             </div>
+                                            <div class="invisible"><%= prenda.id%></div>
                                         </div>
                                     </div>
                                 <% end %>

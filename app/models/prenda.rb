@@ -27,7 +27,10 @@ class Prenda < ApplicationRecord
         end
     end 
     
-    has_many :atuendos
+    has_many :atuendos,foreign_key: 'prenda_torso_id', dependent: :destroy
+    has_many :atuendos,foreign_key: 'prenda_piernas_id', dependent: :destroy
+    has_many :atuendos,foreign_key: 'prenda_pies_id', dependent: :destroy
+    has_many :atuendos,foreign_key: 'prenda_accesorios_id', dependent: :destroy
 
     
     #belongs_to :guardarropa

@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   
   resources :guardarropas do
     resources :prendas
-    resources :atuendos
+    resources :atuendos do
+      get :rand
+    end
   end
 
   root to: 'home#index'

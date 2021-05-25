@@ -67,6 +67,7 @@
     <section class="navegacion-guardarropa d-flex justify-content-between align-center my-4">
         <div class="botones-index-atuendo">
             <%= link_to new_guardarropa_atuendo_path(@guardarropa), class: "btn btn-crear btn-lg" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear atuendo</p><%end%>
+            <%= link_to new_guardarropa_atuendo_path(@guardarropa), method: :get, class: "btn btn-crear btn-lg" do %><i class="fas fa-dice"></i> <p class="d-inline">Generar atuendo aleatorio</p><%end%>
             <%= link_to guardarropa_prendas_path(@guardarropa), class: "btn btn-crear btn-lg" do %><i class="fas fa-list"></i> <p class="d-inline">Prendas</p><%end%>
             <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline">Guardarropas</p><%end%>
         </div>

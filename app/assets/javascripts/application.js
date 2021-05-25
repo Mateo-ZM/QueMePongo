@@ -53,6 +53,14 @@ function theDomHasLoaded()
     atuendos_new_pies = document.querySelectorAll(".card_atuendos_new_pies");
     atuendos_new_accesorio = document.querySelectorAll(".card_atuendos_new_accesorio");
 
+    let cadena_inicial = "<option value=" + "></option>"
+    atuendos_new_torso[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena_inicial;
+    atuendos_new_piernas[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena_inicial;
+    atuendos_new_pies[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena_inicial;
+    atuendos_new_accesorio[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena_inicial;
+
+    let boton = document.querySelector('button.form-control');
+    boton.disabled = true;
 
     Seleccionar_Torso()
     Seleccionar_Piernas()
@@ -78,9 +86,25 @@ function Seleccionar_Torso()
                     atuendos_new_torso[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena;
                 }
             }
+            comprobar_todas_opciones_seleccionadas()
         })
     });
 }
+
+function comprobar_todas_opciones_seleccionadas()
+{
+    let boton = document.querySelector('button.form-control');
+    let id_torso = atuendos_new_torso[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].value;
+    let id_piernas = atuendos_new_piernas[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].value;
+    let id_pies = atuendos_new_pies[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].value;
+    let id_accesorio = atuendos_new_accesorio[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].value;
+
+    if(id_torso != "" && id_piernas != "" && id_pies != "" && id_accesorio != "") {
+        boton.disabled = false;
+    }
+}
+
+
 
 function Seleccionar_Piernas()
 {
@@ -100,6 +124,7 @@ function Seleccionar_Piernas()
                     atuendos_new_piernas[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena;
                 }
             }
+            comprobar_todas_opciones_seleccionadas()
         })
     });
 }
@@ -122,6 +147,7 @@ function Seleccionar_Pies()
                     atuendos_new_pies[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena;
                 }
             }
+            comprobar_todas_opciones_seleccionadas()
         })
     });
 }
@@ -144,6 +170,7 @@ function Seleccionar_Accesorio()
                     atuendos_new_accesorio[0].parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena;
                 }
             }
+            comprobar_todas_opciones_seleccionadas()
         })
     });
 }

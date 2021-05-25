@@ -10,59 +10,40 @@
         </ol>
     </nav>
 
-    <div class="row mt-5 mb-3"> 
+
+    <div class="row">
         <% @atuendos.each do |atuendo| %>
-            <div class="container col-lg-4 col-md-6 col-sm-12 col-12 my-2"> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-2">
                 <%= link_to guardarropa_atuendo_path(@guardarropa,atuendo), class: "text-decoration-none" do %>
                     <div class="card">
-                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                            <%= image_tag(atuendo.prenda_torso.link_imagen , class:"fotos_cards_index h-100") %>
+
+                        <div class="m-4 row d-flex align-items-center">
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <%= image_tag(atuendo.prenda_torso.link_imagen , class:"card_imagen_atuendos_index h-100") %>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                            <%= image_tag(atuendo.prenda_piernas.link_imagen , class:"card_imagen_atuendos_index h-100") %>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <%= image_tag(atuendo.prenda_pies.link_imagen , class:"card_imagen_atuendos_index h-100") %>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <%= image_tag(atuendo.prenda_accesorios.link_imagen , class:"card_imagen_atuendos_index h-100") %>
+                            </div>
                         </div>
+
+                        
 
                         <div class="card-footer card-footer-index d-flex justify-content-center align-center">
                             <h5 class="container text-center text-dark">
-                                <%= atuendo.prenda_torso.tipo%>
+                                <%= atuendo.Descripcion%>
                             </h5>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                            <%= image_tag(atuendo.prenda_piernas.link_imagen , class:"fotos_cards_index h-100") %>
-                        </div>
-
-                        <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                            <h5 class="container text-center text-dark">
-                                <%= atuendo.prenda_piernas.tipo%>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                            <%= image_tag(atuendo.prenda_pies.link_imagen , class:"fotos_cards_index h-100") %>
-                        </div>
-
-                        <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                            <h5 class="container text-center text-dark">
-                                <%= atuendo.prenda_pies.tipo%>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
-                            <%= image_tag(atuendo.prenda_accesorios.link_imagen , class:"fotos_cards_index h-100") %>
-                        </div>
-
-                        <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                            <h5 class="container text-center text-dark">
-                                <%= atuendo.prenda_accesorios.tipo%>
-                            </h5>
-                        </div>
-                    </div>
-                    
-                <% end %>
-            </div>
-        <% end %>
-    </div>
+                <%end%>
+            </div> 
+        <%end%>
+    </div>    
 
     <section class="navegacion-guardarropa d-flex justify-content-between align-center my-4">
         <div class="botones-index-atuendo">

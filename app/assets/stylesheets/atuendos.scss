@@ -44,10 +44,23 @@ $color-volver-hover: #780E12;
     padding: 0;
     border: none;
     white-space: normal;
-    }
+}
 
-    .invisible{
-        visibility: hidden;
-        width: 0px;
-        height: 0px;
-    }
+.invisible{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+.card_imagen_atuendos_index {
+    max-height: 8rem;
+    alt:"imagen de la prenda";
+    overflow: hidden;
+}
+
+.card_atuendo_show {
+    width:30rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}

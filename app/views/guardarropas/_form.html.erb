@@ -18,7 +18,11 @@
                 </div>
 
                 <div class="container d-flex justify-content-center my-2">
-                    <%= image_tag(link_imagen, class:"fotos_cards_show h-100") %>
+                    <%if guardarropa.imagen.attached?%>
+                        <%= image_tag(guardarropa.imagen , class:"card-fotos-guardarropa-index") %>
+                    <%else%>
+                        <%= image_tag(link_imagen , class:"card-fotos-guardarropa-index") %>
+                    <%end%>
                 </div>
 
                 <div class="field form-group">   

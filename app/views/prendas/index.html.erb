@@ -22,7 +22,11 @@
                             <%= link_to guardarropa_prenda_path(@guardarropa,prenda), class: "text-decoration-none" do %>
                                 <div class="card ">
                                     <div class="container  d-flex justify-content-center align-items-center my-1" >
-                                        <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
+                                        <%if prenda.imagen.attached?%>
+                                            <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
+                                        <%else%>
+                                            <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
+                                        <%end%>
                                     </div>
 
                                     <div class="card-footer card-footer-index d-flex justify-content-center align-center">

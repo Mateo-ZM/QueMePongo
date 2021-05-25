@@ -19,7 +19,11 @@
                 </div>
 
                 <div class="container d-flex justify-content-center my-2">
-                    <%= image_tag(link_imagen, class:"fotos_cards_show h-100") %>
+                    <%if prenda.imagen.attached?%>
+                        <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
+                    <%else%>
+                        <%= image_tag(link_imagen , class:"fotos_cards_index h-100") %>
+                    <%end%>
                 </div>
 
                 <div class="field form-group">   

@@ -8,7 +8,12 @@
                 <div class="card d-flex flex-row justify-content-between flex-wrap align-items-center">
                     <%= link_to guardarropa_prendas_path(guardarropa), class: "text-decoration-none d-flex flex-row justify-content-start flex-grow-1 align-items-center" do %>
                         <div class="p-0" >
-                            <img src="<%= guardarropa.link_imagen %>" alt="" class="card-fotos-guardarropa-index">
+                            <%if guardarropa.imagen.attached?%>
+                                <%= image_tag(guardarropa.imagen , class:"card-fotos-guardarropa-index") %>
+                            <%else%>
+                                <%= image_tag(guardarropa.link_imagen , class:"card-fotos-guardarropa-index") %>
+                            <%end%>
+                            <!--<img src="<%= guardarropa.link_imagen %>" alt="" class="card-fotos-guardarropa-index">-->
                         </div>
                         <div class="textos d-flex flex-row  flex-grow-1 justify-content-around align-items-center">
                             <div class="card-nombre-guardarropa-index">

@@ -10,40 +10,59 @@
         </ol>
     </nav>
 
+    <div class="splide">
+        <div class="splide__slider">
+            <div class="splide__track">
+                <div class="splide__list">
+                        <% @atuendos.each do |atuendo| %>
+                        <div class="splide__slide">
+                            <%= link_to guardarropa_atuendo_path(@guardarropa,atuendo), class: "text-decoration-none" do %>
+                                <div class="card  ">
 
-    <div class="row">
-        <% @atuendos.each do |atuendo| %>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-2">
-                <%= link_to guardarropa_atuendo_path(@guardarropa,atuendo), class: "text-decoration-none" do %>
-                    <div class="card">
+                                    <div class="m-4 row d-flex align-items-center">
+                                        <div class="col-6 d-flex justify-content-center align-items-center">
+                                            <%if atuendo.prenda_torso.imagen.attached?%>
+                                                <%= image_tag(atuendo.prenda_torso.imagen , class:"card_imagen_atuendos_index h-100") %>
+                                            <%else%>
+                                                <%= image_tag(atuendo.prenda_torso.link_imagen , class:"card_imagen_atuendos_index h-100") %>
+                                            <%end%>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-center align-items-center">
+                                            <%if atuendo.prenda_piernas.imagen.attached?%>
+                                                <%= image_tag(atuendo.prenda_piernas.imagen , class:"card_imagen_atuendos_index h-100") %>
+                                            <%else%>
+                                                <%= image_tag(atuendo.prenda_piernas.link_imagen , class:"card_imagen_atuendos_index h-100") %>
+                                            <%end%>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-center align-items-center">
+                                            <%if atuendo.prenda_pies.imagen.attached?%>
+                                                <%= image_tag(atuendo.prenda_pies.imagen , class:"card_imagen_atuendos_index h-100") %>
+                                            <%else%>
+                                                <%= image_tag(atuendo.prenda_pies.link_imagen , class:"card_imagen_atuendos_index h-100") %>
+                                            <%end%>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-center align-items-center">
+                                            <%if atuendo.prenda_accesorios.imagen.attached?%>
+                                                <%= image_tag(atuendo.prenda_accesorios.imagen , class:"card_imagen_atuendos_index h-100") %>
+                                            <%else%>
+                                                <%= image_tag(atuendo.prenda_accesorios.link_imagen , class:"card_imagen_atuendos_index h-100") %>
+                                            <%end%>
+                                        </div>
+                                    </div>
 
-                        <div class="m-4 row d-flex align-items-center">
-                            <div class="col-6 d-flex justify-content-center align-items-center">
-                                <%= image_tag(atuendo.prenda_torso.link_imagen , class:"card_imagen_atuendos_index h-100") %>
+                                    <div class="card-footer card-footer-index d-flex justify-content-center align-center">
+                                        <h5 class="container text-center text-dark">
+                                            <%= atuendo.Descripcion%>
+                                        </h5>
+                                    </div>
+                                </div>
+                            <%end%>
                             </div>
-                            <div class="col-6 d-flex justify-content-center align-items-center">
-                            <%= image_tag(atuendo.prenda_piernas.link_imagen , class:"card_imagen_atuendos_index h-100") %>
-                            </div>
-                            <div class="col-6 d-flex justify-content-center align-items-center">
-                                <%= image_tag(atuendo.prenda_pies.link_imagen , class:"card_imagen_atuendos_index h-100") %>
-                            </div>
-                            <div class="col-6 d-flex justify-content-center align-items-center">
-                                <%= image_tag(atuendo.prenda_accesorios.link_imagen , class:"card_imagen_atuendos_index h-100") %>
-                            </div>
-                        </div>
-
-                        
-
-                        <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                            <h5 class="container text-center text-dark">
-                                <%= atuendo.Descripcion%>
-                            </h5>
-                        </div>
-                    </div>
-                <%end%>
-            </div> 
-        <%end%>
-    </div>    
+                        <%end%>
+                </div>
+            </div>
+        </div>
+    </div>   
 
     <section class="navegacion-guardarropa d-flex justify-content-between align-center my-4">
         <div class="botones-index-atuendo">
@@ -54,3 +73,4 @@
         <%= paginate @atuendos, window: 3 %>
     </section>
 </main>
+

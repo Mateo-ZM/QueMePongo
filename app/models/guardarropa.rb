@@ -7,9 +7,9 @@ class Guardarropa < ApplicationRecord
     paginates_per 4
 
     def comprobar_link_imagen! 
-        if  self.imagen.attached?
+        #if  self.imagen.attached?
             #self.link_imagen = url_for(self.imagen)
-        elsif self.vacia?
+        if self.vacia?
             self.link_imagen = "https://www.pngitem.com/pimgs/m/503-5039552_closet-png-image-wardrobe-png-transparent-png.png"
         end
     end 

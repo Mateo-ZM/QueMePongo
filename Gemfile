@@ -40,3 +40,5 @@ gem 'kaminari'
 group :assets do
   gem 'rails-ujs'
 end
+
+gem 'paloma', '~> 6.1.0'

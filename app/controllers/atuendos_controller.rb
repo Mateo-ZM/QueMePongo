@@ -104,7 +104,7 @@ class AtuendosController < ApplicationController
 
         @prendas_piernas = @guardarropa.prendas.select{|p| p.categoria == "Piernas"}
         @prendas_piernas_paginable = Kaminari.paginate_array(@prendas_piernas).page(params[:piernas_page]).per(4)
-        @prenda_piernas = @prendas_piernas[rand(@prendas_piernas.length)]
+        @prenda_piernas = @atuendo.prenda_piernas_id
         @conversion_piernas = Array.new
 
         @prendas_piernas.each do |prenda|
@@ -116,7 +116,7 @@ class AtuendosController < ApplicationController
 
         @prendas_pies = @guardarropa.prendas.select{|p| p.categoria == "Pies"}
         @prendas_pies_paginable = Kaminari.paginate_array(@prendas_pies).page(params[:pies_page]).per(4)
-        @prenda_pies = @prendas_pies[rand(@prendas_pies.length)]
+        @prenda_pies = @atuendo.prenda_pies_id
         @conversion_pies = Array.new
 
         @prendas_pies.each do |prenda|
@@ -128,7 +128,7 @@ class AtuendosController < ApplicationController
 
         @prendas_accesorios = @guardarropa.prendas.select{|p| p.categoria == "Accesorio"}
         @prendas_accesorios_paginable = Kaminari.paginate_array(@prendas_accesorios).page(params[:accesorio_page]).per(4)
-        @prenda_accesorios = @prendas_accesorios[rand(@prendas_accesorios.length)]
+        @prenda_accesorios = @atuendo.prenda_accesorios_id
         @conversion_accesorios = Array.new
 
         @prendas_accesorios.each do |prenda|

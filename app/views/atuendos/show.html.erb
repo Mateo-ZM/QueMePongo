@@ -43,7 +43,14 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><span class="negrita">Puntaje: </span><%= @atuendo.Puntaje %></li>
                 <li class="list-group-item"><span class="negrita">Formalidad: </span><%= @atuendo.Etiqueta_Formal %></li>
-                <li class="list-group-item"><span class="negrita">Estacion: </span><%= @atuendo.Etiqueta_Estacion %></li>
+                <li class="list-group-item">
+                    <span class="negrita">Estacion: </span>
+                    <%if @atuendo.Etiqueta_Estacion != "OtonioPrimavera"%>
+                        <%= @atuendo.Etiqueta_Estacion %>
+                    <%else%>
+                        <%="Otoño/Primavera"%>
+                    <%end%>
+                </li>
                 <li class="list-group-item"><span class="negrita">Horario: </span><%= @atuendo.Etiqueta_DiaNoche %></li>
             </ul>
 

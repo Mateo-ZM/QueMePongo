@@ -159,11 +159,11 @@
 
     <li class="list-group-item"><span class="negrita">Puntaje: </span><%= f.select :Puntaje, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], :prompt => 'Elige uno', class:"form-control"%></li>
     <li class="list-group-item"><span class="negrita">Formalidad: </span><%= f.select :Etiqueta_Formal, ['Formal', 'Informal'], :prompt => 'Elige uno', class:"form-control"%></li>
-    <li class="list-group-item"><span class="negrita">Estación: </span><%= f.select :Etiqueta_Estacion, ['Verano', 'Invierno', 'Otoño/Primavera'], :prompt => 'Elige uno', class:"form-control"%></li>
+    <li class="list-group-item"><span class="negrita">Estación: </span><%= f.select :Etiqueta_Estacion, options_for_select([['Verano', 'Verano'],['Invierno','Invierno'],['Otoño/Primavera', 'OtonioPrimavera']]), :prompt => 'Elige uno', class:"form-control"%></li>
     <li class="list-group-item"><span class="negrita">Horario: </span><%= f.select :Etiqueta_DiaNoche, ['Dia', 'Noche'], :prompt => 'Elige uno', class:"form-control"%></li>
 
     <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 form-control ") do %>
-            <i class="subir"></i> <p class="d-inline">hola que tal</p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
+            <i class="subir"></i> <p class="d-inline"><%= btn_text %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
     <% end %>
     <% end %>
 </div>

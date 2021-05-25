@@ -3,7 +3,7 @@
 
 Paloma.controller('Atuendos', {
     edit: function(){
-            document.addEventListener("DOMContentLoaded", theDomHasLoaded);
+            window.addEventListener("load", theDomHasLoaded);
 
 
         function theDomHasLoaded() 

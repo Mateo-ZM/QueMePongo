@@ -43,4 +43,14 @@ function ClimaYVariables()
     
     xhr.send();
 }
+
+//window.addEventListener("resize", ChequearResizeBotones);
+//function ChequearResizeBotones(){
+//    if(Foundation.MediaQuery.get('small')){
+//        document.getElementById("botones-prenda-index").className += " flex-column";
+//    }
+//}
+
+
+
 //var confirmar_volver = prompt("Seguro que desea volver sin guardar?");

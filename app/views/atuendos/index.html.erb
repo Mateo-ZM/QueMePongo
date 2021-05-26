@@ -1,6 +1,6 @@
 <main class="guardarropa container">
     
-    <h1 class="titulo mt-4 text-center">Atuendos de <%= @guardarropa.Nombre %></h1>
+    <h1 class="titulo my-4 text-center">Atuendos de <%= @guardarropa.Nombre %></h1>
     
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -17,9 +17,9 @@
                         <% @atuendos.each do |atuendo| %>
                         <div class="splide__slide">
                             <%= link_to guardarropa_atuendo_path(@guardarropa,atuendo), class: "text-decoration-none" do %>
-                                <div class="card  ">
+                                <div class="card h-100">
 
-                                    <div class="m-4 row d-flex align-items-center">
+                                    <div class="m-4 h-100 row d-flex align-items-center">
                                         <div class="col-6 d-flex justify-content-center align-items-center">
                                             <%if atuendo.prenda_torso.imagen.attached?%>
                                                 <%= image_tag(atuendo.prenda_torso.imagen , class:"card_imagen_atuendos_index h-100") %>
@@ -64,12 +64,10 @@
         </div>
     </div>   
 
-    <section class="navegacion-guardarropa d-flex justify-content-between align-center my-4">
-        <div class="botones-index-atuendo">
-            <%= link_to new_guardarropa_atuendo_path(@guardarropa), class: "btn btn-crear btn-lg" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear atuendo</p><%end%>
-            <%= link_to guardarropa_prendas_path(@guardarropa), class: "btn btn-crear btn-lg" do %><i class="fas fa-list"></i> <p class="d-inline">Prendas</p><%end%>
-            <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline">Guardarropas</p><%end%>
-        </div>
+    <section class="navegacion-guardarropa d-flex justify-content-center align-center my-4">
+        <%= link_to new_guardarropa_atuendo_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear atuendo</p><%end%>
+        <%= link_to guardarropa_prendas_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-list"></i> <p class="d-inline">Prendas</p><%end%>
+        <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline">Guardarropas</p><%end%>
         <%= paginate @atuendos, window: 3 %>
     </section>
 </main>

@@ -31,7 +31,7 @@
                                     <% @prendas_torso.each do |prenda| %>
                                         <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
                                             <div class="card card_atuendos_new_torso h-100">
-                                                <div class="container  d-flex justify-content-center align-items-center my-1" >
+                                                <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
                                                     <%if prenda.imagen.attached?%>
                                                         <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
                                                     <%else%>
@@ -81,7 +81,7 @@
                                     <% @prendas_piernas.each do |prenda| %>
                                         <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
                                             <div class="card card_atuendos_new_piernas h-100">
-                                                <div class="container  d-flex justify-content-center align-items-center my-1" >
+                                                <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
                                                     <%if prenda.imagen.attached?%>
                                                         <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
                                                     <%else%>
@@ -130,7 +130,7 @@
                                     <% @prendas_pies.each do |prenda| %>
                                         <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
                                             <div class="card card_atuendos_new_pies h-100">
-                                                <div class="container  d-flex justify-content-center align-items-center my-1" >
+                                                <div class="container h-100 d-flex justify-content-center align-items-center my-1" >
                                                     <%if prenda.imagen.attached?%>
                                                         <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
                                                     <%else%>
@@ -179,7 +179,7 @@
                                     <% @prendas_accesorios.each do |prenda| %>
                                         <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
                                             <div class="card card_atuendos_new_accesorio h-100">
-                                                <div class="container  d-flex justify-content-center align-items-center my-1" >
+                                                <div class="container h-100 d-flex justify-content-center align-items-center my-1 h-100">
                                                     <%if prenda.imagen.attached?%>
                                                         <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
                                                     <%else%>
@@ -229,7 +229,9 @@
                 <% end %>
             </div>
             <div class="col-lg-4">
-                <%= link_to new_guardarropa_atuendo_path(@guardarropa), method: :get, class: "btn btn-crear form-control btn-lg" do %><i class="fas fa-dice"></i> <p class="d-inline">Generar atuendo aleatorio</p><%end%>
+                <div style="visibility:<%= hide %>">
+                <%= link_to ruta, method: :get, class: "btn btn-crear form-control btn-lg" do %><i class="fas fa-dice"></i> <p class="d-inline">Generar atuendo aleatorio</p><%end%>
+                </div>
             </div>
             <div class="col-lg-4">
                 <%= link_to link_volver, class:"btn-salir px-3 py-2 text-decoration-none text-center text-white form-control", data: {confirm: 'Volver sin guardar?' } do%>

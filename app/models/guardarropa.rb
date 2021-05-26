@@ -10,7 +10,7 @@ class Guardarropa < ApplicationRecord
         #if  self.imagen.attached?
             #self.link_imagen = url_for(self.imagen)
         if self.vacia?
-            self.link_imagen = "https://www.pngitem.com/pimgs/m/503-5039552_closet-png-image-wardrobe-png-transparent-png.png"
+            self.link_imagen = "imagen_no_disponible.jpg"
         end
     end 
 

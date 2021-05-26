@@ -14,7 +14,7 @@
         <div class="card mi_card_modif ">
             <%= form_for guardarropa do |f| %>
                 <div class="card-header position-relative">
-                    <%= f.text_field :Nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
+                    <%= f.text_field :Nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre", :maxlength => 25 %>  
                 </div>
 
                 <div class="container d-flex justify-content-center my-2">

@@ -205,3 +205,9 @@ main.guardarropa span.firulete{
     border-radius: 0.3rem;
     margin: 0;
 }
+
+.titulo {
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}

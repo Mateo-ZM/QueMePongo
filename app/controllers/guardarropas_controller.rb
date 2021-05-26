@@ -1,6 +1,6 @@
 class GuardarropasController < ApplicationController
     def index
-        @guardarropas = Guardarropa.page(params[:page])
+        @guardarropas = Guardarropa.all
         @guardarropas.each do |guardarropa|
             guardarropa.comprobar_link_imagen!
         end

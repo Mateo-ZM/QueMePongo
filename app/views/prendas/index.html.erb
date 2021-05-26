@@ -1,6 +1,6 @@
 <main class="guardarropa container">
     
-    <h1 class="titulo mt-4 mb-1 text-center"><%= @guardarropa.Nombre %></h1>
+    <h1 class="titulo mt-4 mb-4 text-center">Prendas de <%= @guardarropa.Nombre %></h1>
 
     <div class="container">
         <nav aria-label="breadcrumb">
@@ -20,8 +20,8 @@
                     <% @prendas.each do |prenda| %>
                         <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
                             <%= link_to guardarropa_prenda_path(@guardarropa,prenda), class: "text-decoration-none" do %>
-                                <div class="card">
-                                    <div class="container  d-flex justify-content-center align-items-center my-1" >
+                                <div class="card h-100">
+                                    <div class="h-100 container  d-flex justify-content-center align-items-center my-1" >
                                         <%if prenda.imagen.attached?%>
                                             <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
                                         <%else%>
@@ -45,7 +45,7 @@
 
 
 
-    <section class="navegacion-guardarropa d-flex justify-content-center align-center my-4" id="botones-prenda-index">
+    <section class="navegacion-guardarropa botones-responsive d-flex justify-content-center align-center my-4" id="botones-prenda-index">
             <%= link_to new_guardarropa_prenda_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear prenda</p><%end%>
             <%= link_to guardarropa_atuendos_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-list"></i> <p class="d-inline">Atuendos</p><%end%>
             <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline">Guardarropas</p><%end%>

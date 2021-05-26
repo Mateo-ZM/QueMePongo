@@ -182,3 +182,9 @@ footer p {
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 890px) {
+  .botones-responsive {
+      flex-direction: column;
+  }
+}

@@ -12,11 +12,23 @@ document.addEventListener( 'DOMContentLoaded', function ()
             new Splide( elms[ 0 ] ,
             { 
                 type: 'loop',  
+                trimSpace: false,
                 width: 'auto',
                 focus: 'center',
                 perPage: 3,
                 gap: 5,
                 start: parseInt(cont[0].innerHTML),
+                breakpoints: {
+                    '1100': {
+                        perPage: 2,
+                        focus: 0,
+                        gap: 5,
+                    },
+                    '770': {
+                        perPage: 1,
+                        gap: 5,
+                    },
+                }
             }
             ).mount();
         }
@@ -46,6 +58,17 @@ document.addEventListener( 'DOMContentLoaded', function ()
                 perPage: 3,
                 gap: 5,
                 start: parseInt(cont[0].innerHTML),
+                breakpoints: {
+                    '1100': {
+                        perPage: 2,
+                        gap: 5,
+                        focus: 0,
+                    },
+                    '770': {
+                        perPage: 1,
+                        gap: 5,
+                    },
+                }
             }
             ).mount();
         }
@@ -75,6 +98,17 @@ document.addEventListener( 'DOMContentLoaded', function ()
                 perPage: 3,
                 gap: 5,
                 start: parseInt(cont[0].innerHTML),
+                breakpoints: {
+                    '1100': {
+                        perPage: 2,
+                        gap: 5,
+                        focus: 0,
+                    },
+                    '770': {
+                        perPage: 1,
+                        gap: 5,
+                    },
+                }
             }
             ).mount();
         }
@@ -104,6 +138,17 @@ document.addEventListener( 'DOMContentLoaded', function ()
                 perPage: 3,
                 gap: 5,
                 start: parseInt(cont[0].innerHTML),
+                breakpoints: {
+                    '1100': {
+                        perPage: 2,
+                        focus: 0,
+                        gap: 5,
+                    },
+                    '770': {
+                        perPage: 1,
+                        gap: 5,
+                    },
+                }
             }
             ).mount();
         }
@@ -127,11 +172,21 @@ document.addEventListener( 'DOMContentLoaded', function ()
         {
             new Splide( elms[0],
             {  
-                type: 'loop',  
-                width: 'auto',
-                focus: 'center',
+                type: 'loop',
                 perPage: 3,
                 gap: 5,
+
+                breakpoints: {
+                    '1100': {
+                        perPage: 2,
+                        gap: 5,
+                        focus: 0,
+                    },
+                    '770': {
+                        perPage: 1,
+                        gap: 5,
+                    },
+                }
             }
             ).mount();
         }

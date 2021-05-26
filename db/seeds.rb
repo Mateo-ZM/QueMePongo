@@ -1,6 +1,7 @@
-guardarropa_1 = Guardarropa.create! Nombre: "Prueba 1", link_imagen: "https://lh3.googleusercontent.com/proxy/aham7mF2hTalORrgCuIBUpqK3vEAtyy8SUjnWrdT3NztEfyvjfn7I4QbnnUYaUMK_kPUxYPfCf_mCwnSnsjelKEpfd1GCguCEocejIf1HVGrTeZ4ILI7TrJliLo69as"
-guardarropa_2 = Guardarropa.create! Nombre: "Prueba 2", link_imagen: "https://lh3.googleusercontent.com/proxy/aham7mF2hTalORrgCuIBUpqK3vEAtyy8SUjnWrdT3NztEfyvjfn7I4QbnnUYaUMK_kPUxYPfCf_mCwnSnsjelKEpfd1GCguCEocejIf1HVGrTeZ4ILI7TrJliLo69as"
-guardarropa_3 = Guardarropa.create! Nombre: "Prueba 3", link_imagen: "https://lh3.googleusercontent.com/proxy/aham7mF2hTalORrgCuIBUpqK3vEAtyy8SUjnWrdT3NztEfyvjfn7I4QbnnUYaUMK_kPUxYPfCf_mCwnSnsjelKEpfd1GCguCEocejIf1HVGrTeZ4ILI7TrJliLo69as"
+guardarropa_1 = Guardarropa.create! Nombre: "Guardarropa Principal", link_imagen: "https://www.pngitem.com/pimgs/m/503-5039552_closet-png-image-wardrobe-png-transparent-png.png"
+guardarropa_2 = Guardarropa.create! Nombre: "Guardarropa Formal", link_imagen: "https://http2.mlstatic.com/D_NQ_NP_417425-MLA25459372929_032017-O.jpg"
+guardarropa_3 = Guardarropa.create! Nombre: "Guardarropa Casual", link_imagen: "https://http2.mlstatic.com/D_NQ_NP_655658-MLA43164704096_082020-O.jpg"
+guardarropa_nino = Guardarropa.create! Nombre: "Guardarropa Ni", link_imagen: "https://thumbs.dreamstime.com/b/guardarropa-con-ropa-del-ni%C3%B1o-105538778.jpg"
 
 guardarropa_1.prendas << (Prenda.create! tipo: "Remera manga corta", categoria: :Torso, tela: :Algodon, color_primario: "rojo", link_imagen:"https://cdyc.com.ar/wp-content/uploads/2018/09/remeraroja.jpg")
 guardarropa_1.prendas << (Prenda.create! tipo: "Remera manga larga", categoria: :Torso, tela: :Mohair, color_primario: "azul", link_imagen: "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_azul_lisa_manga_larga_op1_.jpg")
@@ -52,6 +53,3 @@ guardarropa_1.prendas << (Prenda.create! tipo: "Pollera amarilla", categoria: :P
 guardarropa_2.prendas << (Prenda.create! tipo: "Remera de ACDC", categoria: :Torso, tela: :Lana, color_primario: "negro", color_secundario: "blanco", link_imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/333/138/products/hombre31-6b9de400e6fe8d2b1516024655782837-640-0.jpg")
 guardarropa_2.prendas << (Prenda.create! tipo: "Remera sol naciente", categoria: :Torso, tela: :Lino, color_primario: "blanco", color_secundario: "rojo", link_imagen: "https://www.remerasweb.com/675-home_default/remera-japon-sol-naciente.jpg")
 guardarropa_2.prendas << (Prenda.create! tipo: "Botas facheras", categoria: :Pies, tela: :Cuero, color_primario: "naranja", color_secundario: "blanco", link_imagen: "https://www.digitalsport.com.ar/files/products/5ec2f5747a201-488282-500x500.jpg")
-
-
-

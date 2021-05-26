@@ -5,228 +5,238 @@
             <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path %></li>
             <li class="breadcrumb-item"><%= link_to "Prendas", guardarropa_prendas_path(@guardarropa) %></li>
             <li class="breadcrumb-item"><%= link_to "Atuendos", guardarropa_atuendos_path(@guardarropa) %></li>
-            <li class="breadcrumb-item active" aria-current="page">Crear</li>
+            <li class="breadcrumb-item active" aria-current="page"><%= btn_text%></li>
         </ol>
     </nav>
-    <%= form_for [@guardarropa,@atuendo] do |f| %>
-<!-- Torso -->
-    <%= f.text_field :Descripcion, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
-    <div class="row d-flex justify-content-center ">
-        <div class="col-lg-1 d-flex justify-content-center align-items-center d-block">
-            <h2 class="d-block">Torso:</h2>
+
+    <%= form_for [@guardarropa,@atuendo], :html => {:class => 'form_atuendos mt-5 mb-4'} do |f| %>
+        <div class="container mt-4">
+            <div class="container">
+                <div class="container">
+                    <div class="container">
+                        <%= f.text_field :Descripcion, class: "container text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <!-- Torso -->
+        <div class="row d-flex justify-content-center ">
+            <div class="col-lg-12 d-block">
+                <div class="row mb-3">
+                    <div class="splide">
+                        <div class="splide__slider">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <% @prendas_torso.each do |prenda| %>
+                                        <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
+                                            <div class="card card_atuendos_new_torso h-100">
+                                                <div class="container  d-flex justify-content-center align-items-center my-1" >
+                                                    <%if prenda.imagen.attached?%>
+                                                        <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
+                                                    <%else%>
+                                                        <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
+                                                    <%end%>
+                                                </div>
+                                                <div class="card-footer card-footer-index d-flex justify-content-center align-center">
+                                                    <h5 class="container text-center text-dark">
+                                                        <%= prenda.tipo%>
+                                                    </h5>
+                                                </div>
+                                                <div class="invisible"><%= prenda.id%></div>
+                                                <div class="invisible">
+                                                    <%if(prenda.id == @prenda_torso)%>
+                                                        <div class="prenda_torso_inicial"><%=@prenda_torso%></div>
+                                                        <div class="contador_torso"><%=@i%></div>
+                                                    <%end%>
+                                                    <%@i=@i+1%>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="col-lg-9 d-block">
-            <div class="row mt-5 mb-3">
-                <div class="splide">
-                    <div class="splide__slider">
-                        <div class="splide__track">
-                            <div class="splide__list">
-                                <% @prendas_torso.each do |prenda| %>
-                                    <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                                        <div class="card card_atuendos_new_torso h-100">
-                                            <div class="container  d-flex justify-content-center align-items-center my-1" >
-                                                <%if prenda.imagen.attached?%>
-                                                    <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
-                                                <%else%>
-                                                    <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
-                                                <%end%>
-                                            </div>
-                                            <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                                                <h5 class="container text-center text-dark">
-                                                    <%= prenda.tipo%>
-                                                </h5>
-                                            </div>
-                                            <div class="invisible"><%= prenda.id%></div>
-                                            <div class="invisible">
-                                                <%if(prenda.id == @prenda_torso)%>
-                                                    <div class="prenda_torso_inicial"><%=@prenda_torso%></div>
-                                                    <div class="contador_torso"><%=@i%></div>
-                                                <%end%>
+        <%@i=0%>
+
+        <div class="invisible">
+            <!--<select name="atuendo[prenda_torso_id]" id="atuendo_prenda_torso_id"><option value=""></option> </select> -->
+            <%= f.select :prenda_torso_id, options_for_select(@conversion_torso),  class:"form-control"%>
+        </div>
+
+        <!-- Piernas -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-12">
+                <div class="row mb-3">
+                    <div class="splide">
+                        <div class="splide__slider">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <% @prendas_piernas.each do |prenda| %>
+                                        <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
+                                            <div class="card card_atuendos_new_piernas h-100">
+                                                <div class="container  d-flex justify-content-center align-items-center my-1" >
+                                                    <%if prenda.imagen.attached?%>
+                                                        <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
+                                                    <%else%>
+                                                        <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
+                                                    <%end%>
+                                                </div>
+                                                <div class="card-footer card-footer-index d-flex justify-content-center align-center">
+                                                    <h5 class="container text-center text-dark">
+                                                        <%= prenda.tipo%>
+                                                    </h5>
+                                                </div>
+                                                <div class="invisible"><%= prenda.id%></div>
+                                                <div class="invisible">
+                                                    <%if(prenda.id == @prenda_piernas)%>
+                                                        <div class="prenda_piernas_inicial"><%=@prenda_piernas%></div>
+                                                        <div class="contador_piernas"><%=@i%></div>
+                                                    <%end%>
+                                                </div>
                                                 <%@i=@i+1%>
-                                                
                                             </div>
                                         </div>
-                                    </div>
-                                <% end %>
+                                    <% end %>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <%@i=0%>
+        <%@i=0%>
 
-    <div class="invisible">
-        <!--<select name="atuendo[prenda_torso_id]" id="atuendo_prenda_torso_id"><option value=""></option> </select> -->
-        <%= f.select :prenda_torso_id, options_for_select(@conversion_torso),  class:"form-control"%>
-    </div>
-
-<!-- Piernas -->
-    <div class="row d-flex justify-content-center">
-        <div class="col-lg-1 d-flex justify-content-center align-items-center">
-            <h2>Piernas:</h2>
+        <div class="invisible">
+            <!--<select name="atuendo[prenda_piernas_id]" id="atuendo_prenda_piernas_id"><option value=""></option> </select> -->
+            <%= f.select :prenda_piernas_id, options_for_select(@conversion_piernas),  class:"form-control"%>
         </div>
 
-        <div class="col-lg-9">
-            <div class="row mt-5 mb-3">
-                <div class="splide">
-                    <div class="splide__slider">
-                        <div class="splide__track">
-                            <div class="splide__list">
-                                <% @prendas_piernas.each do |prenda| %>
-                                    <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                                        <div class="card card_atuendos_new_piernas h-100">
-                                            <div class="container  d-flex justify-content-center align-items-center my-1" >
-                                                <%if prenda.imagen.attached?%>
-                                                    <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
-                                                <%else%>
-                                                    <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
-                                                <%end%>
+    <!-- Pies -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-12">
+                <div class="row mb-3">
+                    <div class="splide">
+                        <div class="splide__slider">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <% @prendas_pies.each do |prenda| %>
+                                        <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
+                                            <div class="card card_atuendos_new_pies h-100">
+                                                <div class="container  d-flex justify-content-center align-items-center my-1" >
+                                                    <%if prenda.imagen.attached?%>
+                                                        <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
+                                                    <%else%>
+                                                        <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
+                                                    <%end%>
+                                                </div>
+                                                <div class="card-footer card-footer-index d-flex justify-content-center align-center">
+                                                    <h5 class="container text-center text-dark">
+                                                        <%= prenda.tipo%>
+                                                    </h5>
+                                                </div>
+                                                <div class="invisible"><%= prenda.id%></div>
+                                                <div class="invisible">
+                                                    <%if(prenda.id == @prenda_pies)%>
+                                                        <div class="prenda_pies_inicial"><%=@prenda_pies%></div>
+                                                        <div class="contador_pies"><%=@i%></div>
+                                                    <%end%>
+                                                </div>
+                                                <%@i=@i+1%>
                                             </div>
-                                            <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                                                <h5 class="container text-center text-dark">
-                                                    <%= prenda.tipo%>
-                                                </h5>
-                                            </div>
-                                            <div class="invisible"><%= prenda.id%></div>
-                                            <div class="invisible">
-                                                <%if(prenda.id == @prenda_piernas)%>
-                                                    <div class="prenda_piernas_inicial"><%=@prenda_piernas%></div>
-                                                    <div class="contador_piernas"><%=@i%></div>
-                                                <%end%>
-                                            </div>
-                                            <%@i=@i+1%>
                                         </div>
-                                    </div>
-                                <% end %>
+                                    <% end %>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <%@i=0%>
+        <%@i=0%>
 
-    <div class="invisible">
-        <!--<select name="atuendo[prenda_piernas_id]" id="atuendo_prenda_piernas_id"><option value=""></option> </select> -->
-        <%= f.select :prenda_piernas_id, options_for_select(@conversion_piernas),  class:"form-control"%>
-    </div>
-
-<!-- Pies -->
-    <div class="row d-flex justify-content-center">
-        <div class="col-lg-1 d-flex justify-content-center align-items-center">
-            <h2>Pies:</h2>
+        <div class="invisible"> 
+            <!--<select name="atuendo[prenda_pies_id]" id="atuendo_prenda_pies_id"><option value=""></option> </select>-->
+            <%= f.select :prenda_pies_id, options_for_select(@conversion_pies),  class:"form-control"%>
         </div>
-        <div class="col-lg-9">
-            <div class="row mt-5 mb-3">
-                <div class="splide">
-                    <div class="splide__slider">
-                        <div class="splide__track">
-                            <div class="splide__list">
-                                <% @prendas_pies.each do |prenda| %>
-                                    <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                                        <div class="card card_atuendos_new_pies h-100">
-                                            <div class="container  d-flex justify-content-center align-items-center my-1" >
-                                                <%if prenda.imagen.attached?%>
-                                                    <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
-                                                <%else%>
-                                                    <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
-                                                <%end%>
+
+    <!-- Accesorio -->
+        <div class="row d-flex justify-content-center"> 
+            <div class="col-lg-12">
+                <div class="row mb-3">
+                    <div class="splide">
+                        <div class="splide__slider">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <% @prendas_accesorios.each do |prenda| %>
+                                        <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
+                                            <div class="card card_atuendos_new_accesorio h-100">
+                                                <div class="container  d-flex justify-content-center align-items-center my-1" >
+                                                    <%if prenda.imagen.attached?%>
+                                                        <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
+                                                    <%else%>
+                                                        <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
+                                                    <%end%>
+                                                </div>
+                                                <div class="card-footer card-footer-index d-flex justify-content-center align-center ">
+                                                    <h5 class="container text-center text-dark">
+                                                        <%= prenda.tipo%>
+                                                    </h5>
+                                                </div>
+                                                <div class="invisible"><%= prenda.id%></div>
+                                                <div class="invisible">
+                                                    <%if(prenda.id == @prenda_accesorios)%>
+                                                        <div class="prenda_accesorios_inicial"><%=@prenda_accesorios%></div>
+                                                        <div class="contador_accesorios"><%=@i%></div>
+                                                    <%end%>
+                                                </div>
+                                                <%@i=@i+1%>
                                             </div>
-                                            <div class="card-footer card-footer-index d-flex justify-content-center align-center">
-                                                <h5 class="container text-center text-dark">
-                                                    <%= prenda.tipo%>
-                                                </h5>
-                                            </div>
-                                            <div class="invisible"><%= prenda.id%></div>
-                                            <div class="invisible">
-                                                <%if(prenda.id == @prenda_pies)%>
-                                                    <div class="prenda_pies_inicial"><%=@prenda_pies%></div>
-                                                    <div class="contador_pies"><%=@i%></div>
-                                                <%end%>
-                                            </div>
-                                            <%@i=@i+1%>
                                         </div>
-                                    </div>
-                                <% end %>
+                                    <% end %>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <%@i=0%>
-
-    <div class="invisible"> 
-        <!--<select name="atuendo[prenda_pies_id]" id="atuendo_prenda_pies_id"><option value=""></option> </select>-->
-        <%= f.select :prenda_pies_id, options_for_select(@conversion_pies),  class:"form-control"%>
-    </div>
-
-<!-- Accesorio -->
-    <div class="row d-flex justify-content-center"> 
-        <div class="col-lg-1 d-flex justify-content-center align-items-center">
-            <h2>Accesorio:</h2>
+        <div class="invisible">
+            <!--<select name="atuendo[prenda_accesorio_id]" id="atuendo_prenda_accesorio_id"><option value=""></option> </select>-->
+            <%= f.select :prenda_accesorios_id, options_for_select(@conversion_accesorios),  class:"form-control"%>
         </div>
-        <div class="col-lg-9">
-            <div class="row mt-5 mb-3">
-                <div class="splide">
-                    <div class="splide__slider">
-                        <div class="splide__track">
-                            <div class="splide__list">
-                                <% @prendas_accesorios.each do |prenda| %>
-                                    <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                                        <div class="card card_atuendos_new_accesorio h-100">
-                                            <div class="container  d-flex justify-content-center align-items-center my-1" >
-                                                <%if prenda.imagen.attached?%>
-                                                    <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
-                                                <%else%>
-                                                    <%= image_tag(prenda.link_imagen , class:"fotos_cards_index h-100") %>
-                                                <%end%>
-                                            </div>
-                                            <div class="card-footer card-footer-index d-flex justify-content-center align-center ">
-                                                <h5 class="container text-center text-dark">
-                                                    <%= prenda.tipo%>
-                                                </h5>
-                                            </div>
-                                            <div class="invisible"><%= prenda.id%></div>
-                                            <div class="invisible">
-                                                <%if(prenda.id == @prenda_accesorios)%>
-                                                    <div class="prenda_accesorios_inicial"><%=@prenda_accesorios%></div>
-                                                    <div class="contador_accesorios"><%=@i%></div>
-                                                <%end%>
-                                            </div>
-                                            <%@i=@i+1%>
-                                        </div>
-                                    </div>
-                                <% end %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        
+        <div class="container d-flex justify-content-center etiquetas_atuendos_new my-5">
+            <li class="list-group-item border-0 d-inline"><span class="negrita">Puntaje: </span><%= f.select :Puntaje, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], :prompt => 'Elige uno', class:"form-control"%></li>
+            <li class="list-group-item border-0 d-inline"><span class="negrita">Formalidad: </span><%= f.select :Etiqueta_Formal, ['Formal', 'Informal'], :prompt => 'Elige uno', class:"form-control"%></li>
+            <li class="list-group-item border-0 d-inline"><span class="negrita">Estación: </span><%= f.select :Etiqueta_Estacion, options_for_select([['Verano', 'Verano'],['Invierno','Invierno'],['Otoño/Primavera', 'OtonioPrimavera']]), :prompt => 'Elige uno', class:"form-control"%></li>
+            <li class="list-group-item border-0 d-inline"><span class="negrita">Horario: </span><%= f.select :Etiqueta_DiaNoche, ['Dia', 'Noche'], :prompt => 'Elige uno', class:"form-control"%></li>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <%= button_tag(type: 'submit', class: "btn btn-crear px-3 py-2 form-control ") do %>
+                    <i class="subir"></i> <p class="d-inline"><%= btn_text %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
+                <% end %>
+            </div>
+            <div class="col-lg-4">
+                <%= link_to new_guardarropa_atuendo_path(@guardarropa), method: :get, class: "btn btn-crear form-control btn-lg" do %><i class="fas fa-dice"></i> <p class="d-inline">Generar atuendo aleatorio</p><%end%>
+            </div>
+            <div class="col-lg-4">
+                <%= link_to link_volver, class:"btn-salir px-3 py-2 text-decoration-none text-center text-white form-control", data: {confirm: 'Volver sin guardar?' } do%>
+                    <i class="fa fa-arrow-left"></i><p class="d-inline"> Volver</p>
+                <% end %>
             </div>
         </div>
-    </div>
-
-    <div class="invisible">
-        <!--<select name="atuendo[prenda_accesorio_id]" id="atuendo_prenda_accesorio_id"><option value=""></option> </select>-->
-        <%= f.select :prenda_accesorios_id, options_for_select(@conversion_accesorios),  class:"form-control"%>
-    </div>
-
-    <li class="list-group-item"><span class="negrita">Puntaje: </span><%= f.select :Puntaje, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], :prompt => 'Elige uno', class:"form-control"%></li>
-    <li class="list-group-item"><span class="negrita">Formalidad: </span><%= f.select :Etiqueta_Formal, ['Formal', 'Informal'], :prompt => 'Elige uno', class:"form-control"%></li>
-    <li class="list-group-item"><span class="negrita">Estación: </span><%= f.select :Etiqueta_Estacion, options_for_select([['Verano', 'Verano'],['Invierno','Invierno'],['Otoño/Primavera', 'OtonioPrimavera']]), :prompt => 'Elige uno', class:"form-control"%></li>
-    <li class="list-group-item"><span class="negrita">Horario: </span><%= f.select :Etiqueta_DiaNoche, ['Dia', 'Noche'], :prompt => 'Elige uno', class:"form-control"%></li>
-
-    <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 form-control ") do %>
-            <i class="subir"></i> <p class="d-inline"><%= btn_text %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
-    <% end %>
     <% end %>
 </div>
 

@@ -58,11 +58,13 @@ main.guardarropa span.firulete{
 .btn-salir {
     color: $color-secundario;
     background-color: $color-volver;
+    font-size: 1.2rem;
 }
 
 .btn-salir:hover, .btn-salir:focus {
     color: $color-secundario;
     background-color: $color-volver-hover;
+    font-size: 1.2rem;
 }
 
 .card-header {

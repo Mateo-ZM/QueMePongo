@@ -215,7 +215,7 @@
             <%= f.select :prenda_accesorios_id, options_for_select(@conversion_accesorios),  class:"form-control"%>
         </div>
         
-        <div class="container d-flex justify-content-center etiquetas_atuendos_new my-5">
+        <div class="container d-flex justify-content-center align-items-center etiquetas_atuendos_new my-5">
             <li class="list-group-item border-0 d-inline"><span class="negrita">Puntaje: </span><%= f.select :Puntaje, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], :prompt => 'Elige uno', class:"form-control"%></li>
             <li class="list-group-item border-0 d-inline"><span class="negrita">Formalidad: </span><%= f.select :Etiqueta_Formal, ['Formal', 'Informal'], :prompt => 'Elige uno', class:"form-control"%></li>
             <li class="list-group-item border-0 d-inline"><span class="negrita">Estación: </span><%= f.select :Etiqueta_Estacion, options_for_select([['Verano', 'Verano'],['Invierno','Invierno'],['Otoño/Primavera', 'OtonioPrimavera']]), :prompt => 'Elige uno', class:"form-control"%></li>

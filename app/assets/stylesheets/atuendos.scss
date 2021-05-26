@@ -77,3 +77,9 @@ $color-volver-hover: #780E12;
 //    padding-left: 1rem;
 //    padding-right: 1rem;
 //}
+
+@media (max-width: 768px) {
+    .etiquetas_atuendos_new {
+        flex-direction: column;
+    }
+}

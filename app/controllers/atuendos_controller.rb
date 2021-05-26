@@ -5,7 +5,7 @@ class AtuendosController < ApplicationController
 
 
     def index
-        @atuendos = @guardarropa.atuendos.page(params[:page])
+        @atuendos = @guardarropa.atuendos.order(:Descripcion)
     end
 
     def show

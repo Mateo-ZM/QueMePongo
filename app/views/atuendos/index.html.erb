@@ -18,7 +18,6 @@
                         <div class="splide__slide">
                             <%= link_to guardarropa_atuendo_path(@guardarropa,atuendo), class: "text-decoration-none" do %>
                                 <div class="card h-100">
-
                                     <div class="m-4 h-100 row d-flex align-items-center">
                                         <div class="col-6 d-flex justify-content-center align-items-center">
                                             <%if atuendo.prenda_torso.imagen.attached?%>
@@ -68,7 +67,7 @@
         <%= link_to new_guardarropa_atuendo_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear atuendo</p><%end%>
         <%= link_to guardarropa_prendas_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-list"></i> <p class="d-inline">Prendas</p><%end%>
         <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline">Guardarropas</p><%end%>
-        <%= paginate @atuendos, window: 3 %>
+        
     </section>
 </main>
 

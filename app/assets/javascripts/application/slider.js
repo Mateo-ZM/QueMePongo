@@ -23,10 +23,12 @@ document.addEventListener( 'DOMContentLoaded', function ()
                         perPage: 2,
                         focus: 0,
                         gap: 5,
+                        pagination: false,
                     },
                     '770': {
                         perPage: 1,
                         gap: 5,
+                        pagination: false,
                     },
                 }
             }
@@ -63,10 +65,12 @@ document.addEventListener( 'DOMContentLoaded', function ()
                         perPage: 2,
                         gap: 5,
                         focus: 0,
+                        pagination: false,
                     },
                     '770': {
                         perPage: 1,
                         gap: 5,
+                        pagination: false,
                     },
                 }
             }
@@ -103,10 +107,12 @@ document.addEventListener( 'DOMContentLoaded', function ()
                         perPage: 2,
                         gap: 5,
                         focus: 0,
+                        pagination: false,
                     },
                     '770': {
                         perPage: 1,
                         gap: 5,
+                        pagination: false,
                     },
                 }
             }
@@ -143,10 +149,12 @@ document.addEventListener( 'DOMContentLoaded', function ()
                         perPage: 2,
                         focus: 0,
                         gap: 5,
+                        pagination: false,
                     },
                     '770': {
                         perPage: 1,
                         gap: 5,
+                        pagination: false,
                     },
                 }
             }
@@ -181,10 +189,12 @@ document.addEventListener( 'DOMContentLoaded', function ()
                         perPage: 2,
                         gap: 5,
                         focus: 0,
+                        pagination: false,
                     },
                     '770': {
                         perPage: 1,
                         gap: 5,
+                        pagination: false,
                     },
                 }
             }

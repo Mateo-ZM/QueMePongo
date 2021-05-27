@@ -71,18 +71,14 @@ class AtuendosController < ApplicationController
 
         @i=0
 
-        #@atuendo.prenda_torso = @prendas_torso[rand(@prendas_torso.count)]
     end
 
     def update
         @atuendo = Atuendo.find(params[:id])
 
-
         @atuendo.update! atuendo_params
 
         redirect_to guardarropa_atuendo_path(@guardarropa,@atuendo)
-        #@atuendo.comprobar_color_secundario
-        #redirect_to guardarropa_atuendo_path(@guardarropa,@atuendo)
     end
 
     def edit
@@ -137,7 +133,6 @@ class AtuendosController < ApplicationController
         end
 
         @i=0
-        #@atuendo.comprobar_link_imagen!
     end
 
     def destroy

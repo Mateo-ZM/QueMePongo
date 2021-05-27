@@ -1,14 +1,13 @@
 <main class= "container h-100">
-    <h1 class = "titulo text-center mt-4 mb-3"> <%= titulo %> </h1>
-
-    <div class="container">
+    <div class="container mt-4">
         <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path%></li>
-            <li class="breadcrumb-item active" aria-current="page"><%= btn_text %></li>
-        </ol>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path%></li>
+                <li class="breadcrumb-item active" aria-current="page"><%= btn_text %></li>
+            </ol>
         </nav>
     </div>
+    <h1 class = "titulo text-center mt-4 mb-3"> <%= titulo %> </h1>
 
     <div class="d-flex  justify-content-center">
         <div class="card mi_card_modif ">
@@ -19,9 +18,9 @@
 
                 <div class="container d-flex justify-content-center my-2">
                     <%if guardarropa.imagen.attached?%>
-                        <%= image_tag(guardarropa.imagen , class:"card-fotos-guardarropa-index") %>
+                        <%= image_tag(guardarropa.imagen , class:"card-fotos-guardarropa-index h-100") %>
                     <%else%>
-                        <%= image_tag(link_imagen , class:"card-fotos-guardarropa-index") %>
+                        <%= image_tag(link_imagen , class:"card-fotos-guardarropa-index h-100") %>
                     <%end%>
                 </div>
 

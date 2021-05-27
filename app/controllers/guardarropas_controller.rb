@@ -12,7 +12,7 @@ class GuardarropasController < ApplicationController
     
     def create
         @guardarropa = Guardarropa.new guardarropa_params
-        @guardarropa.save
+        @guardarropa.save!
         redirect_to "/guardarropas" 
     end
     

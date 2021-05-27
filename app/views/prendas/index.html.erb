@@ -1,16 +1,14 @@
 <main class="guardarropa container">
-    
-    <h1 class="container titulo mt-4 mb-4 text-center">Prendas de <%= @guardarropa.Nombre %></h1>
-
-    <div class="container">
+    <div class="container mt-4">
         <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path%></li>
-            <li class="breadcrumb-item active" aria-current="page">Prendas</li>
-        </ol>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path%></li>
+                <li class="breadcrumb-item active" aria-current="page">Prendas</li>
+            </ol>
         </nav>
     </div>
-    
+    <h1 class="container titulo mt-4 mb-4 text-center">Prendas de <%= @guardarropa.Nombre %></h1>
+
 
     <div class="splide">
         <div class="splide__slider">
@@ -46,9 +44,9 @@
 
 
     <section class="navegacion-guardarropa botones-responsive d-flex justify-content-center align-center my-4" id="botones-prenda-index">
-            <%= link_to new_guardarropa_prenda_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear prenda</p><%end%>
-            <%= link_to guardarropa_atuendos_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-list"></i> <p class="d-inline">Atuendos</p><%end%>
-            <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline">Guardarropas</p><%end%>
+        <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline">Guardarropas</p><%end%>
+        <%= link_to guardarropa_atuendos_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-list"></i> <p class="d-inline">Atuendos</p><%end%>
+        <%= link_to new_guardarropa_prenda_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear prenda</p><%end%>
     </section>
 </main>
 

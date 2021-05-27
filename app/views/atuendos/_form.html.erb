@@ -1,13 +1,15 @@
 <div class="atuendos-new container">
-    <h1 class="titulo mt-4 mb-2 text-center"><%= titulo %></h1>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path %></li>
-            <li class="breadcrumb-item"><%= link_to "Prendas", guardarropa_prendas_path(@guardarropa) %></li>
-            <li class="breadcrumb-item"><%= link_to "Atuendos", guardarropa_atuendos_path(@guardarropa) %></li>
-            <li class="breadcrumb-item active" aria-current="page"><%= btn_text%></li>
-        </ol>
-    </nav>
+    <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path %></li>
+                <li class="breadcrumb-item"><%= link_to "Prendas", guardarropa_prendas_path(@guardarropa) %></li>
+                <li class="breadcrumb-item"><%= link_to "Atuendos", guardarropa_atuendos_path(@guardarropa) %></li>
+                <li class="breadcrumb-item active" aria-current="page"><%= btn_text%></li>
+            </ol>
+        </nav>
+    </div>
+    <h1 class="titulo mt-2 mb-2 text-center"><%= titulo %></h1>
 
     <%= form_for [@guardarropa,@atuendo], :html => {:class => 'form_atuendos mt-5 mb-4'} do |f| %>
         <div class="container mt-4">
@@ -178,7 +180,7 @@
                                 <div class="splide__list">
                                     <% @prendas_accesorios.each do |prenda| %>
                                         <div class=" splide__slide "> <!-- Puse 6 por cada una porque con 8 no sabia como hacer para que cuando se mas chica la pantalla aparezcan menos-->
-                                            <div class="card card_atuendos_new_accesorio h-100">
+                                            <div class="card card_atuendos_new_accesorios h-100">
                                                 <div class="container h-100 d-flex justify-content-center align-items-center my-1 h-100">
                                                     <%if prenda.imagen.attached?%>
                                                         <%= image_tag(prenda.imagen , class:"fotos_cards_index h-100") %>
@@ -224,12 +226,12 @@
         
         <div class="container">
             <div class="botones-responsive d-flex justify-content-center align-center my-4">
-                <%= button_tag(type: 'submit', class: "btn btn-crear px-3 py-2 m-2 form-control") do %>
-                    <i class="<%= icono%>"></i> <p class="d-inline"><%= btn_text %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
-                <% end %>
-                <%= link_to ruta, method: :get, class: hide + " btn btn-crear px-3 py-2 m-2 form-control" do %><i class="fas fa-dice"></i> <p class="d-inline">Generar atuendo aleatorio</p><%end%>
                 <%= link_to link_volver, class:"btn-salir px-3 py-2 text-decoration-none text-center text-white m-2 form-control", data: {confirm: '¿Volver sin guardar?' } do%>
                     <i class="fa fa-arrow-left"></i><p class="d-inline"> Volver</p>
+                <% end %>
+                <%= link_to ruta, method: :get, class: hide + " btn btn-crear px-3 py-2 m-2 form-control" do %><i class="fas fa-dice"></i> <p class="d-inline">Generar atuendo aleatorio</p><%end%>
+                <%= button_tag(type: 'submit', class: "btn btn-crear px-3 py-2 m-2 form-control") do %>
+                    <i class="<%= icono%>"></i> <p class="d-inline"><%= btn_text %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                 <% end %>
             </div>
         </div>

@@ -22,8 +22,7 @@ class PrendasController < ApplicationController
 
   def create
     @prenda = @guardarropa.prendas.build (prenda_params)
-    #@prenda.comprobar_color_secundario
-    @prenda.save
+    @prenda.save!
     redirect_to guardarropa_prenda_path(@guardarropa,@prenda)
   end
 
@@ -34,7 +33,6 @@ class PrendasController < ApplicationController
   def update
     @prenda = Prenda.find(params[:id])
     @prenda.update! prenda_params
-    #@prenda.comprobar_color_secundario
     redirect_to guardarropa_prenda_path(@guardarropa,@prenda)
   end
 

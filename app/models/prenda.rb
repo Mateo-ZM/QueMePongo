@@ -3,28 +3,21 @@ class Prenda < ApplicationRecord
     enum tela: [:Algodon, :Lana, :Lino, :Cuero, :Denim, :Seda, :Poliester, :Mohair, :Piel, :Cuerina]
     has_one_attached :imagen
     paginates_per 6
-    #max_paginates_per 8
 
     def vacia?
-        return (self.link_imagen.blank? || ((URI.parse(self.link_imagen).scheme != "https") && (URI.parse(self.link_imagen).scheme != "http")))
+        (self.link_imagen.blank? || ((URI.parse(self.link_imagen).scheme != "https") && (URI.parse(self.link_imagen).scheme != "http")))
     end
 
     def mismo_color?
-        return self.color_primario == self.color_secundario
+        self.color_primario == self.color_secundario
     end
 
     def comprobar_color_secundario
-        if self.mismo_color?
-            self.update({:color_secundario => "Vacio"})
-        end
+        self.update({:color_secundario => "Vacio"}) if self.mismo_color?
     end
 
     def comprobar_link_imagen! 
-        #if  self.imagen.attached?
-            #self.link_imagen = url_for(self.imagen)
-        if self.vacia?
-            self.link_imagen = "imagen_no_disponible.jpg"
-        end
+        self.link_imagen = "imagen_no_disponible.jpg" if self.vacia?
     end 
     
     has_many :atuendos,foreign_key: 'prenda_torso_id', dependent: :destroy
@@ -32,6 +25,4 @@ class Prenda < ApplicationRecord
     has_many :atuendos,foreign_key: 'prenda_pies_id', dependent: :destroy
     has_many :atuendos,foreign_key: 'prenda_accesorios_id', dependent: :destroy
 
-    
-    #belongs_to :guardarropa
 end

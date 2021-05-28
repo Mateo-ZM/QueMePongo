@@ -37,8 +37,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'kaminari'
 
+gem 'wdm', '~> 0.1.1'
+
 group :assets do
   gem 'rails-ujs'
 end
+
 gem 'jquery-rails'
 gem 'paloma', '~> 6.1.0'

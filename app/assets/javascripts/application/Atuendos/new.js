@@ -38,7 +38,7 @@ Paloma.controller('Atuendos', {
             seleccionar_Parte('pies')
             seleccionar_Parte('accesorios')
 
-        function comprobar_todas_opciones_seleccionadas()
+        function comprobar_Todas_Opciones_Seleccionadas()
         {
             let boton = document.querySelector('button.form-control');
             let id_torso = atuendos_new_torso[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].value;
@@ -73,7 +73,7 @@ Paloma.controller('Atuendos', {
                             atuendos_new_parte[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].innerHTML = cadena;
                         }
                     }
-                    comprobar_todas_opciones_seleccionadas()
+                    comprobar_Todas_Opciones_Seleccionadas()
                 })
             });
         }

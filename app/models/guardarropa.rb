@@ -11,6 +11,9 @@ class Guardarropa < ApplicationRecord
 
     
     def vacia?
-        (self.link_imagen.blank? || ((URI.parse(self.link_imagen).scheme != "https") && (URI.parse(self.link_imagen).scheme != "http")))
+        (self.link_imagen.blank? || !"https".in?(self.link_imagen) || !"http".in?(self.link_imagen))
     end
 end 
+
+
+#((URI.parse(self.link_imagen).scheme != "https") && (URI.parse(self.link_imagen).scheme != "http")

@@ -17,17 +17,25 @@
 }
 
 .fotos_cards_index_guardarropas {
-    max-height: 18rem;
+    max-height: 16rem;
     alt:"imagen del guardarropa";
     overflow: hidden;
 }
 
 .card-footer-index-guardarropas{
-    height: 6rem;
+    height: 5rem;
 }
 
 .card-footer-index-guardarropas h2{
     overflow: hidden;
     white-space:nowrap;
     text-overflow: ellipsis;
+}
+
+.card-header-index-guardarropas{
+    height: 3rem;
+}
+
+.guardarropa-form-titulo {
+    overflow: visible;
 }

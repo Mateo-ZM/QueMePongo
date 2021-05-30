@@ -226,11 +226,11 @@
         
         <div class="container">
             <div class="botones-responsive d-flex justify-content-center align-center my-4">
-                <%= link_to link_volver, class:"btn-salir px-3 py-2 text-decoration-none text-center text-white m-2 form-control", data: {confirm: '¿Volver sin guardar?' } do%>
+                <%= link_to link_volver, class:"btn-salir btn-form px-3 py-2 text-decoration-none text-center text-white m-2 form-control", data: {confirm: '¿Volver sin guardar?' } do%>
                     <i class="fa fa-arrow-left"></i><p class="d-inline"> Volver</p>
                 <% end %>
-                <%= link_to ruta, method: :get, class: hide + " btn btn-crear px-3 py-2 m-2 form-control" do %><i class="fas fa-dice"></i> <p class="d-inline">Generar atuendo aleatorio</p><%end%>
-                <%= button_tag(type: 'submit', class: "btn btn-crear px-3 py-2 m-2 form-control") do %>
+                <%= link_to ruta, method: :get, class: hide + " btn btn-crear btn-form px-3 py-2 m-2 form-control" do %><i class="fas fa-dice"></i> <p class="d-inline">Generar atuendo aleatorio</p><%end%>
+                <%= button_tag(type: 'submit', class: "btn btn-crear btn-form px-3 py-2 m-2 form-control") do %>
                     <i class="fas fa-check"></i> <p class="d-inline">Confirmar</p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                 <% end %>
             </div>

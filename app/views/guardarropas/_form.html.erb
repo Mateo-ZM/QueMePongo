@@ -7,7 +7,7 @@
             </ol>
         </nav>
     </div>
-    <h1 class = "titulo text-center mt-4 mb-3"> <%= titulo %> </h1>
+    <h1 class = "titulo guardarropa-form-titulo text-center mt-4 mb-3 "> <%= titulo %> </h1>
 
     <div class="d-flex  justify-content-center">
         <div class="card mi_card_modif ">
@@ -34,11 +34,11 @@
 
                 <footer class="card-footer">
                     <div class="action form-group">
-                        <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 form-control ") do %>
+                        <%= button_tag(type: 'submit', class: "btn btn-general btn-form px-3 py-2 my-3 form-control ") do %>
                             <i class="fas fa-check"></i> <p class="d-inline">Confirmar</p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                         <% end %>
                         
-                        <%= link_to "/guardarropas", class:"btn-salir px-3 text-decoration-none text-center text-white form-control", data: {confirm: '¿Volver sin guardar?' } do%>
+                        <%= link_to link_volver, class:"btn-salir btn-form px-3 text-decoration-none text-center text-white form-control", data: {confirm: '¿Volver sin guardar?' } do%>
                             <i class="fa fa-arrow-left"></i><p class="d-inline"> Volver</p>
                         <% end %>
                     </div>

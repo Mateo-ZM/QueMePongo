@@ -13,7 +13,7 @@ class GuardarropasController < ApplicationController
     def create
         @guardarropa = Guardarropa.new guardarropa_params
         @guardarropa.save!
-        redirect_to "/guardarropas" 
+        redirect_to guardarropa_prendas_path(@guardarropa)
     end
     
     def new
@@ -23,7 +23,7 @@ class GuardarropasController < ApplicationController
     def update
         @guardarropa = Guardarropa.find(params[:id])
         @guardarropa.update! guardarropa_params
-        redirect_to guardarropas_path
+        redirect_to guardarropa_prendas_path(@guardarropa)
     end
     
     def edit

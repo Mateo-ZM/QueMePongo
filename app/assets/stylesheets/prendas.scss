@@ -11,7 +11,7 @@ $color-volver-hover: #780E12;
 //rojo fuerte #ed1c24
 //rojo suave #F54F47
 
-main.guardarropa h1.titulo {
+.titulo {
     //text-decoration: underline;
     //text-decoration-color: $color-terciario;
     //font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -36,7 +36,7 @@ main.guardarropa span.firulete{
 .btn-crear {
     background-color: $color-terciario;
     color: $color-secundario;
-    font-size: 1.2rem;
+    font-size: 1.45rem;
 }
 
 .btn-crear:hover, .btn-crear:focus {
@@ -47,7 +47,7 @@ main.guardarropa span.firulete{
 .btn-volver-guardarropas {
     background-color: $color-volver;
     color: $color-secundario;
-    font-size: 1.2rem;
+    font-size: 1.45rem;
 }
 
 .btn-volver-guardarropas:hover, .btn-volver-guardarropas:focus {
@@ -58,13 +58,21 @@ main.guardarropa span.firulete{
 .btn-salir {
     color: $color-secundario;
     background-color: $color-volver;
-    font-size: 1.2rem;
+    font-size: 1.45rem;
 }
 
 .btn-salir:hover, .btn-salir:focus {
     color: $color-secundario;
     background-color: $color-volver-hover;
-    font-size: 1.2rem;
+    font-size: 1.45rem;
+}
+
+.btn-form {
+    font-size: 1.1rem;
+}
+
+.btn-form:hover, .btn-form:focus{
+    font-size: 1.1rem;
 }
 
 .card-header {

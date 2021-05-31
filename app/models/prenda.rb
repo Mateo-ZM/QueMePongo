@@ -10,7 +10,7 @@ class Prenda < ApplicationRecord
     paginates_per 6
 
     def vacia?
-        (self.link_imagen.blank? || (!"https".in?(self.link_imagen) || !"http".in?(self.link_imagen)))
+        (self.link_imagen.blank? || (!"https".in?(self.link_imagen) && !"http".in?(self.link_imagen)))
         #((URI.parse(self.link_imagen).scheme != "https") && (URI.parse(self.link_imagen).scheme != "http"))
     end
 

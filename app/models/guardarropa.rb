@@ -13,7 +13,7 @@ class Guardarropa < ApplicationRecord
 
     
     def vacia?
-        (self.link_imagen.blank? || !"https".in?(self.link_imagen) || !"http".in?(self.link_imagen))
+        (self.link_imagen.blank? || (!"https".in?(self.link_imagen) && !"http".in?(self.link_imagen)))
     end
 end 
 

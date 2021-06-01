@@ -30,4 +30,90 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  #home
   hello: "Hello world"
+  que_ponerse: "Don't know what to wear?"
+  automatiza_guardarropas: "AUTOMATE YOUR WARDROBE!"
+  profesion: "Software developer"
+  derechos_reservados: "All rights reserved"
+  contacto: "Contact"
+  inicio: "home"
+  servicio: "Services"
+  nosotros: "About us"
+  descubri: "Discover the app"
+  #guardarropas
+    #index
+  guardarropas_de: "User's wardrobes"
+  crear_guardarropas: "Create new wardrobe"
+
+    #edit
+  modificacion_guardarropas: "Editing wardrobe"
+  editar: "Edit"
+    #form
+  guardarropas: "Wardrobes"
+  nombre: "Name"
+  link_imagen: "Image link:"
+  placeholder_link_imagen: "https://domain.com/path.jpg"
+  confirmar: "Confirm"
+  volver: "Return"
+    #new
+  creacion_guardarropas: "Creating wardrobe"
+  crear: "Create"
+  #prendas
+    #index
+  prendas_de: "%{guardarropa_nombre}'s clothes"
+  atuendos: "Outfits"
+  creacion_prenda: "Create clothing"
+    #edit
+  modificacion_prenda: "Editing clothing"
+    #form
+  prendas: "Clothes"
+  categoria: "Category:"
+  tipo_tela: "Cloth type:"
+  color_primario: "Primary color:"
+  color_secundario: "Secondary color:"
+  torso: "Torso"
+  piernas: "Legs"
+  pies: "Feet"
+  accesorio: "Accesory"
+  algodon: "Cotton"
+  lana: "Wool"
+  lino: "Linen"
+  cuero: "Leather"
+  denim: "Denim"
+  seda: "Silk"
+  poliester: "Polyester"
+  mohair: "Mohair"
+  piel: "Fur"
+  cuerina: "Synthetic leather"
+  volver_sin_guardar?: "Are you sure you want to return without saving? All entered data will be eliminated"
+    #show
+  prenda: "Clothing"
+  color/es: "Color/s:"
+    #new
+  nueva_prenda: "New clothing"
+  #prenda
+    #index
+  atuendos_de: "%{guardarropa_nombre}'s outfits"
+  creacion_atuendo: "Create new outfit" 
+    #edit
+  modificacion_atuendo: "Editing Outfit"
+    #form
+  puntaje: "Rating"
+  formalidad: "Formality"
+  estacion: "Season"
+  horario: "Time of day"
+  formal: "Formal"
+  informal: "Informal"
+  elige_uno: "Choose one"
+  verano: "Summer"
+  invierno: "Winter"
+  otoño/primavera: "Fall/Spring"
+  dia: "Day"
+  noche: "Night"
+  generar_atuendo_aleatorio: "Generate random outfit"
+    #show
+  atuendo: "Outfit"
+    #show
+  nuevo_atuendo: "New outfit"
+  

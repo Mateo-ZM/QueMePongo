@@ -1,0 +1,87 @@
+es:
+  #home
+  hello: "Hola Mundo"
+  que_ponerse: "¿No sabes que ponerte?"
+  automatiza_guardarropas: "¡AUTOMATIZÁ TU GUARDARROPA!"
+  profesion: "Ingeniero en informática"
+  derechos_reservados: "Todos los derechos reservados"
+  contacto: "Contacto"
+  inicio: "Inicio"
+  servicio: "Servicios"
+  nosotros: "Nosotros"
+  descubri: "Descubrí la app"
+  #guardarropas
+    #index
+  guardarropas_de: "Guardarropas de Usuario"
+  crear_guardarropas: "Crear nuevo guardarropas"
+    #edit
+  modificacion_guardarropas: "Modificación de guardarropa"
+  editar: "Editar"
+    #form
+  guardarropas: "Guardarropas"
+  nombre: "Nombre"
+  link_imagen: "Link de la Imagen:"
+  placeholder_link_imagen: "https://dominio.com/camino.jpg"
+  confirmar: "Confirmar"
+  volver: "Volver"
+    #new
+  creacion_guardarropas: "Creación de guardarropa"
+  crear: "Crear"
+  #prendas
+    #index
+  prendas_de: "Prendas de %{guardarropa_nombre}"
+  atuendos: "Atuendos"
+  creacion_prenda: "Crear prenda"
+    #edit  
+  modificacion_prenda: "Modificar prenda"
+    #form
+  prendas: "Prendas"
+  categoria: "Categoria:"
+  tipo_tela: "Tipo de tela:"
+  color_primario: "Color primario:"
+  color_secundario: "Color secundario:"
+  torso: "Torso"
+  piernas: "Piernas"
+  pies: "Pies"
+  accesorio: "Accesorio"
+  algodon: "Algodón"
+  lana: "Lana"
+  lino: "Lino"
+  cuero: "Cuero"
+  denim: "Denim"
+  seda: "Seda"
+  poliester: "Poliéster"
+  mohair: "Mohair"
+  piel: "Piel"
+  cuerina: "Cuerina"
+  volver_sin_guardar?: "¿Seguro desea volver sin guardar? Se perderán todos los datos ingresados"
+    #show
+  prenda: "Prenda"
+  color/es: "Color/es:"
+    #new
+  nueva_prenda: "Nueva prenda"
+  #prenda
+    #index
+  atuendos_de: "Atuendos de %{guardarropa_nombre}"
+  creacion_atuendo: "Crear nuevo atuendo"
+    #edit
+  modificacion_atuendo: "Modificación de atuendo"
+    #form
+  puntaje: "Puntaje"
+  formalidad: "Formalidad"
+  estacion: "Estación"
+  horario: "Horario del día"
+  formal: "Formal"
+  informal: "Informal"
+  elige_uno: "Elige uno"
+  verano: "Verano"
+  invierno: "Invierno"
+  otoño/primavera: "Otoño/Primavera"
+  dia: "Día"
+  noche: "Noche"
+  generar_atuendo_aleatorio: "Generar atuendo aleatorio"
+    #show
+  atuendo: "Atuendo"
+    #show
+  nuevo_atuendo: "Nuevo atuendo"
+

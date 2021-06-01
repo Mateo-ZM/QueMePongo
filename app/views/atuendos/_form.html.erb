@@ -2,9 +2,8 @@
     <div class="container mt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path %></li>
-                <li class="breadcrumb-item"><%= link_to "Prendas", guardarropa_prendas_path(@guardarropa) %></li>
-                <li class="breadcrumb-item"><%= link_to "Atuendos", guardarropa_atuendos_path(@guardarropa) %></li>
+                <li class="breadcrumb-item"><%= link_to t('guardarropas'), guardarropas_path %></li>
+                <li class="breadcrumb-item"><%= link_to t('atuendos'), guardarropa_atuendos_path(@guardarropa) %></li>
                 <li class="breadcrumb-item active" aria-current="page"><%= btn_text%></li>
             </ol>
         </nav>
@@ -16,7 +15,7 @@
             <div class="container">
                 <div class="container">
                     <div class="container">
-                        <%= f.text_field :Descripcion, class: "container text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>
+                        <%= f.text_field :Descripcion, class: "container text-box form-control d-flex justify-content-center", placeholder: t('nombre') %>
                     </div>
                 </div>
             </div>
@@ -218,20 +217,39 @@
         </div>
         
         <div class="container d-flex justify-content-center align-items-center etiquetas_atuendos_new my-5">
-            <li class="list-group-item border-0 d-inline"><span class="negrita">Puntaje: </span><%= f.select :Puntaje, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], :prompt => 'Elige uno', class:"form-control"%></li>
-            <li class="list-group-item border-0 d-inline"><span class="negrita">Formalidad: </span><%= f.select :Etiqueta_Formal, ['Formal', 'Informal'], :prompt => 'Elige uno', class:"form-control"%></li>
-            <li class="list-group-item border-0 d-inline"><span class="negrita">Estación: </span><%= f.select :Etiqueta_Estacion, options_for_select([['Verano', 'Verano'],['Invierno','Invierno'],['Otoño/Primavera', 'OtonioPrimavera']]), :prompt => 'Elige uno', class:"form-control"%></li>
-            <li class="list-group-item border-0 d-inline"><span class="negrita">Horario: </span><%= f.select :Etiqueta_DiaNoche, ['Dia', 'Noche'], :prompt => 'Elige uno', class:"form-control"%></li>
+            <li class="list-group-item border-0 d-inline">
+                <span class="negrita">
+                    <%=t('puntaje') %> 
+                </span>
+                <%= f.select :Puntaje, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], :prompt => t('elige_uno'), class:"form-control"%>
+            </li>
+            <li class="list-group-item border-0 d-inline">
+                <span class="negrita">
+                    <%=t('formalidad') %>
+                </span><%= f.select :Etiqueta_Formal, options_for_select([[t('formal'), 'Formal'],[t('informal'),'Informal']]), :prompt => t('elige_uno'), class:"form-control"%>
+            </li>
+            <li class="list-group-item border-0 d-inline">
+                <span class="negrita">
+                    <%=t('estacion') %> 
+                </span>
+                <%= f.select :Etiqueta_Estacion, options_for_select([[t('verano'), 'Verano'],[t('invierno'),'Invierno'],[t('otoño/primavera'), 'OtonioPrimavera']]), :prompt => t('elige_uno'), class:"form-control"%>
+            </li>
+            <li class="list-group-item border-0 d-inline">
+                <span class="negrita">
+                    <%=t('horario') %> 
+                </span>
+                <%= f.select :Etiqueta_DiaNoche,options_for_select([[t('dia'), 'Dia'],[t('noche'),'Noche']]), :prompt => t('elige_uno'), class:"form-control"%>
+            </li>
         </div>
         
         <div class="container">
             <div class="botones-responsive d-flex justify-content-center align-center my-4">
-                <%= link_to link_volver, class:"btn-salir btn-form px-3 py-2 text-decoration-none text-center text-white m-2 form-control", data: {confirm: '¿Volver sin guardar?' } do%>
-                    <i class="fa fa-arrow-left"></i><p class="d-inline"> Volver</p>
+                <%= link_to link_volver, class:"btn-salir btn-form px-3 py-2 text-decoration-none text-center text-white m-2 form-control", data: {confirm: t('volver_sin_guardar?') } do%>
+                    <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('volver') %></p>
                 <% end %>
-                <%= link_to ruta, method: :get, class: hide + " btn btn-crear btn-form px-3 py-2 m-2 form-control" do %><i class="fas fa-dice"></i> <p class="d-inline">Generar atuendo aleatorio</p><%end%>
+                <%= link_to ruta, method: :get, class: hide + " btn btn-crear btn-form px-3 py-2 m-2 form-control" do %><i class="fas fa-dice"></i> <p class="d-inline"> <%=t('generar_atuendo_aleatorio')%> </p><%end%>
                 <%= button_tag(type: 'submit', class: "btn btn-crear btn-form px-3 py-2 m-2 form-control") do %>
-                    <i class="fas fa-check"></i> <p class="d-inline">Confirmar</p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
+                    <i class="fas fa-check"></i> <p class="d-inline"><%=t('confirmar') %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                 <% end %>
             </div>
         </div>

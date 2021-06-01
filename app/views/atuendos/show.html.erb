@@ -2,10 +2,9 @@
     <div class="container mt-4 mb-0">
         <nav aria-label="breadcrumb mb-0">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path %></li>
-                <li class="breadcrumb-item"><%= link_to "Prendas", guardarropa_prendas_path(@guardarropa) %></li>
-                <li class="breadcrumb-item"><%= link_to "Atuendos", guardarropa_atuendos_path(@guardarropa) %></li>
-                <li class="breadcrumb-item active" aria-current="page">Atuendo</li>
+                <li class="breadcrumb-item"><%= link_to t('guardarropas'), guardarropas_path %></li>
+                <li class="breadcrumb-item"><%= link_to t('atuendos'), guardarropa_atuendos_path(@guardarropa) %></li>
+                <li class="breadcrumb-item active" aria-current="page"> <%=t('atuendo') %> </li>
             </ol>
         </nav>
     </div>
@@ -41,22 +40,22 @@
             </div>
 
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span class="negrita">Puntaje: </span><%= @atuendo.Puntaje %></li>
-                <li class="list-group-item"><span class="negrita">Formalidad: </span><%= @atuendo.Etiqueta_Formal %></li>
+                <li class="list-group-item"><span class="negrita"> <%=t('puntaje')%>: </span><%= @atuendo.Puntaje %></li>
+                <li class="list-group-item"><span class="negrita"><%=t('formalidad')%>: </span><%= @atuendo.Etiqueta_Formal %></li>
                 <li class="list-group-item">
-                    <span class="negrita">Estacion: </span>
+                    <span class="negrita"><%=t('estacion')%>: </span>
                     <%if @atuendo.Etiqueta_Estacion != "OtonioPrimavera"%>
                         <%= @atuendo.Etiqueta_Estacion %>
                     <%else%>
                         <%="Otoño/Primavera"%>
                     <%end%>
                 </li>
-                <li class="list-group-item"><span class="negrita">Horario: </span><%= @atuendo.Etiqueta_DiaNoche %></li>
+                <li class="list-group-item"><span class="negrita"><%=t('horario')%>: </span><%= @atuendo.Etiqueta_DiaNoche %></li>
             </ul>
 
             <footer class="card-footer">
                 <div class="action form-group">
-                    <%= link_to edit_guardarropa_atuendo_path(@guardarropa,@atuendo), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> Editar</p> <%end%>
+                    <%= link_to edit_guardarropa_atuendo_path(@guardarropa,@atuendo), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('editar')%></p> <%end%>
                 </div>
             </footer>
         </div>

@@ -2,12 +2,12 @@
     <div class="container mt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path%></li>
+                <li class="breadcrumb-item"><%= link_to t('guardarropas'), guardarropas_path%></li>
                 <li class="breadcrumb-item active" aria-current="page">Prendas</li>
             </ol>
         </nav>
     </div>
-    <h1 class="container titulo mt-4 mb-4 text-center">Prendas de "<%= @guardarropa.Nombre %>"</h1>
+    <h1 class="container titulo mt-4 mb-4 text-center"> <%=t('prendas_de', guardarropa_nombre: @guardarropa.Nombre)%> </h1>
 <div class="d-flex justify-content-center align-center">
         <%= link_to edit_guardarropa_path(@guardarropa) do %> <i class="fa fa-pencil-alt fa-2x text-dark mx-5"></i><%end%>
         <%= link_to guardarropa_path(@guardarropa), method: :delete, data: {confirm: '¿Seguro que desea eliminar este guardarropa?' } do %><i class="mx-5 fas fa-trash fa-2x text-dark"></i><% end %>
@@ -45,9 +45,9 @@
 
 
     <section class="navegacion-guardarropa botones-responsive d-flex justify-content-center align-center my-4" id="botones-prenda-index">
-        <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline">Guardarropas</p><%end%>
-        <%= link_to guardarropa_atuendos_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-list"></i> <p class="d-inline">Atuendos</p><%end%>
-        <%= link_to new_guardarropa_prenda_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear prenda</p><%end%>
+        <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline"> <%=t('guardarropas') %> </p><%end%>
+        <%= link_to guardarropa_atuendos_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-list"></i> <p class="d-inline"> <%=t('atuendos') %> </p><%end%>
+        <%= link_to new_guardarropa_prenda_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline"><%=t('creacion_prenda') %></p><%end%>
     </section>
     
 </main>

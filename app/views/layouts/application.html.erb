@@ -39,16 +39,16 @@
                 <div class="collapse  navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex justify-content-center ms-auto"> 
                         <li class="nav-item px-3 py-2 rounded">
-                            <a class="nav-text" href="/">Inicio</a>
+                            <a class="nav-text" href="/"><%=t('inicio')%></a>
                         </li>
                         <li class="nav-item px-3 py-2 rounded">
-                            <a class="nav-text" href="/">Servicios</a>
+                            <a class="nav-text" href="/"><%=t('servicio')%></a>
                         </li>
                         <li class="nav-item px-3 py-2 rounded">
-                            <a href="/#nosotros" class="nav-text">Nosotros</a>
+                            <a href="/#nosotros" class="nav-text"><%=t('nosotros')%></a>
                         </li>
                         <li class="nav-item px-3 py-2 rounded">
-                            <a class="nav-text" href="/#contacto">Contacto</a>
+                            <a class="nav-text" href="/#contacto"><%=t('contacto')%></a>
                         </li>
                     </ul>
                 </div>
@@ -60,9 +60,9 @@
     
         <footer class="footer">
             <div class="container d-flex flex-row">
-                <p class="m-4">QueMePongo &copy; All rights reserved</p>
+                <p class="m-4">QueMePongo &copy; <%=t('derechos_reservados')%></p>
                 <span class="ms-auto">
-                    <p id="contacto" class="m-4 contacto text-center">Contacto: +54 9 11 2633-4567 | info@quemepongo.com.ar</p>
+                    <p id="contacto" class="m-4 contacto text-center"><%=t('contacto')%>: +54 9 11 2633-4567 | info@quemepongo.com.ar</p>
                 </span>
             </div>
         </footer>

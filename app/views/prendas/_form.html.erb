@@ -2,8 +2,8 @@
     <div class="container mt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><%= link_to "Guardarropas", guardarropas_path%></li>
-                <li class="breadcrumb-item"><%= link_to "Prendas", guardarropa_prendas_path(@guardarropa) %></li>
+                <li class="breadcrumb-item"><%= link_to t('guardarropas'), guardarropas_path%></li>
+                <li class="breadcrumb-item"><%= link_to t('prendas'), guardarropa_prendas_path(@guardarropa) %></li>
                 <li class="breadcrumb-item active" aria-current="page"><%= btn_text %></li>
             </ol>
         </nav>
@@ -30,21 +30,46 @@
                 </div>
 
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><span class="negrita">Link de la Imagen: </span><%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: "Link imagen" %>
-                    <li class="list-group-item"><span class="negrita">Categoria: </span><%= f.select :categoria, [ 'Torso', 'Piernas', 'Pies', 'Accesorio'], :prompt => 'Elige uno', class:"form-control"%></li>
-                    <li class="list-group-item"><span class="negrita">Tipo de tela:</span> <%= f.select :tela, ['Algodon', 'Lana', 'Lino', 'Cuero', 'Denim', 'Seda', 'Poliester', 'Mohair', 'Piel', 'Cuerina'], :prompt => 'Elige uno', class: "form-control"%></li>
-                    <li class="list-group-item"><span class="negrita">Color primario: </span><%= f.color_field :color_primario, class: "my-2 text-box form-control" %></li>
-                    <li class="list-group-item"><span class="negrita">Color secundario: </span><%= f.color_field :color_secundario, class: "my-2 text-box form-control" %></li></li>
+                    <li class="list-group-item">
+                        <span class="negrita">
+                            <%= t('link_imagen')%> 
+                        </span>
+                        <%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: t('placeholder_link_imagen') %>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="negrita"> 
+                            <%=t('categoria') %> 
+                        </span>
+                        <%= f.select :categoria, options_for_select([[t('torso'), 'Torso'],[t('piernas'),'Piernas'],[t('pies'), 'Pies'],[t('accesorio'), 'Accesorio']]), :prompt => t('elige_uno'), class:"form-control"%>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="negrita"> 
+                            <%=t('tipo_tela') %>
+                        </span> 
+                        <%= f.select :tela, options_for_select([[t('algodon'), 'Algodon'],[t('lana'),'Lana'],[t('lino'), 'Lino'],[t('cuero'), 'Cuero'],[t('denim'), 'Denim'],[t('seda'), 'Seda'],[t('poliester'), 'Poliester'],[t('mohair'), 'Mohair'],[t('piel'), 'Piel'],[t('cuerina'), 'Cuerina']]), :prompt => t('elige_uno'), class: "form-control"%>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="negrita"> 
+                            <%=t('color_primario') %> 
+                        </span>
+                        <%= f.color_field :color_primario, class: "my-2 text-box form-control" %>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="negrita"> 
+                            <%=t('color_secundario') %> 
+                        </span>
+                        <%= f.color_field :color_secundario, class: "my-2 text-box form-control" %>
+                    </li>
                 </ul>
                 
                 <footer class="card-footer">
                     <div class="action form-group">
                         <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 btn-form  form-control ") do %>
-                            <i class="fas fa-check"></i> <p class="d-inline">Confirmar</p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
+                            <i class="fas fa-check"></i> <p class="d-inline"><%=t('confirmar') %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                         <% end %>
                         
-                        <%= link_to link_volver, class:"btn-salir px-3 text-decoration-none text-center text-white form-control btn-form ", data: {confirm: '¿Volver sin guardar?' } do%>
-                            <i class="fa fa-arrow-left"></i><p class="d-inline"> Volver</p>
+                        <%= link_to link_volver, class:"btn-salir px-3 text-decoration-none text-center text-white form-control btn-form ", data: {confirm: t('volver_sin_guardar?')  } do%>
+                            <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('volver') %></p>
                         <% end %>
                     </div>
                 </footer>

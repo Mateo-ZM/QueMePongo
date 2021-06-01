@@ -1,6 +1,6 @@
 <main class="guardarropa container">
     
-    <h1 class="titulo my-4 text-center">Guardarropas de "Usuario"</h1>
+    <h1 class="titulo my-4 text-center"> <%= t('guardarropas_de')%></h1>
     
     <div class="splide">
         <div class="splide__slider">
@@ -35,6 +35,6 @@
     </div>
 
     <section class="navegacion-guardarropa botones-responsive d-flex justify-content-center align-center my-4" id="botones-prenda-index">
-        <%= link_to new_guardarropa_path, class: "btn btn-crear btn-lg" do %>  <i class="fas fa-plus fa-sm"></i> <p class="d-inline">Crear Guardarropa</p><%end%>
+        <%= link_to new_guardarropa_path, class: "btn btn-crear btn-lg" do %>  <i class="fas fa-plus fa-sm"></i> <p class="d-inline"> <%=t('crear_guardarropas')%> </p><%end%>
     </section>
 </main>

@@ -7,171 +7,117 @@ document.addEventListener( 'DOMContentLoaded', function ()
         var cont = document.getElementsByClassName('contador_torso');
         let control = document.querySelectorAll("div.card_atuendos_new_torso");
 
-        if (control.length >= 3)
-        {
-            new Splide( elms[ 0 ] ,
-            { 
-                type: 'loop',  
-                trimSpace: false,
-                width: 'auto',
-                focus: 'center',
-                perPage: 3,
-                gap: 5,
-                start: parseInt(cont[0].innerHTML),
-                breakpoints: {
-                    '1100': {
-                        perPage: 2,
-                        focus: 0,
-                        gap: 5,
-                        pagination: false,
-                    },
-                    '770': {
-                        perPage: 1,
-                        gap: 5,
-                        pagination: false,
-                    },
-                }
-            }
-            ).mount();
-        }
-        else
-        {
-            new Splide( elms[ 0 ] ,
-            {  
-                width: 'auto',
-                focus: 'center',
-                perPage: 3,
-                gap: 5,
-                start: parseInt(cont[0].innerHTML)
-            }
-            ).mount();
-        }
 
+        new Splide( elms[ 0 ] ,
+        { 
+            width: 'auto',
+            focus: 'center',
+            perPage: 3,
+            gap: 5,
+            start: parseInt(cont[0].innerHTML),
+            trimSpace: false,
+            breakpoints: {
+                '1100': {
+                    perPage: 2,
+                    focus: 0,
+                    gap: 5,
+                    pagination: false,
+                },
+                '770': {
+                    type: 'loop',
+                    perPage: 1,
+                    gap: 5,
+                    pagination: false,
+                },
+            }
+        }
+        ).mount();
         cont = document.getElementsByClassName('contador_piernas');
         control = document.querySelectorAll("div.card_atuendos_new_piernas");
 
-        if (control.length >= 3)
-        {
-            new Splide( elms[ 1 ] ,
-            { 
-                type: 'loop',  
-                width: 'auto',
-                focus: 'center',
-                perPage: 3,
-                gap: 5,
-                start: parseInt(cont[0].innerHTML),
-                breakpoints: {
-                    '1100': {
-                        perPage: 2,
-                        gap: 5,
-                        focus: 0,
-                        pagination: false,
-                    },
-                    '770': {
-                        perPage: 1,
-                        gap: 5,
-                        pagination: false,
-                    },
-                }
+        new Splide( elms[ 1 ] ,
+        { 
+            width: 'auto',
+            focus: 'center',
+            perPage: 3,
+            gap: 5,
+            start: parseInt(cont[0].innerHTML),
+            trimSpace: false,
+            breakpoints: {
+                '1100': {
+                    perPage: 2,
+                    focus: 0,
+                    gap: 5,
+                    pagination: false,
+                },
+                '770': {
+                    type: 'loop',
+                    perPage: 1,
+                    gap: 5,
+                    pagination: false,
+                },
             }
-            ).mount();
         }
-        else
-        {
-            new Splide( elms[ 1 ] ,
-            {  
-                width: 'auto',
-                focus: 'center',
-                perPage: 3,
-                gap: 5,
-                start: parseInt(cont[0].innerHTML)
-            }
-            ).mount();
-        }
+        ).mount();
 
         cont = document.getElementsByClassName('contador_pies');
         control = document.querySelectorAll("div.card_atuendos_new_pies");
 
-        if (control.length >= 3)
-        {
-            new Splide( elms[ 2 ] ,
-            { 
-                type: 'loop',  
-                width: 'auto',
-                focus: 'center',
-                perPage: 3,
-                gap: 5,
-                start: parseInt(cont[0].innerHTML),
-                breakpoints: {
-                    '1100': {
-                        perPage: 2,
-                        gap: 5,
-                        focus: 0,
-                        pagination: false,
-                    },
-                    '770': {
-                        perPage: 1,
-                        gap: 5,
-                        pagination: false,
-                    },
-                }
+
+        new Splide( elms[ 2 ] ,
+        { 
+            width: 'auto',
+            focus: 'center',
+            perPage: 3,
+            gap: 5,
+            start: parseInt(cont[0].innerHTML),
+            trimSpace: false,
+            breakpoints: {
+                '1100': {
+                    perPage: 2,
+                    focus: 0,
+                    gap: 5,
+                    pagination: false,
+                },
+                '770': {
+                    type: 'loop',
+                    perPage: 1,
+                    gap: 5,
+                    pagination: false,
+                },
             }
-            ).mount();
         }
-        else
-        {
-            new Splide( elms[ 2 ] ,
-            {  
-                width: 'auto',
-                focus: 'center',
-                perPage: 3,
-                gap: 5,
-                start: parseInt(cont[0].innerHTML)
-            }
-            ).mount();
-        }
+        ).mount();
+    
 
         cont = document.getElementsByClassName('contador_accesorios');
         control = document.querySelectorAll("div.card_atuendos_new_accesorio");
 
-        if (control.length >= 3)
-        {
-            new Splide( elms[ 3 ] ,
-            { 
-                type: 'loop',  
-                width: 'auto',
-                focus: 'center',
-                perPage: 3,
-                gap: 5,
-                start: parseInt(cont[0].innerHTML),
-                breakpoints: {
-                    '1100': {
-                        perPage: 2,
-                        focus: 0,
-                        gap: 5,
-                        pagination: false,
-                    },
-                    '770': {
-                        perPage: 1,
-                        gap: 5,
-                        pagination: false,
-                    },
-                }
+        new Splide( elms[ 3 ] ,
+        {   
+            width: 'auto',
+            focus: 'center',
+            perPage: 3,
+            gap: 5,
+            start: parseInt(cont[0].innerHTML),
+            trimSpace: false,
+            breakpoints: {
+                '1100': {
+                    perPage: 2,
+                    focus: 0,
+                    gap: 5,
+                    pagination: false,
+                },
+                '770': {
+                    type: 'loop',
+                    perPage: 1,
+                    gap: 5,
+                    pagination: false,
+                },
             }
-            ).mount();
         }
-        else
-        {
-            new Splide( elms[ 3 ] ,
-            {  
-                width: 'auto',
-                focus: 'center',
-                perPage: 3,
-                gap: 5,
-                start: parseInt(cont[0].innerHTML)
-            }
-            ).mount();
-        }
+        ).mount();
+
     }
     else
     {

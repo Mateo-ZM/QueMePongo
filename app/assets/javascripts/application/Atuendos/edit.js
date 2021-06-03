@@ -36,19 +36,6 @@ Paloma.controller('Atuendos', {
             seleccionar_Parte('accesorios')
         }
 
-        function comprobar_Todas_Opciones_Seleccionadas()
-        {
-            let boton = document.querySelector('button.form-control');
-            let id_torso = atuendos_new_torso[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].value;
-            let id_piernas = atuendos_new_piernas[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].value;
-            let id_pies = atuendos_new_pies[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].value;
-            let id_accesorio = atuendos_new_accesorio[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].value;
-
-            if(id_torso != "" && id_piernas != "" && id_pies != "" && id_accesorio != "") {
-                boton.disabled = false;
-            }
-        }
-
         function seleccionar_Parte(parte)
         {
             let atuendos_new_parte = document.querySelectorAll(`.card_atuendos_new_${parte}`);

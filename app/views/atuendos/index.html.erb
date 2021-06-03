@@ -14,7 +14,7 @@
         <div class="splide__slider">
             <div class="splide__track">
                 <div class="splide__list">
-                        <% @atuendos.each do |atuendo| %>
+                    <% @atuendos.each do |atuendo| %>
                         <div class="splide__slide">
                             <%= link_to guardarropa_atuendo_path(@guardarropa,atuendo), class: "text-decoration-none" do %>
                                 <div class="card h-100">
@@ -56,8 +56,8 @@
                                     </div>
                                 </div>
                             <%end%>
-                            </div>
-                        <%end%>
+                        </div>
+                    <%end%>
                 </div>
             </div>
         </div>

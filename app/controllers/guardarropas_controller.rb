@@ -1,10 +1,12 @@
 class GuardarropasController < ApplicationController
+
     def index
         @guardarropas = Guardarropa.all
         @guardarropas.each do |guardarropa|
             guardarropa.comprobar_link_imagen!
         end
     end
+    
     def show
         @guardarropas = Guardarropa.find(params[:id])
         @prendas = @guardarropas.prendas
@@ -41,4 +43,5 @@ class GuardarropasController < ApplicationController
     def guardarropa_params
         params.require(:guardarropa).permit(:Nombre, :imagen, :link_imagen)
     end
+
 end

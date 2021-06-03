@@ -4,119 +4,35 @@ document.addEventListener( 'DOMContentLoaded', function ()
 
     if(elms.length > 1)
     {
-        var cont = document.getElementsByClassName('contador_torso');
-        let control = document.querySelectorAll("div.card_atuendos_new_torso");
+        var cont = document.getElementsByClassName('contador');
 
-
-        new Splide( elms[ 0 ] ,
-        { 
-            width: 'auto',
-            focus: 'center',
-            perPage: 3,
-            gap: 5,
-            start: parseInt(cont[0].innerHTML),
-            trimSpace: false,
-            breakpoints: {
-                '1100': {
-                    perPage: 2,
-                    focus: 0,
+        for(var i = 0; i<elms.length;i++)
+        {
+            new Splide( elms[ i ] ,
+                { 
+                    width: 'auto',
+                    focus: 'center',
+                    perPage: 3,
                     gap: 5,
-                    pagination: false,
-                },
-                '770': {
-                    type: 'loop',
-                    perPage: 1,
-                    gap: 5,
-                    pagination: false,
-                },
-            }
+                    start: parseInt(cont[i].innerHTML),
+                    trimSpace: false,
+                    breakpoints: {
+                        '1100': {
+                            perPage: 2,
+                            focus: 0,
+                            gap: 5,
+                            pagination: false,
+                        },
+                        '770': {
+                            type: 'loop',
+                            perPage: 1,
+                            gap: 5,
+                            pagination: false,
+                        },
+                    }
+                }
+                ).mount();
         }
-        ).mount();
-        cont = document.getElementsByClassName('contador_piernas');
-        control = document.querySelectorAll("div.card_atuendos_new_piernas");
-
-        new Splide( elms[ 1 ] ,
-        { 
-            width: 'auto',
-            focus: 'center',
-            perPage: 3,
-            gap: 5,
-            start: parseInt(cont[0].innerHTML),
-            trimSpace: false,
-            breakpoints: {
-                '1100': {
-                    perPage: 2,
-                    focus: 0,
-                    gap: 5,
-                    pagination: false,
-                },
-                '770': {
-                    type: 'loop',
-                    perPage: 1,
-                    gap: 5,
-                    pagination: false,
-                },
-            }
-        }
-        ).mount();
-
-        cont = document.getElementsByClassName('contador_pies');
-        control = document.querySelectorAll("div.card_atuendos_new_pies");
-
-
-        new Splide( elms[ 2 ] ,
-        { 
-            width: 'auto',
-            focus: 'center',
-            perPage: 3,
-            gap: 5,
-            start: parseInt(cont[0].innerHTML),
-            trimSpace: false,
-            breakpoints: {
-                '1100': {
-                    perPage: 2,
-                    focus: 0,
-                    gap: 5,
-                    pagination: false,
-                },
-                '770': {
-                    type: 'loop',
-                    perPage: 1,
-                    gap: 5,
-                    pagination: false,
-                },
-            }
-        }
-        ).mount();
-    
-
-        cont = document.getElementsByClassName('contador_accesorios');
-        control = document.querySelectorAll("div.card_atuendos_new_accesorio");
-
-        new Splide( elms[ 3 ] ,
-        {   
-            width: 'auto',
-            focus: 'center',
-            perPage: 3,
-            gap: 5,
-            start: parseInt(cont[0].innerHTML),
-            trimSpace: false,
-            breakpoints: {
-                '1100': {
-                    perPage: 2,
-                    focus: 0,
-                    gap: 5,
-                    pagination: false,
-                },
-                '770': {
-                    type: 'loop',
-                    perPage: 1,
-                    gap: 5,
-                    pagination: false,
-                },
-            }
-        }
-        ).mount();
 
     }
     else

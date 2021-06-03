@@ -1,6 +1,6 @@
 class Guardarropa < ApplicationRecord
-    has_many :prendas , foreign_key: 'guardarropa_id', dependent: :destroy
-    has_many :atuendos
+    has_many :prendas , dependent: :destroy
+    has_many :atuendos, dependent: :destroy
     has_one_attached :imagen
     accepts_nested_attributes_for :prendas
     paginates_per 4

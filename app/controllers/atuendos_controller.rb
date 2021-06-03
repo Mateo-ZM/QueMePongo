@@ -6,6 +6,14 @@ class AtuendosController < ApplicationController
 
     def index
         @atuendos = @guardarropa.atuendos.order(:Descripcion)
+
+        @atuendos.each do |atuendo|
+            if !(atuendo.prenda_torso && atuendo.prenda_accesorios && atuendo.prenda_piernas && atuendo.prenda_pies)
+                @atuendos.destroy(atuendo.id)
+                atuendo.destroy!
+            end
+        end
+        
     end
 
     def show

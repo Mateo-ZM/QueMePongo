@@ -3,7 +3,6 @@ class PrendasController < ApplicationController
   skip_forgery_protection
   before_action :get_guardarropa
 
-
   def index
     @prendas = @guardarropa.prendas.order(:tipo)
     @prendas.each do |prenda|

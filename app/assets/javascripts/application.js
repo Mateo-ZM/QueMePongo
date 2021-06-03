@@ -31,27 +31,15 @@ function ClimaYVariables()
         document.getElementById('clima-loader').hidden = true;
         if(this.status == 200){
             let climaResponse = JSON.parse(this.responseText);
-            
             let climaDescription = climaResponse.weather[0].description + ", ";
-            climaDescription += climaResponse.main.temp + "°C";
             let climaIcon = climaResponse.weather[0].icon;
+            climaDescription += climaResponse.main.temp + "°C";
+            
             let climaHTML = `<span><img class = "nav-img" src = "https://raw.githubusercontent.com/yuvraaaj/openweathermap-api-icons/master/icons/${climaIcon}.png"></img> ${climaDescription}</span>`
+            
             document.getElementById('clima-container').innerHTML = climaHTML;
-
-            //<i class = "${climaIcon}"></i>
         }
     }
     
     xhr.send();
 }
-
-//window.addEventListener("resize", ChequearResizeBotones);
-//function ChequearResizeBotones(){
-//    if(Foundation.MediaQuery.get('small')){
-//        document.getElementById("botones-prenda-index").className += " flex-column";
-//    }
-//}
-
-
-
-//var confirmar_volver = prompt("Seguro que desea volver sin guardar?");

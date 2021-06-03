@@ -1,6 +1,4 @@
-class SessionsController < ApplicationController
-    before_action :set_Session, only: %i[ show edit update destroy ]
-  
+class SessionsController < ApplicationController  
 
     def new
     end

@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
     def validate_logged_user!
         if !current_user
-            #redirect_to '/login'
+            redirect_to '/login'
         end
     end
 

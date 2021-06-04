@@ -1,0 +1,19 @@
+<div class="container">
+    <main class="prenda d-flex justify-content-center mb-5">
+        <div class="card my-4 mi_card_prenda">
+            <h1>Login</h1>
+            <%= form_tag '/login' do %>
+                <%= label_tag :email%>
+                <%= text_field_tag :email%>
+                <%= label_tag :password%>
+                <%= password_field_tag :password%>
+                <%= submit_tag "Login"%>
+            <%end%>
+                
+            <%= link_to new_user_path do%>
+                Registrate!
+            <% end %>
+        
+        </div>
+    </main>
+</div>

@@ -1,0 +1,24 @@
+$color-primario: #222126; //Es el equivalente a rgb(34,33,38)
+$color-secundario: white; //Es el equivalente a rgb(255,255,255)
+$color-terciario: #1B8F88; //Es el equivalente a rgb(104,98,138)
+$color-terciario-hover: #115C57;
+$color-volver: #F54F47;
+$color-volver-hover: #780E12;
+
+.btn-login {
+    background-color: $color-terciario;
+    color: $color-secundario;
+    font-size: 1.45rem;
+    border: none;
+}
+
+.card_login{
+    width:30em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.text_box_login{
+    width:20rem;
+}

@@ -1,7 +1,8 @@
 class GuardarropasController < ApplicationController
+    before_action :get_user
 
     def index
-        @guardarropas = Guardarropa.all
+        @guardarropas = @user.guardarropas.order(:Nombre)
         @guardarropas.each do |guardarropa|
             guardarropa.comprobar_link_imagen!
         end
@@ -13,13 +14,13 @@ class GuardarropasController < ApplicationController
     end
     
     def create
-        @guardarropa = Guardarropa.new guardarropa_params
+        @guardarropa = @user.guardarropas.build (guardarropa_params)
         @guardarropa.save!
         redirect_to guardarropa_prendas_path(@guardarropa)
     end
     
     def new
-        @guardarropa = Guardarropa.new 
+        @guardarropa = @user.guardarropas.build
     end
     
     def update
@@ -44,4 +45,7 @@ class GuardarropasController < ApplicationController
         params.require(:guardarropa).permit(:Nombre, :imagen, :link_imagen)
     end
 
+    def get_user
+        @user = User.find(session[:user_id])
+    end
 end

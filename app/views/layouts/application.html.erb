@@ -41,14 +41,20 @@
                         <li class="nav-item px-3 py-2 rounded">
                             <a class="nav-text" href="/"><%=t('inicio')%></a>
                         </li>
-                        <li class="nav-item px-3 py-2 rounded">
+                        <!-- <li class="nav-item px-3 py-2 rounded">
                             <a class="nav-text" href="/"><%=t('servicio')%></a>
                         </li>
                         <li class="nav-item px-3 py-2 rounded">
                             <a href="/#nosotros" class="nav-text"><%=t('nosotros')%></a>
-                        </li>
+                        </li> -->
                         <li class="nav-item px-3 py-2 rounded">
                             <a class="nav-text" href="/#contacto"><%=t('contacto')%></a>
+                        </li>
+                        <li class="nav-item px-3 py-2 rounded">
+                            <%= link_to "Iniciar sesion", login_path, class: "text-white" %>
+                        </li>
+                        <li class="nav-item px-3 py-2 rounded">
+                            <%= link_to logout_path, method: :get, class: "text-danger", data: {confirm: '¿Seguro que desea cerrar sesion?' } do %>Cerrar sesion<% end %>
                         </li>
                     </ul>
                 </div>

@@ -38,10 +38,4 @@ class Atuendo < ApplicationRecord
             end
         end
     end
-
-    #def comprobar_prendas!
-     #   if !(self.prenda_torso && self.prenda_accesorios && self.prenda_piernas && self.prenda_pies)
-      #      self.destroy!
-       # end
-    #end
 end

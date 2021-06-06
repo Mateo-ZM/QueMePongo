@@ -2,6 +2,8 @@ class Guardarropa < ApplicationRecord
     has_many :prendas , dependent: :destroy
     has_many :atuendos, dependent: :destroy
     has_one_attached :imagen
+    belongs_to :user
+
     accepts_nested_attributes_for :prendas
     paginates_per 4
 

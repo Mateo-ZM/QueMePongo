@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
-  skip_before_action :validate_logged_user!, only: [:new, :create]
+  skip_before_action :validate_logged_user!
 
   # GET /users or /users.json
   def index
@@ -24,15 +24,24 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: "User was successfully created." }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+    if @user.password.length > 7 && @user.password.length < 17
+      respond_to do |format|
+        if @user.save
+          format.html { redirect_to @user, notice: "User was successfully created." }
+          format.json { render :show, status: :created, location: @user }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      flash.alert = "La contrasena debe tener entre 8 y 16 caracteres"
+      render action: "new"
     end
+
+    
+
+    
   end
 
   # PATCH/PUT /users/1 or /users/1.json

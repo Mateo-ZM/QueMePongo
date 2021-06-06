@@ -1,32 +1,47 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-        <% user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="card my-4 card_login">
+  <div class="card-header d-flex justify-content-center align-items-center">
+    Registro de usuario
+  </div>
+  <%= form_with(model: user, local: true) do |form| %>
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+          <% user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <div>
+        <div class="row my-4">
+                <div class="col-5 d-flex justify-content-center align-items-center"> <i class="fas fa-envelope"></i><p class="m-0 d-inline">&nbspEmail: </p> </div>
+                <div class="col-7"><%= form.text_field :email %></div>
+        </div>
+        <div class="row my-4">
+                <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-lock"></i></i><p class="m-0 d-inline">&nbspContrasena: </p> </div>
+                <div class="col-7"><%= form.password_field :password %></div>
+        </div>
+        <div class="row my-4">
+                <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-lock"></i></i><p class="m-0 d-inline">&nbspConfirmar: </p> </div>
+                <div class="col-7"><%= form.password_field :password_confirmation %></div>
+        </div>
     </div>
+  </div>
+
+
+
+    <footer class="card-footer d-flex justify-content-center align-items-center">
+        <%= link_to link_volver, class:"btn btn-volver-signup px-4 py-2 m-3 btn-form", data: {confirm: "Volver sin registrarse?"  } do%>
+          <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('volver') %></p>
+        <% end %>
+        <%= button_tag(type: 'submit', class: "btn btn-general px-4 py-2 m-3 btn-form") do %>
+          <i class="fas fa-user-plus"></i><p class="d-inline"> Registarse</p>
+        <% end %>
+    </footer>
   <% end %>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-
-  <div class="field">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

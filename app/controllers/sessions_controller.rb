@@ -23,6 +23,8 @@ class SessionsController < ApplicationController
     end
 
     def reset
-        reset_session
+        if session[:user_id] != nil
+            session[:user_id] = nil
+        end
     end
 end

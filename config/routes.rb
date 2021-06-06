@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get	'/signup', to:	'users#new'
   get '/users/:id', to: redirect('/profile')
   get	'/profile', to:	'users#show'		
+  get '/users/:id/edit', to: redirect('/profile/edit')
+  get	'/profile/edit', to:	'users#edit'
   resources :users
 
   

@@ -1,0 +1,16 @@
+$color-primario: #222126; //Es el equivalente a rgb(34,33,38)
+$color-secundario: white; //Es el equivalente a rgb(255,255,255)
+$color-terciario: #1B8F88; //Es el equivalente a rgb(104,98,138)
+$color-terciario-hover: #115C57;
+$color-volver: #F54F47;
+$color-volver-hover: #780E12;
+
+.btn-volver-signup {
+    background-color: $color-volver;
+    color: $color-secundario;
+}
+
+.btn-volver-signup:hover, .btn-volver-signup:focus {
+    background-color: $color-volver-hover;
+    color: $color-secundario;
+}

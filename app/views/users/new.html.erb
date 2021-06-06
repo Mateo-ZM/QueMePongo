@@ -1,5 +1,3 @@
-<h1>New User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Back', login_path %>
+<main class="d-flex m-auto justify-content-center align-items-center">
+    <%= render partial: 'form', locals: {link_volver: login_path, user: @user} %>
+</main>

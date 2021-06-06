@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    reset_session
     @user = User.new
   end
 
@@ -38,10 +39,6 @@ class UsersController < ApplicationController
       flash.alert = "La contrasena debe tener entre 8 y 16 caracteres"
       render action: "new"
     end
-
-    
-
-    
   end
 
   # PATCH/PUT /users/1 or /users/1.json
@@ -69,11 +66,15 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find(session[:user_id])
     end
 
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:email, :password, :password_confirmation)
+    end
+
+    def resetear
+      redirect_to logout_path, method: :get and return
     end
 end

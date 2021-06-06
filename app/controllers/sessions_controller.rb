@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController  
     skip_before_action :validate_logged_user!
-    
+    before_action :reset, only: [:new]
+
     def new
     end
 
@@ -21,4 +22,7 @@ class SessionsController < ApplicationController
         redirect_to '/login', notice: 'Deslogueado exitósamente'
     end
 
+    def reset
+        reset_session
+    end
 end

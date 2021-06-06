@@ -44,4 +44,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
 gem 'paloma', '~> 6.1.0'
+
+gem 'cancancan'

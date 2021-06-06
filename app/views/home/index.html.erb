@@ -2,11 +2,7 @@
         <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
             <h2 class="text-black text-center mb-3"><%= t('que_ponerse') %></h1>
             <h1 class="text-white text-center mb-5"><%= t('automatiza_guardarropas') %></h1>
-            <a href="/login">
-                <button type="button" class="boton_principal btn btn-lg px-5 py-3">
-                    <h3><%=t('descubri')%></h3>
-                </button>
-            </a>
+            <%= link_to guardarropas_path, class:"boton_principal btn btn-lg px-5 py-3"  do %><h3><%=t('descubri')%></h3><% end %>
         </div>
     </main>
 

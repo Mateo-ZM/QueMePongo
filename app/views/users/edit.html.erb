@@ -1,10 +1,7 @@
 <!-- <% if can? :edit, @user %> -->
     <h1>Editing User</h1>
 
-    <%= render 'form', user: @user %>
-
-    <%= link_to 'Show', @user %> |
-    <%= link_to 'Back', users_path %>
+    <%= render partial: 'form', locals: {link_volver: profile_path, user: @user} %>
 <!-- <% else %>
     <%= render partial: "error_autorizacion"%>
 <% end %> -->

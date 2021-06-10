@@ -15,9 +15,14 @@
       <% @users.each do |user| %>
         <tr>
           <td><%= user.email %></td>
-          <td><%= link_to 'Show', user %></td>
-          <td><%= link_to 'Edit', edit_user_path(user) %></td>
-          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          
+          <td>Guardarropas: <%= user.guardarropas.length  %></td>
+          <% @cantidad_prendas = 0 %>
+          <% user.guardarropas.each do |guardarropa| %>
+            <% @cantidad_prendas += guardarropa.prendas.length %>
+          <% end %>
+          <td>Prendas: <%= @cantidad_prendas %> <td>
+          <td>Fecha de registro: <%= user.created_at.to_date %></td>
         </tr>
       <% end %>
     </tbody>
@@ -25,7 +30,7 @@
 
   <br>
 
-  <%= link_to 'New User', new_user_path %>
+  <%= paginate @users, window: 3 %>
 <% else %>
     <%= render partial: "error_autorizacion"%>
 <% end %>

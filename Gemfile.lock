@@ -103,6 +103,7 @@ GEM
     nokogiri (1.11.3-x64-mingw32)
       racc (~> 1.4)
     paloma (6.1.0)
+    pg (1.2.3-x64-mingw32)
     puma (4.3.7)
       nio4r (~> 2.0)
     racc (1.5.2)
@@ -162,7 +163,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -196,13 +196,13 @@ DEPENDENCIES
   kaminari
   listen (~> 3.2)
   paloma (~> 6.1.0)
+  pg
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.6)
   rails-ujs
   sass-rails (>= 6)
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
   wdm (~> 0.1.1)

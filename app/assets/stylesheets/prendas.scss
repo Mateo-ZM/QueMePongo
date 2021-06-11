@@ -203,6 +203,26 @@ main.guardarropa span.firulete{
         border-bottom-right-radius: 25px;
         overflow: hidden;
     }
+
+    .next a span{
+        border: none;
+    }
+
+    .prev a span{
+        border: none;
+    }
+
+    .first a span{
+        border: none;
+    }
+
+    .last a span{
+        border: none;
+    }
+
+    .gap a span{
+        border: none;
+    }
 }
 
 .color {

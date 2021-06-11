@@ -1,6 +1,6 @@
 <% if can? :edit, @user %>
-  <div class="mt-5">
-    <h1 class="titulo d-flex justify-content-center">Users</h1>
+  <div class="mt-4">
+    <h1 class="titulo mb-4 d-flex justify-content-center">Users</h1>
     <div class="container">
       <div class="table-responsive">
         <table class="table table-striped">
@@ -32,7 +32,7 @@
     </div>
     <br>
     
-    <section class="navegacion-guardarropa botones-responsive d-flex justify-content-center align-center my-4" id="botones-prenda-index">
+    <section class="navegacion-guardarropa botones-responsive d-flex justify-content-around align-center my-4" id="botones-prenda-index">
       <%= link_to profile_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline"> <%=t('volver') %> </p><%end%>
       <%= paginate @users, window: 3 %>
     </section>

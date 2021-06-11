@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ], except: [:new, :create]
-  skip_before_action :validate_logged_user!, only: %i[ new ]
+  skip_before_action :validate_logged_user!, :only => [:new, :create]
   
 
   # GET /users or /users.json

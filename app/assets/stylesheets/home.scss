@@ -40,56 +40,7 @@ span.negrita {
 //  color: $color-terciario;
 //}
 
-///* Navbar *///
-nav.landing-navbar {
-  background-color: $color-primario;
-  border-bottom: 5px solid $color-terciario;
-}
 
-@media (max-width: 768px) {
-  .navbar {
-    position: relative;
-
-
-  }
-}
-
-.nav-img{
-  height: 2rem;
-  background-color: $color-secundario;
-  border: 0.5px solid $color-primario;
-  border-radius: 10px;
-}
-
-.nav-icon{
-  /*margin-right: 6rem;*/
-  white-space: nowrap;
-  width: 17em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-.nav-clima{
-  text-align: center;
-}
-
-.nav-text {
-  color: $color-secundario;
-  font-size: 1.2rem;
-}
-
-.nav-item:hover, .nav-item:focus{
-  background-color: $color-terciario;
-  cursor: pointer;
-}
-
-.nav-item:hover a, .nav-item:focus a {
-  color: $color-secundario;
-}
-
-.nav-item a{
-  text-decoration: none;
-}
 
 .fa-bars {
   color: $color-secundario;

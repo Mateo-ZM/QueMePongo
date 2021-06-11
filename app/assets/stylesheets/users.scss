@@ -14,3 +14,7 @@ $color-volver-hover: #780E12;
     background-color: $color-volver-hover;
     color: $color-secundario;
 }
+
+.table td, th {
+    text-align: center;
+}

@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_05_223535) do
+ActiveRecord::Schema.define(version: 2021_06_10_232951) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "adminpack"
+  enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -45,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_06_05_223535) do
     t.integer "prenda_piernas_id"
     t.integer "prenda_pies_id"
     t.integer "prenda_accesorios_id"
-    t.integer "guardarropa_id"
+    t.bigint "guardarropa_id"
     t.index ["guardarropa_id"], name: "index_atuendos_on_guardarropa_id"
   end
 
@@ -54,7 +58,7 @@ ActiveRecord::Schema.define(version: 2021_06_05_223535) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "link_imagen"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_guardarropas_on_user_id"
   end
 
@@ -67,7 +71,7 @@ ActiveRecord::Schema.define(version: 2021_06_05_223535) do
     t.text "link_imagen"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "guardarropa_id"
+    t.bigint "guardarropa_id"
     t.index ["guardarropa_id"], name: "index_prendas_on_guardarropa_id"
   end
 
@@ -77,6 +81,10 @@ ActiveRecord::Schema.define(version: 2021_06_05_223535) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false
+    t.string "nombre"
+    t.string "apellido"
+    t.string "link_imagen"
+    t.integer "sexo"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

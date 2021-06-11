@@ -1,7 +1,16 @@
-guardarropa_1 = Guardarropa.create! Nombre: "Guardarropa Principal", link_imagen: "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/05/04141206/guardarropas-masculino.jpg"
-guardarropa_2 = Guardarropa.create! Nombre: "Guardarropa Formal", link_imagen: "https://http2.mlstatic.com/D_NQ_NP_417425-MLA25459372929_032017-O.jpg"
-guardarropa_3 = Guardarropa.create! Nombre: "Guardarropa Casual", link_imagen: "https://http2.mlstatic.com/D_NQ_NP_655658-MLA43164704096_082020-O.jpg"
-guardarropa_nino = Guardarropa.create! Nombre: "Guardarropa Niño", link_imagen: "https://thumbs.dreamstime.com/b/guardarropa-con-ropa-del-ni%C3%B1o-105538778.jpg"
+usuario_1 = User.create! email: "lucasinfantino@1234.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Lucas", apellido: "Infantino", sexo: :Hombre
+usuario_2 = User.create! email: "fedeamor@1234.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Federico", apellido: "Amor", sexo: :Hombre
+usuario_3 = User.create! email: "gonzaloheredia@1234.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Gonzalo", apellido: "Heredia", sexo: :Hombre
+usuario_4 = User.create! email: "mateozanetti@1234.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Mateo", apellido: "Zanetti", sexo: :Hombre
+usuario_5 = User.create! email: "usuariogenerico1@1234.com", password: "12345678", password_confirmation: "12345678", admin: false, nombre: "generico", apellido: "no tengo apellido", sexo: :Otro
+usuario_6 = User.create! email: "usuariogenerico2@1234.com", password: "12345678", password_confirmation: "12345678", admin: false, nombre: "NPC", apellido: "inactivo", sexo: :Mujer
+
+guardarropa_1 = usuario_1.guardarropas.build Nombre: "Guardarropa Principal", link_imagen: "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/05/04141206/guardarropas-masculino.jpg"
+guardarropa_2 = usuario_2.guardarropas.build Nombre: "Guardarropa Formal", link_imagen: "https://http2.mlstatic.com/D_NQ_NP_417425-MLA25459372929_032017-O.jpg"
+guardarropa_3 = usuario_3.guardarropas.build Nombre: "Guardarropa Casual", link_imagen: "https://http2.mlstatic.com/D_NQ_NP_655658-MLA43164704096_082020-O.jpg"
+guardarropa_nino = usuario_4.guardarropas.build Nombre: "Guardarropa Niño", link_imagen: "https://thumbs.dreamstime.com/b/guardarropa-con-ropa-del-ni%C3%B1o-105538778.jpg"
+guardarropa_4 = usuario_5.guardarropas.build Nombre: "Guardarropa Principal", link_imagen: "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/05/04141206/guardarropas-masculino.jpg"
+guardarropa_5 = usuario_6.guardarropas.build Nombre: "Guardarropa Principal", link_imagen: "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/05/04141206/guardarropas-masculino.jpg"
 
 guardarropa_1.prendas << (Prenda.create! tipo: "Remera manga corta", categoria: :Torso, tela: :Algodon, link_imagen:"https://cdyc.com.ar/wp-content/uploads/2018/09/remeraroja.jpg")
 guardarropa_1.prendas << (Prenda.create! tipo: "Remera manga larga", categoria: :Torso, tela: :Mohair, link_imagen: "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_azul_lisa_manga_larga_op1_.jpg")
@@ -48,7 +57,7 @@ guardarropa_1.prendas << (Prenda.create! tipo: "Crocs negras", categoria: :Pies,
 guardarropa_1.prendas << (Prenda.create! tipo: "Bermuda negra", categoria: :Piernas, tela: :Mohair, link_imagen: "http://cdn.shopify.com/s/files/1/0347/6255/5529/products/pg_bermudanegra2_1200x1200.jpg?v=1583785036")
 guardarropa_1.prendas << (Prenda.create! tipo: "Reloj Tommy", categoria: :Accesorio, tela: :Seda, link_imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/966/070/products/th1791651_11-248a4156b9f48560a515914782870287-1024-1024.jpg")
 
-#guardarropa_1.atuendos << (Atuendo.create! Puntaje: :'10', Etiqueta_Formal: :Formal, Etiqueta_Estacion: :OtonioPrimavera, :prenda_torso(Prenda.create! tipo: "Camisa negra", categoria: :Torso, tela: :Seda, link_imagen: "https://microcamisa.files.wordpress.com/2012/10/cropped-camisa22.jpg"))
+#guardarropa_4.atuendos << (Atuendo.create! Puntaje: :'10', Etiqueta_Formal: :Formal, Etiqueta_Estacion: :OtonioPrimavera, :prenda_torso(Prenda.create! tipo: "Camisa negra", categoria: :Torso, tela: :Seda, link_imagen: "https://microcamisa.files.wordpress.com/2012/10/cropped-camisa22.jpg"))
 
 guardarropa_2.prendas << (Prenda.create! tipo: "Remera manga corta", categoria: :Torso, tela: :Algodon, link_imagen:"https://cdyc.com.ar/wp-content/uploads/2018/09/remeraroja.jpg")
 guardarropa_2.prendas << (Prenda.create! tipo: "Remera manga larga", categoria: :Torso, tela: :Mohair, link_imagen: "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_azul_lisa_manga_larga_op1_.jpg")
@@ -156,3 +165,100 @@ guardarropa_nino.prendas << (Prenda.create! tipo: "Ojotas minion", categoria: :P
 guardarropa_nino.prendas << (Prenda.create! tipo: "Remera Among Us", categoria: :Torso, tela: :Cuero, color_primario: "#ff0000", color_secundario: "#ffffff", link_imagen: "https://http2.mlstatic.com/D_NQ_NP_952820-MLA43530339063_092020-O.jpg")
 guardarropa_nino.prendas << (Prenda.create! tipo: "Zapatillas alemanas", categoria: :Piernas, tela: :Cuero, color_primario: "#ff0000", color_secundario: "#ffffff", link_imagen: "https://thumbs.dreamstime.com/b/zapatos-para-el-ni%C3%B1o-en-el-fondo-blanco-20598631.jpg")
 guardarropa_nino.prendas << (Prenda.create! tipo: "Zapatillas alemanas", categoria: :Accesorio, tela: :Cuero, color_primario: "#ff0000", color_secundario: "#ffffff", link_imagen: "https://thumbs.dreamstime.com/b/zapatos-para-el-ni%C3%B1o-en-el-fondo-blanco-20598631.jpg")
+
+guardarropa_4.prendas << (Prenda.create! tipo: "Remera manga larga", categoria: :Torso, tela: :Mohair, link_imagen: "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_azul_lisa_manga_larga_op1_.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Botas militares", categoria: :Pies, tela: :Cuero, link_imagen: "https://i.pinimg.com/originals/fb/d6/26/fbd6266766a20e6ce09f053b915409bc.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Remera manga corta", categoria: :Torso, tela: :Algodon, link_imagen:"https://cdyc.com.ar/wp-content/uploads/2018/09/remeraroja.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Pantalon de Jean", categoria: :Piernas, tela: :Denim, link_imagen:"https://http2.mlstatic.com/D_NQ_NP_868101-MLA43579227964_092020-W.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Camisa negra", categoria: :Torso, tela: :Seda, link_imagen: "https://microcamisa.files.wordpress.com/2012/10/cropped-camisa22.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Gorra jordan negra", categoria: :Accesorio, tela: :Seda, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_986813-MLA45350444411_032021-W.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Jogging negro abercrombie", categoria: :Piernas, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_809919-MLA29820173136_042019-O.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Remera de ACDC", categoria: :Torso, tela: :Lana, link_imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/333/138/products/hombre31-6b9de400e6fe8d2b1516024655782837-640-0.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Remera sol naciente", categoria: :Torso, tela: :Lino, link_imagen: "https://www.remerasweb.com/675-home_default/remera-japon-sol-naciente.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Botas facheras", categoria: :Pies, tela: :Cuero, link_imagen: "https://www.digitalsport.com.ar/files/products/5ec2f5747a201-488282-500x500.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Hollister negra", categoria: :Torso, tela: :Algodon, link_imagen:"https://http2.mlstatic.com/D_NQ_NP_909509-MLA32568327674_102019-O.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Hollister blanca", categoria: :Torso, tela: :Mohair, link_imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/871/671/products/337d04e4-7c3f-449b-aca2-90ff08d9979c_nube-68643c7415fbd3754715830082858627-1024-1024.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Converse rojas clasicas", categoria: :Pies, tela: :Cuero, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_939955-MLA31043175628_062019-W.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Bermuda gris", categoria: :Piernas, tela: :Denim, link_imagen:"https://i.pinimg.com/originals/a1/b9/d9/a1b9d9e722acda0747464ecd1a1bb94c.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Buzo abercrombie negro", categoria: :Torso, tela: :Seda, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_921311-MLA27971371887_082018-O.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Rinonera blanca fila", categoria: :Accesorio, tela: :Seda, link_imagen: "https://statics.glamit.com.ar/media/catalog/product/cache/76/image/9df78eab33525d08d6e5fb8d27136e95/f/i/fila_ws201911_100_1.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Jogging gris abercrombie", categoria: :Piernas, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_935266-MLA42557454684_072020-O.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Remera clasica adidas", categoria: :Torso, tela: :Lana, link_imagen: "https://essential.vteximg.com.br/arquivos/ids/305737-1000-1000/266-0710_1.jpg?v=637112560190470000")
+guardarropa_4.prendas << (Prenda.create! tipo: "Adidas essential negra", categoria: :Torso, tela: :Lino, link_imagen: "https://www.cero26.com.ar/41728-large_default/remera-mujer-boyfriend-tee.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Converse botita negras", categoria: :Pies, tela: :Cuero, link_imagen: "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/1/5/157197c_0.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Sweater abercrombie negro", categoria: :Torso, tela: :Algodon, link_imagen:"https://http2.mlstatic.com/D_NQ_NP_750513-MLA44278163265_122020-W.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Sweater abercrombie gris", categoria: :Torso, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_843829-MLA44275745459_122020-O.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Stan smith - verdes", categoria: :Pies, tela: :Cuero, link_imagen: "https://www.cero26.com.ar/54358-medium_default/zapatillas-stan-smith.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Bermuda de Jean", categoria: :Piernas, tela: :Denim, link_imagen:"https://www.digitalsport.com.ar/files/products/5cd459817169a-473106-500x500.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Remera half adidas", categoria: :Torso, tela: :Seda, link_imagen: "https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw01276cc5/products/AD_GD6332/AD_GD6332-1.JPG")
+guardarropa_4.prendas << (Prenda.create! tipo: "Anteojos de sol", categoria: :Accesorio, tela: :Seda, link_imagen: "https://delablog.com/wp-content/uploads/2020/02/mejores-marcas-de-gafas-de-sol-para-hombre-ray-ban.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Malla rosa", categoria: :Piernas, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_961146-MLA44584705220_012021-W.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Degrade azul hollister", categoria: :Torso, tela: :Lana, link_imagen: "https://mitiendavision.com/content/images/thumbs/0032306_remera-hollister-sombreado-talle-s.jpeg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Saco negro", categoria: :Torso, tela: :Lino, link_imagen: "https://cdn.lookastic.es/blazer-negro-original-438804.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Supertstar blancas", categoria: :Pies, tela: :Cuero, link_imagen: "https://assets.adidas.com/images/w_600,f_auto,q_auto/29d99d71262249438241ab57011b3b10_9366/Zapatillas_Veganas_Superstar_Blanco_FW2295_01_standard.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Chaleco verde", categoria: :Torso, tela: :Algodon, link_imagen:"https://www.columbiatienda.com.mx/images/large/tiendacolumbia/Columbia%20Pike%20Lake%20Chalecos%20Hombre%20G%20844_ZOOM.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Uniclo negra", categoria: :Torso, tela: :Mohair, link_imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/430/498/products/2ec3cb3a-e2fe-4e9d-b088-be489ff92e1b1-44b25834b38748023216152529149673-640-0.jpeg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Airmax 270 react", categoria: :Pies, tela: :Cuero, link_imagen: "https://i.pinimg.com/originals/0a/54/72/0a54723d67de9ad31f4b43bbe8770b04.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Malla turquesa", categoria: :Piernas, tela: :Denim, link_imagen:"https://http2.mlstatic.com/D_NQ_NP_842107-MLA26463711516_112017-O.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Camisa negra", categoria: :Torso, tela: :Seda, link_imagen: "https://microcamisa.files.wordpress.com/2012/10/cropped-camisa22.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Gorro gris", categoria: :Accesorio, tela: :Seda, link_imagen: "https://m.media-amazon.com/images/I/513zgXsuFjL.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Malla flores", categoria: :Piernas, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_746829-MLA32759864348_112019-O.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Zapatilals running", categoria: :Pies, tela: :Cuero, link_imagen: "https://www.sport.es/labolsadelcorredor/wp-content/uploads/2019/07/adidas-running-zapatillas-01-Ultraboost-20.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Jean negro", categoria: :Piernas, tela: :Mohair, link_imagen: "https://elasdeljean.com/wp-content/uploads/2020/05/15883370602464ce466dd5f3dfc9b448444cc10ef3.png")
+guardarropa_4.prendas << (Prenda.create! tipo: "Jogging caqui", categoria: :Piernas, tela: :Mohair, link_imagen: "https://sc04.alicdn.com/kf/U4fadcad0444f478096e781e566368621b.jpg")
+guardarropa_4.prendas << (Prenda.create! tipo: "Jordan boston", categoria: :Pies, tela: :Cuero, link_imagen: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bf3b25ba-719c-4326-a6b5-e44f593a7579/calzado-air-jordan-1-mid-BNc6lg.png")
+guardarropa_4.prendas << (Prenda.create! tipo: "Crocs negras", categoria: :Pies, tela: :Cuero, link_imagen: "https://thumbs.nosto.com/quick/magento-fe8c9b12/8/75682_alt_5631aa84be7b70a68b09cfc0212b06af7747614cc6974b946e968d12c116c341/770e7c85bc04d7d6c7f5612ba73b53326b4004e76f49f7353be3d82d0a88ddb0a/A")
+guardarropa_4.prendas << (Prenda.create! tipo: "Bermuda negra", categoria: :Piernas, tela: :Mohair, link_imagen: "http://cdn.shopify.com/s/files/1/0347/6255/5529/products/pg_bermudanegra2_1200x1200.jpg?v=1583785036")
+guardarropa_4.prendas << (Prenda.create! tipo: "Reloj Tommy", categoria: :Accesorio, tela: :Seda, link_imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/966/070/products/th1791651_11-248a4156b9f48560a515914782870287-1024-1024.jpg")
+
+guardarropa_5.prendas << (Prenda.create! tipo: "Remera manga corta", categoria: :Torso, tela: :Algodon, link_imagen:"https://cdyc.com.ar/wp-content/uploads/2018/09/remeraroja.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Remera manga larga", categoria: :Torso, tela: :Mohair, link_imagen: "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_azul_lisa_manga_larga_op1_.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Botas militares", categoria: :Pies, tela: :Cuero, link_imagen: "https://i.pinimg.com/originals/fb/d6/26/fbd6266766a20e6ce09f053b915409bc.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Pantalon de Jean", categoria: :Piernas, tela: :Denim, link_imagen:"https://http2.mlstatic.com/D_NQ_NP_868101-MLA43579227964_092020-W.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Camisa negra", categoria: :Torso, tela: :Seda, link_imagen: "https://microcamisa.files.wordpress.com/2012/10/cropped-camisa22.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Gorra jordan negra", categoria: :Accesorio, tela: :Seda, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_986813-MLA45350444411_032021-W.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Jogging negro abercrombie", categoria: :Piernas, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_809919-MLA29820173136_042019-O.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Remera de ACDC", categoria: :Torso, tela: :Lana, link_imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/333/138/products/hombre31-6b9de400e6fe8d2b1516024655782837-640-0.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Remera sol naciente", categoria: :Torso, tela: :Lino, link_imagen: "https://www.remerasweb.com/675-home_default/remera-japon-sol-naciente.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Botas facheras", categoria: :Pies, tela: :Cuero, link_imagen: "https://www.digitalsport.com.ar/files/products/5ec2f5747a201-488282-500x500.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Hollister negra", categoria: :Torso, tela: :Algodon, link_imagen:"https://http2.mlstatic.com/D_NQ_NP_909509-MLA32568327674_102019-O.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Hollister blanca", categoria: :Torso, tela: :Mohair, link_imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/871/671/products/337d04e4-7c3f-449b-aca2-90ff08d9979c_nube-68643c7415fbd3754715830082858627-1024-1024.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Converse rojas clasicas", categoria: :Pies, tela: :Cuero, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_939955-MLA31043175628_062019-W.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Bermuda gris", categoria: :Piernas, tela: :Denim, link_imagen:"https://i.pinimg.com/originals/a1/b9/d9/a1b9d9e722acda0747464ecd1a1bb94c.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Buzo abercrombie negro", categoria: :Torso, tela: :Seda, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_921311-MLA27971371887_082018-O.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Rinonera blanca fila", categoria: :Accesorio, tela: :Seda, link_imagen: "https://statics.glamit.com.ar/media/catalog/product/cache/76/image/9df78eab33525d08d6e5fb8d27136e95/f/i/fila_ws201911_100_1.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Jogging gris abercrombie", categoria: :Piernas, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_935266-MLA42557454684_072020-O.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Remera clasica adidas", categoria: :Torso, tela: :Lana, link_imagen: "https://essential.vteximg.com.br/arquivos/ids/305737-1000-1000/266-0710_1.jpg?v=637112560190470000")
+guardarropa_5.prendas << (Prenda.create! tipo: "Adidas essential negra", categoria: :Torso, tela: :Lino, link_imagen: "https://www.cero26.com.ar/41728-large_default/remera-mujer-boyfriend-tee.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Converse botita negras", categoria: :Pies, tela: :Cuero, link_imagen: "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/1/5/157197c_0.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Sweater abercrombie negro", categoria: :Torso, tela: :Algodon, link_imagen:"https://http2.mlstatic.com/D_NQ_NP_750513-MLA44278163265_122020-W.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Sweater abercrombie gris", categoria: :Torso, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_843829-MLA44275745459_122020-O.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Stan smith - verdes", categoria: :Pies, tela: :Cuero, link_imagen: "https://www.cero26.com.ar/54358-medium_default/zapatillas-stan-smith.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Bermuda de Jean", categoria: :Piernas, tela: :Denim, link_imagen:"https://www.digitalsport.com.ar/files/products/5cd459817169a-473106-500x500.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Remera half adidas", categoria: :Torso, tela: :Seda, link_imagen: "https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw01276cc5/products/AD_GD6332/AD_GD6332-1.JPG")
+guardarropa_5.prendas << (Prenda.create! tipo: "Anteojos de sol", categoria: :Accesorio, tela: :Seda, link_imagen: "https://delablog.com/wp-content/uploads/2020/02/mejores-marcas-de-gafas-de-sol-para-hombre-ray-ban.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Malla rosa", categoria: :Piernas, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_961146-MLA44584705220_012021-W.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Degrade azul hollister", categoria: :Torso, tela: :Lana, link_imagen: "https://mitiendavision.com/content/images/thumbs/0032306_remera-hollister-sombreado-talle-s.jpeg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Saco negro", categoria: :Torso, tela: :Lino, link_imagen: "https://cdn.lookastic.es/blazer-negro-original-438804.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Supertstar blancas", categoria: :Pies, tela: :Cuero, link_imagen: "https://assets.adidas.com/images/w_600,f_auto,q_auto/29d99d71262249438241ab57011b3b10_9366/Zapatillas_Veganas_Superstar_Blanco_FW2295_01_standard.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Chaleco verde", categoria: :Torso, tela: :Algodon, link_imagen:"https://www.columbiatienda.com.mx/images/large/tiendacolumbia/Columbia%20Pike%20Lake%20Chalecos%20Hombre%20G%20844_ZOOM.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Uniclo negra", categoria: :Torso, tela: :Mohair, link_imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/430/498/products/2ec3cb3a-e2fe-4e9d-b088-be489ff92e1b1-44b25834b38748023216152529149673-640-0.jpeg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Airmax 270 react", categoria: :Pies, tela: :Cuero, link_imagen: "https://i.pinimg.com/originals/0a/54/72/0a54723d67de9ad31f4b43bbe8770b04.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Malla turquesa", categoria: :Piernas, tela: :Denim, link_imagen:"https://http2.mlstatic.com/D_NQ_NP_842107-MLA26463711516_112017-O.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Camisa negra", categoria: :Torso, tela: :Seda, link_imagen: "https://microcamisa.files.wordpress.com/2012/10/cropped-camisa22.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Gorro gris", categoria: :Accesorio, tela: :Seda, link_imagen: "https://m.media-amazon.com/images/I/513zgXsuFjL.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Malla flores", categoria: :Piernas, tela: :Mohair, link_imagen: "https://http2.mlstatic.com/D_NQ_NP_746829-MLA32759864348_112019-O.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Zapatilals running", categoria: :Pies, tela: :Cuero, link_imagen: "https://www.sport.es/labolsadelcorredor/wp-content/uploads/2019/07/adidas-running-zapatillas-01-Ultraboost-20.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Jean negro", categoria: :Piernas, tela: :Mohair, link_imagen: "https://elasdeljean.com/wp-content/uploads/2020/05/15883370602464ce466dd5f3dfc9b448444cc10ef3.png")
+guardarropa_5.prendas << (Prenda.create! tipo: "Jogging caqui", categoria: :Piernas, tela: :Mohair, link_imagen: "https://sc04.alicdn.com/kf/U4fadcad0444f478096e781e566368621b.jpg")
+guardarropa_5.prendas << (Prenda.create! tipo: "Jordan boston", categoria: :Pies, tela: :Cuero, link_imagen: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bf3b25ba-719c-4326-a6b5-e44f593a7579/calzado-air-jordan-1-mid-BNc6lg.png")
+guardarropa_5.prendas << (Prenda.create! tipo: "Crocs negras", categoria: :Pies, tela: :Cuero, link_imagen: "https://thumbs.nosto.com/quick/magento-fe8c9b12/8/75682_alt_5631aa84be7b70a68b09cfc0212b06af7747614cc6974b946e968d12c116c341/770e7c85bc04d7d6c7f5612ba73b53326b4004e76f49f7353be3d82d0a88ddb0a/A")
+guardarropa_5.prendas << (Prenda.create! tipo: "Bermuda negra", categoria: :Piernas, tela: :Mohair, link_imagen: "http://cdn.shopify.com/s/files/1/0347/6255/5529/products/pg_bermudanegra2_1200x1200.jpg?v=1583785036")
+guardarropa_5.prendas << (Prenda.create! tipo: "Reloj Tommy", categoria: :Accesorio, tela: :Seda, link_imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/966/070/products/th1791651_11-248a4156b9f48560a515914782870287-1024-1024.jpg")
+
+guardarropa_1.save!
+guardarropa_2.save!
+guardarropa_3.save!
+guardarropa_4.save!
+guardarropa_5.save!
+guardarropa_nino.save!

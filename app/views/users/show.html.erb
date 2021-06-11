@@ -22,6 +22,9 @@
             <footer class="card-footer">
                 <div class="action form-group">
                     <%= link_to edit_user_path(@user), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('editar') %> </p> <%end%>
+                    <% if @user.admin %>
+                        <%= link_to users_path, class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-list"></i><p class="d-inline"> Usuarios </p> <%end%>
+                    <% end %>
                 </div>
             </footer>
         </div>

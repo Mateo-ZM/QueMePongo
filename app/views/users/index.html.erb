@@ -1,38 +1,42 @@
 <% if can? :edit, @user %>
-
-  <h1 class="titulo d-flex justify-content-center">Users</h1>
-  <div class="container">
-    <div class="table-responsive">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col"> Email</th>
-            <th scope="col"> Cantidad guardarropas</th>
-            <th scope="col"> Cantidad prendas</th>
-            <th scope="col"> Fecha de registro</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @users.each do |user| %>
+  <div class="mt-5">
+    <h1 class="titulo d-flex justify-content-center">Users</h1>
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
             <tr>
-              <td><%= user.email %></td>
-              <td><%= user.guardarropas.length  %></td>
-                <% @cantidad_prendas = 0 %>
-                <% user.guardarropas.each do |guardarropa| %>
-                  <% @cantidad_prendas += guardarropa.prendas.length %>
-                <% end %>
-              <td> <%= @cantidad_prendas %> </td>
-              <td> <%= user.created_at.to_date %></td>
+              <th scope="col"> Email</th>
+              <th scope="col"> Cantidad guardarropas</th>
+              <th scope="col"> Cantidad prendas</th>
+              <th scope="col"> Fecha de registro</th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <br>
+          </thead>
 
-  <%= paginate @users, window: 3 %>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.email %></td>
+                <td><%= user.guardarropas.length  %></td>
+                  <% @cantidad_prendas = 0 %>
+                  <% user.guardarropas.each do |guardarropa| %>
+                    <% @cantidad_prendas += guardarropa.prendas.length %>
+                  <% end %>
+                <td> <%= @cantidad_prendas %> </td>
+                <td> <%= user.created_at.to_date %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br>
+    
+    <section class="navegacion-guardarropa botones-responsive d-flex justify-content-center align-center my-4" id="botones-prenda-index">
+      <%= link_to profile_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline"> <%=t('volver') %> </p><%end%>
+      <%= paginate @users, window: 3 %>
+    </section>
+  </div>
 <% else %>
     <%= render partial: "error_autorizacion"%>
 <% end %>

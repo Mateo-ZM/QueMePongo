@@ -32,49 +32,53 @@ class AtuendosController < ApplicationController
         @i = 0
 
         @prendas_torso = @guardarropa.prendas.select{|p| p.categoria == "Torso"}
-        @prenda_torso = @prendas_torso[rand(@prendas_torso.length)].id
-        @conversion_torso = Array.new
-
-        @prendas_torso.each do |prenda|
-            @conversion_torso[@i] = [prenda.tipo,prenda.id]
-            @i+=1
-        end
-
-        @i=0
-
         @prendas_piernas = @guardarropa.prendas.select{|p| p.categoria == "Piernas"}
-        @prenda_piernas = @prendas_piernas[rand(@prendas_piernas.length)].id
-        @conversion_piernas = Array.new
-
-        @prendas_piernas.each do |prenda|
-            @conversion_piernas[@i] = [prenda.tipo,prenda.id]
-            @i+=1
-        end
-
-        @i=0
-
         @prendas_pies = @guardarropa.prendas.select{|p| p.categoria == "Pies"}
-        @prenda_pies = @prendas_pies[rand(@prendas_pies.length)].id
-        @conversion_pies = Array.new
-
-        @prendas_pies.each do |prenda|
-            @conversion_pies[@i] = [prenda.tipo,prenda.id]
-            @i+=1
-        end
-
-        @i=0
-
         @prendas_accesorios = @guardarropa.prendas.select{|p| p.categoria == "Accesorio"}
-        @prenda_accesorios = @prendas_accesorios[rand(@prendas_accesorios.length)].id
-        @conversion_accesorios = Array.new
 
-        @prendas_accesorios.each do |prenda|
-            @conversion_accesorios[@i] = [prenda.tipo,prenda.id]
-            @i+=1
+        if @prendas_torso.length > 0 && @prendas_piernas.length > 0 && @prendas_pies.length > 0 && @prendas_accesorios.length > 0
+            @prenda_torso = @prendas_torso[rand(@prendas_torso.length)].id
+            @conversion_torso = Array.new
+    
+            @prendas_torso.each do |prenda|
+                @conversion_torso[@i] = [prenda.tipo,prenda.id]
+                @i+=1
+            end
+    
+            @i=0
+
+            @prenda_piernas = @prendas_piernas[rand(@prendas_piernas.length)].id
+            @conversion_piernas = Array.new
+
+            @prendas_piernas.each do |prenda|
+                @conversion_piernas[@i] = [prenda.tipo,prenda.id]
+                @i+=1
+            end
+
+            @i=0
+
+            @prenda_pies = @prendas_pies[rand(@prendas_pies.length)].id
+            @conversion_pies = Array.new
+
+            @prendas_pies.each do |prenda|
+                @conversion_pies[@i] = [prenda.tipo,prenda.id]
+                @i+=1
+            end
+
+            @i=0
+
+            @prenda_accesorios = @prendas_accesorios[rand(@prendas_accesorios.length)].id
+            @conversion_accesorios = Array.new
+
+            @prendas_accesorios.each do |prenda|
+                @conversion_accesorios[@i] = [prenda.tipo,prenda.id]
+                @i+=1
+            end
+
+            @i=0
+        else
+            redirect_to guardarropa_atuendos_path(@guardarropa), alert: "ERROR: No hay prendas disponibles para crear un atuendo"
         end
-
-        @i=0
-
     end
 
     def update

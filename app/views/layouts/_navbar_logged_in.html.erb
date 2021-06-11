@@ -18,7 +18,7 @@
                     <i class="fas fa-bars fa-2x"></i>
                 </button>
                 <div class="collapse  navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav d-flex justify-content-center ms-auto"> 
+                    <ul class="navbar-nav d-flex justify-content-center align-items-center ms-auto"> 
 
                         <li class="nav-item px-3 py-2 rounded">
                             <%= link_to t('guardarropas'), guardarropas_path, class: "nav-text" %>
@@ -27,7 +27,7 @@
                             <%= link_to "Perfil", profile_path, class: "nav-text" %>
                         </li>
                         <li class="nav-item px-3 py-2 rounded">
-                            <%= link_to logout_path, method: :get, class: "text-danger nav-text", data: {confirm: '¿Seguro que desea cerrar sesion?' } do %>Cerrar sesion<% end %>
+                            <%= link_to logout_path, method: :get, class: "text-danger nav-text", data: {confirm: '¿Seguro que desea cerrar sesion?' } do %>Cerrar&nbspsesion<% end %>
                         </li>
                     </ul>
                 </div>

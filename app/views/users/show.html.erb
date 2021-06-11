@@ -1,9 +1,29 @@
-  <p id="notice"><%= notice %></p>
+  <div class="container">
 
-  <p>
-    <strong>Email:</strong>
-    <%= @user.email %>
-  </p>
+    <main class="prenda d-flex justify-content-center mb-5">
+        <div class="card my-4 mi_card_prenda">
+            <div class="card-header d-flex justify-content-center align-items-center">
+                <div class="px-3 text-center overflow-auto"><%= @user.nombre + " " + @user.apellido %></div>
+            </div>
 
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Back', users_path %>
+            <div class="container h-100 d-flex justify-content-center align-items-center my-2" >
+                <%if @user.imagen.attached?%>
+                    <%= image_tag(@user.imagen , class:"fotos_cards_index h-100") %>
+                  <%else%>
+                    <%= image_tag(@user.link_imagen , class:"fotos_cards_index h-100") %>
+                <%end%>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><span class="negrita">Email: </span><%= @user.email %></li>
+                <li class="list-group-item"><span class="negrita">Género: </span><%= @user.sexo %></li>
+            </ul>
+
+            <footer class="card-footer">
+                <div class="action form-group">
+                    <%= link_to edit_user_path(@user), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('editar') %> </p> <%end%>
+                </div>
+            </footer>
+        </div>
+    </main>
+</div>

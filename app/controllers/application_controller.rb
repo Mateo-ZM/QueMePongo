@@ -24,4 +24,6 @@ class ApplicationController < ActionController::Base
             User.find(user_id)
         end
     end
+    helper_method :current_user
+
 end

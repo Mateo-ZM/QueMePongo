@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ], except: [:new, :create]
-  skip_before_action :validate_logged_user!
+  skip_before_action :validate_logged_user!, only: %i[ new ]
+  
 
   # GET /users or /users.json
   def index
@@ -11,6 +12,7 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    @user.comprobar_link_imagen!
   end
 
   # GET /users/new
@@ -21,12 +23,12 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user.comprobar_link_imagen!
   end
 
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
-
     if @user.password.length > 7 && @user.password.length < 17
       respond_to do |format|
         if @user.save
@@ -73,7 +75,7 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation, :nombre, :apellido, :sexo)
+      params.require(:user).permit(:email, :password, :password_confirmation, :nombre, :apellido, :sexo, :imagen, :link_imagen)
     end
 
     def resetear

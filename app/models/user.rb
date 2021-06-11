@@ -6,7 +6,7 @@ class User < ApplicationRecord
   enum sexo: [:Hombre, :Mujer, :Otro]
 
   def comprobar_link_imagen! 
-    self.link_imagen = "imagen_no_disponible.jpg" if self.vacia?
+    self.link_imagen = "default-profile.png" if self.vacia?
   end 
 
   def vacia?

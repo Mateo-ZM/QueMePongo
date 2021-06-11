@@ -1,46 +1,60 @@
-<div class="card my-4 card_login">
-  <div class="card-header d-flex justify-content-center align-items-center">
-    Registro de usuario
-  </div>
-  <%= form_with(model: user, local: true) do |form| %>
-    <% if user.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<main class= "container h-100">
+  <h1 class = "titulo text-center mt-2 mb-5"> Modificar usuario </h1>
+    <div class="d-flex  justify-content-center">
+        <div class="card mi_card_modif ">
+            <%= form_for @user do |f| %>
+                <div class="card-header card-header-atuendos-new position-relative">
+                    <%= f.text_field :nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
+                    <%= f.text_field :apellido, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Apellido" %>  
 
-        <ul>
-          <% user.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+                </div>
+                
 
-  <div class="d-flex flex-column justify-content-center align-items-center">
-    <div>
-        <div class="row my-4">
-                <div class="col-5 d-flex justify-content-center align-items-center"> <i class="fas fa-envelope"></i><p class="m-0 d-inline">&nbspEmail: </p> </div>
-                <div class="col-7"><%= form.text_field :email %></div>
-        </div>
-        <div class="row my-4">
-                <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-lock"></i></i><p class="m-0 d-inline">&nbspContrasena: </p> </div>
-                <div class="col-7"><%= form.password_field :password %></div>
-        </div>
-        <div class="row my-4">
-                <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-lock"></i></i><p class="m-0 d-inline">&nbspConfirmar: </p> </div>
-                <div class="col-7"><%= form.password_field :password_confirmation %></div>
+                <div class="container d-flex justify-content-center my-2">
+                    <%if @user.imagen.attached?%>
+                        <%= image_tag(@user.imagen , class:"fotos_cards_index h-100") %>
+                    <%else%>
+                        <%= image_tag(@user.link_imagen , class:"fotos_cards_index h-100 mb-5") %>
+                    <%end%>
+                </div>
+
+                <div class="field form-group">   
+                    <%=f.file_field :imagen , class: "form-control"%>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <span class="negrita">
+                            <%= t('link_imagen')%> 
+                        </span>
+                        <%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: t('placeholder_link_imagen') %>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="negrita"> 
+                            Email 
+                        </span>
+                        <%= f.text_field :email, class:"form-control"%>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="negrita"> 
+                            Género
+                        </span> 
+                        <%= f.select :sexo, options_for_select([['Hombre','Hombre'],['Mujer','Mujer'],['Otro','Otro']]), :prompt => t('elige_uno'), class: "form-control"%>
+                    </li>
+                </ul>
+                
+                <footer class="card-footer">
+                    <div class="action form-group">
+                        <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 btn-form  form-control ") do %>
+                            <i class="fas fa-check"></i> <p class="d-inline"><%=t('confirmar') %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
+                        <% end %>
+                        
+                        <%= link_to user_path(@user), class:"btn-salir px-3 text-decoration-none text-center text-white form-control btn-form ", data: {confirm: t('volver_sin_guardar?')  } do%>
+                            <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('volver') %></p>
+                        <% end %>
+                    </div>
+                </footer>
+            <% end %>
         </div>
     </div>
-  </div>
-
-
-
-    <footer class="card-footer d-flex justify-content-center align-items-center">
-        <%= link_to link_volver, class:"btn btn-volver-signup px-4 py-2 m-3 btn-form", data: {confirm: "Volver sin registrarse?"  } do%>
-          <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('volver') %></p>
-        <% end %>
-        <%= button_tag(type: 'submit', class: "btn btn-general px-4 py-2 m-3 btn-form") do %>
-          <i class="fas fa-user-plus"></i><p class="d-inline"> Registarse</p>
-        <% end %>
-    </footer>
-  <% end %>
-</div>
+</main>

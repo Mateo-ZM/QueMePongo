@@ -148,6 +148,11 @@ main.guardarropa span.firulete{
         color: $color-secundario;
     }
 
+    span:hover a span{
+        background-color: $color-terciario-hover;
+        color: $color-secundario;
+    }
+
     a:hover{
         background-color: $color-terciario-hover;
         color: $color-secundario;

@@ -11,31 +11,40 @@
     
     <%= form_tag guardarropa_atuendos_path(@guardarropa), method: :get do %>
         <div class="d-flex justify-content-center align-items-center">
-        <li class="list-group-item border-0 d-inline">
-                    <span class="negrita">
-                        <%=t('puntaje') %> 
-                    </span>
-                    <%= select_tag :Puntaje, options_for_select(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]), :prompt => t('elige_uno'), class:"form-control"%>
-                </li>
             <li class="list-group-item border-0 d-inline">
-                    <span class="negrita">
-                        <%=t('formalidad') %>
-                    </span><%= select_tag :Formalidad, options_for_select(["Formal","Informal"]), :prompt => t('elige_uno'), class:"form-control"%>
-                </li>
-                <li class="list-group-item border-0 d-inline">
-                    <span class="negrita">
-                        <%=t('estacion') %> 
-                    </span>
-                    <%= select_tag :Estacion, options_for_select(["Verano","Invierno", "OtonioPrimavera"]), :prompt => t('elige_uno'), class:"form-control"%>
-                </li>
-                <li class="list-group-item border-0 d-inline">
-                    <span class="negrita">
-                        <%=t('horario') %> 
-                    </span>
-                    <%= select_tag :DiaNoche, options_for_select(["Dia","Noche"]), :prompt => t('elige_uno'), class:"form-control"%>
-                </li>
-                <%= submit_tag 'Filtrar', class: "btn btn-crear btn-form px-3 py-2 m-2 form-control" %>
-                <!--<i class="fas fa-filter text-white"></i><p class="d-inline"></p> -->
+                <span class="negrita">
+                    <%=t('puntaje') %> 
+                </span>
+                <%= select_tag :Puntaje, options_for_select(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]), :prompt => t('elige_uno'), class:"form-control"%>
+            </li>
+            <li class="list-group-item border-0 d-inline">
+                <span class="negrita">
+                    <%=t('formalidad') %>
+                </span><%= select_tag :Formalidad, options_for_select(["Formal","Informal"]), :prompt => t('elige_uno'), class:"form-control"%>
+            </li>
+            <li class="list-group-item border-0 d-inline">
+                <span class="negrita">
+                    <%=t('estacion') %> 
+                </span>
+                <%= select_tag :Estacion, options_for_select(["Verano","Invierno", "OtonioPrimavera"]), :prompt => t('elige_uno'), class:"form-control"%>
+            </li>
+            <li class="list-group-item border-0 d-inline">
+                <span class="negrita">
+                    Horario
+                </span>
+                <%= select_tag :DiaNoche, options_for_select(["Dia","Noche"]), :prompt => t('elige_uno'), class:"form-control"%>
+            </li>
+            <li class="list-group-item border-0 d-inline">
+                <span class="negrita">
+                    Ordenar
+                </span>
+                <%= select_tag :orden, options_for_select(["AZ","ZA","Mayor puntaje","Menor puntaje"]), :prompt => t('elige_uno'), class:"form-control"%>
+            </li>
+
+                <%= button_tag(type: 'submit', class: "align-self-end btn btn-crear btn-form px-3 py-2  form-control btn-filtar-atuendos") do %>
+                    <i class="fas fa-filter text-white"></i><p class="d-inline"> Filtrar</p>
+                <% end %>
+
         </div>
     <% end%>
 

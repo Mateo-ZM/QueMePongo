@@ -5,7 +5,7 @@ class AtuendosController < ApplicationController
 
 
     def index
-        @atuendos = @guardarropa.atuendos.order(:Descripcion)
+        ordenar
         filtrar
         @atuendos.each do |atuendo|
             if !(atuendo.prenda_torso && atuendo.prenda_accesorios && atuendo.prenda_piernas && atuendo.prenda_pies)
@@ -166,6 +166,22 @@ class AtuendosController < ApplicationController
         end
         if params[:DiaNoche] != '' && params[:DiaNoche] != nil
             @atuendos = @atuendos.select{|a| a.Etiqueta_DiaNoche == params[:DiaNoche]}
+        end
+    end
+
+    def ordenar
+        if params[:orden] == nil || params[:orden] == ""
+            @atuendos = @guardarropa.atuendos.all 
+        else 
+            if params[:orden] == "AZ"
+                @atuendos = @guardarropa.atuendos.order(:Descripcion)
+            elsif params[:orden] == "ZA"
+                @atuendos = @guardarropa.atuendos.order(Descripcion: :desc) 
+            elsif params[:orden] == "Mayor puntaje"
+                @atuendos = @guardarropa.atuendos.order(Puntaje: :desc)
+            elsif params[:orden] == "Menor puntaje"
+                @atuendos = @guardarropa.atuendos.order(:Puntaje)
+            end
         end
     end
 end

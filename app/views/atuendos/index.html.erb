@@ -9,6 +9,29 @@
     </div>
     <h1 class="titulo my-4 text-center"><%=t('atuendos_de', guardarropa_nombre: @guardarropa.Nombre)%></h1>
     
+    <%= form_tag guardarropa_atuendos_path(@guardarropa), method: :get do %>
+        <div class="d-flex justify-content-center align-items-center">
+            <li class="list-group-item border-0 d-inline">
+                    <span class="negrita">
+                        <%=t('formalidad') %>
+                    </span><%= select_tag :Formalidad, options_for_select(["Formal","Informal"]), :prompt => t('elige_uno'), class:"form-control"%>
+                </li>
+                <li class="list-group-item border-0 d-inline">
+                    <span class="negrita">
+                        <%=t('estacion') %> 
+                    </span>
+                    <%= select_tag :Estacion, options_for_select(["Verano","Invierno", "OtonioPrimavera"]), :prompt => t('elige_uno'), class:"form-control"%>
+                </li>
+                <li class="list-group-item border-0 d-inline">
+                    <span class="negrita">
+                        <%=t('horario') %> 
+                    </span>
+                    <%= select_tag :DiaNoche, options_for_select(["Dia","Noche"]), :prompt => t('elige_uno'), class:"form-control"%>
+                </li>
+                <%= submit_tag 'Filtrar', class: "btn btn-crear btn-form px-3 py-2 m-2 form-control" %>
+                <!--<i class="fas fa-filter text-white"></i><p class="d-inline"></p> -->
+        </div>
+    <% end%>
 
     <div class="splide">
         <div class="splide__slider">

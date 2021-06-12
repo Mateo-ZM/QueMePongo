@@ -1,6 +1,5 @@
 <div class="container">
-
-    <main class="prenda d-flex justify-content-center mb-5">
+    <main class="prenda d-flex justify-content-center my-5">
         <div class="card my-4 mi_card_prenda">
             <div class="card-header d-flex justify-content-center align-items-center">
                 <div class="px-3 text-center overflow-auto"><%= @user.nombre + " " + @user.apellido %></div>
@@ -22,8 +21,9 @@
             <footer class="card-footer">
                 <div class="action form-group">
                     <%= link_to edit_user_path(@user), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('editar') %> </p> <%end%>
+                    <%= link_to guardarropas_path, class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-list"></i><p class="d-inline"> <%=t('guardarropas') %> </p> <%end%>
                     <% if @user.admin %>
-                        <%= link_to users_path, class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-list"></i><p class="d-inline"> Usuarios </p> <%end%>
+                        <%= link_to users_path, class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-users"></i><p class="d-inline"> Usuarios </p> <%end%>
                     <% end %>
                 </div>
             </footer>

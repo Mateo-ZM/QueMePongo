@@ -6,7 +6,7 @@ class AtuendosController < ApplicationController
 
     def index
         @atuendos = @guardarropa.atuendos.order(:Descripcion)
-        @atuendos = filtrar @atuendos
+        filtrar
         @atuendos.each do |atuendo|
             if !(atuendo.prenda_torso && atuendo.prenda_accesorios && atuendo.prenda_piernas && atuendo.prenda_pies)
                 @atuendos.destroy(atuendo.id)
@@ -147,23 +147,25 @@ class AtuendosController < ApplicationController
 
     private
     def atuendo_params
-        params.require(:atuendo).permit(:Descripcion, :Puntaje, :Etiqueta_DiaNoche, :Etiqueta_Estacion, :Etiqueta_Formal, :guardarropa_id, :prenda_accesorios_id, :prenda_piernas_id, :prenda_pies_id, :prenda_torso_id, :Formalidad, :DiaNoche, :Estacion)#:tipo, :categoria, :tela, :color_primario, :color_secundario, :link_imagen, :imagen, 
+        params.require(:atuendo).permit(:Descripcion, :Puntaje, :Etiqueta_DiaNoche, :Etiqueta_Estacion, :Etiqueta_Formal, :guardarropa_id, :prenda_accesorios_id, :prenda_piernas_id, :prenda_pies_id, :prenda_torso_id)
     end
 
     def get_guardarropa
         @guardarropa = Guardarropa.find(params[:guardarropa_id])
     end
     
-    def filtrar atuendos
-        if params[:Formalidad] != ''
-            atuendos = atuendos.select{|a| a.Etiqueta_Formal == params[:Formalidad]}
+    def filtrar
+        if params[:Puntaje] != '' && params[:Puntaje] != nil
+            @atuendos = @atuendos.select{|a| a.Puntaje == params[:Puntaje]}
         end
-        if params[:Estacion] != ''
-            atuendos = atuendos.select{|a| a.Etiqueta_Estacion == params[:Estacion]}
+        if params[:Formalidad] != '' && params[:Formalidad] != nil
+            @atuendos = @atuendos.select{|a| a.Etiqueta_Formal == params[:Formalidad]}
         end
-        if params[:DiaNoche] != ''
-            atuendos = atuendos.select{|a| a.Etiqueta_DiaNoche == params[:DiaNoche]}
+        if params[:Estacion] != '' && params[:Estacion] != nil
+            @atuendos = @atuendos.select{|a| a.Etiqueta_Estacion == params[:Estacion]}
         end
-        atuendos
+        if params[:DiaNoche] != '' && params[:DiaNoche] != nil
+            @atuendos = @atuendos.select{|a| a.Etiqueta_DiaNoche == params[:DiaNoche]}
+        end
     end
 end

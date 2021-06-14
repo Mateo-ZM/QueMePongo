@@ -40,7 +40,53 @@
             </div>
 
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span class="negrita"> <%=t('puntaje')%>: </span><%= @atuendo.Puntaje %></li>
+                <li class="list-group-item">
+                    <span class="negrita"> 
+                        <%=t('puntaje')%>: 
+                    </span>
+                    <%if(@atuendo.Puntaje == 5)%>
+                        <%=  render partial: "layouts/estrellas"%>
+                        <%=  render partial: "layouts/estrellas"%>
+                        <%=  render partial: "layouts/estrellas"%>
+                        <%=  render partial: "layouts/estrellas"%>
+                        <%=  render partial: "layouts/estrellas"%>
+                    <%end%>
+                    <%if(@atuendo.Puntaje == 4)%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                    <%end%>
+                    <%if(@atuendo.Puntaje == 3)%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                    <%end%>
+                    <%if(@atuendo.Puntaje == 2)%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                    <%end%>
+                    <%if(@atuendo.Puntaje == 1)%>
+                        <%= render partial: "layouts/estrellas"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                    <%end%>
+                    <%if(@atuendo.Puntaje == 0)%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                        <%= render partial: "layouts/estrellas_oscuras"%>
+                    <%end%>
+                </li>
                 <li class="list-group-item"><span class="negrita"><%=t('formalidad')%>: </span><%= @atuendo.Etiqueta_Formal %></li>
                 <li class="list-group-item">
                     <span class="negrita"><%=t('estacion')%>: </span>

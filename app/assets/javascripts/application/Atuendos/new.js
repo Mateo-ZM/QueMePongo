@@ -26,6 +26,7 @@ Paloma.controller('Atuendos', {
             seleccionar_Parte('piernas')
             seleccionar_Parte('pies')
             seleccionar_Parte('accesorios')
+            estrellas(0)
         }
 
         function seleccionar_Parte(parte)
@@ -49,6 +50,23 @@ Paloma.controller('Atuendos', {
                         }
                     }
                 })
+            });
+        }
+
+
+
+        function estrellas(num)
+        {
+            selector_puntaje[0].children[0].children[0].value = 0; 
+            for (let i = 5; i > 0; i--) {
+                if(num >= i)
+                {
+                    estrellas_seleccionadas.push ( document.querySelector(`.estrella-${i}`) );
+                }
+            }
+
+            estrellas_no_seleccionadas.forEach(estrella => {
+                estrella.classList.remove("estrella-amarilla");
             });
         }
     }

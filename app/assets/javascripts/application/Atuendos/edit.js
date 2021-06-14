@@ -1,6 +1,6 @@
 Paloma.controller('Atuendos', {
     edit: function(){
-            window.addEventListener("load", theDomHasLoaded);
+        window.addEventListener("load", theDomHasLoaded);
 
         function inicializarParte(parte)
         {
@@ -26,6 +26,8 @@ Paloma.controller('Atuendos', {
             seleccionar_Parte('piernas')
             seleccionar_Parte('pies')
             seleccionar_Parte('accesorios')
+
+
         }
 
         function seleccionar_Parte(parte)
@@ -51,5 +53,8 @@ Paloma.controller('Atuendos', {
                 })
             });
         }
+
+
     }
+    ,
 });

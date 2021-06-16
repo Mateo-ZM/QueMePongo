@@ -240,7 +240,7 @@
                     <%if(edit)%>
                         <%= f.select :Puntaje, [@atuendo.Puntaje], class:"form-control"%>
                     <%else%>
-                        <%= f.select :Puntaje, options_for_select(["1"]), class:"form-control puntaje"%>
+                        <%= f.select :Puntaje, options_for_select(["0"]), class:"form-control puntaje"%>
                     <%end%>
                 </div>
             </li>

@@ -88,6 +88,20 @@ $color-volver-hover: #780E12;
     width: 12rem;
 }
 
+
+.btn-desfiltrar-atuendos{
+    background-color: $color-volver;
+    color: white;
+    font-size: 1.45rem;
+    width: 12rem;
+}
+
+.btn-desfiltrar-atuendos:hover, .btn-desfiltrar-atuendos:focus {
+    background-color: $color-volver-hover;
+    color: $color-secundario;
+}
+
+
 .estrella{
     fill: gray;
     border: black 1em;
@@ -105,5 +119,8 @@ $color-volver-hover: #780E12;
     stroke-linejoin: round;
 }
 
-
+.sacar-margen{
+    color: gray;
+    margin-left: -1.5em;;
+}
 

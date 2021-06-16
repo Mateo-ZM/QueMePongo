@@ -1,10 +1,4 @@
-window.addEventListener("load", theDomHasLoaded);
 
-
-function theDomHasLoaded() 
-{
-    inicializarEstrellas();
-}
 
 function inicializarEstrellas()
 {

@@ -1,6 +1,6 @@
 Paloma.controller('Atuendos', {
     edit: function(){
-        window.addEventListener("load", theDomHasLoaded);
+        window.addEventListener("load", atuendosEditcargo);
 
         function inicializarParte(parte)
         {
@@ -15,19 +15,20 @@ Paloma.controller('Atuendos', {
             })
             
         }
-        function theDomHasLoaded() 
+        function atuendosEditcargo() 
         {
+            slider()
             inicializarParte('torso');
             inicializarParte('piernas'); 
             inicializarParte('pies'); 
             inicializarParte('accesorios');
 
-            seleccionar_Parte('torso')
-            seleccionar_Parte('piernas')
-            seleccionar_Parte('pies')
-            seleccionar_Parte('accesorios')
+            seleccionar_Parte('torso');
+            seleccionar_Parte('piernas');
+            seleccionar_Parte('pies');
+            seleccionar_Parte('accesorios');
 
-
+            inicializarEstrellas();
         }
 
         function seleccionar_Parte(parte)

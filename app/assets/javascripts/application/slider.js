@@ -1,4 +1,4 @@
-document.addEventListener( 'DOMContentLoaded', function () 
+function slider() 
 {
     var elms = document.getElementsByClassName( 'splide' );
 
@@ -74,4 +74,4 @@ document.addEventListener( 'DOMContentLoaded', function ()
         }
         
     }
-} );
+}

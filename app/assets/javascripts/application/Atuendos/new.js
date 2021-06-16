@@ -1,6 +1,7 @@
 Paloma.controller('Atuendos', {
     new: function(){
-            window.addEventListener("load", theDomHasLoaded);
+        window.addEventListener("load", theDomHasLoaded);
+
         
         function inicializarParte(parte)
         {
@@ -17,6 +18,7 @@ Paloma.controller('Atuendos', {
         }
         function theDomHasLoaded() 
         {
+            slider()
             inicializarParte('torso');
             inicializarParte('piernas'); 
             inicializarParte('pies'); 
@@ -55,19 +57,6 @@ Paloma.controller('Atuendos', {
 
 
 
-        function estrellas(num)
-        {
-            selector_puntaje[0].children[0].children[0].value = 0; 
-            for (let i = 5; i > 0; i--) {
-                if(num >= i)
-                {
-                    estrellas_seleccionadas.push ( document.querySelector(`.estrella-${i}`) );
-                }
-            }
-
-            estrellas_no_seleccionadas.forEach(estrella => {
-                estrella.classList.remove("estrella-amarilla");
-            });
-        }
+        
     }
 });

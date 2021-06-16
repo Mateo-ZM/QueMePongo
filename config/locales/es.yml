@@ -85,3 +85,22 @@ es:
     #show
   nuevo_atuendo: "Nuevo atuendo"
 
+  perfil: "Perfil"
+  cerrar_sesion: "Cerrar sesión"
+  registrarse: "Registrarse"
+  iniciar_sesion: "Iniciar sesión"
+  inicio_de_sesion: "Inicio de sesión"
+  contraseña: "Contraseña"
+  no_tienes_usuario: "No tienes un usuario aun? Registrate"
+  registro_de_usuario: "Registro de usuario"
+  confirmar: "Confirmar"
+  apellido: "Apellido"
+  genero: "Género"
+  hombre: "Hombre"
+  mujer: "Mujer"
+  otro: "Otro"
+  ya_tienes_usuario: "Ya tienes un usuario? Inicia sesión"
+  
+
+
+

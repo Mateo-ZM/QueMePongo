@@ -26,8 +26,11 @@
                 <span class="negrita">
                     <%=t('estacion') %> 
                 </span>
-                <%= select_tag :Estacion, options_for_select(["Verano","Invierno", "OtonioPrimavera"]), :prompt => t('elige_uno'), class:"form-control select_estacion"%>
+                <%= select_tag :Estacion, options_for_select(["Verano","Invierno", ["Otoño/Primavera", "OtonioPrimavera"], ["Según Clima Actual","SegunClimaActual"]]), :prompt => t('elige_uno'), class:"form-control select_estacion"%>
             </li>
+            <div class="invisible temperatura">
+
+            </div>
             <li class="list-group-item border-0 d-inline">
                 <span class="negrita">
                     Horario
@@ -44,12 +47,16 @@
             <%= button_tag(type: 'submit', class: "align-self-end btn btn-crear btn-form px-3 py-2  form-control btn-filtar-atuendos") do %>
                 <i class="fas fa-filter text-white"></i><p class="d-inline"> Filtrar</p>
             <% end %>
+            <%= button_tag(type: 'submit', class: "align-self-end btn btn-crear btn-form px-3 py-2  form-control btn-filtar-atuendos" ,:onclick => "temperatura()") do %>
+                <i class="fas fa-filter text-white"></i><p class="d-inline"> Según clima</p>
+            <% end %>
             <%= button_tag(type: 'submit', class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,:onclick => "eliminarFiltros()") do %>
                 <i class="fas fa-filter text-white">
                     <i class="fas fa-slash sacar-margen"></i>
                 </i>
                 <p class="d-inline"> Eliminar filtros</p>
             <% end %>
+
 
         </div>
     <% end%>

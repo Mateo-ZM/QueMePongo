@@ -11,13 +11,13 @@ Paloma.controller('Atuendos', {
 
         function filtrados()
         {
-            const urlParams = new URLSearchParams(window.location.search);
+            var urlParams = new URLSearchParams(window.location.search);
         
-            const puntaje = urlParams.get('Puntaje');
-            const formalidad = urlParams.get('Formalidad');
-            const estacion = urlParams.get('Estacion');
-            const dianoche = urlParams.get('DiaNoche');
-            const orden = urlParams.get('orden'); 
+            var puntaje = urlParams.get('Puntaje');
+            var formalidad = urlParams.get('Formalidad');
+            var estacion = urlParams.get('Estacion');
+            var dianoche = urlParams.get('DiaNoche');
+            var orden = urlParams.get('orden'); 
         
             var indicePuntaje;
             var indiceFormalidad;
@@ -148,6 +148,5 @@ Paloma.controller('Atuendos', {
             select_dianoche.selectedIndex = indiceDiaNoche;
             select_orden.selectedIndex = indiceOrden;
         }
-
     }
 });

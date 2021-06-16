@@ -18,6 +18,7 @@
 $(document).ready(function(){
     Paloma.start();
 });
+var climaTemp;
 
 window.addEventListener("load", ClimaYVariables);
 function ClimaYVariables()
@@ -32,6 +33,7 @@ function ClimaYVariables()
             let climaDescription = climaResponse.weather[0].description + ", ";
             let climaIcon = climaResponse.weather[0].icon;
             climaDescription += climaResponse.main.temp + "°C";
+            climaTemp = climaResponse.main.temp;
             
             let climaHTML = `<span><img class = "nav-img" src = "https://raw.githubusercontent.com/yuvraaaj/openweathermap-api-icons/master/icons/${climaIcon}.png"></img> ${climaDescription}</span>`
             

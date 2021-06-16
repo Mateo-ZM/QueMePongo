@@ -3,6 +3,7 @@ class Atuendo < ApplicationRecord
     belongs_to :prenda_piernas, class_name: "Prenda" 
     belongs_to :prenda_pies, class_name: "Prenda" 
     belongs_to :prenda_accesorios, class_name: "Prenda"
+    enum Puntaje: ['0', '1', '2', '3', '4', '5']
     enum Etiqueta_Formal: [:Formal, :Informal]
     enum Etiqueta_Estacion: [:Verano, :Invierno, :OtonioPrimavera]
     enum Etiqueta_DiaNoche: [:Dia, :Noche]

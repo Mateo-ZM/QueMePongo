@@ -44,42 +44,42 @@
                     <span class="negrita"> 
                         <%=t('puntaje')%>: 
                     </span>
-                    <%if(@atuendo.Puntaje == 5)%>
+                    <%if(@atuendo.Puntaje == "5")%>
                         <%=  render partial: "layouts/estrellas"%>
                         <%=  render partial: "layouts/estrellas"%>
                         <%=  render partial: "layouts/estrellas"%>
                         <%=  render partial: "layouts/estrellas"%>
                         <%=  render partial: "layouts/estrellas"%>
                     <%end%>
-                    <%if(@atuendo.Puntaje == 4)%>
+                    <%if(@atuendo.Puntaje == "4")%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                     <%end%>
-                    <%if(@atuendo.Puntaje == 3)%>
+                    <%if(@atuendo.Puntaje == "3")%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                     <%end%>
-                    <%if(@atuendo.Puntaje == 2)%>
+                    <%if(@atuendo.Puntaje == "2")%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                     <%end%>
-                    <%if(@atuendo.Puntaje == 1)%>
+                    <%if(@atuendo.Puntaje == "1")%>
                         <%= render partial: "layouts/estrellas"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                     <%end%>
-                    <%if(@atuendo.Puntaje == 0)%>
+                    <%if(@atuendo.Puntaje == "0")%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>
                         <%= render partial: "layouts/estrellas_oscuras"%>

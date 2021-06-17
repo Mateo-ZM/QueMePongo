@@ -15,6 +15,19 @@ class Guardarropa < ApplicationRecord
     def vacia?
         (self.link_imagen.blank? || (!"https".in?(self.link_imagen) && !"http".in?(self.link_imagen)))
     end
+
+    def select_random (categoria)
+        @prendas = self.prendas.select{|p| p.categoria == categoria}
+        @prenda = @prendas.sample
+        if @prenda
+            @prenda = @prenda.id
+        end
+        [@prendas, @prenda]
+    end
+
+    def select_edit (categoria)
+        @prendas = self.prendas.select{|p| p.categoria == categoria}
+    end
 end 
 
 

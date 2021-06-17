@@ -51,7 +51,6 @@
                                                         <div class="contador"><%=@i%></div>
                                                     <%end%>
                                                     <%@i=@i+1%>
-                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -68,7 +67,7 @@
 
         <div class="invisible select-torso">
             <!--<select name="atuendo[prenda_torso_id]" id="atuendo_prenda_torso_id"><option value=""></option> </select> -->
-            <%= f.select :prenda_torso_id, options_for_select(@conversion_torso),  class:"form-control"%>
+            <%= f.select :prenda_torso_id,  class:"form-control"%>
         </div>
 
         <!-- Piernas -->
@@ -117,7 +116,7 @@
 
         <div class="invisible select-piernas">
             <!--<select name="atuendo[prenda_piernas_id]" id="atuendo_prenda_piernas_id"><option value=""></option> </select> -->
-            <%= f.select :prenda_piernas_id, options_for_select(@conversion_piernas),  class:"form-control"%>
+            <%= f.select :prenda_piernas_id,  class:"form-control"%>
         </div>
 
     <!-- Pies -->
@@ -166,7 +165,7 @@
 
         <div class="invisible select-pies"> 
             <!--<select name="atuendo[prenda_pies_id]" id="atuendo_prenda_pies_id"><option value=""></option> </select>-->
-            <%= f.select :prenda_pies_id, options_for_select(@conversion_pies),  class:"form-control"%>
+            <%= f.select :prenda_pies_id,  class:"form-control"%>
         </div>
 
     <!-- Accesorio -->
@@ -213,7 +212,7 @@
 
         <div class="invisible select-accesorios">
             <!--<select name="atuendo[prenda_accesorio_id]" id="atuendo_prenda_accesorio_id"><option value=""></option> </select>-->
-            <%= f.select :prenda_accesorios_id, options_for_select(@conversion_accesorios),  class:"form-control"%>
+            <%= f.select :prenda_accesorios_id,  class:"form-control"%>
         </div>
         
         <div class="container d-flex justify-content-center align-items-center etiquetas_atuendos_new my-5">

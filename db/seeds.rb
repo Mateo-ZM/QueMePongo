@@ -1,9 +1,9 @@
-usuario_1 = User.create! email: "lucasinfantino@12345.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Lucas", apellido: "Infantino", sexo: :Hombre
-usuario_2 = User.create! email: "fedeamor@12345.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Federico", apellido: "Amor", sexo: :Hombre
-usuario_3 = User.create! email: "gonzaloheredia@12345.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Gonzalo", apellido: "Heredia", sexo: :Hombre
-usuario_4 = User.create! email: "mateozanetti@12345.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Mateo", apellido: "Zanetti", sexo: :Hombre
-usuario_5 = User.create! email: "usuariogenerico1@12345.com", password: "12345678", password_confirmation: "12345678", admin: false, nombre: "generico", apellido: "no tengo apellido", sexo: :Otro
-usuario_6 = User.create! email: "usuariogenerico2@12345.com", password: "12345678", password_confirmation: "12345678", admin: false, nombre: "NPC", apellido: "inactivo", sexo: :Mujer
+usuario_1 = User.create! email: "lucasinfantino@12345.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Lucas", apellido: "Infantino", genero: :Hombre
+usuario_2 = User.create! email: "fedeamor@12345.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Federico", apellido: "Amor", genero: :Hombre
+usuario_3 = User.create! email: "gonzaloheredia@12345.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Gonzalo", apellido: "Heredia", genero: :Hombre
+usuario_4 = User.create! email: "mateozanetti@12345.com", password: "12345678", password_confirmation: "12345678", admin: true, nombre: "Mateo", apellido: "Zanetti", genero: :Hombre
+usuario_5 = User.create! email: "usuariogenerico1@12345.com", password: "12345678", password_confirmation: "12345678", admin: false, nombre: "generico", apellido: "no tengo apellido", genero: :Otro
+usuario_6 = User.create! email: "usuariogenerico2@12345.com", password: "12345678", password_confirmation: "12345678", admin: false, nombre: "NPC", apellido: "inactivo", genero: :Mujer
 
 guardarropa_1 = usuario_1.guardarropas.build Nombre: "Guardarropa Principal", link_imagen: "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/05/04141206/guardarropas-masculino.jpg"
 guardarropa_2 = usuario_2.guardarropas.build Nombre: "Guardarropa Formal", link_imagen: "https://http2.mlstatic.com/D_NQ_NP_417425-MLA25459372929_032017-O.jpg"

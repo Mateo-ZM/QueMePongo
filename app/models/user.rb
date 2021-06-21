@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :guardarropas, dependent: :destroy
   has_one_attached :imagen
   paginates_per 14
-  enum sexo: [:Hombre, :Mujer, :Otro]
+  enum genero: [:Hombre, :Mujer, :Otro]
 
   def comprobar_link_imagen! 
     self.link_imagen = "imagen_no_disponible.jpg" if self.vacia?
@@ -16,5 +16,9 @@ class User < ApplicationRecord
 
   def admin?
     admin
+  end
+
+  def tamanio_password_correcto?
+    self.password.length > 7 && self.password.length < 17
   end
 end

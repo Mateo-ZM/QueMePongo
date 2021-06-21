@@ -23,6 +23,17 @@
         <% else  %>
             <%= render partial: "layouts/navbar_not_logged_in"%>
         <% end %>
+
+        <div class="mt-5 d-flex justify-content-center align-items-center flash">
+            <% if flash[:alert] %>
+                <div class="text-danger"><%= flash[:alert] %></div>
+            <% elsif flash[:notice] %>
+                <div class="color-letra-terciario"><%= flash[:notice] %></div>
+            <%end%>
+        </div>
+        
+        
+
         <%= yield %>
         <%= insert_paloma_hook %>
     

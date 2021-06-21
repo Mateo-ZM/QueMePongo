@@ -90,10 +90,14 @@
                 <li class="list-group-item"><span class="negrita"><%=t('formalidad')%>: </span><%= @atuendo.Etiqueta_Formal %></li>
                 <li class="list-group-item">
                     <span class="negrita"><%=t('estacion')%>: </span>
-                    <%if @atuendo.Etiqueta_Estacion != "OtonioPrimavera"%>
+                    <%if @atuendo.Etiqueta_Estacion != "Otonio" && @atuendo.Etiqueta_Estacion != "Primavera"%>
                         <%= @atuendo.Etiqueta_Estacion %>
                     <%else%>
-                        <%="Otoño/Primavera"%>
+                        <%if @atuendo.Etiqueta_Estacion == "Otonio"%>
+                            <%="Otoño"%>
+                        <%else%>
+                            <%="Primavera"%>
+                        <%end%>
                     <%end%>
                 </li>
                 <li class="list-group-item"><span class="negrita"><%=t('horario')%>: </span><%= @atuendo.Etiqueta_DiaNoche %></li>

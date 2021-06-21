@@ -80,8 +80,11 @@ Paloma.controller('Atuendos', {
                     indiceEstacion = 2;
                     break;
         
-                case "OtonioPrimavera":
+                case "Otonio":
                     indiceEstacion = 3;
+                    break;
+                case "Primavera":
+                    indiceEstacion = 4;
                     break;
                 case null:
                     indiceEstacion = 0;

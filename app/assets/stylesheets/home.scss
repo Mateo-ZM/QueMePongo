@@ -6,8 +6,12 @@
 
 $color-primario: #222126; //Es el equivalente a rgb(34,33,38)
 $color-secundario: white; //Es el equivalente a rgb(255,255,255)
-$color-terciario: #1B8F88; //Es el equivalente a rgb(27,143,136)
+$color-terciario: #1B8F88; //Es el equivalente a rgb(104,98,138)
 $color-terciario-hover: #115C57;
+$color-volver: #F54F47;
+$color-volver-hover: #780E12;
+//rojo fuerte #ed1c24
+//rojo suave #F54F47
 //cyan #1B8F88
 //violeta viejo: (104,98,138)
 
@@ -135,4 +139,9 @@ footer p {
   .botones-responsive {
       flex-direction: column;
   }
+}
+
+.flash{
+  font-size: 1.4rem;
+  font-weight: bold;
 }

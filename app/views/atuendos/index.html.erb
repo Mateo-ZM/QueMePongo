@@ -26,7 +26,7 @@
                 <span class="negrita">
                     <%=t('estacion') %> 
                 </span>
-                <%= select_tag :Estacion, options_for_select(["Verano","Invierno", ["Otoño/Primavera", "OtonioPrimavera"], ["Según Clima Actual","SegunClimaActual"]]), :prompt => t('elige_uno'), class:"form-control select_estacion"%>
+                <%= select_tag :Estacion, options_for_select(["Verano","Invierno",["Otoño", "Otonio"],["Primavera", "Primavera"], ["Según Clima Actual","SegunClimaActual"]]), :prompt => t('elige_uno'), class:"form-control select_estacion"%>
             </li>
             <div class="invisible temperatura">
 
@@ -41,20 +41,25 @@
                 <span class="negrita">
                     Ordenar
                 </span>
-                <%= select_tag :orden, options_for_select(["AZ","ZA","Mayor puntaje","Menor puntaje"]), :prompt => t('elige_uno'), class:"form-control select_orden"%>
+                <%= select_tag :orden, options_for_select(["Alfabetic. (A-Z)","Alfabetic. (Z-A)","Mayor puntaje","Menor puntaje"]), :prompt => t('elige_uno'), class:"form-control select_orden"%>
             </li>
 
             <%= button_tag(type: 'submit', class: "align-self-end btn btn-crear btn-form px-3 py-2  form-control btn-filtar-atuendos") do %>
-                <i class="fas fa-filter text-white"></i><p class="d-inline"> Filtrar</p>
+                <span class="fa-stack">
+                    <i class="fas fa-filter fa-stack-1x text-white"></i>
+                </span>
+                
+                <p class="d-inline"> Filtrar</p>
+            <% end %>
+            <%= button_tag(type: 'submit', class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,:onclick => "eliminarFiltros()") do %>
+                <span class="fa-stack">
+                    <i class="fa fa-filter fa-stack-1x"></i>
+                    <i class="fa fa-slash fa-stack-1x text-dark "></i>
+                </span>
+                <p class="d-inline">Quitar filtros</p>
             <% end %>
             <%= button_tag(type: 'submit', class: "align-self-end btn btn-crear btn-form px-3 py-2  form-control btn-filtar-atuendos" ,:onclick => "temperatura()") do %>
                 <i class="fas fa-filter text-white"></i><p class="d-inline"> Según clima</p>
-            <% end %>
-            <%= button_tag(type: 'submit', class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,:onclick => "eliminarFiltros()") do %>
-                <i class="fas fa-filter text-white">
-                    <i class="fas fa-slash sacar-margen"></i>
-                </i>
-                <p class="d-inline"> Eliminar filtros</p>
             <% end %>
 
 

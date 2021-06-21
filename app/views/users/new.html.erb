@@ -39,8 +39,8 @@
                             <div class="col-7"><%= form.text_field :apellido %></div>
                     </div>
                     <div class="row my-4">
-                            <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-venus-mars"></i></i><p class="m-0 d-inline">&nbspSexo: </p> </div>
-                            <div class="col-7"><%= form.select :sexo, options_for_select([['Hombre','Hombre'],['Mujer','Mujer'],['Otro','Otro']]), :prompt => t('elige_uno')%></div>
+                            <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-venus-mars"></i></i><p class="m-0 d-inline">&nbspGenero: </p> </div>
+                            <div class="col-7"><%= form.select :genero, options_for_select([['Hombre','Hombre'],['Mujer','Mujer'],['Otro','Otro']]), :prompt => t('elige_uno')%></div>
                     </div>
                 </div>
             </div>

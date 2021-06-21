@@ -1,7 +1,9 @@
 $color-primario: #222126; //Es el equivalente a rgb(34,33,38)
 $color-secundario: white; //Es el equivalente a rgb(255,255,255)
-$color-terciario: #1B8F88; //Es el equivalente a rgb(27,143,136)
+$color-terciario: #1B8F88; //Es el equivalente a rgb(104,98,138)
 $color-terciario-hover: #115C57;
+$color-volver: #F54F47;
+$color-volver-hover: #780E12;
 
 ///* Navbar *///
 nav.landing-navbar {
@@ -50,5 +52,19 @@ nav.landing-navbar {
 }
 
 .nav-item a{
+    text-decoration: none;
+}
+
+.logout-hover:hover, .logout-hover:focus {
+    background-color: $color-volver;
+    color: $color-secundario;
+    cursor: pointer;
+}
+
+.logout-hover:hover a, .logout-hover:focus a {
+    color: $color-secundario;
+}
+
+.logout-hover a{
     text-decoration: none;
 }

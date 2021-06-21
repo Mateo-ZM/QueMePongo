@@ -98,9 +98,9 @@ class AtuendosController < ApplicationController
         if params[:orden] == nil || params[:orden] == ""
             @atuendos = @guardarropa.atuendos.all 
         else 
-            if params[:orden] == "AZ"
+            if params[:orden] == "Alfabetic. (A-Z)"
                 @atuendos = @guardarropa.atuendos.order(:Descripcion)
-            elsif params[:orden] == "ZA"
+            elsif params[:orden] == "Alfabetic. (Z-A)"
                 @atuendos = @guardarropa.atuendos.order(Descripcion: :desc) 
             elsif params[:orden] == "Mayor puntaje"
                 @atuendos = @guardarropa.atuendos.order(Puntaje: :desc)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_232951) do
+ActiveRecord::Schema.define(version: 2021_06_21_211526) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "adminpack"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 2021_06_10_232951) do
     t.string "nombre"
     t.string "apellido"
     t.string "link_imagen"
-    t.integer "sexo"
+    t.integer "genero"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

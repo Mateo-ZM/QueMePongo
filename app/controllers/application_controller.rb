@@ -7,9 +7,6 @@ class ApplicationController < ActionController::Base
         
     end
 
-    #def locale_from_header
-    #    request.env.fetch('HTTP_ACCEPT_LANGUAGE', '').scan(/[a-z]{2}/).first
-    #end
     def extract_locale
         parsed_locale = params[:locale] || request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/)[0]
         I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
@@ -32,6 +29,13 @@ class ApplicationController < ActionController::Base
             User.find(user_id)
         end
     end
+
+    def check_remain_logged_in
+        if session[:user_id] != nil
+            redirect_back fallback_location: guardarropas_path
+        end
+    end
+    
     helper_method :current_user
 
 end

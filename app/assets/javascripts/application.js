@@ -24,7 +24,7 @@ window.addEventListener("load", ClimaYVariables);
 function ClimaYVariables()
 {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=Buenos Aires&appid=c2e8f8aee7f46d429a8d82dd755b236b&lang=es&units=metric', true);
+    xhr.open('GET', '//api.openweathermap.org/data/2.5/weather?q=Buenos Aires&appid=c2e8f8aee7f46d429a8d82dd755b236b&lang=es&units=metric', true);
     
     xhr.onload = function(){
         document.getElementById('clima-loader').hidden = true;

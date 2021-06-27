@@ -2,7 +2,7 @@
     <main class="d-flex justify-content-center align-items-center">
         <div class="card my-4 card_login">
             <div class="card-header d-flex justify-content-center align-items-center">
-                Inicio de sesion
+                Inicio de sesión
             </div>
             <%= form_tag '/login' do %>
                 <div class="d-flex flex-column justify-content-center align-items-center">
@@ -12,7 +12,7 @@
                                 <div class="col-7"><%= text_field_tag :email%></div>
                         </div>
                         <div class="row my-4">
-                                <div class="col-5"><i class="fas fa-lock"></i></i><p class="m-0 d-inline"> Contrasena: </p> </div>
+                                <div class="col-5"><i class="fas fa-lock"></i></i><p class="m-0 d-inline"> Contraseña: </p> </div>
                                 <div class="col-7"><%= password_field_tag :password%></div>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                             <i class="fas fa-sign-in-alt"></i><p class="d-inline"> Iniciar sesion</p>
                         <% end %>
                         <%= link_to signup_path, class: "my-2 text-dark text-decoration-none fw-bold" do%>
-                            No tienes un usuario aun? <span class="color-letra-terciario">Registrate!</span>
+                            ¿No tienes un usuario aun? <span class="color-letra-terciario">¡Registrate!</span>
                         <% end %>
                     </div>
                 </footer>

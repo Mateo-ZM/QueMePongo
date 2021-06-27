@@ -42,4 +42,7 @@ function ClimaYVariables()
     }
     
     xhr.send();
+
 }
+
+    

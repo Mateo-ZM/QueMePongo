@@ -109,4 +109,5 @@ class AtuendosController < ApplicationController
             end
         end
     end
+
 end

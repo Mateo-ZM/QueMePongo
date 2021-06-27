@@ -15,18 +15,21 @@
                 <span class="negrita">
                     <%=t('puntaje') %> 
                 </span>
-                <%= select_tag :Puntaje, options_for_select(["1", "2", "3", "4", "5"]), :prompt => t('elige_uno'), class:"form-control select_puntaje"%>
+                <%= select_tag :Puntaje, options_for_select(["1", "2", "3", "4", "5"]),
+                :prompt => t('elige_uno'),
+                :onchange => "filtro( 1,this.value)",
+                class:"form-control select_puntaje"%>
             </li>
             <li class="list-group-item border-0 d-inline">
                 <span class="negrita">
                     <%=t('formalidad') %>
-                </span><%= select_tag :Formalidad, options_for_select(["Formal","Informal"]), :prompt => t('elige_uno'), class:"form-control select_formalidad"%>
+                </span><%= select_tag :Formalidad, options_for_select(["Formal","Informal"]), :prompt => t('elige_uno'),:onchange => "filtro( 2,this.value)", class:"form-control select_formalidad"%>
             </li>
             <li class="list-group-item border-0 d-inline">
                 <span class="negrita">
                     <%=t('estacion') %> 
                 </span>
-                <%= select_tag :Estacion, options_for_select(["Verano","Invierno",["Otoño", "Otonio"],["Primavera", "Primavera"], ["Según Clima Actual","SegunClimaActual"]]), :prompt => t('elige_uno'), class:"form-control select_estacion"%>
+                <%= select_tag :Estacion, options_for_select(["Verano","Invierno",["Otoño", "Otonio"],["Primavera", "Primavera"], ["Según Clima Actual","SegunClimaActual"]]),:onchange => "filtro( 3,this.value)", :prompt => t('elige_uno'), class:"form-control select_estacion"%>
             </li>
             <div class="invisible temperatura">
 
@@ -35,22 +38,19 @@
                 <span class="negrita">
                     Horario
                 </span>
-                <%= select_tag :DiaNoche, options_for_select(["Dia","Noche"]), :prompt => t('elige_uno'), class:"form-control select_horario"%>
+                <%= select_tag :DiaNoche, options_for_select(["Dia","Noche"]), :prompt => t('elige_uno'),:onchange => "filtro( 4,this.value)", class:"form-control select_horario"%>
             </li>
             <li class="list-group-item border-0 d-inline">
                 <span class="negrita">
                     Ordenar
                 </span>
-                <%= select_tag :orden, options_for_select(["Alfabetic. (A-Z)","Alfabetic. (Z-A)","Mayor puntaje","Menor puntaje"]), :prompt => t('elige_uno'), class:"form-control select_orden"%>
+                <%= select_tag :orden, options_for_select(["Alfabetic. (A-Z)","Alfabetic. (Z-A)","Mayor puntaje","Menor puntaje"]), :prompt => t('elige_uno'),:onchange => "filtro( 5,this.value)", class:"form-control select_orden"%>
             </li>
 
-            <%= button_tag(type: 'submit', class: "align-self-end btn btn-crear btn-form px-3 py-2  form-control btn-filtar-atuendos") do %>
-                <span class="fa-stack">
-                    <i class="fas fa-filter fa-stack-1x text-white"></i>
-                </span>
-                
-                <p class="d-inline"> Filtrar</p>
-            <% end %>
+
+
+        </div>
+        <div class="Filtros-aplicados d-flex justify-content-center">
             <%= button_tag(type: 'submit', class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,:onclick => "eliminarFiltros()") do %>
                 <span class="fa-stack">
                     <i class="fa fa-filter fa-stack-1x"></i>
@@ -58,12 +58,10 @@
                 </span>
                 <p class="d-inline">Quitar filtros</p>
             <% end %>
-            <%= button_tag(type: 'submit', class: "align-self-end btn btn-crear btn-form px-3 py-2  form-control btn-filtar-atuendos" ,:onclick => "temperatura()") do %>
-                <i class="fas fa-filter text-white"></i><p class="d-inline"> Según clima</p>
-            <% end %>
-
-
         </div>
+
+
+
     <% end%>
 
     <div class="splide">

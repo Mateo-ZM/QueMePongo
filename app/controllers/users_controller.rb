@@ -6,9 +6,12 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.page(params[:page])
-    @cantidad_prendas
-    
+    if can? :edit, @user
+      @users = User.page(params[:page])
+      @cantidad_prendas
+    else
+      redirect_to guardarropas_path
+    end
   end
 
   # GET /users/1 or /users/1.json
@@ -30,12 +33,20 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.tamanio_password_correcto?
+      begin
       if @user.save
         session[:user_id] = @user.id
         redirect_to profile_path, notice: "¡Registro exitoso!"
       else
         flash.now[:alert] = "¡Error al registrarse! Intente de nuevo."
+        render action: "new"
       end
+
+    rescue 
+      flash.now[:alert] = "El mail ya se encuentra en uso"
+      render action: "new"
+    end
+
     else
       flash.now[:alert] = "La contrasena debe tener entre 8 y 16 caracteres"
       render action: "new"

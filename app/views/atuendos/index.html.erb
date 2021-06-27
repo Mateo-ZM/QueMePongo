@@ -44,7 +44,7 @@
                 <span class="negrita">
                     Ordenar
                 </span>
-                <%= select_tag :orden, options_for_select(["Alfabetic. (A-Z)","Alfabetic. (Z-A)","Mayor puntaje","Menor puntaje"]), :prompt => t('elige_uno'),:onchange => "filtro( 5,this.value)", class:"form-control select_orden"%>
+                <%= select_tag :orden, options_for_select(["Alfabético (A-Z)","Alfabético (Z-A)","Mayor puntaje","Menor puntaje"]), :prompt => t('elige_uno'),:onchange => "filtro( 5,this.value)", class:"form-control select_orden"%>
             </li>
                         <%= button_tag(type: 'submit', class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,:onclick => "eliminarFiltros()") do %>
                 <span class="fa-stack">

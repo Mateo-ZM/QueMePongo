@@ -43,10 +43,10 @@
         <footer class="footer">
             <div class="container d-flex justify-content-between">
                 <p class="m-auto flex-column tercio ">QueMePongo &copy; <%=t('derechos_reservados')%></p>
-                <div class="my-2 mx-auto align-self-center tercio">
-                    <%= link_to 'Español', url_for(locale: :es), class: "dropdown-item rounded" %> 
-                    <%= link_to 'English', url_for(locale: :en), class: "dropdown-item rounded" %>
-                    <%= link_to 'Deutsch', url_for(locale: :de), class: "dropdown-item rounded" %>
+                <div class="my-2 mx-auto align-self-center tercio d-flex justify-content-center">
+
+                    <%= select_tag "Idioma", options_for_select([["Español", "es"],["English", "en"], ["Deutsch","de"]]),:onchange => "idioma(this.value)", class:"text-center"%>
+
                 </div>
                 <span class="my-auto tercio">
                     <p id="contacto" class="m-4 contacto text-center"><%=t('contacto')%>: +54 9 11 2633-4567 | info@quemepongo.com.ar</p>

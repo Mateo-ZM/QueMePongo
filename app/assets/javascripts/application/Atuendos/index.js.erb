@@ -2,15 +2,20 @@ Paloma.controller('Atuendos', {
     index: function(){
         window.addEventListener("load", atuendosIndexCargo);
 
-    function atuendosIndexCargo()
-    {
-        slider();
-        filtrados();
-    }
+        function atuendosIndexCargo()
+        {
+            slider();
+            filtrados();
+            
+        }
 
 
         function filtrados()
         {
+            //let contenedorFiltrosAplicados= document.querySelector('.Filtros-aplicados');
+            //var nuevoElemento = `<div class="filtro">Puntaje: ${valor}</div>`
+            //contenedorFiltrosAplicados.insertAdjacentHTML( 'afterbegin', nuevoElemento )
+
             var urlParams = new URLSearchParams(window.location.search);
         
             var puntaje = urlParams.get('Puntaje');
@@ -114,11 +119,11 @@ Paloma.controller('Atuendos', {
             }
         
             switch (orden) {
-                case "AZ":
+                case "Alfabetic. (A-Z)":
                     indiceOrden = 1;
                     break;
         
-                case "ZA":
+                case "Alfabetic. (Z-A)":
                     indiceOrden = 2;
                     break;
         
@@ -151,5 +156,8 @@ Paloma.controller('Atuendos', {
             select_dianoche.selectedIndex = indiceDiaNoche;
             select_orden.selectedIndex = indiceOrden;
         }
+
+        
+
     }
 });

@@ -104,18 +104,18 @@ $color-volver-hover: #780E12;
 
 .estrella{
     fill: gray;
-    border: black 1em;
+    border: black 0.5em;
     stroke: #646464;
-    stroke-width: 1px;
+    stroke-width: 0.5px;
     stroke-linejoin: round;
 }
 
 
 .estrella-amarilla{
-    fill: yellow;
-    border: black 1em;
+    fill: #FBE337; //#F9E46E #FDFD96 Otros amarillos para que prueben los sucios de front end
+    border: black 0.5em;
     stroke: #646464;
-    stroke-width: 1px;
+    stroke-width: 0.5px;
     stroke-linejoin: round;
 }
 

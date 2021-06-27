@@ -32,9 +32,9 @@ class UsersController < ApplicationController
     if @user.tamanio_password_correcto?
       if @user.save
         session[:user_id] = @user.id
-        redirect_to profile_path, notice: "Registro exitoso!"
+        redirect_to profile_path, notice: "¡Registro exitoso!"
       else
-        flash.now[:alert] = "Error al registrarse!! Intente de nuevo."
+        flash.now[:alert] = "¡Error al registrarse! Intente de nuevo."
       end
     else
       flash.now[:alert] = "La contrasena debe tener entre 8 y 16 caracteres"
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1 or /users/1.json
   def update
     if @user.update(user_params)
-      redirect_to profile_path, notice: "Perfil editado correctamente!"
+      redirect_to profile_path, notice: "¡Perfil editado correctamente!"
     else
       render :edit, alert: "Error al editar perfil."
     end

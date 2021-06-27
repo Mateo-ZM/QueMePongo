@@ -29,6 +29,9 @@
                         <li class="logout-hover  px-3 py-2 rounded">
                             <%= link_to logout_path, method: :get, class: "nav-text", data: {confirm: '¿Seguro que desea cerrar sesion?' } do %>Cerrar&nbspsesion<% end %>
                         </li>
+                        <li>
+                            <%= select_tag "Idioma", options_for_select([["🇦🇷Español", "es"],["🇺🇸English", "en"], ["🇩🇪Deutsch","de"]]),:onchange => "idioma(this.value)", class:"text-center selector_idioma"%>
+                        </li>
                     </ul>
                 </div>
             </div>

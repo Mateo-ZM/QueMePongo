@@ -46,18 +46,19 @@
                 </span>
                 <%= select_tag :orden, options_for_select(["Alfabetic. (A-Z)","Alfabetic. (Z-A)","Mayor puntaje","Menor puntaje"]), :prompt => t('elige_uno'),:onchange => "filtro( 5,this.value)", class:"form-control select_orden"%>
             </li>
-
-
-
-        </div>
-        <div class="Filtros-aplicados d-flex justify-content-center">
-            <%= button_tag(type: 'submit', class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,:onclick => "eliminarFiltros()") do %>
+                        <%= button_tag(type: 'submit', class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,:onclick => "eliminarFiltros()") do %>
                 <span class="fa-stack">
                     <i class="fa fa-filter fa-stack-1x"></i>
                     <i class="fa fa-slash fa-stack-1x text-dark "></i>
                 </span>
                 <p class="d-inline">Quitar filtros</p>
             <% end %>
+
+
+
+        </div>
+        <div class="Filtros-aplicados d-flex justify-content-center">
+
         </div>
 
 

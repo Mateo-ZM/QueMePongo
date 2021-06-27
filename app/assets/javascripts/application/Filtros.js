@@ -16,7 +16,17 @@ function eliminarFiltros()
 function filtro(nombreParametro, valor){
 
     const parser = new URL(window.location);
+    let select_puntaje = document.querySelector('.select_puntaje');
+    let select_formalidad = document.querySelector('.select_formalidad');
+    let select_estacion = document.querySelector('.select_estacion');
+    let select_dianoche = document.querySelector('.select_horario');
+    let select_orden = document.querySelector('.select_orden');
 
+
+    //select_formalidad.selectedIndex = indiceFormalidad;
+    //select_estacion.selectedIndex = indiceEstacion;
+    //select_dianoche.selectedIndex = indiceDiaNoche;
+    //select_orden.selectedIndex = indiceOrden;
 
     switch (nombreParametro) {
         case 1:
@@ -45,7 +55,7 @@ function filtro(nombreParametro, valor){
             }
             break;
         case 4:
-            parser.searchParams.set("Horario", valor);
+            parser.searchParams.set("DiaNoche", valor);
             break;
         case 5:
             parser.searchParams.set("orden", valor);

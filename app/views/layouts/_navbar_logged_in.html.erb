@@ -17,7 +17,7 @@
                 <button class="navbar-toggler container " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                     <i class="fas fa-bars fa-2x"></i>
                 </button>
-                <div class="collapse  navbar-collapse" id="navbarSupportedContent tercio">
+                <div class="collapse navbar-collapse tercio" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex justify-content-center align-items-center ms-auto"> 
 
                         <li class="nav-item px-3 py-2 rounded">
@@ -30,7 +30,7 @@
                             <%= link_to logout_path, method: :get, class: "nav-text", data: {confirm: '¿Seguro que desea cerrar sesion?' } do %>Cerrar&nbspsesion<% end %>
                         </li>
                         <li>
-                            <%= select_tag "Idioma", options_for_select([["🇦🇷Español", "es"],["🇺🇸English", "en"], ["🇩🇪Deutsch","de"]]),:onchange => "idioma(this.value)", class:"text-center selector_idioma"%>
+                            <%= select_tag "Idioma", options_for_select([["🇦🇷", "es"],["🇺🇸", "en"], ["🇩🇪","de"]]),:onchange => "idioma(this.value)", class:"text-center selector_idioma"%>
                         </li>
                     </ul>
                 </div>

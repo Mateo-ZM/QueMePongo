@@ -32,6 +32,13 @@
     text-overflow: ellipsis;
 }
 
+.card-footer-index-guardarropas h4{
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.5em;
+}
+
 .card-header-index-guardarropas{
     height: 3rem;
 }

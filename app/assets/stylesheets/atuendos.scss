@@ -119,6 +119,7 @@ $color-volver-hover: #780E12;
     height: 2.3em;
     padding: 0;
     text-align: center;
+    align-self: flex-end;
 
 }
 
@@ -131,4 +132,16 @@ $color-volver-hover: #780E12;
     width: 11em;
     height: 2.3em;
     padding: 0;
+    align-self: flex-end;
+}
+
+@media (max-width: 1250px) {
+    .todos-los-filtros{
+        flex-direction: column;
+    }
+    .li_btn-desfiltrar-atuendos{
+        align-self: center;
+        margin-top: 1em;
+    }
+
 }

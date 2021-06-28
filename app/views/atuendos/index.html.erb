@@ -8,11 +8,15 @@
         </nav>
     </div>
     <h1 class="titulo my-4 text-center"><%=t('atuendos_de', guardarropa_nombre: @guardarropa.Nombre)%></h1>
-    
-    <button data-bs-toggle="collapse" data-bs-target="#filtros-colapsables">Filtros</button>
+    <div class="d-flex justify-content-center">
+        <button data-bs-toggle="collapse" data-bs-target="#filtros-colapsables" class="btn btn-crear btn-lg m-2 ">
+            <i class="fas fa-filter"></i>
+            Filtros
+        </button>
+    </div>
     <div id="filtros-colapsables" class="collapse">
         <%= form_tag guardarropa_atuendos_path(@guardarropa), method: :get do %>
-            <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center todos-los-filtros">
                 <li class="list-group-item border-0 d-inline text-center">
                     <span class="negrita">
                         <%=t('puntaje') %> 
@@ -65,9 +69,9 @@
                     :onchange => "filtro( 5,this.value)", 
                     class:"form-control select_orden text-center select-filtro-atuendos"%>
                 </li>
-                <li class="d-flex align-self-end mb-2 li_btn-desfiltrar-atuendos">
+                <li class="d-flex mb-2 li_btn-desfiltrar-atuendos">
                     <%= button_tag(type: 'submit',
-                    class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,
+                    class: "   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,
                     :onclick => "eliminarFiltros()") do %>
                             <i class="fas fa-times"></i>
                         <p class="d-inline">Quitar filtros</p>

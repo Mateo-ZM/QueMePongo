@@ -84,24 +84,6 @@ $color-volver-hover: #780E12;
     }
 }
 
-.btn-filtar-atuendos {
-    width: 12rem;
-}
-
-
-.btn-desfiltrar-atuendos{
-    background-color: $color-volver;
-    color: white;
-    font-size: 1.45rem;
-    width: 12rem;
-}
-
-.btn-desfiltrar-atuendos:hover, .btn-desfiltrar-atuendos:focus {
-    background-color: $color-volver-hover;
-    color: $color-secundario;
-}
-
-
 .estrella{
     fill: gray;
     border: black 0.5em;
@@ -124,3 +106,29 @@ $color-volver-hover: #780E12;
     margin-left: -1.5em;;
 }
 
+.select-filtro-atuendos{
+    height: 2.5em;
+    width: 11em;
+}
+
+.btn-desfiltrar-atuendos{
+    background-color: $color-volver;
+    color: white;
+    font-size: 1.45rem;
+    width: 11em;
+    height: 2.3em;
+    padding: 0;
+    text-align: center;
+
+}
+
+.btn-desfiltrar-atuendos:hover, .btn-desfiltrar-atuendos:focus {
+    background-color: $color-volver-hover;
+    color: $color-secundario;
+
+}
+.li_btn-desfiltrar-atuendos{
+    width: 11em;
+    height: 2.3em;
+    padding: 0;
+}

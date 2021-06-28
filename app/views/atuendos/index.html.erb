@@ -9,61 +9,73 @@
     </div>
     <h1 class="titulo my-4 text-center"><%=t('atuendos_de', guardarropa_nombre: @guardarropa.Nombre)%></h1>
     
-    <%= form_tag guardarropa_atuendos_path(@guardarropa), method: :get do %>
-        <div class="d-flex justify-content-center align-items-center">
-            <li class="list-group-item border-0 d-inline text-center">
-                <span class="negrita">
-                    <%=t('puntaje') %> 
-                </span>
-                <%= select_tag :Puntaje, options_for_select(["1", "2", "3", "4", "5"]),
-                :prompt => t('elige_uno'),
-                :onchange => "filtro( 1,this.value)",
-                class:"form-control select_puntaje"%>
-            </li>
-            <li class="list-group-item border-0 d-inline text-center">
-                <span class="negrita">
-                    <%=t('formalidad') %>
-                </span><%= select_tag :Formalidad, options_for_select(["Formal","Informal"]), :prompt => t('elige_uno'),:onchange => "filtro( 2,this.value)", class:"form-control select_formalidad"%>
-            </li>
-            <li class="list-group-item border-0 d-inline text-center">
-                <span class="negrita ">
-                    <%=t('estacion') %> 
-                </span>
-                <%= select_tag :Estacion, options_for_select(["Verano","Invierno",["Otoño", "Otonio"],["Primavera", "Primavera"], ["Según Clima Actual","SegunClimaActual"]]),:onchange => "filtro( 3,this.value)", :prompt => t('elige_uno'), class:"form-control select_estacion text-center"%>
-            </li>
-            <div class="invisible temperatura">
+    <button data-bs-toggle="collapse" data-bs-target="#filtros-colapsables">Filtros</button>
+    <div id="filtros-colapsables" class="collapse">
+        <%= form_tag guardarropa_atuendos_path(@guardarropa), method: :get do %>
+            <div class="d-flex justify-content-center align-items-center">
+                <li class="list-group-item border-0 d-inline text-center">
+                    <span class="negrita">
+                        <%=t('puntaje') %> 
+                    </span>
+                    <%= select_tag :Puntaje,
+                    options_for_select(["1", "2", "3", "4", "5"]),
+                    :prompt => t('elige_uno'),
+                    :onchange => "filtro( 1,this.value)",
+                    class:"form-control select_puntaje text-center select-filtro-atuendos" %>
+                </li>
+                <li class="list-group-item border-0 d-inline text-center">
+                    <span class="negrita">
+                        <%=t('formalidad') %>
+                    </span><%= select_tag :Formalidad, 
+                    options_for_select(["Formal","Informal"]), 
+                    :prompt => t('elige_uno'),
+                    :onchange => "filtro( 2,this.value)", 
+                    class:"form-control select_formalidad text-center select-filtro-atuendos"%>
+                </li>
+                <li class="list-group-item border-0 d-inline text-center">
+                    <span class="negrita ">
+                        <%=t('estacion') %> 
+                    </span>
+                    <%= select_tag :Estacion, 
+                    options_for_select(["Verano","Invierno",["Otoño", "Otonio"],["Primavera", "Primavera"], ["Según Clima Actual","SegunClimaActual"]]),
+                    :onchange => "filtro( 3,this.value)", 
+                    :prompt => t('elige_uno'), 
+                    class:"form-control select_estacion text-center text-center select-filtro-atuendos"%>
+                </li>
+                <div class="invisible temperatura">
 
+                </div>
+                <li class="list-group-item border-0 d-inline text-center">
+                    <span class="negrita">
+                        Horario
+                    </span>
+                    <%= select_tag :DiaNoche, 
+                    options_for_select(["Dia","Noche"]), 
+                    :prompt => t('elige_uno'),
+                    :onchange => "filtro( 4,this.value)", 
+                    class:"form-control select_horario text-center select-filtro-atuendos"%>
+                </li>
+                <li class="list-group-item border-0 d-inline text-center">
+                    <span class="negrita">
+                        Ordenar
+                    </span>
+                    <%= select_tag :orden, 
+                    options_for_select(["Alfabético (A-Z)","Alfabético (Z-A)","Mayor puntaje","Menor puntaje"]), 
+                    :prompt => t('elige_uno'),
+                    :onchange => "filtro( 5,this.value)", 
+                    class:"form-control select_orden text-center select-filtro-atuendos"%>
+                </li>
+                <li class="d-flex align-self-end mb-2 li_btn-desfiltrar-atuendos">
+                    <%= button_tag(type: 'submit',
+                    class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,
+                    :onclick => "eliminarFiltros()") do %>
+                            <i class="fas fa-times"></i>
+                        <p class="d-inline">Quitar filtros</p>
+                    <% end %>
+                </li>  
             </div>
-            <li class="list-group-item border-0 d-inline text-center">
-                <span class="negrita">
-                    Horario
-                </span>
-                <%= select_tag :DiaNoche, options_for_select(["Dia","Noche"]), :prompt => t('elige_uno'),:onchange => "filtro( 4,this.value)", class:"form-control select_horario"%>
-            </li>
-            <li class="list-group-item border-0 d-inline text-center">
-                <span class="negrita">
-                    Ordenar
-                </span>
-                <%= select_tag :orden, options_for_select(["Alfabético (A-Z)","Alfabético (Z-A)","Mayor puntaje","Menor puntaje"]), :prompt => t('elige_uno'),:onchange => "filtro( 5,this.value)", class:"form-control select_orden"%>
-            </li>
-                        <%= button_tag(type: 'submit', class: "align-self-end   btn-form px-3 py-2  form-control btn-desfiltrar-atuendos" ,:onclick => "eliminarFiltros()") do %>
-                <span class="fa-stack">
-                    <i class="fa fa-filter fa-stack-1x"></i>
-                    <i class="fa fa-slash fa-stack-1x text-dark "></i>
-                </span>
-                <p class="d-inline">Quitar filtros</p>
-            <% end %>
-
-
-
-        </div>
-        <div class="Filtros-aplicados d-flex justify-content-center">
-
-        </div>
-
-
-
-    <% end%>
+        <% end%>
+    </div>
 
     <div class="splide">
         <div class="splide__slider">
@@ -103,7 +115,6 @@
                                             <%end%>
                                         </div>
                                     </div>
-
                                     <div class="card-footer card-footer-index d-flex justify-content-center align-center">
                                         <h5 class="container text-center text-dark">
                                             <%= atuendo.Descripcion%>

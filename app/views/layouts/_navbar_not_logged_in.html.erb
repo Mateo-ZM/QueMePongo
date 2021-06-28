@@ -31,8 +31,9 @@
                         <li class="nav-item color-letra-terciario px-3 py-2 rounded">
                             <%= link_to "Registrarse", signup_path, class: "color-letra-terciario nav-text" %>
                         </li>
-
-
+                        <li>
+                            <%= select_tag "Idioma", options_for_select([["🇦🇷", "es"],["🇺🇸", "en"], ["🇩🇪","de"]]),:onchange => "idioma(this.value)", class:"text-center selector_idioma"%>
+                        </li>
                     </ul>
                 </div>
             </div>

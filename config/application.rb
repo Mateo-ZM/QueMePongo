@@ -32,7 +32,7 @@ module QueMePongo
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.i18n.available_locales = [:en, :es, :de]
+    config.i18n.available_locales = [:en, :es, :de, :it]
     config.i18n.default_locale = :es
     config.i18n.fallbacks = false
 

@@ -2,12 +2,12 @@
     <div class="container mt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><%= link_to t('guardarropas'), guardarropas_path %></li>
-                <li class="breadcrumb-item active" aria-current="page"> <%=t('atuendos')%> </li>
+                <li class="breadcrumb-item"><%= link_to t('Guardarropas'), guardarropas_path %></li>
+                <li class="breadcrumb-item active" aria-current="page"> <%=t('Atuendos')%> </li>
             </ol>
         </nav>
     </div>
-    <h1 class="titulo my-4 text-center"><%=t('atuendos_de', guardarropa_nombre: @guardarropa.Nombre)%></h1>
+    <h1 class="titulo my-4 text-center"><%=t('Atuendos_de', guardarropa_nombre: @guardarropa.Nombre)%></h1>
     <div class="d-flex justify-content-center">
         <button data-bs-toggle="collapse" data-bs-target="#filtros-colapsables" class="btn btn-crear btn-lg m-2 ">
             <i class="fas fa-filter"></i>
@@ -19,31 +19,32 @@
             <div class="d-flex justify-content-center align-items-center todos-los-filtros">
                 <li class="list-group-item border-0 d-inline text-center">
                     <span class="negrita">
-                        <%=t('puntaje') %> 
+                        <%=t('Puntaje') %> 
                     </span>
                     <%= select_tag :Puntaje,
                     options_for_select(["1", "2", "3", "4", "5"]),
-                    :prompt => t('elige_uno'),
+                    :prompt => t('Elige_uno'),
                     :onchange => "filtro( 1,this.value)",
                     class:"form-control select_puntaje text-center select-filtro-atuendos" %>
                 </li>
                 <li class="list-group-item border-0 d-inline text-center">
                     <span class="negrita">
-                        <%=t('formalidad') %>
-                    </span><%= select_tag :Formalidad, 
-                    options_for_select(["Formal","Informal"]), 
-                    :prompt => t('elige_uno'),
+                        <%=t('Formalidad') %>
+                    </span>
+                    <%= select_tag :Formalidad, 
+                    options_for_select([[t('Formal'),"Formal"],[t('Informal'),"Informal"]]), 
+                    :prompt => t('Elige_uno'),
                     :onchange => "filtro( 2,this.value)", 
                     class:"form-control select_formalidad text-center select-filtro-atuendos"%>
                 </li>
                 <li class="list-group-item border-0 d-inline text-center">
                     <span class="negrita ">
-                        <%=t('estacion') %> 
+                        <%=t('Estacion') %> 
                     </span>
                     <%= select_tag :Estacion, 
-                    options_for_select(["Verano","Invierno",["Otoño", "Otonio"],["Primavera", "Primavera"], ["Según Clima Actual","SegunClimaActual"]]),
+                    options_for_select([[t('Verano'),"Verano"],[t('Invierno'),"Invierno"],[t('Otonio'), "Otonio"],[t('Primavera'), "Primavera"], ["Según Clima Actual","SegunClimaActual"]]),
                     :onchange => "filtro( 3,this.value)", 
-                    :prompt => t('elige_uno'), 
+                    :prompt => t('Elige_uno'), 
                     class:"form-control select_estacion text-center text-center select-filtro-atuendos"%>
                 </li>
                 <div class="invisible temperatura">
@@ -54,8 +55,8 @@
                         Horario
                     </span>
                     <%= select_tag :DiaNoche, 
-                    options_for_select(["Dia","Noche"]), 
-                    :prompt => t('elige_uno'),
+                    options_for_select([[t('Dia'),"Dia"],[t('Noche'),"Noche"]]), 
+                    :prompt => t('Elige_uno'),
                     :onchange => "filtro( 4,this.value)", 
                     class:"form-control select_horario text-center select-filtro-atuendos"%>
                 </li>
@@ -65,7 +66,7 @@
                     </span>
                     <%= select_tag :orden, 
                     options_for_select(["Alfabético (A-Z)","Alfabético (Z-A)","Mayor puntaje","Menor puntaje"]), 
-                    :prompt => t('elige_uno'),
+                    :prompt => t('Elige_uno'),
                     :onchange => "filtro( 5,this.value)", 
                     class:"form-control select_orden text-center select-filtro-atuendos"%>
                 </li>
@@ -134,10 +135,10 @@
     </div>   
 
     <section class="navegacion-guardarropa botones-responsive d-flex justify-content-center align-center my-4">
-        <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline"><%=t('guardarropas') %></p><%end%>
-        <%= link_to guardarropa_prendas_path(@guardarropa), class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline"><%=t('prendas')%></p><%end%>
+        <%= link_to guardarropas_path, class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline"><%=t('Guardarropas') %></p><%end%>
+        <%= link_to guardarropa_prendas_path(@guardarropa), class: "btn btn-volver-guardarropas btn-lg m-2" do %><i class="fas fa fa-arrow-left fa-sm"></i> <p class="d-inline"><%=t('Prendas')%></p><%end%>
         <!-- <%= link_to guardarropa_prendas_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-list"></i> <p class="d-inline">Prendas</p><%end%> -->
-        <%= link_to new_guardarropa_atuendo_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline"><%=t('creacion_atuendo')%></p><%end%>
+        <%= link_to new_guardarropa_atuendo_path(@guardarropa), class: "btn btn-crear btn-lg m-2" do %><i class="fas fa-plus fa-sm"></i> <p class="d-inline"><%=t('Creacion_atuendo')%></p><%end%>
     </section>
 </main>
 

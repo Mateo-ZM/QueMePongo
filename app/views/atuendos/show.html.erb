@@ -2,9 +2,9 @@
     <div class="container mt-4 mb-0">
         <nav aria-label="breadcrumb mb-0">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><%= link_to t('guardarropas'), guardarropas_path %></li>
-                <li class="breadcrumb-item"><%= link_to t('atuendos'), guardarropa_atuendos_path(@guardarropa) %></li>
-                <li class="breadcrumb-item active" aria-current="page"> <%=t('atuendo') %> </li>
+                <li class="breadcrumb-item"><%= link_to t('Guardarropas'), guardarropas_path %></li>
+                <li class="breadcrumb-item"><%= link_to t('Atuendos'), guardarropa_atuendos_path(@guardarropa) %></li>
+                <li class="breadcrumb-item active" aria-current="page"> <%=t('Atuendo') %> </li>
             </ol>
         </nav>
     </div>
@@ -42,7 +42,7 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                     <span class="negrita"> 
-                        <%=t('puntaje')%>: 
+                        <%=t('Puntaje')%>: 
                     </span>
                     <%if(@atuendo.Puntaje == "5")%>
                         <%=  render partial: "layouts/estrellas"%>
@@ -87,25 +87,17 @@
                         <%= render partial: "layouts/estrellas_oscuras"%>
                     <%end%>
                 </li>
-                <li class="list-group-item"><span class="negrita"><%=t('formalidad')%>: </span><%= @atuendo.Etiqueta_Formal %></li>
+                <li class="list-group-item"><span class="negrita"><%=t('Formalidad')%>: </span><%= t(@atuendo.Etiqueta_Formal) %></li>
                 <li class="list-group-item">
-                    <span class="negrita"><%=t('estacion')%>: </span>
-                    <%if @atuendo.Etiqueta_Estacion != "Otonio" && @atuendo.Etiqueta_Estacion != "Primavera"%>
-                        <%= @atuendo.Etiqueta_Estacion %>
-                    <%else%>
-                        <%if @atuendo.Etiqueta_Estacion == "Otonio"%>
-                            <%="Otoño"%>
-                        <%else%>
-                            <%="Primavera"%>
-                        <%end%>
-                    <%end%>
+                    <span class="negrita"><%=t('Estacion')%>: </span> 
+                    <%= t(@atuendo.Etiqueta_Estacion) %>
                 </li>
-                <li class="list-group-item"><span class="negrita"><%=t('horario')%>: </span><%= @atuendo.Etiqueta_DiaNoche %></li>
+                <li class="list-group-item"><span class="negrita"><%=t('Horario')%>: </span><%= t(@atuendo.Etiqueta_DiaNoche) %></li>
             </ul>
 
             <footer class="card-footer">
                 <div class="action form-group">
-                    <%= link_to edit_guardarropa_atuendo_path(@guardarropa,@atuendo), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('editar')%></p> <%end%>
+                    <%= link_to edit_guardarropa_atuendo_path(@guardarropa,@atuendo), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('Editar')%></p> <%end%>
                 </div>
             </footer>
         </div>

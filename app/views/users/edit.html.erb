@@ -25,9 +25,9 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <span class="negrita">
-                            <%= t('link_imagen')%> 
+                            <%= t('Link_imagen')%> 
                         </span>
-                        <%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: t('placeholder_link_imagen') %>
+                        <%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: t('Placeholder_link_imagen') %>
                     </li>
                     <li class="list-group-item">
                         <span class="negrita"> 
@@ -39,18 +39,18 @@
                         <span class="negrita"> 
                             Género
                         </span> 
-                        <%= f.select :genero, options_for_select([['Hombre','Hombre'],['Mujer','Mujer'],['Otro','Otro']]), :prompt => t('elige_uno'), class: "form-control"%>
+                        <%= f.select :genero, options_for_select([['Hombre','Hombre'],['Mujer','Mujer'],['Otro','Otro']]), :prompt => t('Elige_uno'), class: "form-control"%>
                     </li>
                 </ul>
                 
                 <footer class="card-footer">
                     <div class="action form-group">
                         <%= button_tag(type: 'submit', class: "btn btn-general px-3 py-2 my-3 btn-form  form-control ") do %>
-                            <i class="fas fa-check"></i> <p class="d-inline"><%=t('confirmar') %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
+                            <i class="fas fa-check"></i> <p class="d-inline"><%=t('Confirmar') %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                         <% end %>
                         
-                        <%= link_to profile_path, class:"btn-salir px-3 text-decoration-none text-center text-white form-control btn-form ", data: {confirm: t('volver_sin_guardar?')  } do%>
-                            <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('volver') %></p>
+                        <%= link_to profile_path, class:"btn-salir px-3 text-decoration-none text-center text-white form-control btn-form ", data: {confirm: t('Volver_sin_guardar?')  } do%>
+                            <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('Volver') %></p>
                         <% end %>
                     </div>
                 </footer>

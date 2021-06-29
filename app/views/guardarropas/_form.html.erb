@@ -2,7 +2,7 @@
     <div class="container mt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><%= link_to  t('guardarropas')  , guardarropas_path%></li>
+                <li class="breadcrumb-item"><%= link_to  t('Guardarropas')  , guardarropas_path%></li>
                 <li class="breadcrumb-item active" aria-current="page"><%= btn_text %></li>
             </ol>
         </nav>
@@ -13,7 +13,7 @@
         <div class="card mi_card_modif ">
             <%= form_for guardarropa do |f| %>
                 <div class="card-header position-relative">
-                    <%= f.text_field :Nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: t('nombre'), :maxlength => 25 %>  
+                    <%= f.text_field :Nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: t('Nombre'), :maxlength => 25 %>  
                 </div>
 
                 <div class="container d-flex justify-content-center my-2">
@@ -29,17 +29,17 @@
                 </div>
 
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><span class="negrita"> <%= t('link_imagen')%> </span><%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: t('placeholder_link_imagen') %>
+                    <li class="list-group-item"><span class="negrita"> <%= t('Link_imagen')%> </span><%= f.text_field :link_imagen, class: "my-2 text-box form-control", placeholder: t('Placeholder_link_imagen') %>
                 </ul>
 
                 <footer class="card-footer">
                     <div class="action form-group">
                         <%= button_tag(type: 'submit', class: "btn btn-general btn-form px-3 py-2 my-3 form-control ") do %>
-                            <i class="fas fa-check"></i> <p class="d-inline"> <%=t('confirmar') %> </p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
+                            <i class="fas fa-check"></i> <p class="d-inline"> <%=t('Confirmar') %> </p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                         <% end %>
                         
                         <%= link_to link_volver, class:"btn-salir btn-form px-3 text-decoration-none text-center text-white form-control", data: {confirm: '¿Volver sin guardar?' } do%>
-                            <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('volver') %> </p>
+                            <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('Volver') %> </p>
                         <% end %>
                     </div>
                 </footer>

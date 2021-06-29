@@ -2,9 +2,9 @@
     <div class="container mt-4 mb-0">
         <nav aria-label="breadcrumb mb-0">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><%= link_to t('guardarropas'), guardarropas_path%></li>
-            <li class="breadcrumb-item"><%= link_to t('prendas'), guardarropa_prendas_path(@guardarropa) %></li>
-            <li class="breadcrumb-item active" aria-current="page"> <%=t('prenda')%> </li>
+            <li class="breadcrumb-item"><%= link_to t('Guardarropas'), guardarropas_path%></li>
+            <li class="breadcrumb-item"><%= link_to t('Prendas'), guardarropa_prendas_path(@guardarropa) %></li>
+            <li class="breadcrumb-item active" aria-current="page"> <%=t('Prenda')%> </li>
         </ol>
         </nav>
     </div>
@@ -25,10 +25,10 @@
             </div>
 
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span class="negrita"><%=t('categoria') %> </span><%= @prenda.categoria %></li>
-                <li class="list-group-item"><span class="negrita"><%=t('tipo_tela') %> </span><%= @prenda.tela %></li>
+                <li class="list-group-item"><span class="negrita"><%=t('Categoria') %> </span><%= t(@prenda.categoria) %></li>
+                <li class="list-group-item"><span class="negrita"><%=t('Tipo_tela') %> </span><%= t(@prenda.tela) %></li>
                 <li class="list-group-item d-flex justify-content-start align-items-center">
-                    <span class="negrita"><%=t('color/es') %> &nbsp</span>
+                    <span class="negrita"><%=t('Color/es') %> &nbsp</span>
                         <p class="color" style="background-color:<%= @prenda.color_primario%>"></p>
                         <div class="secundario d-flex align-items-center" style="visibility:<%= @hide %>"> <span>&nbspy&nbsp</span> <p class="color" style="background-color:<%= @prenda.color_secundario%>"></p></div>      
                 </li>
@@ -37,7 +37,7 @@
 
             <footer class="card-footer">
                 <div class="action form-group">
-                    <%= link_to edit_guardarropa_prenda_path(@guardarropa,@prenda), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('editar') %> </p> <%end%>
+                    <%= link_to edit_guardarropa_prenda_path(@guardarropa,@prenda), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('Editar') %> </p> <%end%>
                 </div>
             </footer>
         </div>

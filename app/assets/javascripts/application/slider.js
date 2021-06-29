@@ -69,6 +69,20 @@ function slider()
                 width: 'auto',
                 perPage: 3,
                 gap: 5,
+
+                breakpoints: {
+                    '1100': {
+                        perPage: 2,
+                        gap: 5,
+                        focus: 0,
+                        pagination: false,
+                    },
+                    '770': {
+                        perPage: 1,
+                        gap: 5,
+                        pagination: false,
+                    },
+                }
             }
             ).mount();
         }

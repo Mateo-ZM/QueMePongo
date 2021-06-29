@@ -15,13 +15,17 @@
 
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><span class="negrita">Email: </span><%= @user.email %></li>
+<<<<<<< HEAD
                 <li class="list-group-item"><span class="negrita">Género: </span><%= @user.genero %></li>
+=======
+                <li class="list-group-item"><span class="negrita"><%=t('Genero')%>: </span><%= t(@user.genero) %></li>
+>>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
             </ul>
 
             <footer class="card-footer">
                 <div class="action form-group">
-                    <%= link_to edit_user_path(@user), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('editar') %> </p> <%end%>
-                    <%= link_to guardarropas_path, class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-list"></i><p class="d-inline"> <%=t('guardarropas') %> </p> <%end%>
+                    <%= link_to edit_user_path(@user), class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-pencil-alt"></i><p class="d-inline"> <%=t('Editar') %> </p> <%end%>
+                    <%= link_to guardarropas_path, class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-list"></i><p class="d-inline"> <%=t('Guardarropas') %> </p> <%end%>
                     <% if @user.admin %>
                         <%= link_to users_path, class: "btn btn-general btn-form px-3 py-2 my-1 form-control" do %> <i class="fas fa-users"></i><p class="d-inline"> Usuarios </p> <%end%>
                     <% end %>

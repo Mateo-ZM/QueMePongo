@@ -137,7 +137,7 @@ footer p {
 
 @media (max-width: 950px) {
   .botones-responsive {
-      flex-direction: column;
+      flex-direction: column-reverse;
   }
 }
 
@@ -152,6 +152,9 @@ footer p {
 
 
 }
-.tercio{
-  width: 33.33%;
+
+@media (min-width: 1200px) {
+  .tercio{
+    width: 33.33%;
+  }
 }

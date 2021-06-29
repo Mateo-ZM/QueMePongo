@@ -1,0 +1,107 @@
+it:
+  #home
+  hello: "Ciao Mondo"
+  que_ponerse: "¿Non sai cosa indossare?"
+  automatiza_guardarropas: "¡AUTOMATIZZA TUO ARMADIO!"
+  profesion: "Ingegnere informatico"
+  derechos_reservados: "tutti i diritti riservati"
+  contacto: "Contatto"
+  inicio: "Inizio"
+  servicio: "Servizi"
+  nosotros: "Noi"
+  descubri: "Scopri l'app"
+  #guardarropas
+    #index
+  guardarropas_de: "Armadio di '%{usuario_nombre}'"
+  crear_guardarropas: "Creare nuovo armadio"
+    #edit
+  modificacion_guardarropas: "Modifica d'armadio"
+  editar: "Modificare"
+    #form
+  guardarropas: "Armadio"
+  nombre: "Nome"
+  link_imagen: "Link dell'Immagine:"
+  placeholder_link_imagen: "https://dominio.com/camino.jpg"
+  confirmar: "Confermare"
+  volver: "Ritornare"
+    #new
+  creacion_guardarropas: "Creazione d'armadio"
+  crear: "Creare"
+  #prendas
+    #index
+  prendas_de: "Indumenti di '%{guardarropa_nombre}'"
+  atuendos: "Abiti"
+  creacion_prenda: "Creare indumento"
+    #edit  
+  modificacion_prenda: "Modifica indumento"
+    #form
+  prendas: "Indumenti"
+  categoria: "Categoria:"
+  tipo_tela: "Tipo di stoffa:"
+  color_primario: "Colore princimario:"
+  color_secundario: "Colore secondario:"
+  torso: "Torso"
+  piernas: "Gambe"
+  pies: "Piedi"
+  accesorio: "Accesori"
+  algodon: "Cotone"
+  lana: "Lana"
+  lino: "Biancheria"
+  cuero: "Pelle"
+  denim: "Denim"
+  seda: "Seta"
+  poliester: "Poliestere"
+  mohair: "Mohair"
+  piel: "Pelliccia"
+  cuerina: "Similpelle"
+  volver_sin_guardar?: "¿Sicuro di ritornare senza salvare? Tutti i dati inseritti si andranno persi"
+    #show
+  prenda: "Indumento"
+  color/es: "Colore/i:"
+    #new
+  nueva_prenda: "Nuovo indumento"
+  #prenda
+    #index
+  atuendos_de: "Abiti di '%{guardarropa_nombre}'"
+  creacion_atuendo: "Creare nuovo abito"
+    #edit
+  modificacion_atuendo: "Modifica d'abito"
+    #form
+  puntaje: "Punteggiatura"
+  formalidad: "Formalitá"
+  estacion: "Stazione"
+  horario: "Ora del giorno"
+  formal: "Formale"
+  informal: "Informale"
+  elige_uno: "Scegline uno"
+  verano: "State"
+  invierno: "Inverno"
+  otoño: "Autunno"
+  primavera: "Primavera"
+  dia: "Mattina"
+  noche: "Sera"
+  generar_atuendo_aleatorio: "Creare abito casuale"
+    #show
+  atuendo: "Abito"
+    #show
+  nuevo_atuendo: "Nuovo abito"
+
+  perfil: "Profilo"
+  cerrar_sesion: "Disconnettersi"
+  registrarse: "Registrare"
+  iniciar_sesion: "Accesso"
+  inicio_de_sesion: "Login"
+  contraseña: "Password"
+  no_tienes_usuario: "Non hai un utente? Registrati"
+  registro_de_usuario: "Registrazione d'utente"
+  confirmar: "Confermare"
+  apellido: "Cognome"
+  genero: "Genere"
+  hombre: "Uomo"
+  mujer: "Donna"
+  otro: "Altri"
+  ya_tienes_usuario: "Hai un utente? Accede"
+  
+
+
+

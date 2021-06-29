@@ -113,5 +113,20 @@ it:
   Alfabetico_inverso: "Alfabético (Z-A)"
   Puntaje_descendiente: "Puntaje descendiente"
   Puntaje_ascendiente: "Puntaje ascendiente"
+  helpers:
+    page_entries_info:
+      more_pages:
+        display_entries: "%{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> di <b>%{total}</b> totali"
+      one_page:
+        display_entries:
+          one: "<b>%{count}</b> %{entry_name}"
+          other: "<b>Tutti %{count}</b> %{entry_name}"
+  views:
+    pagination:
+      first: "&laquo; Inizio"
+      last: Fine &raquo;
+      next: Succ. &rsaquo;
+      previous: "&lsaquo; Prec."
+      truncate: "&hellip;"
 
 

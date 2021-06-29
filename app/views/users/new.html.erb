@@ -1,34 +1,51 @@
 <main class="d-flex m-auto justify-content-center align-items-center">
     <div class="card my-4 card_login">
         <div class="card-header d-flex justify-content-center align-items-center">
-            Registro de usuario
+            <%=t('Registrarse') %>
         </div>
         <%= form_with(model: @user, local: true) do |form| %>
 
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <div>
                     <div class="row my-4">
-                            <div class="col-5 d-flex justify-content-center align-items-center"> <i class="fas fa-envelope"></i><p class="m-0 d-inline">&nbspEmail: </p> </div>
+                            <div class="col-5 d-flex justify-content-center align-items-center"> 
+                                <i class="fas fa-envelope me-1"></i>
+                                <p class="m-0 d-inline">&nbspEmail: </p> 
+                            </div>
                             <div class="col-7"><%= form.text_field :email %></div>
                     </div>
                     <div class="row my-4">
-                            <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-lock"></i></i><p class="m-0 d-inline">&nbspContrasena: </p> </div>
+                            <div class="col-5 d-flex justify-content-center align-items-center">
+                                <i class="fas fa-lock"></i>
+                                <p class="m-0 d-inline me-1"> <%=t('Contrasena') %> : </p> 
+                            </div>
                             <div class="col-7"><%= form.password_field :password %></div>
                     </div>
                     <div class="row my-4">
-                            <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-lock"></i></i><p class="m-0 d-inline">&nbspConfirmar: </p> </div>
+                            <div class="col-5 d-flex justify-content-center align-items-center">
+                                <i class="fas fa-lock"></i>
+                                <p class="m-0 d-inline me-1"> <%=t('Confirmar')%>: </p> 
+                            </div>
                             <div class="col-7"><%= form.password_field :password_confirmation %></div>
                     </div>
                     <div class="row my-4">
-                            <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-user"></i></i><p class="m-0 d-inline">&nbspNombre/s: </p> </div>
+                            <div class="col-5 d-flex justify-content-center align-items-center">
+                                <i class="fas fa-user"></i>
+                                <p class="m-0 d-inline me-1"><%=t('Nombre')%>: </p> 
+                            </div>
                             <div class="col-7"><%= form.text_field :nombre %></div>
                     </div>
                     <div class="row my-4">
-                            <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-user"></i></i><p class="m-0 d-inline">&nbspApellido/s: </p> </div>
+                            <div class="col-5 d-flex justify-content-center align-items-center">
+                                <i class="fas fa-user"></i>
+                                <p class="m-0 d-inline me-1"><%=t('Apellido')%>: </p> 
+                            </div>
                             <div class="col-7"><%= form.text_field :apellido %></div>
                     </div>
                     <div class="row my-4">
-                            <div class="col-5 d-flex justify-content-center align-items-center"><i class="fas fa-venus-mars"></i></i><p class="m-0 d-inline">&nbspGenero: </p> </div>
+                            <div class="col-5 d-flex justify-content-center align-items-center">
+                                <i class="fas fa-venus-mars"></i>
+                                <p class="m-0 d-inline me-1"><%=t('Genero')%>: </p> </div>
                             <div class="col-7"><%= form.select :genero, options_for_select([[t('Hombre'),'Hombre'],[t('Mujer'),'Mujer'],[t('Otro'),'Otro']]), :prompt => t('Elige_uno')%></div>
                     </div>
                 </div>
@@ -37,10 +54,10 @@
             <footer class="card-footer">
                 <div class="action form-group d-flex flex-column justify-content-center align-items-center">
                     <%= button_tag(type: 'submit', class: "btn btn-general px-4 py-2 m-3 btn-form") do %>
-                        <i class="fas fa-user-plus"></i><p class="d-inline"> Registarse</p>
+                        <i class="fas fa-user-plus"></i><p class="d-inline"> <%=t('Registrarse')%></p>
                     <% end %>
                     <%= link_to login_path, class: "my-2 text-dark fw-bold text-decoration-none" do%>
-                        Ya tienes un usuario? <span class="color-letra-terciario">Inicia sesión!</span> 
+                        <%=t('Ya_tienes_usuario')%> <span class="color-letra-terciario"><%=t('Iniciar_sesion')%></span> 
                     <% end %>
                 </div>
             </footer>

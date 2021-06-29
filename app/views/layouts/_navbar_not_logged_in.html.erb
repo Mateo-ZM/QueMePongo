@@ -9,7 +9,7 @@
 
         <div class="container d-flex justify-content-center">
             <div id='clima-loader' class="text-light">
-                Cargando...
+                <%=t('Cargando') %>
             </div>
             <div class = "nav-text text-light nav-clima" id="clima-container"></div>
         </div>
@@ -27,10 +27,10 @@
                     <a href="/#nosotros" class="nav-text"><%=t('Nosotros')%></a>
                 </li> 
                 <li class="nav-item px-3 py-2 rounded">
-                    <%= link_to login_path, class: "nav-text" do %>Iniciar&nbspsesion<% end %>
+                    <%= link_to login_path, class: "nav-text" do t('Iniciar_sesion') end %>  <!--&nbsp-->
                 </li>
                 <li class="nav-item color-letra-terciario px-3 py-2 rounded">
-                    <%= link_to "Registrarse", signup_path, class: "color-letra-terciario nav-text" %>
+                    <%= link_to t('Registrarse'), signup_path, class: "color-letra-terciario nav-text" %>
                 </li>
                 <li>
                     <%= select_tag "Idioma", options_for_select([["🇦🇷", "es"],["🇺🇸", "en"], ["🇩🇪","de"], ["🇮🇹","it"]]),:onchange => "idioma(this.value)", class:"text-center selector_idioma"%>

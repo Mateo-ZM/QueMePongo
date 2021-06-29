@@ -85,23 +85,28 @@ es:
   Atuendo: "Atuendo"
     #show
   Nuevo_atuendo: "Nuevo atuendo"
-
   Perfil: "Perfil"
   Cerrar_sesion: "Cerrar sesión"
   Registrarse: "Registrarse"
+  Registrate: "Registrate"
   Iniciar_sesion: "Iniciar sesión"
   Inicio_de_sesion: "Inicio de sesión"
-  Contraseña: "Contraseña"
-  No_tienes_usuario: "No tienes un usuario aun? Registrate"
+  Contrasena: "Contraseña"
+  No_tienes_usuario: "¿No tienes un usuario aun?"
   Registro_de_usuario: "Registro de usuario"
-  Confirmar: "Confirmar"
   Apellido: "Apellido"
   Genero: "Género"
   Hombre: "Hombre"
   Mujer: "Mujer"
   Otro: "Otro"
-  Ya_tienes_usuario: "Ya tienes un usuario? Inicia sesión"
-  
-
-
+  Ya_tienes_usuario: "Ya tienes un usuario?"
+  Seguro_desea_cerrar_sesion?: "¿Seguro que desea cerrar sesion?"
+  Editar_Usuario: "Editar usuario"
+  Usuarios: "Usuarios"
+  Fecha_de_registro: "Fecha de registro"
+  Cargando: "Cargando..."
+  Ordenar: "Orden"
+  Quitar_filtros: "Quitar filtros"
+  Filtros: "Filtros" 
+  Segun_clima_actual: "Según clima actual"
 

@@ -1,10 +1,10 @@
 <main class= "container h-100">
-  <h1 class = "titulo text-center mt-2 mb-5"> Modificar usuario </h1>
+    <h1 class = "titulo text-center mt-2 mb-5"> <%=t('Editar_Usuario') %> </h1>
     <div class="d-flex  justify-content-center">
         <div class="card mi_card_modif ">
             <%= form_for @user do |f| %>
                 <div class="card-header card-header-atuendos-new position-relative">
-                    <%= f.text_field :nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Nombre" %>  
+                    <%= f.text_field :nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: t('Nombre') %>  
                     <%= f.text_field :apellido, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Apellido" %>  
 
                 </div>

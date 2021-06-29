@@ -85,23 +85,29 @@ it:
   Atuendo: "Abito"
     #show
   Nuevo_atuendo: "Nuovo abito"
-
   Perfil: "Profilo"
   Cerrar_sesion: "Disconnettersi"
   Registrarse: "Registrare"
+  Registrate: "Registrare"
   Iniciar_sesion: "Accesso"
   Inicio_de_sesion: "Login"
-  Contraseña: "Password"
-  No_tienes_usuario: "Non hai un utente? Registrati"
+  Contrasena: "Password"
+  No_tienes_usuario: "Non hai un utente? "
   Registro_de_usuario: "Registrazione d'utente"
-  Confirmar: "Confermare"
   Apellido: "Cognome"
   Genero: "Genere"
   Hombre: "Uomo"
   Mujer: "Donna"
   Otro: "Altri"
   Ya_tienes_usuario: "Hai un utente? Accede"
-  
-
+  Seguro_desea_cerrar_sesion?: "Seguro que desea cerrar sesion?"
+  Editar_Usuario: "Editar user"
+  Usuarios: "Usuarios"
+  Fecha_de_registro: "Registration date"
+  Cargando: "Cargando..."
+  Ordenar: "Order"
+  Quitar_filtros: "Quitar filtros"
+  Filtros: "Filter" 
+  Segun_clima_actual: "Según clima actual"
 
 

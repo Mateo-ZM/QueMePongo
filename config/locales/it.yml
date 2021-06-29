@@ -109,5 +109,9 @@ it:
   Quitar_filtros: "Quitar filtros"
   Filtros: "Filter" 
   Segun_clima_actual: "Según clima actual"
+  Alfabetico: "Alfabético (A-Z)"
+  Alfabetico_inverso: "Alfabético (Z-A)"
+  Puntaje_descendiente: "Puntaje descendiente"
+  Puntaje_ascendiente: "Puntaje ascendiente"
 
 

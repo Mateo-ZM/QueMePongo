@@ -140,6 +140,10 @@ en:
   Ordenar: "Order"
   Quitar_filtros: "Remove filters"
   Filtros: "Filters"
-  Segun_clima_actual: "According to current weather" 
+  Segun_clima_actual: "According to current weather"
+  Alfabetico: "Alphabetical (A-Z)"
+  Alfabetico_inverso: "Alphabetical (Z-A)"
+  Puntaje_descendiente: "Descending rating"
+  Puntaje_ascendiente: "Ascending rating"
 
 

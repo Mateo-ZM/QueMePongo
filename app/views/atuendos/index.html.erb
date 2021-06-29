@@ -65,7 +65,7 @@
                         <%=t('Ordenar') %>
                     </span>
                     <%= select_tag :orden, 
-                    options_for_select(["Alfabético (A-Z)","Alfabético (Z-A)","Mayor puntaje","Menor puntaje"]), 
+                    options_for_select([[t('Alfabetico'), "Alfabetic. (A-Z)"],[t('Alfabetico_inverso'),"Alfabetic. (Z-A)"],[t('Puntaje_descendiente'),"Mayor puntaje"],[t('Puntaje_ascendiente'),"Menor puntaje"]]), 
                     :prompt => t('Elige_uno'),
                     :onchange => "filtro( 5,this.value)", 
                     class:"form-control select_orden text-center select-filtro-atuendos"%>

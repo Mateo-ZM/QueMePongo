@@ -5,7 +5,7 @@
             <%= form_for @user do |f| %>
                 <div class="card-header card-header-atuendos-new position-relative">
                     <%= f.text_field :nombre, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: t('Nombre') %>  
-                    <%= f.text_field :apellido, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: "Apellido" %>  
+                    <%= f.text_field :apellido, class: "my-2 text-box form-control d-flex justify-content-center", placeholder: t('Apellido') %>  
 
                 </div>
                 
@@ -37,9 +37,9 @@
                     </li>
                     <li class="list-group-item">
                         <span class="negrita"> 
-                            Género
+                            <%= t('Genero')%> 
                         </span> 
-                        <%= f.select :genero, options_for_select([['Hombre','Hombre'],['Mujer','Mujer'],['Otro','Otro']]), :prompt => t('Elige_uno'), class: "form-control"%>
+                        <%= f.select :genero, options_for_select([[t('Hombre'),'Hombre'],[t('Mujer'),'Mujer'],[t('Otro'),'Otro']]), :prompt => t('Elige_uno'), class: "form-control"%>
                     </li>
                 </ul>
                 

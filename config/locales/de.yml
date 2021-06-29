@@ -109,3 +109,7 @@ de:
   Quitar_filtros: "Filter entfernen"
   Filtros: "Filter" 
   Segun_clima_actual: "Nach aktuellem Klima" 
+  Alfabetico: "Alphabetischer (A-Z)"
+  Alfabetico_inverso: "Alphabetischer (Z-A)"
+  Puntaje_descendiente: "Absteigende Bewertung"
+  Puntaje_ascendiente: "Aufsteigende Bewertung"

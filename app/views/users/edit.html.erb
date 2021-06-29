@@ -39,11 +39,7 @@
                         <span class="negrita"> 
                             Género
                         </span> 
-<<<<<<< HEAD
-                        <%= f.select :genero, options_for_select([['Hombre','Hombre'],['Mujer','Mujer'],['Otro','Otro']]), :prompt => t('elige_uno'), class: "form-control"%>
-=======
                         <%= f.select :genero, options_for_select([['Hombre','Hombre'],['Mujer','Mujer'],['Otro','Otro']]), :prompt => t('Elige_uno'), class: "form-control"%>
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
                     </li>
                 </ul>
                 
@@ -53,13 +49,8 @@
                             <i class="fas fa-check"></i> <p class="d-inline"><%=t('Confirmar') %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                         <% end %>
                         
-<<<<<<< HEAD
-                        <%= link_to profile_path, class:"btn-salir px-3 text-decoration-none text-center text-white form-control btn-form ", data: {confirm: t('volver_sin_guardar?')  } do%>
-                            <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('volver') %></p>
-=======
                         <%= link_to profile_path, class:"btn-salir px-3 text-decoration-none text-center text-white form-control btn-form ", data: {confirm: t('Volver_sin_guardar?')  } do%>
                             <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('Volver') %></p>
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
                         <% end %>
                     </div>
                 </footer>

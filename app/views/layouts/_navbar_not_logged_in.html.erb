@@ -6,42 +6,10 @@
             </a>
         </div>
 
-<<<<<<< HEAD
-                <div class="container d-flex justify-content-center">
-                    <div id='clima-loader' class="text-light">
-                        Cargando...
-                    </div>
-                    <div class = "nav-text text-light nav-clima" id="clima-container"></div>
-                </div>
 
-                
-                <button class="navbar-toggler container " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <i class="fas fa-bars fa-2x"></i>
-                </button>
-                <div class="collapse  navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav d-flex justify-content-center align-items-center ms-auto"> 
-                        <li class="nav-item px-3 py-2 rounded">
-                            <a class="nav-text" href="/"><%=t('inicio')%></a>
-                        </li>
-                        <li class="nav-item px-3 py-2 rounded">
-                            <a href="/#nosotros" class="nav-text"><%=t('nosotros')%></a>
-                        </li> 
-                        <li class="nav-item px-3 py-2 rounded">
-                            <%= link_to login_path, class: "nav-text" do %>Iniciar&nbspsesion<% end %>
-                        </li>
-                        <li class="nav-item color-letra-terciario px-3 py-2 rounded">
-                            <%= link_to "Registrarse", signup_path, class: "color-letra-terciario nav-text" %>
-                        </li>
-                        <li>
-                            <%= select_tag "Idioma", options_for_select([["🇦🇷", "es"],["🇺🇸", "en"], ["🇩🇪","de"]]),:onchange => "idioma(this.value)", class:"text-center selector_idioma"%>
-                        </li>
-                    </ul>
-                </div>
-=======
         <div class="container d-flex justify-content-center">
             <div id='clima-loader' class="text-light">
                 Cargando...
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
             </div>
             <div class = "nav-text text-light nav-clima" id="clima-container"></div>
         </div>

@@ -99,22 +99,6 @@ en:
     #edit
   Modificacion_atuendo: "Editing Outfit"
     #form
-<<<<<<< HEAD
-  puntaje: "Rating"
-  formalidad: "Formality"
-  estacion: "Season"
-  horario: "Time of day"
-  formal: "Formal"
-  informal: "Informal"
-  elige_uno: "Choose one"
-  verano: "Summer"
-  invierno: "Winter"
-  otoño: "Fall"
-  primavera: "Spring"
-  dia: "Day"
-  noche: "Night"
-  generar_atuendo_aleatorio: "Generate random outfit"
-=======
   Puntaje: "Rating"
   Formalidad: "Formality"
   Estacion: "Season"
@@ -129,7 +113,6 @@ en:
   Dia: "Day"
   Noche: "Night"
   Generar_atuendo_aleatorio: "Generate random outfit"
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
     #show
   Atuendo: "Outfit"
     #show

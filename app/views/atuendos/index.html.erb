@@ -7,11 +7,7 @@
             </ol>
         </nav>
     </div>
-<<<<<<< HEAD
-    <h1 class="titulo my-4 text-center"><%=t('atuendos_de', guardarropa_nombre: @guardarropa.Nombre)%></h1>
-=======
     <h1 class="titulo my-4 text-center"><%=t('Atuendos_de', guardarropa_nombre: @guardarropa.Nombre)%></h1>
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
     <div class="d-flex justify-content-center">
         <button data-bs-toggle="collapse" data-bs-target="#filtros-colapsables" class="btn btn-crear btn-lg m-2 ">
             <i class="fas fa-filter"></i>
@@ -23,56 +19,32 @@
             <div class="d-flex justify-content-center align-items-center todos-los-filtros">
                 <li class="list-group-item border-0 d-inline text-center">
                     <span class="negrita">
-<<<<<<< HEAD
-                        <%=t('puntaje') %> 
-                    </span>
-                    <%= select_tag :Puntaje,
-                    options_for_select(["1", "2", "3", "4", "5"]),
-                    :prompt => t('elige_uno'),
-=======
                         <%=t('Puntaje') %> 
                     </span>
                     <%= select_tag :Puntaje,
                     options_for_select(["1", "2", "3", "4", "5"]),
                     :prompt => t('Elige_uno'),
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
                     :onchange => "filtro( 1,this.value)",
                     class:"form-control select_puntaje text-center select-filtro-atuendos" %>
                 </li>
                 <li class="list-group-item border-0 d-inline text-center">
                     <span class="negrita">
-<<<<<<< HEAD
-                        <%=t('formalidad') %>
-                    </span><%= select_tag :Formalidad, 
-                    options_for_select(["Formal","Informal"]), 
-                    :prompt => t('elige_uno'),
-=======
                         <%=t('Formalidad') %>
                     </span>
                     <%= select_tag :Formalidad, 
                     options_for_select([[t('Formal'),"Formal"],[t('Informal'),"Informal"]]), 
                     :prompt => t('Elige_uno'),
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
                     :onchange => "filtro( 2,this.value)", 
                     class:"form-control select_formalidad text-center select-filtro-atuendos"%>
                 </li>
                 <li class="list-group-item border-0 d-inline text-center">
                     <span class="negrita ">
-<<<<<<< HEAD
-                        <%=t('estacion') %> 
-                    </span>
-                    <%= select_tag :Estacion, 
-                    options_for_select(["Verano","Invierno",["Otoño", "Otonio"],["Primavera", "Primavera"], ["Según Clima Actual","SegunClimaActual"]]),
-                    :onchange => "filtro( 3,this.value)", 
-                    :prompt => t('elige_uno'), 
-=======
                         <%=t('Estacion') %> 
                     </span>
                     <%= select_tag :Estacion, 
                     options_for_select([[t('Verano'),"Verano"],[t('Invierno'),"Invierno"],[t('Otonio'), "Otonio"],[t('Primavera'), "Primavera"], ["Según Clima Actual","SegunClimaActual"]]),
                     :onchange => "filtro( 3,this.value)", 
                     :prompt => t('Elige_uno'), 
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
                     class:"form-control select_estacion text-center text-center select-filtro-atuendos"%>
                 </li>
                 <div class="invisible temperatura">
@@ -83,13 +55,8 @@
                         Horario
                     </span>
                     <%= select_tag :DiaNoche, 
-<<<<<<< HEAD
-                    options_for_select(["Dia","Noche"]), 
-                    :prompt => t('elige_uno'),
-=======
                     options_for_select([[t('Dia'),"Dia"],[t('Noche'),"Noche"]]), 
                     :prompt => t('Elige_uno'),
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
                     :onchange => "filtro( 4,this.value)", 
                     class:"form-control select_horario text-center select-filtro-atuendos"%>
                 </li>
@@ -99,11 +66,7 @@
                     </span>
                     <%= select_tag :orden, 
                     options_for_select(["Alfabético (A-Z)","Alfabético (Z-A)","Mayor puntaje","Menor puntaje"]), 
-<<<<<<< HEAD
-                    :prompt => t('elige_uno'),
-=======
                     :prompt => t('Elige_uno'),
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
                     :onchange => "filtro( 5,this.value)", 
                     class:"form-control select_orden text-center select-filtro-atuendos"%>
                 </li>

@@ -67,22 +67,6 @@ de:
     #edit
   Modificacion_atuendo: "Outfit Modifikation"
     #form
-<<<<<<< HEAD
-  puntaje: "Bewertung"
-  formalidad: "Formalität"
-  estacion: "Saison"
-  horario: "Uhrzeit"
-  formal: "Formell"
-  informal: "Informell"
-  elige_uno: "Whäle ein"
-  verano: "Sommer"
-  invierno: "Winter"
-  otoño: "Herbst"
-  primavera: "Frühling"
-  dia: "Tag"
-  noche: "Nacht"
-  generar_atuendo_aleatorio: "Zufälliges Outfit generieren"
-=======
   Puntaje: "Bewertung"
   Formalidad: "Formalität"
   Estacion: "Saison"
@@ -97,7 +81,6 @@ de:
   Dia: "Tag"
   Noche: "Nacht"
   Generar_atuendo_aleatorio: "Zufälliges Outfit generieren"
->>>>>>> 49ae5282f43e70dcfa4c7fd65657e0fc68b343eb
     #show
   Atuendo: "Outfit"
     #show

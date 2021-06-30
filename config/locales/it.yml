@@ -10,6 +10,9 @@ it:
   Servicio: "Servizi"
   Nosotros: "Noi"
   Descubri: "Scopri l'app"
+  Cerrar_sesion_nav: "Disconnettersi"
+  Iniciar_sesion_nav: "Accesso"
+  Registrarse_nav: "Registrare"
 
   #guardarropas
     #index

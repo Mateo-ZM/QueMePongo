@@ -39,8 +39,11 @@ en:
   Contacto: "Contact"
   Inicio: "Home"
   Servicio: "Services"
-  Nosotros: "About us"
+  Nosotros: "About\xA0us"
   Descubri: "Discover the app"
+  Cerrar_sesion_nav: "Log\xA0out"
+  Iniciar_sesion_nav: "Log\xA0in"
+  Registrarse_nav: "Sign\xA0up"
 
   #guardarropas
     #index

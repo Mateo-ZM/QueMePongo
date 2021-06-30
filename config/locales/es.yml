@@ -10,6 +10,9 @@ es:
   Servicio: "Servicios"
   Nosotros: "Nosotros"
   Descubri: "Descubrí la app"
+  Cerrar_sesion_nav: "Cerrar\xA0sesión"
+  Iniciar_sesion_nav: "Iniciar\xA0sesión"
+  Registrarse_nav: "Registrarse"
 
   #guardarropas
     #index

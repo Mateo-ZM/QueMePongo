@@ -8,8 +8,11 @@ de:
   Contacto: "Kontakt"
   Inicio: "Anfang"
   Servicio: "Dienstleistungen"
-  Nosotros: "Über uns"
+  Nosotros: "Über\xA0uns"
   Descubri: "Entdecke die App"
+  Cerrar_sesion_nav: "Ausloggen"
+  Iniciar_sesion_nav: "Einloggen"
+  Registrarse_nav: "Einmelden"
 
   #guardarropas
     #index

@@ -27,7 +27,7 @@
                     <%= link_to t('Perfil'), profile_path, class: "nav-text" %>
                 </li>
                 <li class="logout-hover  px-3 py-2 rounded">
-                    <%= link_to logout_path, method: :get, class: "nav-text", data: {confirm: t('Seguro_desea_cerrar_sesion?') } do %><%t('Cerrar_sesion') end %>
+                    <%= link_to logout_path, method: :get, class: "nav-text", data: {confirm: t('Seguro_desea_cerrar_sesion?') } do %><%=t('Cerrar_sesion_nav')%><% end %>
                 </li>
                 <li>
                     <%= select_tag "Idioma", options_for_select([["🇦🇷", "es"],["🇺🇸", "en"], ["🇩🇪","de"], ["🇮🇹","it"]]),:onchange => "idioma(this.value)", class:"text-center selector_idioma"%>

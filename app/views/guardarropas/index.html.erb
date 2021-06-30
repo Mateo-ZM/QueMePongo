@@ -1,6 +1,6 @@
 <main class="guardarropa container">
     
-    <h1 class="titulo my-4 text-center"> <%= t('Guardarropas_de')%></h1>
+    <h1 class="titulo my-4 text-center"> <%= t('Guardarropas_de', usuario_nombre: @user.nombre + " " + @user.apellido)%></h1>
     
     <div class="splide">
         <div class="splide__slider">

@@ -17,6 +17,9 @@ function idioma_seleccionado(){
         case "de":
             select_idioma.selectedIndex = 2;
             break;
+        case "it":
+            select_idioma.selectedIndex = 3;
+            break;
         default:
             select_idioma.selectedIndex = 0;
             break;

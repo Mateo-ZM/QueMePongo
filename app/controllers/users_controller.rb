@@ -36,19 +36,19 @@ class UsersController < ApplicationController
       begin
       if @user.save
         session[:user_id] = @user.id
-        redirect_to profile_path, notice: "¡Registro exitoso!"
+        redirect_to profile_path, notice: t('Registro_exitoso')
       else
-        flash.now[:alert] = "¡Error al registrarse! Intente de nuevo."
+        flash.now[:alert] = t('Error_registro')
         render action: "new"
       end
 
     rescue 
-      flash.now[:alert] = "El mail ya se encuentra en uso"
+      flash.now[:alert] = t('Mail_en_uso')
       render action: "new"
     end
 
     else
-      flash.now[:alert] = "La contrasena debe tener entre 8 y 16 caracteres"
+      flash.now[:alert] = t('Caracteres_contraseña')
       render action: "new"
     end
   end
@@ -56,16 +56,16 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1 or /users/1.json
   def update
     if @user.update(user_params)
-      redirect_to profile_path, notice: "¡Perfil editado correctamente!"
+      redirect_to profile_path, notice: t('Edit_perfil_exitoso')
     else
-      render :edit, alert: "Error al editar perfil."
+      render :edit, alert: t('Edit_perfil_fallido')
     end
   end
 
   # DELETE /users/1 or /users/1.json
   def destroy
     @user.destroy
-    redirect_to users_path, notice: "User was successfully destroyed."
+    redirect_to users_path, notice: t('Perfil_borrado')
   end
 
   private

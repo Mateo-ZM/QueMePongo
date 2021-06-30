@@ -10,7 +10,7 @@
     <h1 class="container titulo mt-4 mb-4 text-center"> <%=t('Prendas_de', guardarropa_nombre: @guardarropa.Nombre)%> </h1>
 <div class="d-flex justify-content-center align-center">
         <%= link_to edit_guardarropa_path(@guardarropa) do %> <i class="fa fa-pencil-alt fa-2x text-dark mx-5"></i><%end%>
-        <%= link_to guardarropa_path(@guardarropa), method: :delete, data: {confirm: '¿Seguro que desea eliminar este guardarropa?' } do %><i class="mx-5 fas fa-trash fa-2x text-dark"></i><% end %>
+        <%= link_to guardarropa_path(@guardarropa), method: :delete, data: {confirm: t('Eliminar_guardarropa' } do %><i class="mx-5 fas fa-trash fa-2x text-dark"></i><% end %>
     </div>
     <div class="splide">
         <div class="splide__slider">

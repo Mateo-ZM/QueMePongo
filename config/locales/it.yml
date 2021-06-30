@@ -29,7 +29,7 @@ it:
   Crear: "Creare"
   #prendas
     #index
-  Crendas_de: "Indumenti di '%{guardarropa_nombre}'"
+  Prendas_de: "Indumenti di '%{guardarropa_nombre}'"
   Atuendos: "Abiti"
   Creacion_prenda: "Creare indumento"
     #edit  
@@ -85,6 +85,7 @@ it:
   Atuendo: "Abito"
     #show
   Nuevo_atuendo: "Nuovo abito"
+  #users
   Perfil: "Profilo"
   Cerrar_sesion: "Disconnettersi"
   Registrarse: "Registrare"
@@ -99,20 +100,38 @@ it:
   Hombre: "Uomo"
   Mujer: "Donna"
   Otro: "Altri"
-  Ya_tienes_usuario: "Hai un utente? Accede"
-  Seguro_desea_cerrar_sesion?: "Seguro que desea cerrar sesion?"
-  Editar_Usuario: "Editar user"
-  Usuarios: "Usuarios"
-  Fecha_de_registro: "Registration date"
-  Cargando: "Cargando..."
-  Ordenar: "Order"
-  Quitar_filtros: "Quitar filtros"
-  Filtros: "Filter" 
-  Segun_clima_actual: "Según clima actual"
-  Alfabetico: "Alfabético (A-Z)"
-  Alfabetico_inverso: "Alfabético (Z-A)"
-  Puntaje_descendiente: "Puntaje descendiente"
-  Puntaje_ascendiente: "Puntaje ascendiente"
+  Ya_tienes_usuario: "Hai un utente?"
+  Seguro_desea_cerrar_sesion?: "Sei sicuro di voler uscire?"
+  Editar_Usuario: "Modificare utente"
+  Usuarios: "Utenti"
+  Fecha_de_registro: "Data di registro"
+  #API
+  Cargando: "In carica..."
+  #filtro
+  Ordenar: "Ordine"
+  Quitar_filtros: "Rimuovi filtri"
+  Filtros: "Filtri" 
+  Segun_clima_actual: "Secondo il Tempo Attuale"
+  Alfabetico: "Alfabetico (A-Z)"
+  Alfabetico_inverso: "Alfabetico (Z-A)"
+  Puntaje_descendiente: "Punteggio Decrescente"
+  Puntaje_ascendiente: "Punteggio in Aumento"
+  #eliminar
+  Eliminar_atuendo: "¿Sicuro di voler eliminare questo abito?"
+  Eliminar_prenda: "¿Sicuro di voler eliminare questo indumento?"
+  Eliminar_guardarropa: "¿Sicuro di voler eliminare questo armadio?"
+  #controllers
+  Login_exitoso: "Login effettuato con successo!"
+  Login_incorrecto: "Email o password errati!"
+  Logout_exitoso: "Disconnessione riuscita!"
+  Registro_exitoso: "Utente registrato con successo!"
+  Error_registro: "Registrazione fallita! Riprova."
+  Mail_en_uso: "L'email è già in uso"
+  Caracteres_contraseña: "La password deve essere compresa tra 8 e 16 caratteri"
+  Edit_perfil_exitoso: "Profilo modificato con successo!"
+  Edit_perfil_fallido: "Errore di modifica del profilo."
+  Perfil_borrado: "L'utente è stato distrutto con successo."
+  #kaminari
   helpers:
     page_entries_info:
       more_pages:

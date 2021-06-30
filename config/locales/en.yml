@@ -37,13 +37,13 @@ en:
   Profesion: "Software developer"
   Derechos_reservados: "All rights reserved"
   Contacto: "Contact"
-  Inicio: "home"
+  Inicio: "Home"
   Servicio: "Services"
   Nosotros: "About us"
   Descubri: "Discover the app"
   #guardarropas
     #index
-  Guardarropas_de: "User's wardrobes"
+  Guardarropas_de: "%{usuario_nombre}'s wardrobes"
   Crear_guardarropas: "Create new wardrobe"
 
     #edit
@@ -92,7 +92,7 @@ en:
   Color/es: "Color/s:"
     #new
   Nueva_prenda: "New clothing"
-  #prenda
+  #atuendos
     #index
   Atuendos_de: "%{guardarropa_nombre}'s outfits"
   Creacion_atuendo: "Create new outfit" 
@@ -117,12 +117,13 @@ en:
   Atuendo: "Outfit"
     #show
   Nuevo_atuendo: "New outfit"
+  #users
   Perfil: "Profile"
-  Cerrar_sesion: "Sign out"
+  Cerrar_sesion: "Log out"
   Registrarse: "Sign up"
-  Registrate: "Register"
-  Iniciar_sesion: "Sign in"
-  Inicio_de_sesion: "Sign in"
+  Registrate: "Sign up"
+  Iniciar_sesion: "Log in"
+  Inicio_de_sesion: "Log in"
   Contrasena: "Password"
   No_tienes_usuario: "Dont have an account yet?"
   Registro_de_usuario: "User sign in"
@@ -132,11 +133,13 @@ en:
   Mujer: "Woman"
   Otro: "Other"
   Ya_tienes_usuario: "Already have an account?"
-  Seguro_desea_cerrar_sesion?: "Are you sure you want to sign out?"
+  Seguro_desea_cerrar_sesion?: "Are you sure you want to log out?"
   Editar_Usuario: "Edit user"
   Usuarios: "Users"
   Fecha_de_registro: "Registration date"
+  #API
   Cargando: "Loading..."
+  #filtro
   Ordenar: "Order"
   Quitar_filtros: "Remove filters"
   Filtros: "Filters"
@@ -145,6 +148,22 @@ en:
   Alfabetico_inverso: "Alphabetical (Z-A)"
   Puntaje_descendiente: "Descending rating"
   Puntaje_ascendiente: "Ascending rating"
+  #eliminar
+  Eliminar_atuendo: "¿Are you sure you want to delete this outfit?"
+  Eliminar_prenda: "¿Are you sure you want to delete this clothing?"
+  Eliminar_guardarropa: "¿Are you sure you want to delete this wardrobe?"
+  #controllers
+  Login_exitoso: "Succesful log in!"
+  Login_incorrecto: "Wrong email or password!"
+  Logout_exitoso: "Succesful log out!"
+  Registro_exitoso: "Succesful sign up!"
+  Error_registro: "Sign up failed! Try again."
+  Mail_en_uso: "The email is already taken"
+  Caracteres_contraseña: "The password must have between 8 and 16 characters"
+  Edit_perfil_exitoso: "Profile edited successfully!"
+  Edit_perfil_fallido: "Profile edit error."
+  Perfil_borrado: "User was successfully destroyed."
+  #kaminari
   helpers:
     page_entries_info:
       more_pages:

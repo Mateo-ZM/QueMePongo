@@ -38,7 +38,7 @@
                             <i class="fas fa-check"></i> <p class="d-inline"> <%=t('Confirmar') %> </p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                         <% end %>
                         
-                        <%= link_to link_volver, class:"btn-salir btn-form px-3 text-decoration-none text-center text-white form-control", data: {confirm: '¿Volver sin guardar?' } do%>
+                        <%= link_to link_volver, class:"btn-salir btn-form px-3 text-decoration-none text-center text-white form-control", data: {confirm: t('Volver_sin_guardar?') } do%>
                             <i class="fa fa-arrow-left"></i><p class="d-inline"> <%=t('Volver') %> </p>
                         <% end %>
                     </div>

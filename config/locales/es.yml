@@ -12,7 +12,7 @@ es:
   Descubri: "Descubrí la app"
   #guardarropas
     #index
-  Guardarropas_de: "Guardarropas de Usuario"
+  Guardarropas_de: "Guardarropas de '%{usuario_nombre}'"
   Crear_guardarropas: "Crear nuevo guardarropas"
     #edit
   Modificacion_guardarropas: "Modificación de guardarropa"
@@ -85,6 +85,7 @@ es:
   Atuendo: "Atuendo"
     #show
   Nuevo_atuendo: "Nuevo atuendo"
+  #users
   Perfil: "Perfil"
   Cerrar_sesion: "Cerrar sesión"
   Registrarse: "Registrarse"
@@ -104,7 +105,9 @@ es:
   Editar_Usuario: "Editar usuario"
   Usuarios: "Usuarios"
   Fecha_de_registro: "Fecha de registro"
+  #API
   Cargando: "Cargando..."
+  #filtro
   Ordenar: "Orden"
   Quitar_filtros: "Quitar filtros"
   Filtros: "Filtros" 
@@ -113,6 +116,22 @@ es:
   Alfabetico_inverso: "Alfabético (Z-A)"
   Puntaje_descendiente: "Puntaje descendiente"
   Puntaje_ascendiente: "Puntaje ascendiente"
+  #eliminar
+  Eliminar_atuendo: "¿Seguro que desea eliminar este atuendo?"
+  Eliminar_prenda: "¿Seguro que desea eliminar esta prenda?"
+  Eliminar_guardarropa: "¿Seguro que desea eliminar este guardarropa?"
+  #controllers
+  Login_exitoso: "¡Inicio de sesión exitoso!"
+  Login_incorrecto: "¡Email o contraseña incorrectos!"
+  Logout_exitoso: "¡Cerrado de sesión exitoso!"
+  Registro_exitoso: "¡Usuario registrado correctamente!"
+  Error_registro: "¡Error al registrarse! Intente de nuevo."
+  Mail_en_uso: "El mail ya se encuentra en uso"
+  Caracteres_contraseña: "La contraseña debe tener entre 8 y 16 caracteres"
+  Edit_perfil_exitoso: "¡Perfil editado correctamente!"
+  Edit_perfil_fallido: "Error al editar perfil."
+  Perfil_borrado: "Usuario borrado exitosamente."
+  #kaminari
   helpers:
   page_entries_info:
     more_pages:

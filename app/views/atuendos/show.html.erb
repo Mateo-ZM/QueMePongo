@@ -14,7 +14,7 @@
             <div class="card-header d-flex justify-content-between align-items-center">
                 <%= link_to guardarropa_atuendos_path(@guardarropa) do %> <i class="fa fa-arrow-left text-dark"></i> <%end%>
                 <div class="px-3 text-center overflow-auto"><%= @atuendo.Descripcion %></div>
-                <%= link_to guardarropa_atuendo_path(@guardarropa,@atuendo), method: :delete, data: {confirm: '¿Seguro que desea eliminar esta prenda?' } do %><i class="fas fa-trash text-dark"></i><% end %>
+                <%= link_to guardarropa_atuendo_path(@guardarropa,@atuendo), method: :delete, data: {confirm: t('Eliminar_atuendo') } do %><i class="fas fa-trash text-dark"></i><% end %>
             </div>
 
             <div class="m-4 row d-flex justify-content-around align-items-center">

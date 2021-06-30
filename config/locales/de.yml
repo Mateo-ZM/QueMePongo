@@ -12,7 +12,7 @@ de:
   Descubri: "Entdecke die App"
   #guardarropas
     #index
-  Guardarropas_de: "Benutzer Kleiderschränke"
+  Guardarropas_de: "Benutzer Kleiderschränke" #Agregar el %{usuario_nombre}
   Crear_guardarropas: "Neuer kleiderschränke erstellen"
     #edit
   Modificacion_guardarropas: "Kleiderschrank Modifikation"
@@ -85,6 +85,7 @@ de:
   Atuendo: "Outfit"
     #show
   Nuevo_atuendo: "Neues Outfit"
+  #users
   Perfil: "Profil"
   Cerrar_sesion: "Ausloggen"
   Registrarse: "Einmelden"
@@ -104,7 +105,9 @@ de:
   Editar_Usuario: "Benutzer modifizieren" 
   Usuarios: "Benutzer"
   Fecha_de_registro: "Registrierungsdatum"
+  #API
   Cargando: "Wird geladen..."
+  #filtro
   Ordenar: "Sortieren"
   Quitar_filtros: "Filter entfernen"
   Filtros: "Filter" 
@@ -113,6 +116,22 @@ de:
   Alfabetico_inverso: "Alphabetischer (Z-A)"
   Puntaje_descendiente: "Absteigende Bewertung"
   Puntaje_ascendiente: "Aufsteigende Bewertung"
+  #eliminar
+  Eliminar_atuendo: "¿Are you sure you want to delete this outfit?"
+  Eliminar_prenda: "¿Are you sure you want to delete this clothing?"
+  Eliminar_guardarropa: "¿Are you sure you want to delete this wardrobe?" #Para Fede xd
+  #controllers
+  Login_exitoso: "¡Inicio de sesión exitoso!"
+  Login_incorrecto: "¡Usuario o contraseña incorrectos!"
+  Logout_exitoso: "¡Cerrado de sesión exitoso!"
+  Registro_exitoso: "¡Usuario registrado correctamente!"
+  Error_registro: "¡Error al registrarse! Intente de nuevo."
+  Mail_en_uso: "El mail ya se encuentra en uso"
+  Caracteres_contraseña: "La contrasena debe tener entre 8 y 16 caracteres" #Para Fede parte 2
+  Edit_perfil_exitoso: "¡Perfil editado correctamente!"
+  Edit_perfil_fallido: "Error al editar perfil."
+  Perfil_borrado: "User was successfully destroyed."
+  #kaminari
   helpers:
   page_entries_info:
     more_pages:

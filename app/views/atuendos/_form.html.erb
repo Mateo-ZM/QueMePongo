@@ -246,19 +246,19 @@
             <li class="list-group-item border-0 d-inline">
                 <span class="negrita">
                     <%=t('Formalidad') %>
-                </span><%= f.select :Etiqueta_Formal, options_for_select([[t('Formal'), 'Formal'],[t('Informal'),'Informal']]), :prompt => t('Elige_uno'), class:"form-control"%>
+                </span><%= f.select :Etiqueta_Formal, options_for_select([[t('Formal'), 'Formal'],[t('Informal'),'Informal']], selected: @atuendo.Etiqueta_Formal), :prompt => t('Elige_uno'), class:"form-control"%>
             </li>
             <li class="list-group-item border-0 d-inline">
                 <span class="negrita">
                     <%=t('Estacion') %> 
                 </span>
-                <%= f.select :Etiqueta_Estacion, options_for_select([[t('Verano'), 'Verano'],[t('Invierno'),'Invierno'],[t('Otonio'), 'Otonio'],[t('Primavera'), 'Primavera']]), :prompt => t('Elige_uno'), class:"form-control"%>
+                <%= f.select :Etiqueta_Estacion, options_for_select([[t('Verano'), 'Verano'],[t('Invierno'),'Invierno'],[t('Otonio'), 'Otonio'],[t('Primavera'), 'Primavera']], selected: @atuendo.Etiqueta_Estacion), :prompt => t('Elige_uno'), class:"form-control"%>
             </li>
             <li class="list-group-item border-0 d-inline">
                 <span class="negrita">
                     <%=t('Horario') %> 
                 </span>
-                <%= f.select :Etiqueta_DiaNoche,options_for_select([[t('Dia'), 'Dia'],[t('Noche'),'Noche']]), :prompt => t('Elige_uno'), class:"form-control"%>
+                <%= f.select :Etiqueta_DiaNoche,options_for_select([[t('Dia'), 'Dia'],[t('Noche'),'Noche']], selected: @atuendo.Etiqueta_DiaNoche), :prompt => t('Elige_uno'), class:"form-control"%>
             </li>
         </div>
         
@@ -272,8 +272,7 @@
                     <i class="fas fa-check"></i> <p class="d-inline"><%=t('Confirmar') %></p> <!-- Ver porque no funciona <i class="bi bi-plus-circle"></i> -->
                 <% end %>
             </div>
-        </div>
-        
+        </div> 
     <% end %>
 </div>
 

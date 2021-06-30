@@ -140,8 +140,8 @@ it:
   Mail_en_uso: "L'email è già in uso"
   Caracteres_contraseña: "La password deve essere compresa tra 8 e 16 caratteri"
   Edit_perfil_exitoso: "Profilo modificato con successo!"
-  Edit_perfil_fallido: "Errore di modifica del profilo."
-  Perfil_borrado: "L'utente è stato distrutto con successo."
+  Edit_perfil_fallido: "Errore di modifica del profilo"
+  Perfil_borrado: "L'utente è stato distrutto con successo"
 
   #kaminari
   helpers:
@@ -170,7 +170,7 @@ it:
   Email_enviado: "Email inviata correttamente. Controlla la tua email per continuare"
   Reset_expirado: "Il link per recuperare la password è scaduto. Riprova"
   Contraseña_cambiada: "La tua password è stata cambiata con successo"
-  Error_cambiar_contraseña: "Errore durante la modifica della password! Riprova."
+  Error_cambiar_contraseña: "Errore durante la modifica della password! Riprova"
 
   #Email
   Saludo_mail: "Ciao "

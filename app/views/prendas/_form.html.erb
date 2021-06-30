@@ -40,13 +40,13 @@
                         <span class="negrita"> 
                             <%=t('Categoria') %> 
                         </span>
-                        <%= f.select :categoria, options_for_select([[t('Torso'), 'Torso'],[t('Piernas'),'Piernas'],[t('Pies'), 'Pies'],[t('Accesorio'), 'Accesorio']]), :prompt => t('Elige_uno'), class:"form-control"%>
+                        <%= f.select :categoria, options_for_select([[t('Torso'), 'Torso'],[t('Piernas'),'Piernas'],[t('Pies'), 'Pies'],[t('Accesorio'), 'Accesorio']], selected: @prenda.categoria), :prompt => t('Elige_uno'), class:"form-control"%>
                     </li>
                     <li class="list-group-item">
                         <span class="negrita"> 
                             <%=t('Tipo_tela') %>
                         </span> 
-                        <%= f.select :tela, options_for_select([[t('Algodon'), 'Algodon'],[t('Lana'),'Lana'],[t('Lino'), 'Lino'],[t('Cuero'), 'Cuero'],[t('Denim'), 'Denim'],[t('Seda'), 'Seda'],[t('Poliester'), 'Poliester'],[t('Mohair'), 'Mohair'],[t('Piel'), 'Piel'],[t('Cuerina'), 'Cuerina']]), :prompt => t('Elige_uno'), class: "form-control"%>
+                        <%= f.select :tela, options_for_select([[t('Algodon'), 'Algodon'],[t('Lana'),'Lana'],[t('Lino'), 'Lino'],[t('Cuero'), 'Cuero'],[t('Denim'), 'Denim'],[t('Seda'), 'Seda'],[t('Poliester'), 'Poliester'],[t('Mohair'), 'Mohair'],[t('Piel'), 'Piel'],[t('Cuerina'), 'Cuerina']], selected: @prenda.tela), :prompt => t('Elige_uno'), class: "form-control"%>
                     </li>
                     <li class="list-group-item">
                         <span class="negrita"> 

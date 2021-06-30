@@ -140,8 +140,8 @@ es:
   Mail_en_uso: "El mail ya se encuentra en uso"
   Caracteres_contraseña: "La contraseña debe tener entre 8 y 16 caracteres"
   Edit_perfil_exitoso: "¡Perfil editado correctamente!"
-  Edit_perfil_fallido: "Error al editar perfil."
-  Perfil_borrado: "Usuario borrado exitosamente."
+  Edit_perfil_fallido: "Error al editar perfil"
+  Perfil_borrado: "Usuario borrado exitosamente"
 
   #kaminari
   helpers:
@@ -169,9 +169,9 @@ es:
   Nueva_contraseña: "Nueva contraseña"
   Confirmar_nueva_contraseña: "Confirmar nueva contraseña"
   Email_enviado: "Email enviado exitosamente. Revise su correo para continuar"
-  Reset_expirado: "El link de recuperación de su contraseña ha expirado. Intente de nuevo."
+  Reset_expirado: "El link de recuperación de su contraseña ha expirado. Intente de nuevo"
   Contraseña_cambiada: "Su contraseña se ha cambiado exitosamente"
-  Error_cambiar_contraseña: "¡Error al intentar cambiar la contraseña! Intente de nuevo."
+  Error_cambiar_contraseña: "¡Error al intentar cambiar la contraseña! Intente de nuevo"
 
   #Contraseñas_incorrectas: "Las contraseñas deben coincidir entre sí" al final no es necesario
 

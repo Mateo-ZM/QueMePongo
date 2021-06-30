@@ -171,10 +171,11 @@ de:
   Email_enviado: "Email wurde erfolgreich Versendet. Überprüfen Sie Ihren Posteingang, um fortzufahren"
   Reset_expirado: "Der Link zum Zurücksetzen des Passworts ist abgelaufen. Versuchen Sie es nochmal"
   Contraseña_cambiada: "Ihr Passwort wurde erfolgreich geändert"
-  Error_cambiar_contraseña: "¡Error al intentar cambiar la contraseña! Intente de nuevo." #Para Fede
+  Error_cambiar_contraseña: "Fehler beim Versuch, das Passwort zu ändern! Versuchen Sie es nochmal" #Para Fede
 
   #Email
-  Saludo_mail: "Hi "
-  Mail_contrasena1: "To reset your password, click " #Para Fede equisde
-  Link_mail: "this link"
-  Mail_contrasena2: "If you did not request your password to be reset, just ignore this e-mail and your password will stay the same."
+  Saludo_mail: "Hallo "
+  Mail_contrasena1: "Um Ihr Passwort zurückzusetzen, klicken Sie auf "
+  Link_mail: "diesen Link"
+  Mail_contrasena2: "Wenn Sie die Zurücksetzung Ihres Passworts nicht angefordert haben, ignorieren Sie diese E-Mail einfach und Ihr Passwort bleibt unverändert."
+  

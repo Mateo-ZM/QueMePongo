@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :password_resets
   resources :users, except: [:new, :edit, :show]
   get	'/signup', to:	'users#new'
   get	'/profile', to:	'users#show'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+
   
   resources :guardarropas do
     resources :prendas

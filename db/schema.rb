@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_21_211526) do
+ActiveRecord::Schema.define(version: 2021_06_30_044008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "adminpack"
@@ -85,6 +85,8 @@ ActiveRecord::Schema.define(version: 2021_06_21_211526) do
     t.string "apellido"
     t.string "link_imagen"
     t.integer "genero"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

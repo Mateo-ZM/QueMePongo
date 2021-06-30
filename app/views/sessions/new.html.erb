@@ -25,6 +25,7 @@
                         <%= link_to signup_path, class: "my-2 text-dark text-decoration-none fw-bold" do%>
                             <%=t('No_tienes_usuario') %>  <span class="color-letra-terciario"><%=t('Registrate') %></span>
                         <% end %>
+                        <p><%= link_to 'Forgot password?', new_password_reset_path %></p>
                     </div>
                 </footer>
             <%end%>

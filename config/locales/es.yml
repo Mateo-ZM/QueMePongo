@@ -148,3 +148,13 @@ es:
       next: Siguiente &rsaquo;
       previous: "&lsaquo; Anterior"
       truncate: "&hellip;"
+  
+  Olvidaste_contraseña: "¿Olvidaste tu contraseña?"
+  Reset_contraseña: "Recuperación de contraseña"
+  Enviar_Email: "Enviar Email"
+  Cambiar_contraseña: "Cambiar contraseña"
+  Nueva_contraseña: "Nueva contraseña"
+  Confirmar_nueva_contraseña: "Confirmar nueva contraseña"
+  Email_enviado: "Email enviado exitosamente. Revise su correo para continuar"
+  Reset_expirado: "El link de recuperación de su contraseña ha expirado. Vuelva a intentarlo"
+  Contraseña_cambiada: "Su contraseña se ha cambiado exitosamente"

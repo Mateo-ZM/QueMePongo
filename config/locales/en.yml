@@ -181,3 +181,12 @@ en:
       previous: "&lsaquo; Prev"
       truncate: "&hellip;"
 
+  Olvidaste_contraseña: "Forgot your password?"
+  Reset_contraseña: "Password reset"
+  Enviar_Email: "Send Email"
+  Cambiar_contraseña: "Change password"
+  Nueva_contraseña: "New password"
+  Confirmar_nueva_contraseña: "Confirm new password"
+  Email_enviado: "Email sent successfully. Check your inbox to continue"
+  Reset_expirado: "Password reset link has expired. Try again"
+  Contraseña_cambiada: "Your password has been changed successfully"

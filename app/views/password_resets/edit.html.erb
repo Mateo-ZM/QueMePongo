@@ -1,24 +1,44 @@
-<h1>Reset Password</h1>
-
-<%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
-    <% if @user.errors.any? %>
-        <div class='error_messages'>
-            <h2>Form is invalid</h2>
-            <ul>
-                <% for message in @user.errors.full_messages %>
-                <li><%= message %></li>
+<div class="container m-auto">
+    <main class="d-flex justify-content-center align-items-center">
+        <div class="card my-4 card_login">
+            <div class="card-header d-flex justify-content-center align-items-center">
+                <%=t('Reset_contraseña') %>
+            </div>
+            <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
+                <% if @user.errors.any? %>
+                    <div class='error_messages'>
+                        <h2>Form is invalid</h2>
+                        <ul>
+                            <% for message in @user.errors.full_messages %>
+                            <li><%= message %></li>
+                            <% end %>
+                        </ul>
+                    </div>
                 <% end %>
-            </ul>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="row my-4">
+                        <div class="col-7 d-flex justify-content-center align-items-center">
+                            <i class="fas fa-lock me-1"></i>
+                            <p class="m-0 d-inline "> <%=t('Nueva_contraseña') %> : </p> 
+                        </div>
+                        <div class="col-5"><%= f.password_field :password %></div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-7 d-flex justify-content-center align-items-center">
+                            <i class="fas fa-lock me-1"></i>
+                            <p class="m-0 d-inline "> <%=t('Cambiar_nueva_contraseña')%>: </p> 
+                        </div>
+                        <div class="col-5"><%= f.password_field :password_confirmation %></div>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <div class="action form-group d-flex flex-column justify-content-center align-items-center">
+                        <%= button_tag(type: 'submit', class: "btn btn-general px-4 py-2 my-3 btn-form") do %>
+                            <i class="fas fa-sign-in-alt"></i><p class="d-inline"> <%=t('Cambiar_contraseña') %></p>
+                        <% end %>
+                    </div>
+                </footer>
+            <%end%>
         </div>
-    <% end %>
-
-    <div class='field'>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-    </div>
-    <div class='field'>
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation %>
-    </div>
-    <div class='actions'><%= f.submit 'Update password' %></div>
-<% end %>
+    </main>
+</div>

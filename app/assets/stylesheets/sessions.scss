@@ -13,7 +13,7 @@ $color-volver-hover: #780E12;
 }
 
 .card_login{
-    width:30em;
+    width:35em;
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
@@ -30,4 +30,11 @@ $color-volver-hover: #780E12;
 .col-login {
     min-width: 209px;
     min-height: 40;
+}
+
+.card_reset_contraseña{
+    width:35em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
 }

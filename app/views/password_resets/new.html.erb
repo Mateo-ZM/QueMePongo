@@ -1,11 +1,28 @@
-<h1>Reset Password</h1>
-
-<%= form_tag password_resets_path, :method => :post do %>
-    <div class='field'>
-        <%= label_tag :email %>
-        <%= text_field_tag :email, params[:email] %>
-    </div>
-    <div class='actions'>
-        <%= submit_tag "Reset Password" %>
-    </div>
-<% end %>
+<div class="container m-auto">
+    <main class="d-flex justify-content-center align-items-center">
+        <div class="card my-4 card_login">
+            <div class="card-header d-flex justify-content-center align-items-center">
+                <%=t('Reset_contraseña') %>
+            </div>
+            <%= form_tag password_resets_path, :method => :post do%>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <div class="row my-4">
+                            <div class="col-5 d-flex justify-content-center align-items-center"> <i class="fas fa-envelope"></i><p class="m-0 d-inline">&nbspEmail: </p> </div>
+                            <div class="col-7"><%= text_field_tag :email, params[:email]%></div>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <div class="action form-group d-flex flex-column justify-content-center align-items-center">
+                        <%= button_tag(type: 'submit', class: "btn btn-general px-4 py-2 my-3 btn-form") do %>
+                            <i class="fas fa-sign-in-alt"></i><p class="d-inline"> <%=t('Enviar_Email') %></p>
+                        <% end %>
+                        <%= link_to signup_path, class: "my-2 text-dark text-decoration-none fw-bold" do%>
+                            <%=t('No_tienes_usuario') %>  <span class="color-letra-terciario"><%=t('Registrate') %></span>
+                        <% end %>
+                    </div>
+                </footer>
+            <%end%>
+        </div>
+    </main>
+</div>

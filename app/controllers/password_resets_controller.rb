@@ -7,7 +7,7 @@ class PasswordResetsController < ApplicationController
   def create
     user = User.find_by_email(params[:email])
     user.send_password_reset if user
-    flash[:notice] = 'E-mail sent with password reset instructions.'
+    flash[:notice] = t('Email_enviado')
     redirect_to login_path
   end
 
@@ -18,10 +18,10 @@ class PasswordResetsController < ApplicationController
   def update
     @user = User.find_by_reset_password_token!(params[:id])
     if @user.reset_password_sent_at < 2.hour.ago
-      flash[:notice] = 'Password reset has expired'
+      flash[:notice] = t('Reset_expirado')
       redirect_to new_password_reset_path
     elsif @user.update(user_params)
-      flash[:notice] = 'Password has been reset!'
+      flash[:notice] = t('Contraseña_cambiada')
       redirect_to login_path
     else
       render :edit

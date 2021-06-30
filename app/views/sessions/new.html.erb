@@ -8,13 +8,19 @@
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <div>
                         <div class="row my-4">
-                                <div class="col-5 d-flex justify-content-center align-items-center"> <i class="fas fa-envelope"></i><p class="m-0 d-inline">&nbspEmail: </p> </div>
-                                <div class="col-7"><%= text_field_tag :email%></div>
+                            <div class="col-5 d-flex justify-content-center align-items-center"> <i class="fas fa-envelope"></i><p class="m-0 d-inline">&nbspEmail: </p> </div>
+                            <div class="col-7"><%= text_field_tag :email%></div>
                         </div>
-                        <div class="row my-4">
-                                <div class="col-5"><i class="fas fa-lock"></i></i><p class="m-0 d-inline"> <%=t('Contrasena') %>: </p> </div>
-                                <div class="col-7"><%= password_field_tag :password%></div>
+                        <div class="row mt-2">
+                            <div class="col-5"><i class="fas fa-lock"></i></i><p class="m-0 d-inline"> <%=t('Contrasena') %>: </p> </div>
+                            <div class="col-7"><%= password_field_tag :password%></div>
                         </div>
+                        <div class="row my-2 text-center">
+                            <%= link_to new_password_reset_path, class: "my-2 text-dark text-decoration-none fw-bold" do%>
+                                <span class="color-letra-terciario"><%=t('Olvidaste_contraseña') %></span>
+                            <% end %>
+                        </div>
+
                     </div>
                 </div>
                 <footer class="card-footer">
@@ -25,7 +31,6 @@
                         <%= link_to signup_path, class: "my-2 text-dark text-decoration-none fw-bold" do%>
                             <%=t('No_tienes_usuario') %>  <span class="color-letra-terciario"><%=t('Registrate') %></span>
                         <% end %>
-                        <p><%= link_to 'Forgot password?', new_password_reset_path %></p>
                     </div>
                 </footer>
             <%end%>

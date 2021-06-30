@@ -148,3 +148,13 @@ de:
       next: Weiter &rsaquo;
       previous: "&lsaquo; Zurück"
       truncate: "&hellip;"
+
+  Olvidaste_contraseña: "Passwort vergessen?"
+  Reset_contraseña: "Passwort zurücksetzen"
+  Enviar_Email: "Email senden"
+  Cambiar_contraseña: "Passwort ändern"
+  Nueva_contraseña: "Neues Passwort"
+  Confirmar_nueva_contraseña: "Bestätige neues Passwort"
+  Email_enviado: "Email wurde erfolgreich Versendet. Überprüfen Sie Ihren Posteingang, um fortzufahren"
+  Reset_expirado: "Der Link zum Zurücksetzen des Passworts ist abgelaufen. Versuchen Sie es nochmal"
+  Contraseña_cambiada: "Ihr Passwort wurde erfolgreich geändert"

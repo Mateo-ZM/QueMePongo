@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
 
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
+            
             redirect_to guardarropas_path, notice:t('Login_exitoso') 
         else
             flash.now[:alert] = t('Login_incorrecto')
@@ -19,6 +20,6 @@ class SessionsController < ApplicationController
 
     def destroy
         session[:user_id] = nil
-        redirect_to '/login', notice: t('Logout_exitoso')
+        redirect_to login_path, notice: t('Logout_exitoso')
     end
 end

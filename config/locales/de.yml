@@ -10,9 +10,10 @@ de:
   Servicio: "Dienstleistungen"
   Nosotros: "Über uns"
   Descubri: "Entdecke die App"
+
   #guardarropas
     #index
-  Guardarropas_de: "Benutzer Kleiderschränke" #Agregar el %{usuario_nombre}
+  Guardarropas_de: "%{usuario_nombre} Kleiderschränke" 
   Crear_guardarropas: "Neuer kleiderschränke erstellen"
     #edit
   Modificacion_guardarropas: "Kleiderschrank Modifikation"
@@ -27,6 +28,7 @@ de:
     #new
   Creacion_guardarropas: "Kleiderschrank erstellen"
   Crear: "erstellen"
+
   #prendas
     #index
   Prendas_de: "%{guardarropa_nombre} Kleidung"
@@ -60,7 +62,8 @@ de:
   Color/es: "Farbe/n:"
     #new
   Nueva_prenda: "Neue Kleidung"
-  #prenda
+
+  #atuendos
     #index
   Atuendos_de: "%{guardarropa_nombre} Outfits"
   Creacion_atuendo: "Neues Outfit erstellen" 
@@ -85,6 +88,7 @@ de:
   Atuendo: "Outfit"
     #show
   Nuevo_atuendo: "Neues Outfit"
+
   #users
   Perfil: "Profil"
   Cerrar_sesion: "Ausloggen"
@@ -105,8 +109,10 @@ de:
   Editar_Usuario: "Benutzer modifizieren" 
   Usuarios: "Benutzer"
   Fecha_de_registro: "Registrierungsdatum"
+
   #API
   Cargando: "Wird geladen..."
+
   #filtro
   Ordenar: "Sortieren"
   Quitar_filtros: "Filter entfernen"
@@ -116,10 +122,12 @@ de:
   Alfabetico_inverso: "Alphabetischer (Z-A)"
   Puntaje_descendiente: "Absteigende Bewertung"
   Puntaje_ascendiente: "Aufsteigende Bewertung"
+
   #eliminar
   Eliminar_atuendo: "Möchten Sie dieses Outfit wirklich löschen?"
   Eliminar_prenda: "Möchten Sie diese Kleidung wirklich löschen?"
-  Eliminar_guardarropa: "Möchten Sie diesen Kleiderschrank wirklich löschen?" #Para Fede xd
+  Eliminar_guardarropa: "Möchten Sie diesen Kleiderschrank wirklich löschen?" 
+
   #controllers
   Login_exitoso: "Erfolgreicher Login!"
   Login_incorrecto: "falscher Benutzername oder Passwort!"
@@ -127,10 +135,11 @@ de:
   Registro_exitoso: "Erfolgreicher Benutzer registrieren!"
   Error_registro: "Registrierung fehlgeschlagen! Versuchen Sie es nochmal"
   Mail_en_uso: "Die Mail wird bereits verwendet"
-  Caracteres_contraseña: "Das Passwort muss zwischen 8 und 16 Zeichen lang sein" #Para Fede parte 2
+  Caracteres_contraseña: "Das Passwort muss zwischen 8 und 16 Zeichen lang sein" 
   Edit_perfil_exitoso: "Profil erfolgreich geändert!"
   Edit_perfil_fallido: "Fehler beim Ändern des Profils"
   Perfil_borrado: "Benutzer wurde erfolgreich zerstört"
+
   #kaminari
   helpers:
   page_entries_info:
@@ -149,6 +158,7 @@ de:
       previous: "&lsaquo; Zurück"
       truncate: "&hellip;"
 
+  #cambio de password
   Olvidaste_contraseña: "Passwort vergessen?"
   Reset_contraseña: "Passwort zurücksetzen"
   Enviar_Email: "Email senden"
@@ -158,3 +168,10 @@ de:
   Email_enviado: "Email wurde erfolgreich Versendet. Überprüfen Sie Ihren Posteingang, um fortzufahren"
   Reset_expirado: "Der Link zum Zurücksetzen des Passworts ist abgelaufen. Versuchen Sie es nochmal"
   Contraseña_cambiada: "Ihr Passwort wurde erfolgreich geändert"
+  Error_cambiar_contraseña: "¡Error al intentar cambiar la contraseña! Intente de nuevo." #Para Fede
+
+  #Email
+  Saludo_mail: "Hi "
+  Mail_contrasena1: "To reset your password, click " #Para Fede equisde
+  Link_mail: "this link"
+  Mail_contrasena2: "If you did not request your password to be reset, just ignore this e-mail and your password will stay the same."

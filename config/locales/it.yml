@@ -10,6 +10,7 @@ it:
   Servicio: "Servizi"
   Nosotros: "Noi"
   Descubri: "Scopri l'app"
+
   #guardarropas
     #index
   Guardarropas_de: "Armadio di '%{usuario_nombre}'"
@@ -27,6 +28,7 @@ it:
     #new
   Creacion_guardarropas: "Creazione d'armadio"
   Crear: "Creare"
+
   #prendas
     #index
   Prendas_de: "Indumenti di '%{guardarropa_nombre}'"
@@ -60,7 +62,8 @@ it:
   Color/es: "Colore/i:"
     #new
   Nueva_prenda: "Nuovo indumento"
-  #prenda
+
+  #atuendos
     #index
   Atuendos_de: "Abiti di '%{guardarropa_nombre}'"
   Creacion_atuendo: "Creare nuovo abito"
@@ -85,6 +88,7 @@ it:
   Atuendo: "Abito"
     #show
   Nuevo_atuendo: "Nuovo abito"
+
   #users
   Perfil: "Profilo"
   Cerrar_sesion: "Disconnettersi"
@@ -105,8 +109,10 @@ it:
   Editar_Usuario: "Modificare utente"
   Usuarios: "Utenti"
   Fecha_de_registro: "Data di registro"
+
   #API
   Cargando: "In carica..."
+
   #filtro
   Ordenar: "Ordine"
   Quitar_filtros: "Rimuovi filtri"
@@ -116,10 +122,12 @@ it:
   Alfabetico_inverso: "Alfabetico (Z-A)"
   Puntaje_descendiente: "Punteggio Decrescente"
   Puntaje_ascendiente: "Punteggio in Aumento"
+
   #eliminar
-  Eliminar_atuendo: "¿Sicuro di voler eliminare questo abito?"
-  Eliminar_prenda: "¿Sicuro di voler eliminare questo indumento?"
-  Eliminar_guardarropa: "¿Sicuro di voler eliminare questo armadio?"
+  Eliminar_atuendo: "Sicuro di voler eliminare questo abito?"
+  Eliminar_prenda: "Sicuro di voler eliminare questo indumento?"
+  Eliminar_guardarropa: "Sicuro di voler eliminare questo armadio?"
+
   #controllers
   Login_exitoso: "Login effettuato con successo!"
   Login_incorrecto: "Email o password errati!"
@@ -131,6 +139,7 @@ it:
   Edit_perfil_exitoso: "Profilo modificato con successo!"
   Edit_perfil_fallido: "Errore di modifica del profilo."
   Perfil_borrado: "L'utente è stato distrutto con successo."
+
   #kaminari
   helpers:
     page_entries_info:
@@ -148,12 +157,20 @@ it:
       previous: "&lsaquo; Prec."
       truncate: "&hellip;"
 
-  Olvidaste_contraseña: "¿Olvidaste tu contraseña?"
-  Reset_contraseña: "Password reset"
-  Enviar_Email: "Enviar Email"
-  Cambiar_contraseña: "Cambiar contraseña"
-  Nueva_contraseña: "Nueva contraseña"
-  Confirmar_nueva_contraseña: "Confirmar nueva contraseña"
-  Email_enviado: "Email enviado exitosamente. Revise su correo para continuar"
-  Reset_expirado: "El link de reccuperación de su contraseña ha expirado. Vuelva a intentarlo"
-  Contraseña_cambiada: "Su contraseña se ha cambiado exitosamente"
+  #cambio de password
+  Olvidaste_contraseña: "Hai dimenticato la tua password?"
+  Reset_contraseña: "Reimpostazione della password"
+  Enviar_Email: "Invia Email"
+  Cambiar_contraseña: "Cambia la password"
+  Nueva_contraseña: "Nuova password"
+  Confirmar_nueva_contraseña: "Conferma la nuova password"
+  Email_enviado: "Email inviata correttamente. Controlla la tua email per continuare"
+  Reset_expirado: "Il link per recuperare la password è scaduto. Riprova"
+  Contraseña_cambiada: "La tua password è stata cambiata con successo"
+  Error_cambiar_contraseña: "Errore durante la modifica della password! Riprova."
+
+  #Email
+  Saludo_mail: "Ciao "
+  Mail_contrasena1: "Per reimpostare la password, fare clic su "
+  Link_mail: "questo link"
+  Mail_contrasena2: "Se non hai richiesto il ripristino della password, ignora semplicemente questa e-mail e la tua password rimarrà la stessa."

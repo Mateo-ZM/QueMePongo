@@ -10,6 +10,7 @@ es:
   Servicio: "Servicios"
   Nosotros: "Nosotros"
   Descubri: "Descubrí la app"
+
   #guardarropas
     #index
   Guardarropas_de: "Guardarropas de '%{usuario_nombre}'"
@@ -27,6 +28,7 @@ es:
     #new
   Creacion_guardarropas: "Creación de guardarropa"
   Crear: "Crear"
+
   #prendas
     #index
   Prendas_de: "Prendas de '%{guardarropa_nombre}'"
@@ -60,7 +62,8 @@ es:
   Color/es: "Color/es:"
     #new
   Nueva_prenda: "Nueva prenda"
-  #prenda
+
+  #atuendos
     #index
   Atuendos_de: "Atuendos de '%{guardarropa_nombre}'"
   Creacion_atuendo: "Crear nuevo atuendo"
@@ -85,6 +88,7 @@ es:
   Atuendo: "Atuendo"
     #show
   Nuevo_atuendo: "Nuevo atuendo"
+
   #users
   Perfil: "Perfil"
   Cerrar_sesion: "Cerrar sesión"
@@ -105,8 +109,10 @@ es:
   Editar_Usuario: "Editar usuario"
   Usuarios: "Usuarios"
   Fecha_de_registro: "Fecha de registro"
+
   #API
   Cargando: "Cargando..."
+
   #filtro
   Ordenar: "Orden"
   Quitar_filtros: "Quitar filtros"
@@ -116,10 +122,12 @@ es:
   Alfabetico_inverso: "Alfabético (Z-A)"
   Puntaje_descendiente: "Puntaje descendiente"
   Puntaje_ascendiente: "Puntaje ascendiente"
+
   #eliminar
   Eliminar_atuendo: "¿Seguro que desea eliminar este atuendo?"
   Eliminar_prenda: "¿Seguro que desea eliminar esta prenda?"
   Eliminar_guardarropa: "¿Seguro que desea eliminar este guardarropa?"
+
   #controllers
   Login_exitoso: "¡Inicio de sesión exitoso!"
   Login_incorrecto: "¡Email o contraseña incorrectos!"
@@ -131,6 +139,7 @@ es:
   Edit_perfil_exitoso: "¡Perfil editado correctamente!"
   Edit_perfil_fallido: "Error al editar perfil."
   Perfil_borrado: "Usuario borrado exitosamente."
+
   #kaminari
   helpers:
   page_entries_info:
@@ -148,7 +157,8 @@ es:
       next: Siguiente &rsaquo;
       previous: "&lsaquo; Anterior"
       truncate: "&hellip;"
-  
+
+  #cambio de password
   Olvidaste_contraseña: "¿Olvidaste tu contraseña?"
   Reset_contraseña: "Recuperación de contraseña"
   Enviar_Email: "Enviar Email"
@@ -156,5 +166,14 @@ es:
   Nueva_contraseña: "Nueva contraseña"
   Confirmar_nueva_contraseña: "Confirmar nueva contraseña"
   Email_enviado: "Email enviado exitosamente. Revise su correo para continuar"
-  Reset_expirado: "El link de recuperación de su contraseña ha expirado. Vuelva a intentarlo"
+  Reset_expirado: "El link de recuperación de su contraseña ha expirado. Intente de nuevo."
   Contraseña_cambiada: "Su contraseña se ha cambiado exitosamente"
+  Error_cambiar_contraseña: "¡Error al intentar cambiar la contraseña! Intente de nuevo."
+
+  #Contraseñas_incorrectas: "Las contraseñas deben coincidir entre sí" al final no es necesario
+
+  #Email
+  Saludo_mail: "Hola "
+  Mail_contrasena1: "Para cambiar su contraseña, de click a "
+  Link_mail: "este link"
+  Mail_contrasena2: "Si no pidió que se reinicie su contraseña, simplemente ignore este mail y su contraseña permanecerá igual."

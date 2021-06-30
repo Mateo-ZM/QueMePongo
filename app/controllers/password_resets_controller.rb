@@ -1,5 +1,6 @@
 class PasswordResetsController < ApplicationController
   skip_before_action :validate_logged_user!
+  before_action :reset_login!
 
   def new
   end
@@ -24,6 +25,7 @@ class PasswordResetsController < ApplicationController
       flash[:notice] = t('Contraseña_cambiada')
       redirect_to login_path
     else
+      flash[:alert] = t('Error_cambiar_contraseña')
       render :edit
     end
   end
@@ -31,6 +33,12 @@ class PasswordResetsController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:password)
+      params.require(:user).permit(:password, :password_confirmation)
     end
+
+    def reset_login!
+      if current_user
+        session[:user_id] = nil
+      end
+  end
 end

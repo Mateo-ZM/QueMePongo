@@ -34,19 +34,17 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.tamanio_password_correcto?
       begin
-      if @user.save
-        session[:user_id] = @user.id
-        redirect_to profile_path, notice: t('Registro_exitoso')
-      else
-        flash.now[:alert] = t('Error_registro')
+        if @user.save
+          session[:user_id] = @user.id
+          redirect_to profile_path, notice: t('Registro_exitoso')
+        else
+          flash.now[:alert] = t('Error_registro')
+          render action: "new"
+        end
+      rescue 
+        flash.now[:alert] = t('Mail_en_uso')
         render action: "new"
       end
-
-    rescue 
-      flash.now[:alert] = t('Mail_en_uso')
-      render action: "new"
-    end
-
     else
       flash.now[:alert] = t('Caracteres_contraseña')
       render action: "new"

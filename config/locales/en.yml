@@ -149,9 +149,9 @@ en:
   Puntaje_descendiente: "Descending rating"
   Puntaje_ascendiente: "Ascending rating"
   #eliminar
-  Eliminar_atuendo: "¿Are you sure you want to delete this outfit?"
-  Eliminar_prenda: "¿Are you sure you want to delete this clothing?"
-  Eliminar_guardarropa: "¿Are you sure you want to delete this wardrobe?"
+  Eliminar_atuendo: "Are you sure you want to delete this outfit?"
+  Eliminar_prenda: "Are you sure you want to delete this clothing?"
+  Eliminar_guardarropa: "Are you sure you want to delete this wardrobe?"
   #controllers
   Login_exitoso: "Succesful log in!"
   Login_incorrecto: "Wrong email or password!"

@@ -117,20 +117,20 @@ de:
   Puntaje_descendiente: "Absteigende Bewertung"
   Puntaje_ascendiente: "Aufsteigende Bewertung"
   #eliminar
-  Eliminar_atuendo: "¿Are you sure you want to delete this outfit?"
-  Eliminar_prenda: "¿Are you sure you want to delete this clothing?"
-  Eliminar_guardarropa: "¿Are you sure you want to delete this wardrobe?" #Para Fede xd
+  Eliminar_atuendo: "Möchten Sie dieses Outfit wirklich löschen?"
+  Eliminar_prenda: "Möchten Sie diese Kleidung wirklich löschen?"
+  Eliminar_guardarropa: "Möchten Sie diesen Kleiderschrank wirklich löschen?" #Para Fede xd
   #controllers
-  Login_exitoso: "¡Inicio de sesión exitoso!"
-  Login_incorrecto: "¡Usuario o contraseña incorrectos!"
-  Logout_exitoso: "¡Cerrado de sesión exitoso!"
-  Registro_exitoso: "¡Usuario registrado correctamente!"
-  Error_registro: "¡Error al registrarse! Intente de nuevo."
-  Mail_en_uso: "El mail ya se encuentra en uso"
-  Caracteres_contraseña: "La contrasena debe tener entre 8 y 16 caracteres" #Para Fede parte 2
-  Edit_perfil_exitoso: "¡Perfil editado correctamente!"
-  Edit_perfil_fallido: "Error al editar perfil."
-  Perfil_borrado: "User was successfully destroyed."
+  Login_exitoso: "Erfolgreicher Login!"
+  Login_incorrecto: "falscher Benutzername oder Passwort!"
+  Logout_exitoso: "Erfolgreicher Ausloggen!"
+  Registro_exitoso: "Erfolgreicher Benutzer registrieren!"
+  Error_registro: "Registrierung fehlgeschlagen! Versuchen Sie es nochmal"
+  Mail_en_uso: "Die Mail wird bereits verwendet"
+  Caracteres_contraseña: "Das Passwort muss zwischen 8 und 16 Zeichen lang sein" #Para Fede parte 2
+  Edit_perfil_exitoso: "Profil erfolgreich geändert!"
+  Edit_perfil_fallido: "Fehler beim Ändern des Profils"
+  Perfil_borrado: "Benutzer wurde erfolgreich zerstört"
   #kaminari
   helpers:
   page_entries_info:
